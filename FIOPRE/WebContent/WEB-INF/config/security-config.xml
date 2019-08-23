@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xmlns:p="http://www.springframework.org/schema/p" 
+       xmlns:context="http://www.springframework.org/schema/context" 
+       xmlns:security="http://www.springframework.org/schema/security" 
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+           http://www.springframework.org/schema/context 
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd 
+           http://www.springframework.org/schema/security 
+           http://www.springframework.org/schema/security/spring-security-3.0.xsd">
+
+	<bean id="md5PasswordEncoder" class="org.springframework.security.authentication.encoding.Md5PasswordEncoder" />
+
+	<bean id="fawnaUserDetailsService"
+		class="com.adelerobots.fawna.security.BaseUserDetailsServiceImpl" />
+
+	<bean id="fawnaAuthProvider" class="com.adelerobots.fawna.security.BaseAuthProvider">
+		<property name="hideUserNotFoundExceptions" value="false" />
+		<!-- Referencia al Bean que obtiene los datos del usuario -->
+		<property name="userDetailsService" ref="fawnaUserDetailsService" />
+
+		<!-- Referencia al Bean que codifica password del formulario -->
+		<!--
+		<beans:property name="passwordEncoder" ref="md5PasswordEncoder" />
+		-->
+	</bean>
+
+	<!-- Introduce el AuthProvider en la cadena de filtros de Spring Security -->
+	<security:authentication-manager alias="fawnaAuthManager">
+		<security:authentication-provider ref="fawnaAuthProvider"/>
+	</security:authentication-manager>
+
+	<bean id="anonymousProcessingFilter"
+		class="com.adelerobots.fawna.security.X509CustomFilter">
+        <property name="authenticationManager" ref="fawnaAuthManager"/>
+		<property name="key" value="foobar" />
+		<property name="userAttribute" value="anonymousUser, IS_AUTHENTICATED_ANONYMOUSLY" />
+	</bean>
+
+	<security:http auto-config="true" path-type="ant">
+	
+		<security:custom-filter ref="anonymousProcessingFilter" after="SECURITY_CONTEXT_FILTER"/>
+		<!-- <security:x509 user-service-ref="fawnaUserDetailsService" subject-principal-regex="EMAILADDRESS=(.*?),"/> -->
+		
+		<!-- 
+			<port-mappings>
+				<port-mapping http="8081" https="8443"/>
+			</port-mappings>
+		-->
+
+		<!-- Flujos no securizados -->
+		<security:anonymous />
+		<security:intercept-url pattern="/adele/ARQ_Error-flow*" requires-channel="any" filters="none" />
+		<security:intercept-url pattern="/adele/login-flow*" requires-channel="any" filters="none" />
+		<security:intercept-url pattern="/adele/signup-flow*" requires-channel="any" filters="none" />
+		<security:intercept-url pattern="/adele/signup-confirm-flow*" requires-channel="any" filters="none" />
+		
+		<!-- Recursos no securizados -->
+		<security:intercept-url pattern="/favicon.**" requires-channel="any" filters="none" />
+		<security:intercept-url pattern="/images/**" requires-channel="any" filters="none" />
+		<security:intercept-url pattern="/css/**" requires-channel="any" filters="none" />
+		<security:intercept-url pattern="/fonts/**" requires-channel="any" filters="none" />
+		<security:intercept-url pattern="/flash/**" requires-channel="any" filters="none" />
+		<security:intercept-url pattern="/js/**" requires-channel="any" filters="none" />
+
+		<!-- Excluir URL anónimas de la seguridad -->
+		<!-- 
+			<security:intercept-url pattern="/treelogic/APP_flujo-flow" requires-channel="any"  filters="none" />
+			<security:intercept-url pattern="/treelogic/APP_flujo-flow" requires-channel="any"  access="IS_AUTHENTICATED_ANONYMOUSLY" />
+		-->
+
+		<!-- URLs securizados por roles -->
+		<security:intercept-url pattern="/adele/ARQ_Default_Landing-flow*" requires-channel="any"
+			access="IS_AUTHENTICATED_FULLY" />
+
+		<!-- Para los flujos de FIONA se necesita pertenecer al grupo USERS -->
+		<security:intercept-url pattern="/adele/FIOPRE_**-flow*" requires-channel="any" 
+			access="IS_AUTHENTICATED_FULLY" />
+		<security:intercept-url pattern="/adele/myprofile-flow*" requires-channel="any" 
+			access="IS_AUTHENTICATED_FULLY" />
+		
+		<!-- para hacer logout primero hay que hacer login -->
+		<security:intercept-url pattern="/adele/logout-flow*" requires-channel="any"
+			access="IS_AUTHENTICATED_FULLY" />
+		<security:intercept-url pattern="/j_security_logout" requires-channel="any"
+			access="IS_AUTHENTICATED_FULLY" />
+
+
+
+
+		<!-- Flujo de login y redirecciones -->
+		<!-- authentication-failure-url="/adele/login-flow?fwn:securityErrorKey=1" -->
+		<security:form-login 
+			login-page="/adele/login-flow"
+			default-target-url="/adele/ARQ_Default_Landing-flow" 
+			always-use-default-target="true"
+			authentication-failure-handler-ref="myAuthenticationFailureHandler"
+			login-processing-url="/j_security_check" />
+
+		<!-- Flujo de logout -->
+		<security:logout logout-url="/j_security_logout" logout-success-url="/adele/login-flow"
+			invalidate-session="true" />
+
+	</security:http>
+	
+	
+	<bean id="myAuthenticationFailureHandler" 
+	      class="org.springframework.security.web.authentication.ExceptionMappingAuthenticationFailureHandler">
+		<property name="defaultFailureUrl" value="/adele/login-flow"></property>
+		<property name="useForward" value="true" />
+		<property name="exceptionMappings">
+			<map>
+				<entry key="org.springframework.security.core.userdetails.UsernameNotFoundException" value="/adele/login-flow?fwn:securityErrorKey=1" />
+				<entry key="org.springframework.security.authentication.BadCredentialsException" value="/adele/login-flow?fwn:securityErrorKey=2" />
+				<entry key="com.adelerobots.fawna.security.AccountNeedActivationAuthenticationException" value="/adele/login-flow?fwn:securityErrorKey=3" />
+				<entry key="org.springframework.security.authentication.CredentialsExpiredException" value="/adele/login-flow?fwn:securityErrorKey=4" />
+				<entry key="org.springframework.security.authentication.AccountExpiredException" value="/adele/login-flow?fwn:securityErrorKey=5" />
+				<entry key="org.springframework.security.authentication.DisabledException" value="/adele/login-flow?fwn:securityErrorKey=6" />
+				<entry key="org.springframework.security.authentication.LockedException" value="/adele/login-flow?fwn:securityErrorKey=7" />
+				<entry key="com.adelerobots.fawna.security.InvalidLogonHoursAuthenticationException" value="/adele/login-flow?fwn:securityErrorKey=8" />
+				<entry key="com.adelerobots.fawna.security.InvalidWorkstationAuthenticationException" value="/adele/login-flow?fwn:securityErrorKey=9" />
+				<entry key="org.springframework.security.authentication.AuthenticationServiceException" value="/adele/login-flow?fwn:securityErrorKey=10" />
+				<entry key="org.springframework.security.authentication.ProviderNotFoundException" value="/adele/login-flow?fwn:securityErrorKey=11" />
+			</map>
+		</property>
+	</bean>
+</beans>

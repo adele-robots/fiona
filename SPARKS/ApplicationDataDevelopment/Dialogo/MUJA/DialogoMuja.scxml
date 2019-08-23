@@ -1,0 +1,962 @@
+<?xml version="1.0"?>
+
+<scxml name="MyMachine" version="1.0" initial="estado-S0P1MenuPrincipal">
+  <datamodel>
+    <data id="prompt"/>
+    <data id="go_to"/>
+    <data id="final_state"/>
+    <data id="stateNumber"/>
+    <data id="rule"/>
+  </datamodel>
+  
+  
+  <state id="estado-S0P1MenuPrincipal">
+    <onentry>
+      <execute expr="stateNumber='0'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S0P1MenuPrincipal.txt,/Dialogo/MUJA/Prompts/prompt-estado-S0P1MenuPrincipalB.txt,/Dialogo/MUJA/Prompts/prompt-estado-S0P1MenuPrincipalC.txt,/Dialogo/MUJA/Prompts/prompt-estado-S0P1MenuPrincipalD.txt'"/>
+      <execute expr="go_to='ASR'"/>
+      <execute expr="rule='ruleS0P1MenuPrincipal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="aplicaciones" target="estado-S1P1AplicacionesMoviles"/>
+    <transition event="aplicaciones_moviles" target="estado-S1P1AplicacionesMoviles"/>
+    <transition event="moviles" target="estado-S1P1AplicacionesMoviles"/>
+    <transition event="1" target="estado-S1P1AplicacionesMoviles"/>
+
+    <transition event="agenda" target="estado-S2P1AgendaEventos"/>
+    <transition event="eventos" target="estado-S2P1AgendaEventos"/>
+    <transition event="4" target="estado-S2P1AgendaEventos"/>
+
+    <transition event="guia" target="estado-S3P1GuiaTuristico"/>
+    <transition event="guia_turistico" target="estado-S3P1GuiaTuristico"/>
+    <transition event="turismo" target="estado-S3P1GuiaTuristico"/>
+    <transition event="5" target="estado-S3P1GuiaTuristico"/>
+
+    <transition event="visitas" target="estado-S4P1LibroVisitas"/>
+    <transition event="firmar" target="estado-S4P1LibroVisitas"/>
+    <transition event="libro" target="estado-S4P1LibroVisitas"/>
+    <transition event="libro visitas" target="estado-S4P1LibroVisitas"/>
+    <transition event="14" target="estado-S4P1LibroVisitas"/>
+
+    <transition event="encuesta" target="estado-S5P1RealizarEncuesta"/>
+    <transition event="opinion" target="estado-S5P1RealizarEncuesta"/>
+    <transition event="realizar_encuesta" target="estado-S5P1RealizarEncuesta"/>
+    <transition event="18" target="estado-S5P1RealizarEncuesta"/>
+
+    <transition event="multimedia" target="estado-S78P0Multimedia"/>
+    <transition event="21" target="estado-S78P0Multimedia"/>
+    
+    <transition event="descubre_muja" target="estado-S9P1ItinerarioMuseistico"/>
+	<transition event="descubre" target="estado-S9P1ItinerarioMuseistico"/>
+	<transition event="muja" target="estado-S9P1ItinerarioMuseistico"/>	
+    <transition event="40" target="estado-S9P1ItinerarioMuseistico"/>
+
+
+    <transition event="45" target="estado-EstadoPublicidad"/>
+  </state>
+
+  
+  
+  <state id="estado-S1P1AplicacionesMoviles">
+    <onentry>
+      <execute expr="stateNumber='1'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S1P1AplicacionesMoviles.txt,/Dialogo/MUJA/Prompts/prompt-estado-S1P1AplicacionesMovilesB.txt'"/>
+      <execute expr="go_to='ASR'"/>
+		  <execute expr="rule='ruleS1P1AplicacionesMoviles'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-S0P1MenuPrincipal"/>
+    <transition event="atras" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="lector" target="estado-S1P2ManualUsoLecturaMuestras"/>
+    <transition event="muestras" target="estado-S1P2ManualUsoLecturaMuestras"/>
+    <transition event="lector_muestras" target="estado-S1P2ManualUsoLecturaMuestras"/>
+    <transition event="2" target="estado-S1P2ManualUsoLecturaMuestras"/>
+
+    <transition event="guia" target="estado-S1P3ManualUsoGuiaMovil"/>
+    <transition event="guia movil" target="estado-S1P3ManualUsoGuiaMovil"/>
+    <transition event="3" target="estado-S1P3ManualUsoGuiaMovil"/>
+  </state>
+
+
+  <state id="estado-S1P2ManualUsoLecturaMuestras">
+    <onentry>
+      <execute expr="stateNumber='2'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S1P2ManualUsoLecturaMuestras.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+   
+     
+        
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="volver" target="estado-S1P1AplicacionesMoviles"/>
+    <transition event="atras" target="estado-S1P1AplicacionesMoviles"/>
+    <transition event="1" target="estado-S1P1AplicacionesMoviles"/>
+  </state>
+
+
+  <state id="estado-S1P3ManualUsoGuiaMovil">
+    <onentry>
+      <execute expr="stateNumber='3'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S1P3ManualUsoGuiaMovil.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="volver" target="estado-S1P1AplicacionesMoviles"/>
+    <transition event="atras" target="estado-S1P1AplicacionesMoviles"/>
+    <transition event="1" target="estado-S1P1AplicacionesMoviles"/>
+  </state>
+
+
+  <state id="estado-S2P1AgendaEventos">
+    <onentry>
+      <execute expr="stateNumber='4'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S2P1AgendaEventos.txt,/Dialogo/MUJA/Prompts/prompt-estado-S2P1AgendaEventosB.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-S0P1MenuPrincipal"/>
+    <transition event="atras" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+  </state>
+
+  
+  
+  
+    
+
+  <state id="estado-S3P1GuiaTuristico">
+    <onentry>
+      <execute expr="stateNumber='5'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S3P1GuiaTuristico.txt,/Dialogo/MUJA/Prompts/prompt-estado-S3P1GuiaTuristicoB.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleS3P1GuiaTuristico'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-S0P1MenuPrincipal"/>
+    <transition event="atras" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="donde alojarse" target="estado-S3P2Alojamiento"/>
+    <transition event="alojamiento" target="estado-S3P2Alojamiento"/>
+    <transition event="6" target="estado-S3P2Alojamiento"/>
+
+    <transition event="que_ver" target="estado-S3P3Cultura"/>
+    <transition event="cultura" target="estado-S3P3Cultura"/>
+    <transition event="7" target="estado-S3P3Cultura"/>
+
+    <transition event="donde_comer" target="estado-S3P4Gastronomia"/>
+	<transition event="comer" target="estado-S3P4Gastronomia"/>	
+    <transition event="gastronomia" target="estado-S3P4Gastronomia"/>
+    <transition event="8" target="estado-S3P4Gastronomia"/>
+
+    <transition event="que_comprar" target="estado-S3P5Compras"/>
+	<transition event="comprar" target="estado-S3P5Compras"/>
+    <transition event="compras" target="estado-S3P5Compras"/>
+    <transition event="9" target="estado-S3P5Compras"/>
+  </state>
+
+
+  <state id="estado-S3P2Alojamiento">
+    <onentry>
+      <execute expr="stateNumber='6'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S3P2Alojamiento.txt,/Dialogo/MUJA/Prompts/prompt-estado-S3P2AlojamientoB.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="volver" target="estado-S3P1GuiaTuristico"/>
+    <transition event="atras" target="estado-S3P1GuiaTuristico"/>
+    <transition event="5" target="estado-S3P1GuiaTuristico"/>
+
+    <transition event="10" target="estado-S3P6AlojamientoItem"/>
+  </state>
+
+
+  <state id="estado-S3P3Cultura">
+    <onentry>
+      <execute expr="stateNumber='7'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S3P3Cultura.txt,/Dialogo/MUJA/Prompts/prompt-estado-S3P3CulturaB.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="volver" target="estado-S3P1GuiaTuristico"/>
+    <transition event="atras" target="estado-S3P1GuiaTuristico"/>
+    <transition event="5" target="estado-S3P1GuiaTuristico"/>
+
+    <transition event="11" target="estado-S3P7CulturaItem"/>
+  </state>
+
+
+  <state id="estado-S3P4Gastronomia">
+    <onentry>
+      <execute expr="stateNumber='8'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S3P4Gastronomia.txt,/Dialogo/MUJA/Prompts/prompt-estado-S3P4GastronomiaB.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="volver" target="estado-S3P1GuiaTuristico"/>
+    <transition event="atras" target="estado-S3P1GuiaTuristico"/>
+    <transition event="5" target="estado-S3P1GuiaTuristico"/>
+
+    <transition event="12" target="estado-S3P8GastronomiaItem"/>
+  </state>
+
+
+  <state id="estado-S3P5Compras">
+    <onentry>
+      <execute expr="stateNumber='9'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S3P5Compras.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="volver" target="estado-S3P1GuiaTuristico"/>
+    <transition event="atras" target="estado-S3P1GuiaTuristico"/>
+    <transition event="5" target="estado-S3P1GuiaTuristico"/>
+
+    <transition event="13" target="estado-S3P9ComprasItem"/>
+  </state>
+
+
+  <state id="estado-S3P6AlojamientoItem">
+    <onentry>
+      <execute expr="stateNumber='10'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S3P6AlojamientoItem.txt,/Dialogo/MUJA/Prompts/prompt-estado-S3P6AlojamientoItemB.txt,/Dialogo/MUJA/Prompts/prompt-estado-S3P6AlojamientoItemC.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="volver" target="estado-S3P2Alojamiento"/>
+    <transition event="atras" target="estado-S3P2Alojamiento"/>
+    <transition event="6" target="estado-S3P2Alojamiento"/>
+  </state>
+
+
+  <state id="estado-S3P7CulturaItem">
+    <onentry>
+      <execute expr="stateNumber='11'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S3P7CulturaItem.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="volver" target="estado-S3P3Cultura"/>
+    <transition event="atras" target="estado-S3P3Cultura"/>
+    <transition event="7" target="estado-S3P3Cultura"/>
+  </state>
+
+
+  <state id="estado-S3P8GastronomiaItem">
+    <onentry>
+      <execute expr="stateNumber='12'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S3P8GastronomiaItem.txt,/Dialogo/MUJA/Prompts/prompt-estado-S3P8GastronomiaItemB.txt,/Dialogo/MUJA/Prompts/prompt-estado-S3P8GastronomiaItemC.txt,/Dialogo/MUJA/Prompts/prompt-estado-S3P8GastronomiaItemD.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="volver" target="estado-S3P4Gastronomia"/>
+    <transition event="atras" target="estado-S3P4Gastronomia"/>
+    <transition event="8" target="estado-S3P4Gastronomia"/>
+  </state>
+
+
+  <state id="estado-S3P9ComprasItem">
+    <onentry>
+      <execute expr="stateNumber='13'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S3P9ComprasItem.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="volver" target="estado-S3P5Compras"/>
+    <transition event="atras" target="estado-S3P5Compras"/>
+    <transition event="9" target="estado-S3P5Compras"/>
+  </state>
+
+
+
+
+
+
+  <state id="estado-S4P1LibroVisitas">
+    <onentry>
+      <execute expr="stateNumber='14'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S4P1LibroVisitas.txt,/Dialogo/MUJA/Prompts/prompt-estado-S4P1LibroVisitasB.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-S0P1MenuPrincipal"/>
+    <transition event="atras" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="firmar" target="estado-S4P2FirmarLibro"/>
+    <transition event="dejar_firma" target="estado-S4P2FirmarLibro"/>
+    <transition event="15" target="estado-S4P2FirmarLibro"/>
+  </state>
+
+
+  <state id="estado-S4P2FirmarLibro">
+    <onentry>
+      <execute expr="stateNumber='15'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S4P2FirmarLibro.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="volver" target="estado-S4P1LibroVisitas"/>
+    <transition event="atras" target="estado-S4P1LibroVisitas"/>
+    <transition event="14" target="estado-S4P1LibroVisitas"/>
+
+    <transition event="16" target="estado-S4P3Exito"/>
+
+    <transition event="17" target="estado-S4P4Error"/>
+  </state>
+
+
+  <state id="estado-S4P3Exito">
+    <onentry>
+      <execute expr="stateNumber='16'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S4P3Exito.txt'"/>
+      <execute expr="go_to='ASR'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="14" target="estado-S4P1LibroVisitas"/>
+  </state>
+
+
+  <state id="estado-S4P4Error">
+    <onentry>
+      <execute expr="stateNumber='17'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S4P4Error.txt'"/>
+      <execute expr="go_to='ASR'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="15" target="estado-S4P2FirmarLibro"/>
+  </state>
+
+
+  
+  
+
+
+  <state id="estado-S5P1RealizarEncuesta">
+    <onentry>
+      <execute expr="stateNumber='18'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S5P1RealizarEncuesta.txt,/Dialogo/MUJA/Prompts/prompt-estado-S5P1RealizarEncuestaB.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-S0P1MenuPrincipal"/>
+    <transition event="atras" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+  </state>
+
+
+  <state id="estado-S5P3Exito">
+    <onentry>
+      <execute expr="stateNumber='19'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S5P3Exito.txt'"/>
+      <execute expr="go_to='ASR'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+  </state>
+
+
+  <state id="estado-S5P3Error">
+    <onentry>
+      <execute expr="stateNumber='20'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S5P3Error.txt'"/>
+      <execute expr="go_to='ASR'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="18" target="estado-S4P2FirmarLibro"/>
+  </state>
+
+
+
+
+
+
+
+  <state id="estado-S78P0Multimedia">
+    <onentry>
+      <execute expr="stateNumber='21'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S78P0Multimedia.txt,/Dialogo/MUJA/Prompts/prompt-estado-S78P0MultimediaB.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleS78P0Multimedia'"/>	 
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-S0P1MenuPrincipal"/>
+    <transition event="atras" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="publicacion" target="estado-S7P1PublicacionMultimedia"/>
+    <transition event="multimedia" target="estado-S7P1PublicacionMultimedia"/>
+    <transition event="publicacion_multimedia" target="estado-S7P1PublicacionMultimedia"/>
+    <transition event="22" target="estado-S7P1PublicacionMultimedia"/>
+
+    <transition event="fotografo" target="estado-S8P1FotografoVirtual"/>
+    <transition event="fotografo_virtual" target="estado-S8P1FotografoVirtual"/>
+	<transition event="foto" target="estado-S8P1FotografoVirtual"/>
+	<transition event="fotos" target="estado-S8P1FotografoVirtual"/>
+    <transition event="29" target="estado-S8P1FotografoVirtual"/>
+  </state>
+
+
+  <state id="estado-S7P1PublicacionMultimedia">
+    <onentry>
+      <execute expr="stateNumber='22'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S7P1PublicacionMultimedia.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleS7P1PublicacionMultimedia'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="volver" target="estado-S78P0Multimedia"/>
+    <transition event="atras" target="estado-S78P0Multimedia"/>
+    <transition event="21" target="estado-S78P0Multimedia"/>
+
+    <transition event="tarjeta" target="estado-S7P2PublicacionTarjeta"/>
+    <transition event="memoria" target="estado-S7P2PublicacionTarjeta"/>
+    <transition event="tarjeta_de_memoria" target="estado-S7P2PublicacionTarjeta"/>
+    <transition event="23" target="estado-S7P2PublicacionTarjeta"/>
+
+    <transition event="blu_tuz" target="estado-S7P4PublicacionBluetooth"/>
+    <transition event="24" target="estado-S7P4PublicacionBluetooth"/>
+  </state>
+
+
+  <state id="estado-S7P2PublicacionTarjeta">
+    <onentry>
+      <execute expr="stateNumber='23'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S7P2PublicacionTarjeta.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleS7Publicacion'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="volver" target="estado-S7P1PublicacionMultimedia"/>
+    <transition event="atras" target="estado-S7P1PublicacionMultimedia"/>
+    <transition event="22" target="estado-S7P1PublicacionMultimedia"/>
+
+    <transition event="aceptar" target="estado-S7P3GaleriaTarjeta"/>
+    <transition event="26" target="estado-S7P3GaleriaTarjeta"/>
+  </state>
+
+
+  <state id="estado-S7P3GaleriaTarjeta">
+    <onentry>
+      <execute expr="stateNumber='26'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S7P3GaleriaTarjeta.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="volver" target="estado-S7P1PublicacionMultimedia"/>
+    <transition event="atras" target="estado-S7P1PublicacionMultimedia"/>
+    <transition event="22" target="estado-S7P1PublicacionMultimedia"/>
+
+    <transition event="25" target="estado-S7P2Error"/>
+
+    <transition event="28" target="estado-S7P6Exito"/>
+  </state>
+
+
+  <state id="estado-S7P2Error">
+    <onentry>
+      <execute expr="stateNumber='25'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S7P2Error.txt'"/>
+      <execute expr="go_to='ASR'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="26" target="estado-S7P3GaleriaTarjeta"/>
+
+    <transition event="24" target="estado-S7P4PublicacionBluetooth"/>
+  </state>
+
+
+  <state id="estado-S7P6Exito">
+    <onentry>
+      <execute expr="stateNumber='28'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S7P6Exito.txt'"/>
+      <execute expr="go_to='ASR'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+  </state>
+
+
+  <state id="estado-S7P4PublicacionBluetooth">
+    <onentry>
+      <execute expr="stateNumber='24'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S7P4PublicacionBluetooth.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleS7Publicacion'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="volver" target="estado-S7P1PublicacionMultimedia"/>
+    <transition event="atras" target="estado-S7P1PublicacionMultimedia"/>
+    <transition event="22" target="estado-S7P1PublicacionMultimedia"/>
+
+    <transition event="aceptar" target="estado-S7P5GaleriaBluetooth"/>
+    <transition event="27" target="estado-S7P5GaleriaBluetooth"/>
+
+    <transition event="25" target="estado-S7P2Error"/>
+  </state>
+
+
+  <state id="estado-S7P5GaleriaBluetooth">
+    <onentry>
+      <execute expr="stateNumber='27'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S7P5GaleriaBluetooth.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="volver" target="estado-S7P1PublicacionMultimedia"/>
+    <transition event="atras" target="estado-S7P1PublicacionMultimedia"/>
+    <transition event="22" target="estado-S7P1PublicacionMultimedia"/>
+
+    <transition event="25" target="estado-S7P2Error"/>
+
+    <transition event="28" target="estado-S7P6Exito"/>
+  </state>
+
+
+  <state id="estado-S8P1FotografoVirtual">
+    <onentry>
+      <execute expr="stateNumber='29'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S8P1FotografoVirtual.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleS8P1FotografoVirtual'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="volver" target="estado-S78P0Multimedia"/>
+    <transition event="atras" target="estado-S78P0Multimedia"/>
+    <transition event="21" target="estado-S78P0Multimedia"/>
+
+    <transition event="30" target="estado-S8P2SeleccionarMarco"/>
+
+    <transition event="33" target="estado-S8P5GrabarVideo"/>
+  </state>
+
+
+  <state id="estado-S8P2SeleccionarMarco">
+    <onentry>
+      <execute expr="stateNumber='30'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S8P2SeleccionarMarco.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="volver" target="estado-S8P1FotografoVirtual"/>
+    <transition event="atras" target="estado-S8P1FotografoVirtual"/>
+    <transition event="29" target="estado-S8P1FotografoVirtual"/>
+
+    <transition event="31" target="estado-S8P3SacarFoto"/>
+  </state>
+  
+
+  /* 
+   * En este estado liberamos la cámara para la Aplicación Principal 
+   * y la recuperamos al salir a otro estado.
+   *
+   */
+  
+  <state id="estado-S8P3SacarFoto">
+    <onentry>
+      <execute expr="stateNumber='31'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S8P3SacarFoto.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  	<execute expr="rule='ruleS8P3SacarFoto'"/>
+      <execute expr="final_state='false'"/>
+      <send targettype="c++" target="muja-target" event="release-camara" />  
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="volver" target="estado-S8P2SeleccionarMarco"/>
+    <transition event="atras" target="estado-S8P2SeleccionarMarco"/>
+    <transition event="30" target="estado-S8P2SeleccionarMarco"/>
+
+    <transition event="foto" target="estado-S8P4AccionFoto"/>
+    <transition event="sacar_foto" target="estado-S8P4AccionFoto"/>
+    <transition event="32" target="estado-S8P4AccionFoto"/>
+    
+    <onexit>
+      <send targettype="c++" target="muja-target" event="grab-camara" />  
+    </onexit>
+  </state>
+
+
+  <state id="estado-S8P4AccionFoto">
+    <onentry>
+      <execute expr="stateNumber='32'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S8P4AccionFoto.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleS8P4Accion'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="volver" target="estado-S8P3SacarFoto"/>
+    <transition event="atras" target="estado-S8P3SacarFoto"/>
+    <transition event="31" target="estado-S8P3SacarFoto"/>
+
+    <transition event="i_meil" target="estado-S8P7MandarEMail"/>
+    <transition event="enviar_i_meil" target="estado-S8P7MandarEMail"/>
+    <transition event="35" target="estado-S8P7MandarEMail"/>
+
+    <transition event="blu_tuz" target="estado-S8P8MandarBluetooth"/>
+    <transition event="enviar_blu_tuz" target="estado-S8P8MandarBluetooth"/>
+    <transition event="36" target="estado-S8P8MandarBluetooth"/>
+  </state>
+
+
+  /* 
+   * En este estado liberamos la cámara para la Aplicación Principal 
+   * y la recuperamos al salir a otro estado.
+   *
+   */
+
+
+  <state id="estado-S8P5GrabarVideo">
+    <onentry>
+      <execute expr="stateNumber='33'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S8P5GrabarVideo.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  	<execute expr="rule='ruleS8P5GrabarVideo'"/>
+      <execute expr="final_state='false'"/>
+      <send targettype="c++" target="muja-target" event="release-camara" />  
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="volver" target="estado-S8P1FotografoVirtual"/>
+    <transition event="atras" target="estado-S8P1FotografoVirtual"/>
+    <transition event="29" target="estado-S8P1FotografoVirtual"/>
+
+    <transition event="video" target="estado-S8P6AccionVideo"/>
+    <transition event="grabar_video" target="estado-S8P6AccionVideo"/>
+    <transition event="34" target="estado-S8P6AccionVideo"/>
+		<transition event="43" target="estado-EstadoSilencio"/>
+		
+		<onexit>
+      <send targettype="c++" target="muja-target" event="grab-camara" />  
+		</onexit>
+  </state>
+
+
+  <state id="estado-S8P6AccionVideo">
+    <onentry>
+      <execute expr="stateNumber='34'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S8P6AccionVideo.txt'"/>
+      <execute expr="go_to='ASR'"/>
+		  <execute expr="rule='ruleS8P4AccionVideo'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="33" target="estado-S8P5GrabarVideo"/>
+
+    <transition event="i_meil" target="estado-S8P7MandarEMail"/>
+    <transition event="enviar_i_meil" target="estado-S8P7MandarEMail"/>
+    <transition event="35" target="estado-S8P7MandarEMail"/>
+
+    <transition event="blu_tuz" target="estado-S8P8MandarBluetooth"/>
+    <transition event="enviar_bluetuz" target="estado-S8P8MandarBluetooth"/>
+    <transition event="36" target="estado-S8P8MandarBluetooth"/>
+  </state>
+
+
+  <state id="estado-S8P7MandarEMail">
+    <onentry>
+      <execute expr="stateNumber='35'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S8P7MandarEMail.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleS8P7MandarEMail'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="32" target="estado-S8P4AccionFoto"/>
+
+    <transition event="34" target="estado-S8P6AccionVideo"/>
+  </state>
+
+
+  <state id="estado-S8P8MandarBluetooth">
+    <onentry>
+      <execute expr="stateNumber='36'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S8P8MandarBluetooth.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleS8P7MandarBluetooth'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="32" target="estado-S8P4AccionFoto"/>
+
+    <transition event="34" target="estado-S8P6AccionVideo"/>
+
+    <transition event="aceptar" target="estado-S8P9SeleccionDispositivo"/>
+    <transition event="37" target="estado-S8P9SeleccionDispositivo"/>
+  </state>
+
+
+  <state id="estado-S8P9SeleccionDispositivo">
+    <onentry>
+      <execute expr="stateNumber='37'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S8P9SeleccionDispositivo.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleS8P9SeleccionDispositivo'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="32" target="estado-S8P4AccionFoto"/>
+
+    <transition event="34" target="estado-S8P6AccionVideo"/>
+  </state>
+
+
+
+  <state id="estado-S9P1ItinerarioMuseistico">
+    <onentry>
+      <execute expr="stateNumber='40'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S9P1ItinerarioMuseistico.txt,/Dialogo/MUJA/Prompts/prompt-estado-S9P1ItinerarioMuseisticoB.txt,/Dialogo/MUJA/Prompts/prompt-estado-S9P1ItinerarioMuseisticoC.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-S0P1MenuPrincipal"/>
+    <transition event="atras" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+
+    <transition event="41" target="estado-S9P2PlantaMuseo"/>
+  </state>
+
+
+  <state id="estado-S9P2PlantaMuseo">
+    <onentry>
+      <execute expr="stateNumber='41'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S9P2PlantaMuseo.txt,/Dialogo/MUJA/Prompts/prompt-estado-S9P2PlantaMuseoB.txt,/Dialogo/MUJA/Prompts/prompt-estado-S9P2PlantaMuseoC.txt,,/Dialogo/MUJA/Prompts/prompt-estado-S9P2PlantaMuseoD.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+
+    <transition event="volver" target="estado-S9P1ItinerarioMuseistico"/>
+    <transition event="atras" target="estado-S9P1ItinerarioMuseistico"/>
+    <transition event="40" target="estado-S9P1ItinerarioMuseistico"/>
+
+    <transition event="42" target="estado-S9P3DescripcionSala"/>
+  </state>
+
+
+  <state id="estado-S9P3DescripcionSala">
+    <onentry>
+      <execute expr="stateNumber='42'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S9P3DescripcionSalaB.txt,/Dialogo/MUJA/Prompts/prompt-estado-S9P3DescripcionSalaC.txt,/Dialogo/MUJA/Prompts/prompt-estado-S9P3DescripcionSalaD.txt,/Dialogo/MUJA/Prompts/prompt-estado-S9P3DescripcionSalaE.txt,/Dialogo/MUJA/Prompts/prompt-estado-S9P3DescripcionSalaF.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menu" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+
+    <transition event="volver" target="estado-S9P2PlantaMuseo"/>
+    <transition event="atras" target="estado-S9P2PlantaMuseo"/>
+    <transition event="41" target="estado-S9P2PlantaMuseo"/>
+  </state>
+  
+  <state id="estado-EstadoSilencio">
+    <onentry>
+      <execute expr="stateNumber='43'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-EstadoSilencio.txt'"/>
+      <execute expr="go_to='ASR'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="44" target="estado-EstadoNada"/>
+  </state>
+
+  <state id="estado-EstadoNada">
+    <onentry>
+      <execute expr="stateNumber='44'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-EstadoNada.txt'"/>
+      <execute expr="go_to='ASR'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="34" target="estado-S8P6AccionVideo"/>
+  </state>
+
+  <state id="estado-EstadoPublicidad">
+    <onentry>
+      <execute expr="stateNumber='45'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-EstadoNada.txt'"/>
+      <execute expr="go_to='ASR'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+  </state>
+
+</scxml>
+

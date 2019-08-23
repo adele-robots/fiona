@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="false" context="org.eclipse.cdt.core.cxxHeader.contenttype_context" deleted="false" description="Default header template to create a new spark. Replace provided and required interfaces with appropiate values" enabled="true" name="Default C++ Spark header template">/// @file ${file_base}.h
+/// @brief Component ${file_base} main class.
+
+
+#ifndef __${file_base}_H
+#define __${file_base}_H
+
+
+#include "Component.h"
+//**To change for convenience**
+//Example of provided interface
+#include "IProvidedInterface1.h"
+
+//**To change for convenience**
+//Example of required interface
+#include "IRequiredInterface1.h"
+
+
+/// @brief This is the main class for component ${file_base}.
+///
+/// 
+
+class ${file_base} :
+	public Component,
+	//**Component class must extend provided interfaces**
+	public IProvidedInterface1	
+{
+public:
+		${file_base}(
+				char *instanceName,
+				ComponentSystem *cs
+		) : Component(instanceName, cs)
+		{}
+
+private:
+	//**To change for convenience**
+	//Example of a required interface initialization
+	IRequiredInterface1 *myRequiredInterface1;
+
+	void initializeRequiredInterfaces() {	
+		requestRequiredInterface&lt;IRequiredInterface1&gt;(&amp;myRequiredInterface1);
+	}
+
+public:
+	//Mandatory
+	void init(void);
+	void quit(void);
+	
+	//**To change for convenience**
+	//Example of interface implementation declaration
+
+	//IProvidedInterface1 implementation
+	void interfaceProcedure1();
+	void interfaceProcedure2();
+	
+private:
+	//Put class attributes here
+private:
+	//Put class private methods here
+	
+};
+
+#endif
+</template></templates>

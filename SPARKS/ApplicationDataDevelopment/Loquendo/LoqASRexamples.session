@@ -1,0 +1,54 @@
+
+[conf]
+"path" = "C:/Archivos de programa/Loquendo/LASR/conf"
+"userencoding" = "WINDOWS"
+"usercodepage" = "WINDOWS_1252"
+
+[log]
+"status" = "off"
+"path" = "C:/Archivos de programa/Loquendo/LASR/conf"
+"files" = "1000"
+"size" = "1000000"
+"structure" = "STRUCTURED_ON_1_LEVEL"
+
+[languages]
+"load" = "es-es"
+
+[options]
+"load" = "recognizer"
+"load" = "speakerverification"
+"load" = "dtmf"
+"load" = "semanticparser"
+"load" = "phonetictranscription"
+
+
+[rp]
+; respetar el formato de los backslashes
+"path" = "C:\\Archivos de programa\\Loquendo\\LASR\\conf\\languages\\es-es\\builtin\\binaries"
+
+[phoneticlearning]
+"status" = "DISABLED"
+"roname" = "rp/it_digits.it_digits"
+"roname" = "it_time"
+"roname" = "it_integer.it_integer"
+"mode" = "ADVANCED_AUDIO"
+
+[audiodump]
+"status" = "DISABLED"
+"roname" = "it_digits.it_digits"
+"roname" = "rp/it_time"
+
+[acousticmodeladaptation]
+"status" = "DISABLED"
+"mode" = "ADVANCED_AUDIO"
+
+[http]
+"timeout" = "10"
+
+[speedup]
+"limitsearchspace" = "650"
+
+[memory]
+"wordlatticesize" = "40"
+
+[cache]

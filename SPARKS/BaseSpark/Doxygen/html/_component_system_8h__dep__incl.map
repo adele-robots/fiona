@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_component_system_8cpp.html" title="/adele/dev/workspace/BaseSpark/ComponentSystem.cpp" alt="" coords="195,160,552,189"/>
+<area shape="rect" id="node5" href="$interface_repository_8cpp.html" title="/adele/dev/workspace/BaseSpark/interfaceRepository.cpp" alt="" coords="24,83,381,112"/>
+<area shape="rect" id="node7" href="$parse_connections_8cpp.html" title="/adele/dev/workspace/BaseSpark/parseConnections.cpp" alt="" coords="405,83,755,112"/>
+<area shape="rect" id="node9" href="$parse_declarations_8cpp.html" title="/adele/dev/workspace/BaseSpark/parseDeclarations.cpp" alt="" coords="779,83,1128,112"/>
+<area shape="rect" id="node11" href="$parse_instances_8cpp.html" title="/adele/dev/workspace/BaseSpark/parseInstances.cpp" alt="" coords="1300,160,1633,189"/>
+<area shape="rect" id="node13" href="$_component_8h.html" title="/adele/dev/workspace/Include/Component.h" alt="" coords="1152,83,1429,112"/>
+<area shape="rect" id="node15" href="$_component_8cpp.html" title="Component class implementation." alt="" coords="964,160,1276,189"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="$class_i_skeleton.html" title="ISkeleton" alt="" coords="5,32,83,61"/>
+<area shape="rect" id="node3" href="$class_skeleton2_d.html" title="Skeleton2D" alt="" coords="131,5,221,35"/>
+<area shape="rect" id="node5" href="$class_skeleton3_d.html" title="This class encapsulates the 3D scene rendering implementation." alt="" coords="131,59,221,88"/>
+</map>

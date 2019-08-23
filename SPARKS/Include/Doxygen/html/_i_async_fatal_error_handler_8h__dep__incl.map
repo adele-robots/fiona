@@ -1,0 +1,24 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_thread_8h.html" title="Base class for several concurrent flow abstractions based on the Pthreads library." alt="" coords="1198,160,1449,189"/>
+<area shape="rect" id="node15" href="$_video_output_8h.html" title="VideoOutput class declaration." alt="" coords="1717,315,2000,344"/>
+<area shape="rect" id="node28" href="$_a_v_input_8h.html" title="AVInput class declaration." alt="" coords="294,315,550,344"/>
+<area shape="rect" id="node42" href="$_audio_input_8h.html" title="AudioInput class declaration." alt="" coords="236,83,508,112"/>
+<area shape="rect" id="node51" href="$_video_input_8h.html" title="VideoInput class declaration." alt="" coords="1014,83,1286,112"/>
+<area shape="rect" id="node64" href="$_vid_capture_8h.html" title="/adele/dev/workspace/Include/VidCapture.h" alt="" coords="1486,83,1761,112"/>
+<area shape="rect" id="node5" href="$_motion_controller_8h.html" title="MotionController class definition." alt="" coords="1481,237,1785,267"/>
+<area shape="rect" id="node7" href="$_face_tracker_8h.html" title="FaceTracker class definition." alt="" coords="1309,315,1592,344"/>
+<area shape="rect" id="node9" href="$_application_8h.html" title="Application class declaration." alt="" coords="829,392,1104,421"/>
+<area shape="rect" id="node25" href="$_f_f_mpeg_audio_video_source_8h.html" title="FFMpegAudioVideoSource class declaration." alt="" coords="460,237,825,267"/>
+<area shape="rect" id="node33" href="$_integration_8h.html" title="Integration class declaration." alt="" coords="981,237,1250,267"/>
+<area shape="rect" id="node39" href="$_web_server_8h.html" title="/adele/dev/workspace/Include/WebServer.h" alt="" coords="2129,392,2404,421"/>
+<area shape="rect" id="node18" href="$_local_video_output_8h.html" title="/adele/dev/workspace/Include/LocalVideoOutput.h" alt="" coords="1441,392,1753,421"/>
+<area shape="rect" id="node20" href="$_remote_video_output_8h.html" title="RemoteVideoOutput class declaration." alt="" coords="1777,392,2105,421"/>
+<area shape="rect" id="node11" href="$_app_teleoperacion_8h.html" title="/adele/dev/workspace/Include/AppTeleoperacion.h" alt="" coords="1514,469,1829,499"/>
+<area shape="rect" id="node35" href="$_event_driven_dialog_manager_8h.html" title="EventDrivenDialogManager class definition." alt="" coords="893,315,1261,344"/>
+<area shape="rect" id="node44" href="$_remote_audio_input_8h.html" title="RemoteAudioInput class declaration." alt="" coords="460,160,777,189"/>
+<area shape="rect" id="node49" href="$_local_audio_input_8h.html" title="LocalAudioInput class declaration." alt="" coords="33,160,334,189"/>
+<area shape="rect" id="node53" href="$_remote_video_input_8h.html" title="RemoteVideoInput class declaration." alt="" coords="801,160,1118,189"/>
+<area shape="rect" id="node58" href="$_local_video_input_8h.html" title="LocalVideoInput class declaration." alt="" coords="1473,160,1774,189"/>
+<area shape="rect" id="node60" href="$_scxml_event_handler_8h.html" title="ScxmlEventHandler class definition." alt="" coords="2036,237,2361,267"/>
+<area shape="rect" id="node67" href="$vid_capture_utils_8h.html" title="Utility functions declaration for VidCapture library." alt="" coords="1798,160,2097,189"/>
+</map>

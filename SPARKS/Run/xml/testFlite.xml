@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentNetwork xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ComponentNetwork.xsd">
+
+    <!-- COMPONENT DECLARATION -->
+  <ComponentDeclarations>
+    <Component  id="idRemoteCharacterEmbodiment3DSpark"  type="RemoteCharacterEmbodiment3DSpark" plugin="libRemoteCharacterEmbodiment3DSpark.so">
+      <ProvidedInterfaces>
+<!-- Testing if it is not necessary to declare the provided and required interfaces of each Spark, except IConcurrent and interfaces
+			named in <ConnectAll> -->
+
+<!--        <Interface name="IFaceExpression" />
+        <Interface name="IEyes" />
+        <Interface name="INeck" />
+        <Interface name="IAnimation" />
+        <Interface name="ICamera" />
+        <Interface name="IAsyncFatalErrorHandler" />
+        <Interface name="IApplication" />
+        <Interface name="IEventQueue" />
+-->
+        <Interface name="IFrameEventPublisher" />
+
+        <Interface name="IConcurrent" />
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+<!--        <Interface name="IAudioQueue" />
+        <Interface name="IControlVoice" />
+-->
+        <Interface name="IAsyncFatalErrorHandler" />
+      </RequiredInterfaces>
+    </Component>
+
+    <Component id="idFliteVoiceThreadSpark"  type="FliteVoiceThreadSpark" plugin="libFliteVoiceThreadSpark.so">
+      <ProvidedInterfaces>
+<!--    <Interface name="IFlow&lt;char*>" />
+        <Interface name="IAudioQueue" />  
+-->
+        <Interface name="IConcurrent" />
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="IAsyncFatalErrorHandler" />
+      </RequiredInterfaces>
+    </Component>
+
+<Component id="idVoiceStartSpark"  type="VoiceStartSpark" plugin="libVoiceStartSpark.so">
+      <ProvidedInterfaces>
+	<!--			<Interface name="IControlVoice" />	 -->
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+ <!--       <Interface name="IFlow&lt;char*>" />
+        <Interface name="IFaceExpression" />
+-->
+        <Interface name="IFrameEventPublisher" />
+
+      </RequiredInterfaces>
+    </Component>	
+
+
+
+  </ComponentDeclarations>
+  
+  
+  <!-- APPLICATION DESCRIPTION -->
+  <ApplicationDescription applicationComponent="instanceRemoteCharacterEmbodiment3DSpark" applicationConfig="/GeneralEca.ini">
+    <!-- Paso 1/2: Instantiate components -->
+    <ComponentInstances> 
+	  <Instance instanceName="instanceRemoteCharacterEmbodiment3DSpark" componentID ="idRemoteCharacterEmbodiment3DSpark" configuration="/ComponentConfigurations/CharacterEmbodiment3DSpark.ini"/>
+	  <Instance instanceName="instanceFliteVoiceThreadSpark" componentID ="idFliteVoiceThreadSpark" configuration="/ComponentConfigurations/FliteVoiceSpark.ini"/>
+	  <Instance instanceName="instanceVoiceStartSpark" componentID ="idVoiceStartSpark" configuration="/ComponentConfigurations/VoiceStartSpark.ini"/>	
+	</ComponentInstances>
+    
+    <!-- Paso 2/2: Connect interfaces -->
+    <InterfaceConnections>
+	  <Connect interface="IAudioQueue" providedBy="instanceFliteVoiceThreadSpark" requiredBy="instanceRemoteCharacterEmbodiment3DSpark" />	  
+	  <Connect interface="IControlVoice" providedBy="instanceVoiceStartSpark" requiredBy="instanceRemoteCharacterEmbodiment3DSpark" />
+	  <Connect interface="IFaceExpression" providedBy="instanceRemoteCharacterEmbodiment3DSpark" requiredBy="instanceVoiceStartSpark" />
+	  <Connect interface="IFlow&lt;char*>" providedBy="instanceFliteVoiceThreadSpark" requiredBy="instanceVoiceStartSpark" />
+      <ConnectAll interface="IAsyncFatalErrorHandler" providedBy="instanceRemoteCharacterEmbodiment3DSpark"/>
+      <ConnectAll interface="IFrameEventPublisher" providedBy="instanceRemoteCharacterEmbodiment3DSpark"/>
+    </InterfaceConnections>
+  </ApplicationDescription>
+</ComponentNetwork>

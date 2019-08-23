@@ -1,0 +1,41 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script src="script.js"></script>
+<script src="autoadvance.js"></script>
+</head>
+
+<body>
+<div id="pruebaPadre">
+<div id="fiona" class="fiona_main" style="display:none;">
+<!-- img id='starttalk' src='myImageSource' onclick='initFiona()'-->
+</div>
+<input type="button" value="myAvatar" id="starttalk" onclick="initFiona(this,usermail,usrid2,usrid1)">
+</div>
+<script type="text/javascript">
+	//usermail = "luis.diaz@adelerobots.com";
+	//usrid2 = "256e6b0e8f5f0266d2545a6e9ade3f33";//md5 de la pass del usuario
+	//usrid1 = "2ff773bb61cae5cd81daba4324fa7f9c";//md5 del usuario
+	usermail = "nikola.tesla@adelerobots.com";
+	usrid1 = "1cf79a1b295a9393d63a76f528a3ed90";
+	usrid2 = "97023b4fefc962b5f34483078de691aa";
+	avatar_size = "big";//big or small
+	show_pop_up = true; // true or false
+	allow_camera = false; // true or false
+
+	(function() {
+    var fi = document.createElement('script'); 
+    fi.type = 'text/javascript'; 
+    fi.async = true;
+    fi.src = ('js/fiona-embed-1.0.js');
+    //fi.src = ('http://adele01.treelogic.local:8081/fionaresources/fiona-embed-1.0.js');
+    //fi.src = ('http://resources.sparkingtogether.com/fiona-embed-1.0.js');
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(fi, s);
+ })();
+	    
+	
+</script>
+
+</body>
+</html>

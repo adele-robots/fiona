@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<formatter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="../fwnScheme.xsd">  
+
+	<componenteIterativo nombre="sparksTabla"
+		persist="sparksDeveloper">
+
+		<destino nombre="spark_id">
+			<origen nombre="FIONEGN004" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG004010" />
+		</destino>
+
+		<destino nombre="nombre">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004020" />
+		</destino>	
+		
+		<destino nombre="status_id">
+			<origen nombre="FIONEGN004" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG004200" />
+		</destino>		
+		
+		<destino nombre="status_nombre">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004210" />
+		</destino>	
+		
+		<destino nombre="iconPath">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004230" />
+		</destino>
+		
+		<destino nombre="statusDate">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004240" />
+		</destino>
+	
+
+	</componenteIterativo>	
+
+	
+</formatter>

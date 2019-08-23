@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow
+	http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd"
+	parent="ARQ_Abstract-flow" start-state="ed_main_init">
+	
+	<action-state id="ed_main_init"><!-- Decisor que determina las acciones a tomar al solicitar el inicio del flujo -->
+		<evaluate expression="genericDecisor.ejecutar">
+			<attribute name="clase"
+				value="FlujoInicioSetupDecisor">
+			</attribute>
+		</evaluate>
+		<transition on="beginning" to="ea_main_init">			
+		</transition>
+		<transition on="returned" to="ed_create_billing_agreement">			
+		</transition>
+		<transition on="cancelled" to="ea_main_init">	
+			
+		</transition>
+	</action-state>
+	
+	<action-state id="ea_main_init"><!--NCGDOC-ActionState: Inicializa el flujo-->
+		<evaluate expression="genericCustomAction.ejecutar">
+			<attribute name="clase"
+				value="com.adelerobots.web.fiopre.action.InicioFlowInitCustomAction">
+			</attribute>
+		</evaluate>
+		<transition on="success" to="ev_mainPage">			
+		</transition>
+	</action-state>
+
+	<action-state id="ea_validateUpload">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="008"></attribute>
+		</evaluate>
+		<transition on="error" to="ev_uploadSpark"></transition>
+		<transition on="success" to="ev_mainPage"></transition>
+	</action-state>
+	<!-- [INICIO] Envío de Invitaciones -->
+	<action-state id="ea_sendInvitation">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="021"></attribute>
+		</evaluate>
+		<!-- <transition on="success" to="ev_mainPage"></transition> -->
+		<transition on="success" to="ev_confirmacionEnvio"></transition>
+	</action-state>
+	<!-- [FIN] Envío de Invitaciones -->
+	
+	<action-state id="ea_GetSparksByUser">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="007"></attribute>
+		</evaluate>
+		<transition on="success" to="ev_avatarBuilder">			
+		</transition>
+	</action-state>
+	
+	<view-state id="ev_notyetbuilder" view="/avisos/notyet">
+		<transition on="back" to="ev_avatarBuilder"></transition>		
+	</view-state>
+	<view-state id="ev_notyetupload" view="/avisos/notyet">
+		<transition on="back" to="ev_uploadSpark"></transition>		
+	</view-state>
+	<view-state id="ev_notyet" view="/avisos/notyet">
+		<transition on="back" to="ev_mainPage"></transition>		
+	</view-state>
+	<view-state id="ev_uploadSpark" view="/subirSpark/uploadSpark">
+		<transition on="validate_upload" to="ea_validateUpload">
+			<attribute name="fichero"
+				value="uploadSpark/UploadSpark_VO_029_008.xml">
+			</attribute>
+		</transition>
+		<transition on="back" to="ev_mainPage"></transition>		
+	</view-state>
+
+	<view-state id="ev_avatarBuilder"
+		view="/modificarUsuarios/avatarBuilder">
+		<transition on="volver" to="efFlujoInicio"></transition>
+		<transition on="restoreDefault" to="ev_confirmRestore"></transition>		
+	</view-state>
+	
+	<view-state id="ev_confirmRestore"
+		view="/modificarUsuarios/confirmRestore">
+		<transition on="cancel" to="ev_avatarBuilder"></transition>
+		<!-- <transition on="restoreDefault" to="ea_avatarBuilder_restoreDefaults"></transition> -->		
+	</view-state>
+	
+	<!-- action-state id="ea_avatarBuilder_restoreDefaults">
+		<evaluate expression="genericCustomAction.ejecutar">
+			<attribute name="clase"
+				value="com.adelerobots.web.fiopre.action.AvatarBuilderRestoreDefaultsCustomAction">
+			</attribute>
+		</evaluate>
+		<transition on="success" to="ev_avatarBuilder"></transition>
+	</action-state -->
+	
+	<view-state id="ev_mainPage" view="/modificarUsuarios/mainPage">
+    	<on-render>
+    		<render fragments="umldiagram" />
+    	</on-render>
+		<!-- <transition on="builder" to="ev_avatarBuilder"></transition>-->
+		<transition on="builder" to="ea_GetSparksByUser">
+			<attribute name="fichero" value="avatarbuilder/FIOPRE_GetSparksByUser_VO_029_007.xml">
+			</attribute>
+		</transition>
+		
+		<!-- <transition on="store" to="ev_notyet"></transition> -->
+		<!-- <transition on="produccion" to="ev_notyet"></transition> -->
+		<transition on="sendInvitations" to="ev_sendInvitations"></transition>
+		<transition on="sign" to="ev_signup_paypal_agreement_initial"></transition>
+		<on-exit>    		
+    		<evaluate expression="genericCustomAction.ejecutar">
+				<attribute name="clase"
+					value="com.adelerobots.web.fiopre.action.DetenerProcesoAvatarCustomAction">
+			</attribute>
+		</evaluate>
+    	</on-exit>
+	</view-state>
+
+	<!-- [INICIO] Envío de Invitaciones -->
+	<view-state id="ev_sendInvitations"
+		view="/modificarUsuarios/sendInvitations">
+		<transition on="enviar" to="ea_sendInvitation">
+			<attribute name="fichero"
+				value="sendInvitations/SendInvitations_VO_029_021.xml">
+			</attribute>
+		</transition>
+		<transition on="cancelar" to="ev_mainPage"></transition>
+	</view-state>
+
+	<view-state id="ev_confirmacionEnvio"
+		view="/modificarUsuarios/sentConfirm">
+		<transition on="ok" to="ev_sendInvitations" />
+	</view-state>
+	<!-- [FIN] Envío de Invitaciones -->
+	
+	<!-- Estado final del flujo -  Redirige al inicio del propio flujo - Main Page -->
+	<end-state id="efFlujoInicio" view="flowRedirect:FIOPRE_flujoInicio-flow" ></end-state>
+
+	<!-- [INICIO] Estado de subflujo para el store -->
+	<subflow-state id="sf_SparkStore"
+		subflow="FIOPRE_sparks_store-flow">
+		<transition to="ev_mainPage" on="ef_SparkStore" />		
+		<transition to="ef_manageMyProfile" on="ef_manageMyProfile"/>
+		<transition to="ev_uploadSpark" on="ef_uploadSpark"/>
+		
+	</subflow-state>	
+	<!-- [FIN] Estado de subflujo para el store -->	
+	
+	<!-- [INICIO] Parte Paypal del flujo -->	
+	<action-state id="ed_create_billing_agreement">
+		<evaluate expression="genericDecisor.ejecutar">
+			<attribute name="clase"	value="CreateBillingAgreementFlujoInicioDecisor"/>			
+		</evaluate>
+				
+		<!-- <transition on="success" to="ev_signup_save_success"></transition> -->
+		<!-- <transition to="ea_SNGetSparkInformation" on="success">
+			<attribute name="fichero" value="sparkStore/FIOPRE_BuySpark_OO_029_020.xml" />
+		</transition>-->
+		<!-- Llamamos al servicio que realmente realiza la compra del spark -->		
+		<transition on="success" to="ea_main_init">			
+		</transition>		
+		<transition on="error" to="ea_main_init">			
+		</transition>
+	</action-state>
+
+	<view-state id="ev_signup_paypal_agreement_initial"
+		view="/modificarUsuarios/billingAgreementInitialView">		
+		
+	</view-state>
+	
+	
+	<view-state id="ev_signup_paypal_agreement_approved" view="/signuppaypalagreement/signupAgreementReturnEC">
+		<!-- <transition on="back" to="ev_signup_save_success"></transition> -->
+		<transition to="ea_main_init" on="back">			
+		</transition>
+	</view-state>
+	<!-- [FIN] Parte Paypal del flujo -->
+	
+	
+	<end-state id="ef_manageMyProfile" view="flowRedirect:myprofile-flow" ></end-state>
+	
+	<global-transitions>
+		
+		<!-- Account -->
+		<transition on="manageMyProfile" to="ev_manageMyProfile"/>
+		<!-- Upload spark -->
+		<transition on="develop" to="ev_uploadSpark"></transition>
+		<!-- Spark Store -->
+		<transition on="store" to="sf_SparkStore">
+			<attribute name="fichero" value="sparkStore/FIOPRE_ListSparksByCriteria_VV_029_023.xml"/>
+		</transition>
+	
+	</global-transitions>	
+
+</flow>

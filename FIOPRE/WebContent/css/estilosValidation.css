@@ -1,0 +1,8 @@
+/*** Estilos controles FACES ******/
+.textoRequerido {
+	background-color: #FFFF00;
+}
+
+.textoErrorValidacion {
+	background-color: red;
+}

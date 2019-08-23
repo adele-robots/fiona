@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentNetwork xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ComponentNetwork.xsd">
+
+  <!-- COMPONENT DECLARATION -->
+  <ComponentDeclarations>
+    <Component  id="idInterfaceProvidingComponent"  type="Componente1" plugin="Plugin1.dll">
+      <ProvidedInterfaces>
+        <Interface name="IProvidedInterface1" />
+      </ProvidedInterfaces>
+    </Component>
+
+    <Component id="idInterfaceRequiringComponentA"  type="Componente2" plugin="Plugin1.dll">
+      <RequiredInterfaces>
+        <Interface name="IProvidedInterface1" />
+      </RequiredInterfaces>
+    </Component>
+    
+    <Component id="idInterfaceRequiringComponentB"  type="Componente3" plugin="Plugin1.dll">
+      <RequiredInterfaces>
+        <Interface name="IProvidedInterface1" />
+      </RequiredInterfaces>
+    </Component>
+    
+
+  </ComponentDeclarations>
+  
+  
+  <!-- APPLICATION DESCRIPTION -->
+  <ApplicationDescription>
+    <!-- Paso 1/2: Instantiate components -->
+    <ComponentInstances>
+      <Instance instanceName="instanceInterfaceProvidingComponent" componentID ="idInterfaceProvidingComponent">
+      </Instance>
+
+      <Instance instanceName="instanceInterfaceRequiringComponentA" componentID ="idInterfaceRequiringComponentA">
+      </Instance>
+
+      <Instance instanceName="instanceInterfaceRequiringComponentB" componentID ="idInterfaceRequiringComponentB">
+      </Instance>
+    </ComponentInstances>
+    
+    <!-- Paso 2/2: Connect interfaces -->
+    <InterfaceConnections>
+      <Connect interface="IProvidedInterface1" providedBy="instanceInterfaceProvidingComponent" requiredBy="instanceInterfaceRequiringComponentB" />
+      <ConnectAll interface="IProvidedInterface1" providedBy="instanceInterfaceProvidingComponent"/>
+    </InterfaceConnections>
+  </ApplicationDescription>
+</ComponentNetwork>

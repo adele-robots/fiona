@@ -1,0 +1,6 @@
+<Material>
+	<Shader source="shaders/model.shader" />
+	<ShaderFlag name="_F01_Skinning" />
+
+	<Sampler name="albedoMap" map="../../../../../../datos/nfs/users/private/3170aa8d92dee2cd1efb58eb711dd34c/fondo.jpg" />
+</Material>

@@ -1,0 +1,122 @@
+/* IDLaunch Fresh Style by David Jansen @ IDLaunch.nl */
+/* Fiona Style by David Ordas @ www.adelerobots.com */
+
+#roofbar {
+	height: 35px;
+	background-image: url('{T_THEME_PATH}/images/roofbar.jpg');
+}
+
+#roofbar ul {
+	margin: 0;
+	padding: 0;
+}
+
+#roofbar li {
+	margin: 0;
+	padding: 0px;
+	padding-right: 1px;
+	line-height: 0px;
+	list-style-type: none;
+}
+
+#roofbar li a {
+	display: block;
+	float: left;
+	color: #008ebd;
+	text-decoration: none;
+	padding: 8px 23px 13px;
+	font-size: 12px;
+	font-weight: normal;
+	font-family: Arial Narrow, Arial, Helvetica, sans-serif;
+}
+
+#roofbar li a:hover, #roofbar li:hover a, #roofbar li.sfhover a {
+	color: #004d66;
+}
+
+#searchbar {
+	position: absolute;
+	top: 3px;
+	right: 10px;
+	height: 35px;
+	width: 210px;
+	background: url('{T_THEME_PATH}/images/searchbox.png') no-repeat;
+	overflow: hidden;
+}
+
+#searchbar .inputbox {
+	background: transparent;
+	color: #008ebd;
+	padding: 3px 3px;
+	border: none;
+	margin: 4px 0 0 35px;
+	width: 150px;
+	height: 14px;
+	font-size: 12px;
+	font-family: tahoma, sans-serif;
+}
+
+#topbar {
+	height: 114px;
+	background: url('{T_THEME_PATH}/images/top-bg.png') 0 0 repeat-x;
+}
+
+#header {
+	position: relative;
+	overflow: hidden;
+	height: 114px;
+}
+
+.wrapper_header {
+	width: 1000px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#logo, #logo a {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 1000px;
+	height: 114px;
+	background: url('{T_THEME_PATH}/images/logo.png') no-repeat;
+}
+
+#menubar {
+	height: 35px;
+	background-image: url('{T_THEME_PATH}/images/menu.jpg');
+}
+
+#menubar ul {
+	margin: 0;
+	padding-left: 0px;
+}
+
+#menubar li {
+	margin: 0;
+	padding: 0px;
+	padding-right: 1px;
+	line-height: 0px;
+	list-style-type: none;
+}
+
+#menubar li a {
+	display: block;
+	float: left;
+	color: #ccc;
+	text-decoration: none;
+	padding: 16px 23px 13px;
+	font-size: 14px;
+	font-weight: bold;
+	font-family: Arial Narrow, Arial, Helvetica, sans-serif;
+}
+
+#menubar li a:hover, #menubar li:hover a, #menubar li.sfhover a {
+	color: #ddd;
+}
+
+#menubar li.chosen a {
+	color: #fff;
+	text-decoration: underline;
+}

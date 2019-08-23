@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentNetwork xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ComponentNetwork.xsd">
+
+    <!-- COMPONENT DECLARATION -->
+  <ComponentDeclarations>
+
+
+   <Component  id="idRebeccaAIMLSpark"  type="RebeccaAIMLSpark" plugin="libRebeccaAIMLSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IVoice" />
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="IVoice" />
+      </RequiredInterfaces>
+    </Component>
+
+   <Component  id="idTestRebecca"  type="TestRebecca" plugin="libTestRebecca.so">
+      <ProvidedInterfaces>
+        <Interface name="IVoice" />
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="IVoice" />
+      </RequiredInterfaces>
+    </Component>
+  
+  </ComponentDeclarations>
+  
+  
+  <!-- APPLICATION DESCRIPTION -->
+  <ApplicationDescription applicationComponent="instanceTestRebecca" applicationConfig="/Eca.ini">
+    <!-- Paso 1/2: Instantiate components -->
+    <ComponentInstances>
+
+      <Instance instanceName="instanceTestRebecca" componentID ="idTestRebecca" >
+      </Instance>
+      <Instance instanceName="instanceRebeccaAIMLSpark" componentID ="idRebeccaAIMLSpark" configuration="/ComponentConfigurations/RebeccaAIMLSpark.ini" >
+      </Instance>          
+       
+    </ComponentInstances>
+    
+    <!-- Paso 2/2: Connect interfaces -->
+    <InterfaceConnections>
+      <Connect interface="IVoice" providedBy="instanceTestRebecca" requiredBy="instanceRebeccaAIMLSpark" />
+      <Connect interface="IVoice" providedBy="instanceRebeccaAIMLSpark" requiredBy="instanceTestRebecca" />
+    </InterfaceConnections>
+  </ApplicationDescription>
+</ComponentNetwork>

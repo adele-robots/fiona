@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<formatter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="../fwnScheme.xsd">  
+
+	<destino nombre="00" tipoDato="BigDecimal">
+		 <funcion method="FuncionConstante">
+	    	<origen nombre="5"></origen>
+	    </funcion>
+	</destino>
+	
+
+
+</formatter>

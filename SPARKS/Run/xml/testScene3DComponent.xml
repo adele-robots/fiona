@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentNetwork xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ComponentNetwork.xsd">
+
+    <!-- COMPONENT DECLARATION -->
+  <ComponentDeclarations>
+
+
+   <Component  id="idScene3DComponent"  type="Scene3DComponent" plugin="libScene3DSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IFaceExpression" />
+      </ProvidedInterfaces>
+      <ProvidedInterfaces>
+        <Interface name="IEyes" />
+      </ProvidedInterfaces>
+      <ProvidedInterfaces>
+        <Interface name="INeck" />
+      </ProvidedInterfaces>
+      <ProvidedInterfaces>
+        <Interface name="IAnimation" />
+      </ProvidedInterfaces>
+      <ProvidedInterfaces>
+        <Interface name="IRenderizable" />
+      </ProvidedInterfaces>
+    </Component>
+
+
+    <Component id="idTestScene3DComponent"  type="TestScene3DComponent" plugin="libTestScene3DSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IApplication" />
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="IRenderizable" />
+      </RequiredInterfaces>
+     </Component>
+
+  </ComponentDeclarations>
+  
+  
+  <!-- APPLICATION DESCRIPTION -->
+  <ApplicationDescription applicationComponent="instanceTestScene3D" applicationConfig="/GeneralEca.ini">
+    <!-- Paso 1/2: Instantiate components -->
+    <ComponentInstances>
+      
+      <Instance instanceName="instanceTestScene3D" componentID ="idTestScene3DComponent" configuration="/ComponentConfigurations/CharacterEmbodiment3DSpark.ini">
+      </Instance>
+      
+      <Instance instanceName="instanceScene3D" componentID ="idScene3DComponent" configuration="/ComponentConfigurations/CharacterEmbodiment3DSpark.ini">
+      </Instance>
+      
+	    
+       
+    </ComponentInstances>
+    
+    <!-- Paso 2/2: Connect interfaces -->
+    <InterfaceConnections>
+      <Connect interface="IRenderizable" providedBy="instanceScene3D" requiredBy="instanceTestScene3D" />
+    </InterfaceConnections>
+  </ApplicationDescription>
+</ComponentNetwork>

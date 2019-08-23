@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		    http://www.springframework.org/schema/webflow 
+		    http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd"
+	parent="ARQ_Abstract-flow" start-state="ed_signup_init">
+
+	<!-- 
+	<action-state id="ea_signup_init">
+		<evaluate expression="genericCustomAction.ejecutar">
+			<attribute name="clase"
+				value="com.adelerobots.web.fiopre.action.SignupInitSetupCustomAction">
+			</attribute>
+		</evaluate>
+		<transition on="success" to="ev_signup_form">--><!--NCGDOC-TransitionState: Pasa a ventana los datos necesarios para mostrar en pantalla-->
+			<!-- <attribute name="fichero"
+				value="signup/Signup_Setup_OV.xml">
+			</attribute>
+		</transition>
+	</action-state>  -->
+	
+	<action-state id="ed_signup_init"><!-- Decisor que determina las acciones a tomar al solicitar el inicio del flujo -->
+		<evaluate expression="genericDecisor.ejecutar">
+			<attribute name="clase"
+				value="SignupInitSetupDecisor">
+			</attribute>
+		</evaluate>
+		<transition on="beginning" to="ev_signup_form"><!--NCGDOC-TransitionState: Pasa a ventana los datos necesarios para mostrar en pantalla-->
+			<attribute name="fichero"
+				value="signup/Signup_Setup_OV.xml">
+			</attribute>
+		</transition>
+		<transition on="returned" to="ea_create_billing_agreement"><!--NCGDOC-TransitionState: Pasa a crear el acuerdo con Paypal-->			
+		</transition>
+		<transition on="cancelled" to="ea_update_account_type"><!--NCGDOC-TransitionState: Pasa a llamarse al SN que setea la cuenta como FREE	-->			
+			<attribute name="fichero"
+				value="signup/Signup_Save_VO_029_065.xml">
+			</attribute>
+		</transition>
+	</action-state>
+
+	<view-state id="ev_signup_form" view="/signup/signupNewFormView"><!--NCGDOC-ViewState: Pantalla de nuevo usuario para registro-->
+		<!-- <transition on="submit" to="ea_signup_save"> --><!--NCGDOC-TransitionState: Pasa los datos necesarios para crear el usuario al contexto de operacion-->
+			<!-- <attribute name="fichero"
+				value="signup/Signup_Save_VO_029_001.xml">
+			</attribute>
+		</transition>  -->
+		<transition on="submit" to="ed_signup_account_type">
+			<attribute name="fichero"
+				value="signup/Signup_Save_VV_029_001.xml">
+			</attribute>
+		</transition>
+		<transition on="back" to="ed_signup_select_back"></transition>		
+	</view-state>
+	
+	<!-- Para decidir si guardamos los datos directamente o arrancamos subflujo de paypal -->
+	<action-state id="ed_signup_account_type">
+		<evaluate expression="genericDecisor.ejecutar">
+			<attribute name="clase"
+				value="SignupAccountTypeDecisor">
+			</attribute>
+		</evaluate>
+		<transition on="free" to="ea_signup_save">
+			<attribute name="fichero"
+				value="signup/Signup_Save_VO_029_001.xml">
+			</attribute>
+		</transition>
+		<transition on="noFree" to="ea_signup_save_paypal">
+			<attribute name="fichero"
+				value="signup/Signup_Save_VO_029_001.xml">
+			</attribute>
+		</transition>
+	</action-state>
+
+	<action-state id="ea_signup_save">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="001"></attribute>
+		</evaluate>
+		<transition on="success" to="ev_signup_save_success">
+			<attribute name="fichero"
+				value="signup/Signup_Save_OV_029_001.xml">
+			</attribute>
+		</transition>
+		<transition on="error" to="ef_ev_signup_save_failure"></transition>
+	</action-state>
+	
+	<!-- Para llamar tras registrar al usuario al flujo de paypal -->
+	<action-state id="ea_signup_save_paypal">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="001"></attribute>
+		</evaluate>
+		<transition on="success" to="ev_signup_paypal_agreement_initial">
+			<attribute name="fichero"
+				value="signup/Signup_Save_OV_029_001.xml">
+			</attribute>
+		</transition>
+		<transition on="error" to="ef_ev_signup_save_failure"></transition>
+	</action-state>	
+	
+	<action-state id="ea_update_account_type">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="065"></attribute>
+		</evaluate>
+		<transition on="success" to="ev_signup_save_success">
+			<attribute name="fichero"
+				value="signup/Signup_Save_OV_029_065.xml">
+			</attribute>
+		</transition>
+	</action-state>
+
+	<view-state id="ev_signup_save_success"
+		view="/signup/signupNewSuccessView">
+		<transition on="back" to="ed_signup_select_back"></transition>
+	</view-state>
+
+	<action-state id="ed_signup_select_back"><!--NCGDOC-DecisionState: Selecciona a donde tiene que volver segun desde donde se venia-->
+		<evaluate expression="genericDecisor.ejecutar">
+			<attribute name="clase"
+				value="com.adelerobots.web.fiopre.decisor.SignupBackSelectorDecisor">
+			</attribute>
+		</evaluate>
+		<transition on="login" to="ef_signup_backToLogin"></transition>
+		<transition on="website" to="ef_signup_backToWebsite"></transition>
+	</action-state>
+
+	<end-state id="ef_ev_signup_save_failure"
+		view="/signup/signupNewFailureView">
+	</end-state>
+
+	<end-state id="ef_signup_backToLogin"></end-state>
+
+	<end-state id="ef_signup_backToWebsite"
+		view="externalRedirect:serverRelative:/">
+	</end-state>
+	
+	<!-- Parte correspondiente a Paypal -->	
+	<action-state id="ed_signup_paypal_agreement_init">
+		<evaluate expression="genericDecisor.ejecutar">
+			<attribute name="clase"	value="SignupPaypalAgreementInitDecisor"/>			
+		</evaluate>
+		
+		<transition on="beginning" to="ev_signup_paypal_agreement_initial">
+		</transition>
+		
+		<transition on="returned" to="ea_create_billing_agreement">			
+		</transition>
+				
+	</action-state>
+	
+	<action-state id="ea_create_billing_agreement">
+		<evaluate expression="genericCustomAction.ejecutar">
+			<attribute name="clase"	value="com.adelerobots.web.fiopre.action.CreateBillingAgreementCustomAction"/>			
+		</evaluate>
+		
+		<transition on="success" to="ev_signup_save_success">
+		</transition>
+	</action-state>
+
+	<view-state id="ev_signup_paypal_agreement_initial"
+		view="/signuppaypalagreement/signupAgreementInitial">
+
+		<transition on="success" to="ev_signup_paypal_agreement_approved">
+		</transition>		
+		
+	</view-state>
+	
+	
+	<view-state id="ev_signup_paypal_agreement_approved" view="/signuppaypalagreement/signupAgreementReturnEC">
+		<transition on="back" to="ev_signup_save_success"></transition>
+	</view-state>
+
+	<!-- FIN Parte correspondiente a Paypal -->
+
+
+</flow>

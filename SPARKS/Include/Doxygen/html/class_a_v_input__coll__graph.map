@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$class_video_input.html" title="VideoInput" alt="" coords="721,101,804,131"/>
+<area shape="rect" id="node27" href="$class_remote_video_input.html" title="RemoteVideoInput" alt="" coords="921,121,1052,151"/>
+<area shape="rect" id="node4" href="$class_video_queue.html" title="Video frame queue." alt="" coords="404,101,497,131"/>
+<area shape="rect" id="node6" href="$struct_video_buffer.html" title="VideoBuffer" alt="" coords="155,101,245,131"/>
+<area shape="rect" id="node8" href="$class_i_image.html" title="IImage" alt="" coords="7,101,68,131"/>
+<area shape="rect" id="node10" href="$class_i_video_consumer.html" title="IVideoConsumer" alt="" coords="392,28,509,57"/>
+<area shape="rect" id="node12" href="$class_i_async_fatal_error_handler.html" title="IAsyncFatalErrorHandler" alt="" coords="368,236,533,265"/>
+<area shape="rect" id="node18" href="$class_thread.html" title="Base class for exception&#45;aware iterative stoppable threads." alt="" coords="831,185,892,215"/>
+<area shape="rect" id="node23" href="$class_audio_input.html" title="AudioInput" alt="" coords="721,273,804,303"/>
+<area shape="rect" id="node14" href="$class_i_audio_consumer.html" title="IAudioConsumer" alt="" coords="392,392,509,421"/>
+<area shape="rect" id="node16" href="$class_f_f_mpeg_audio_video_source.html" title="FFMpegAudioVideoSource" alt="" coords="1209,187,1385,216"/>
+<area shape="rect" id="node21" href="$class_remote_audio_input.html" title="RemoteAudioInput" alt="" coords="921,225,1052,255"/>
+</map>

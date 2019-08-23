@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<formatter 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:noNamespaceSchemaLocation="../fwnScheme.xsd">
+
+	<destino persist="USER_FISTNAME" sesion="SES_USER_FISTNAME">
+		<origen nombre="USER_FISTNAME" />
+	</destino>
+	<destino persist="USER_SURNAME" sesion="SES_USER_SURNAME">
+		<origen nombre="USER_SURNAME" />
+	</destino>	
+	<destino persist="USER_MAIL" sesion="SES_USER_MAIL">
+		<origen nombre="USER_MAIL" />
+	</destino>	
+	<destino persist="USER_NEWPASSWORD1" sesion="SES_USER_NEWPASSWORD1">
+		<origen nombre="USER_NEWPASSWORD1" />
+	</destino>	
+	<destino persist="USER_ACCOUNTTYPE_ID" sesion="SES_USER_ACCOUNTTYPE_ID">
+		<origen nombre="USER_ACCOUNTTYPE_ID" />
+	</destino>	
+	<destino persist="USER_NICKNAME" sesion="SES_USER_NICKNAME">
+		<origen nombre="USER_NICKNAME" />
+	</destino>
+	<destino persist="SECURE_USER_USERGROUP_ID">
+		<!-- El propio usuario no puede cambiar su rol asi que lo cogemos de session -->
+		<origen nombre="SECURE_USER_USERGROUP_ID" />
+	</destino>
+	<destino persist="USER_TITLE" sesion="SES_USER_TITLE">
+		<origen nombre="USER_TITLE" />
+	</destino>
+	<destino persist="USER_FLAGENTITY" sesion="SES_USER_FLAGENTITY">
+		<origen nombre="USER_FLAGENTITY" />
+	</destino>
+	<destino persist="USER_ORGANIZATIONTYPE_ID" sesion="SES_USER_ORGANIZATIONTYPE_ID">
+		<origen nombre="USER_ORGANIZATIONTYPE_ID" />
+	</destino>
+	<destino persist="USER_LEGALENTITYNAME" sesion="SES_USER_LEGALENTITYNAME">
+		<origen nombre="USER_LEGALENTITYNAME" />
+	</destino>
+	<destino persist="USER_WEBSITE" sesion="SES_USER_WEBSITE">
+		<origen nombre="USER_WEBSITE" />
+	</destino>
+	<destino persist="USER_WORKEMAIL" sesion="SES_USER_WORKEMAIL">
+		<origen nombre="USER_WORKEMAIL" />
+	</destino>
+	<destino persist="USER_COUNTRYCODE" sesion="SES_USER_COUNTRYCODE">
+		<origen nombre="USER_COUNTRYCODE" />
+	</destino>
+	<destino persist="USER_PHONENUMBER" sesion="SES_USER_PHONENUMBER">
+		<origen nombre="USER_PHONENUMBER" />
+	</destino>
+	<destino persist="USER_EXT" sesion="SES_USER_EXT">
+		<origen nombre="USER_EXT" />
+	</destino>
+	<destino persist="USER_ACCOUNTTYPE_METHOD" sesion="SES_USER_ACCOUNTTYPE_METHOD">
+		<origen nombre="USER_ACCOUNTTYPE_METHOD" />
+	</destino>
+	<destino persist="account_credit" sesion="ses_account_credit">
+		<origen nombre="account_credit" />
+	</destino>	
+
+</formatter>

@@ -1,0 +1,17 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_thread_8h.html" title="Base class for several concurrent flow abstractions based on the Pthreads library." alt="" coords="685,83,936,112"/>
+<area shape="rect" id="node15" href="$_video_output_8h.html" title="VideoOutput class declaration." alt="" coords="36,237,319,267"/>
+<area shape="rect" id="node43" href="$_a_s_r_8h.html" title="ASR class definition for speech recognition." alt="" coords="960,83,1197,112"/>
+<area shape="rect" id="node46" href="$_component_8h.html" title="/adele/dev/workspace/Include/Component.h" alt="" coords="1221,83,1499,112"/>
+<area shape="rect" id="node5" href="$_motion_controller_8h.html" title="MotionController class definition." alt="" coords="285,160,589,189"/>
+<area shape="rect" id="node7" href="$_face_tracker_8h.html" title="FaceTracker class definition." alt="" coords="495,237,777,267"/>
+<area shape="rect" id="node9" href="$_application_8h.html" title="Application class declaration." alt="" coords="711,315,985,344"/>
+<area shape="rect" id="node25" href="$_f_f_mpeg_audio_video_source_8h.html" title="FFMpegAudioVideoSource class declaration." alt="" coords="848,160,1213,189"/>
+<area shape="rect" id="node33" href="$_integration_8h.html" title="Integration class declaration." alt="" coords="1237,160,1507,189"/>
+<area shape="rect" id="node39" href="$_web_server_8h.html" title="/adele/dev/workspace/Include/WebServer.h" alt="" coords="1241,315,1516,344"/>
+<area shape="rect" id="node18" href="$_local_video_output_8h.html" title="/adele/dev/workspace/Include/LocalVideoOutput.h" alt="" coords="5,315,317,344"/>
+<area shape="rect" id="node20" href="$_remote_video_output_8h.html" title="RemoteVideoOutput class declaration." alt="" coords="341,315,669,344"/>
+<area shape="rect" id="node11" href="$_app_teleoperacion_8h.html" title="/adele/dev/workspace/Include/AppTeleoperacion.h" alt="" coords="956,392,1271,421"/>
+<area shape="rect" id="node28" href="$_a_v_input_8h.html" title="AVInput class declaration." alt="" coords="903,237,1159,267"/>
+<area shape="rect" id="node35" href="$_event_driven_dialog_manager_8h.html" title="EventDrivenDialogManager class definition." alt="" coords="1183,237,1551,267"/>
+</map>

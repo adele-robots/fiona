@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+elementFormDefault="qualified">
+
+<xs:element name="formatter">
+  <xs:complexType>
+	<xs:choice maxOccurs="unbounded">
+		<xs:element name="destino" type="fieldType"></xs:element>
+		<xs:element name="componenteIterativo">
+			<xs:complexType>
+				<xs:sequence maxOccurs="unbounded">
+					<xs:element name="destino" type="fieldTypeLista" />
+				</xs:sequence>
+				<xs:attribute name="nombre" use="required"
+					type="xs:string" />
+				<xs:attribute name="persist" use="optional"
+					type="xs:string" />
+				<xs:attribute name="sesion" use="optional"
+					type="xs:string" />
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="contexto" type="contextoType"></xs:element>
+	</xs:choice>
+  </xs:complexType>
+</xs:element>
+
+
+
+<xs:simpleType name="datoType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="String"/>
+    <xs:enumeration value="BigDecimal"/>
+	<xs:enumeration value="Producto"/>
+    <xs:enumeration value="Registro"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="datoTypeSN">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="String"/>
+    <xs:enumeration value="BigDecimal"/>
+    <xs:enumeration value="Date"/>
+	<xs:enumeration value="Producto"/>
+	<xs:enumeration value="Contexto"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="datoTypeCtx">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="String"/>
+    <xs:enumeration value="BigDecimal"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="funciones">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="FuncionConcatenar"/>
+    <xs:enumeration value="FuncionComparar"/>
+    <xs:enumeration value="FuncionSuma"/>
+    <xs:enumeration value="FuncionResta"/>
+    <xs:enumeration value="FuncionMultiplica"/>
+    <xs:enumeration value="FuncionDivide"/>
+    <xs:enumeration value="FuncionSubString"/>
+    <xs:enumeration value="FuncionMayusculas"/>
+    <xs:enumeration value="FuncionMinusculas"/>
+    <xs:enumeration value="FuncionCompletar"/>
+    <xs:enumeration value="FuncionConstante"/>
+    <xs:enumeration value="FuncionCuenta"/>
+  </xs:restriction>
+</xs:simpleType>
+
+
+<xs:complexType name="fieldType">
+	 <xs:choice>
+	            <xs:element name="origen">
+	            	<xs:complexType>
+	            		<xs:sequence>
+	            			<xs:element name="registro"
+	            				type="registroType" maxOccurs="1" minOccurs="0">
+	            			</xs:element>
+	            			<xs:element name="registroIterativo"
+	            				type="registroIterativoType" maxOccurs="1" minOccurs="0">
+	            			</xs:element>
+	            		</xs:sequence>
+	            		<xs:attribute name="nombre" use="required"
+	            			type="xs:string">
+	            		</xs:attribute>
+	            		<xs:attribute name="tipoDatoValor"
+	            			use="optional" type="datoType">
+	            		</xs:attribute>
+	            		<xs:attribute name="propiedadValor"
+	            			use="optional" type="xs:string">
+	            		</xs:attribute>
+	            	</xs:complexType>
+	            </xs:element>
+	            <xs:element name="funcion">
+           	        	 <xs:complexType>
+           	        	      <xs:sequence>
+			            		  <xs:element name="origen" maxOccurs="unbounded">
+					            	<xs:complexType>
+					            		<xs:attribute name="nombre" use="required" type="xs:string"/>
+					            	    <xs:attribute name="tipoDatoValor" use="optional" type="datoType"> </xs:attribute>
+	            						<xs:attribute name="propiedadValor" use="optional" type="xs:string"> </xs:attribute>
+					            	</xs:complexType>
+	           					  </xs:element>
+           					  </xs:sequence>
+           	        	    <xs:attribute name="method" use="required" type="funciones"/>
+           	       		 </xs:complexType>
+           	    </xs:element>
+	</xs:choice>
+  <xs:attribute name="nombre" use="optional" type="xs:string"/>
+  <xs:attribute name="tipoDato" use="optional" type="datoTypeSN" />
+  <xs:attribute name="persist" use="optional" type="xs:string" />
+   <xs:attribute name="sesion" use="optional" type="xs:string" />
+</xs:complexType>
+
+<xs:complexType name="fieldTypeLista">
+	 <xs:sequence>
+	            <xs:element name="origen">
+	            	<xs:complexType>
+	            		<xs:sequence>
+	            			<xs:element name="registro"
+	            				type="registroType" maxOccurs="1" minOccurs="0">
+	            			</xs:element>
+	            			<xs:element name="registroIterativo"
+	            				type="registroIterativoType" maxOccurs="1" minOccurs="0">
+	            			</xs:element>
+	            		</xs:sequence>
+	            		<xs:attribute name="nombre" use="required"
+	            			type="xs:string">
+	            		</xs:attribute>
+	            		<xs:attribute name="tipoDatoValor"
+	            			use="required" type="datoType">
+	            		</xs:attribute>
+	            		<xs:attribute name="propiedadValor"
+	            			use="required" type="xs:string">
+	            		</xs:attribute>
+	            		<xs:attribute name="tipoDatoEtiqueta"
+	            			type="datoType">
+	            		</xs:attribute>
+	            		<xs:attribute name="propiedadEtiqueta"
+	            			type="xs:string">
+	            		</xs:attribute>
+	            	</xs:complexType>
+	            </xs:element>
+	</xs:sequence>
+  <xs:attribute name="nombre" use="required" type="xs:string"/>
+</xs:complexType>
+
+
+    <xs:complexType name="registroType">
+    	<xs:attribute name="propiedadValor" type="xs:string"></xs:attribute>
+    	<xs:attribute name="tipoDatoValor" type="datoTypeCtx"></xs:attribute>
+    	<xs:attribute name="nombre" type="xs:string"></xs:attribute>
+    	<xs:attribute name="tipoDatoEtiqueta" type="datoTypeCtx"></xs:attribute>
+    	<xs:attribute name="propiedadEtiqueta" type="xs:string"></xs:attribute>
+    </xs:complexType>
+
+
+    <xs:complexType name="registroIterativoType">
+    	<xs:sequence>
+    		<xs:element name="registro" type="registroType" maxOccurs="unbounded" minOccurs="1"></xs:element>
+    	</xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="contextoType">
+    	<xs:sequence>
+    		<xs:element name="destino" type="destinoCtxType" maxOccurs="unbounded" minOccurs="0"></xs:element>
+    		<xs:element name="registro" type="registroEntrType" maxOccurs="unbounded" minOccurs="0"></xs:element>
+    		<xs:element name="registroIterativo" type="registroIterativoEntrType" maxOccurs="unbounded" minOccurs="0"></xs:element>
+    	</xs:sequence>
+    	<xs:attribute name="refCtx" type="xs:string"></xs:attribute>
+    	<xs:attribute name="nombreCtx" type="xs:string"></xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="registroEntrType">
+    	<xs:sequence>
+    		<xs:element name="destino" type="destinoCtxType" maxOccurs="unbounded" minOccurs="0"></xs:element>
+    		<xs:element name="registro" type="registroEntrType" maxOccurs="unbounded" minOccurs="0"></xs:element>
+    		<xs:element name="registroIterativo" type="registroIterativoEntrType" maxOccurs="unbounded" minOccurs="0"></xs:element>
+    	</xs:sequence>
+    	<xs:attribute name="nombreReg" type="xs:string"></xs:attribute>
+    </xs:complexType>
+    
+    <xs:complexType name="registroIterativoEntrType">
+    	<xs:sequence>
+    		<xs:element name="registro" type="registroEntrType"
+    			maxOccurs="unbounded" minOccurs="0">
+    		</xs:element>
+    	</xs:sequence>
+    	<xs:attribute name="nombre" type="xs:string"></xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="destinoCtxType">
+    	<xs:sequence>
+    		<xs:element name="origen" type="OrigenCtxType" maxOccurs="1" minOccurs="1"></xs:element>
+    	</xs:sequence>
+    	<xs:attribute name="propiedadValor" type="xs:string"></xs:attribute>
+    	<xs:attribute name="tipoDatoValor" type="datoTypeCtx"></xs:attribute>
+    </xs:complexType>
+
+    <xs:complexType name="tipoDatoValorCtxType"></xs:complexType>
+
+    <xs:complexType name="OrigenCtxType">
+    	<xs:attribute name="nombre" type="xs:string"></xs:attribute>
+    </xs:complexType>
+</xs:schema>

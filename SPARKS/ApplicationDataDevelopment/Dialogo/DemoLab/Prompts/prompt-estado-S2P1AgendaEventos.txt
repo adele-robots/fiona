@@ -1,0 +1,4 @@
+..Aquí tienes la agenda del museo con todos sus eventos... Le invitamos a visitarnos más veces. .
+Puedes cambiar de mes si lo prefieres o seleccionar un día que te interese pulsando sobre él.. 
+También puedes saber más sobre un evento particular pulsando sobre su título..
+Si ya lo has visto, dime que quieres "volver".

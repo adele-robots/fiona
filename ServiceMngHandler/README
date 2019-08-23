@@ -1,0 +1,67 @@
+#####################################################################################
+######################### FUNCIONALIDADES BÁSICAS ##################################
+#####################################################################################
+# Archivo fiona-embed-1.0.js
+
+1)function clickAutoButtons()
+
+- Se añade esta función que nos permitirá simular el click en cualquier elemento con "class='autoClickable'" que nos sea devuelto como respuesta al CHAT.
+- Esta función se llama cada vez que se recibe un nuevo mensaje desde el servicio de negocio que extrae los mensajes de respuesta de la cola de mensajes IPC.
+
+
+#####################################################################################
+######################### FUNCIONALIDADES DE MAPAS ##################################
+#####################################################################################
+# Archivo fiona-maps.js
+
+1) function displayMap(lat, lon,markerTitle)
+
+- Esta función mostrará un mapa centrado en las coordenadas pasadas como parámetros (lat, lon).
+- El parámetro "markerTitle" es opcional, y representa el nombre que se le quiera dar al marker que aparecerá en el punto central del mapa.
+- Ejemplos de llamada desde el AIML de Rebbecca:
+--------------------------------------------------
+<category><pattern>MAPA</pattern>
+	<template>Here you have a map from Moreda &lt;a class='autoClickable' style='display:none;' onclick='javascript:displayMap(43.166719,-5.735121);'&gt;&lt;/a&gt;
+	</template>
+</category>
+--------------------------------------------------
+<category>
+	<pattern>dónde está el Idepa</pattern>
+	<template>El Idepa está ubicado en el Parque Tecnológico de Asturias en el municipio de Llanera. &lt;a class='autoClickable' style='display:none;' 
+	onclick='javascript:displayMap(43.42224,-5.826362,/EDIFICIO IDEPA/);'&gt;&lt;/a&gt;. ¿Quieres saber algo más del Idepa?</template>
+</category>
+--------------------------------------------------
+
+2) function displayMapCalcRoute(lat, lon, start, end)
+
+- Esta función permite mostrar un mapa con una ruta. El mapa estará centrado en las coordenadas pasadas como parámetro (lat, lon).
+- El punto inicial de la ruta será una cadena representada por el parámetro "start".
+- El punto final de la ruta será una cadena representada por el parámetro "end".
+- Ejemplo de llamada desde el AIML de Rebbeca:
+
+--------------------------------------------------
+<category><pattern>ROUTE FROM MOREDA DE ALLER TO OVIEDO</pattern>
+	<template>Of course!!! Here you can see a map with the possible route. &lt;a class="autoClickable" style="display:none;" 
+	onclick="javascript:displayMapCalcRoute(43.166719,-5.735121,/Moreda de Aller/,/Oviedo/);"&gt;&lt;/a&gt;</template>
+</category>
+--------------------------------------------------
+
+
+
+#####################################################################################
+######################### FUNCIONALIDADES DE VIDEOS #################################
+#####################################################################################
+# Archivo fiona-video.js
+
+1) function showYoutubeVideo(videoID, autoPlay)
+
+- Esta función permite mostrar vídeos de Youtube.
+- El parámetro "videoID" representa el identificador del vídeo que queremos mostrar.
+- El parámetro "autoPlay" podrá tener un valor "0" o "1". Si su valor es "1" el vídeo mostrado al usuario empezará a reproducirse automáticamente.
+- Ejemplo de llamada desde el AIML de Rebbecca:
+
+--------------------------------------------------
+<category><pattern>ADELE ROBOTS VIDEO</pattern>
+<template>Of course!!! I like that people too. &lt;a class="autoClickable" style="display:none;" onclick="javascript:showYoutubeVideo(/fJraVdVZ2fM/,1);"&gt;&lt;/a&gt;</template>
+</category>
+--------------------------------------------------

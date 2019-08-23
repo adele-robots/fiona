@@ -1,0 +1,37 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_face_tracker_8h.html" title="FaceTracker class definition." alt="" coords="1507,83,1613,112"/>
+<area shape="rect" id="node7" href="$_motion_controller_8h.html" title="MotionController class definition." alt="" coords="2059,160,2187,189"/>
+<area shape="rect" id="node11" href="$_i_scene_8h.html" title="IScene.h" alt="" coords="2337,315,2412,344"/>
+<area shape="rect" id="node15" href="$_lip_synch_8h.html" title="LipSynch class definition." alt="" coords="2572,237,2657,267"/>
+<area shape="rect" id="node20" href="$_i_morph_target_blender_8h.html" title="IMorphTargetBlender.h" alt="" coords="3000,315,3155,344"/>
+<area shape="rect" id="node36" href="$_thread_8h.html" title="Base class for several concurrent flow abstractions based on the Pthreads library." alt="" coords="1625,237,1697,267"/>
+<area shape="rect" id="node44" href="$_meca_tronica_serial_8h.html" title="MecaTronicaSerial.h" alt="" coords="2196,237,2337,267"/>
+<area shape="rect" id="node57" href="$_scene3_d_8h.html" title="Scene3D.h" alt="" coords="2336,160,2421,189"/>
+<area shape="rect" id="node62" href="$_scene2_d_8h.html" title="Scene2D.h" alt="" coords="2725,83,2811,112"/>
+<area shape="rect" id="node66" href="$_window___svg_8h.html" title="Window_Svg.h" alt="" coords="2777,160,2887,189"/>
+<area shape="rect" id="node77" href="$_f_f_mpeg_audio_video_source_8h.html" title="FFMpegAudioVideoSource class declaration." alt="" coords="777,160,964,189"/>
+<area shape="rect" id="node90" href="$_audio_input_8h.html" title="AudioInput class declaration." alt="" coords="24,315,117,344"/>
+<area shape="rect" id="node98" href="$_video_input_8h.html" title="VideoInput class declaration." alt="" coords="397,315,491,344"/>
+<area shape="rect" id="node105" href="$_f_f_mpeg_audio_video_destination_8h.html" title="FFMpegAudioVideoDestination class declaration." alt="" coords="1049,160,1263,189"/>
+<area shape="rect" id="node113" href="$_audio_output_8h.html" title="AudioOutput class declaration." alt="" coords="2597,83,2701,112"/>
+<area shape="rect" id="node116" href="$_video_output_8h.html" title="VideoOutput class declaration." alt="" coords="1969,83,2073,112"/>
+<area shape="rect" id="node132" href="$_morph_target_blender3_d_8h.html" title="MorphTargetBlender3D.h" alt="" coords="3219,237,3384,267"/>
+<area shape="rect" id="node135" href="$_morph_target_blender2_d_8h.html" title="MorphTargetBlender2D.h" alt="" coords="3075,160,3240,189"/>
+<area shape="rect" id="node142" href="$_original_window_8h.html" title="OriginalWindow.h" alt="" coords="2885,83,3008,112"/>
+<area shape="rect" id="node146" href="$_event_driven_dialog_manager_8h.html" title="EventDrivenDialogManager class definition." alt="" coords="2307,83,2499,112"/>
+<area shape="rect" id="node150" href="$_a_v_input_8h.html" title="AVInput class declaration." alt="" coords="316,83,396,112"/>
+<area shape="rect" id="node46" href="$_video_queue_8h.html" title="VideoQueue.h" alt="" coords="1496,392,1600,421"/>
+<area shape="rect" id="node49" href="$_i_image_8h.html" title="IImage is a common interface for FFMpeg and CVCapture frames consumed by OpenCV." alt="" coords="1437,469,1509,499"/>
+<area shape="rect" id="node52" href="$_i_video_consumer_8h.html" title="IVideoConsumer interface definition." alt="" coords="475,392,605,421"/>
+<area shape="rect" id="node9" href="$_perlin_8h.html" title="Perlin.h" alt="" coords="2004,237,2071,267"/>
+<area shape="rect" id="node13" href="$_configuration_8h.html" title="psisban::Config class and mainConfig global variable declarations." alt="" coords="2320,392,2429,421"/>
+<area shape="rect" id="node22" href="$_stop_watch_8h.html" title="Declaration of the StopWatch class supporting high precision duration measures." alt="" coords="2008,315,2107,344"/>
+<area shape="rect" id="node40" href="$_i_async_fatal_error_handler_8h.html" title="Threads must have this handler to give up with a gobal fatal error." alt="" coords="275,392,451,421"/>
+<area shape="rect" id="node42" href="$_error_handling_8h.html" title="Global exception class definition, and error macro to throw it." alt="" coords="1699,315,1811,344"/>
+<area shape="rect" id="node68" href="$_window_8h.html" title="Window.h" alt="" coords="2775,237,2855,267"/>
+<area shape="rect" id="node70" href="$my__application_8h.html" title="my_application.h" alt="" coords="2879,237,2999,267"/>
+<area shape="rect" id="node88" href="$_remote_audio_input_8h.html" title="RemoteAudioInput class declaration." alt="" coords="101,237,243,267"/>
+<area shape="rect" id="node96" href="$_remote_video_input_8h.html" title="RemoteVideoInput class declaration." alt="" coords="469,237,611,267"/>
+<area shape="rect" id="node93" href="$_i_audio_consumer_8h.html" title="IAudioConsumer interface definition." alt="" coords="5,392,136,421"/>
+<area shape="rect" id="node121" href="$_on_screen_monitor_8h.html" title="OnScreenMonitor class declaration." alt="" coords="1851,160,1984,189"/>
+</map>

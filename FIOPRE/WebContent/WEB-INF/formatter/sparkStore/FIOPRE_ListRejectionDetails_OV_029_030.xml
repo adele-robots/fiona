@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<formatter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="../fwnScheme.xsd">  
+
+	<componenteIterativo nombre="rejectionTabla"
+		persist="rejectionList">
+
+		<destino nombre="rejection_id">
+			<origen nombre="FIONEGN010" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG010010" />
+		</destino>	
+		
+		<destino nombre="rejection_date">
+			<origen nombre="FIONEGN010" tipoDatoValor="String"
+				propiedadValor="FIONEG010030" />
+		</destino>
+		
+		<destino nombre="rejection_motivo">
+			<origen nombre="FIONEGN010" tipoDatoValor="String"
+				propiedadValor="FIONEG010040" />
+		</destino>		
+		
+
+	</componenteIterativo>	
+
+	
+</formatter>

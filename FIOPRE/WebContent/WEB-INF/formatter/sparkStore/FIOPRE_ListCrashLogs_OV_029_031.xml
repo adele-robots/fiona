@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<formatter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="../fwnScheme.xsd">  
+
+	<componenteIterativo nombre="crashTabla"
+		persist="crashList">
+
+		<destino nombre="crash_id">
+			<origen nombre="FIONEGN011" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG011010" />
+		</destino>	
+		
+		<destino nombre="crash_date">
+			<origen nombre="FIONEGN011" tipoDatoValor="String"
+				propiedadValor="FIONEG011030" />
+		</destino>
+		
+		<destino nombre="crash_motivo">
+			<origen nombre="FIONEGN011" tipoDatoValor="String"
+				propiedadValor="FIONEG011040" />
+		</destino>		
+		
+
+	</componenteIterativo>	
+
+	
+</formatter>

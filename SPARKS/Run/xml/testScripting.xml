@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentNetwork xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ComponentNetwork.xsd">
+
+    <!-- COMPONENT DECLARATION -->
+  <ComponentDeclarations>
+
+   <Component  id="idScriptingSpark"  type="ScriptingSpark" plugin="libScriptingSpark.so">
+	
+		<ProvidedInterfaces>
+			<Interface name="IAnimation" />
+		</ProvidedInterfaces>
+		
+		<ProvidedInterfaces>
+       		<Interface name="IApplication" />
+		</ProvidedInterfaces>
+		
+		<ProvidedInterfaces>
+			<Interface name="IAsyncFatalErrorHandler"/>
+		</ProvidedInterfaces>
+
+		<ProvidedInterfaces>
+			<Interface name="IAudioQueue"/>
+		</ProvidedInterfaces>
+
+		<ProvidedInterfaces>
+			<Interface name="ICamera"/>
+		</ProvidedInterfaces>
+		
+		<ProvidedInterfaces>
+			<Interface name="IConcurrent"/>
+		</ProvidedInterfaces>
+
+		<ProvidedInterfaces>
+			<Interface name="IControlVoice"/>
+		</ProvidedInterfaces>
+		
+		<ProvidedInterfaces>
+       		<Interface name="IDetectedFacePositionConsumer" />
+      	</ProvidedInterfaces>
+
+      	<ProvidedInterfaces>
+        	<Interface name="IEyes" />
+      	</ProvidedInterfaces>
+      		
+      	<ProvidedInterfaces>
+			<Interface name="IFaceExpression" />
+		</ProvidedInterfaces>
+		
+		<ProvidedInterfaces>
+			<Interface name="IFrameEventPublisher" />
+		</ProvidedInterfaces>
+		
+		<ProvidedInterfaces>
+			<Interface name="FrameEventSubscriber" />
+		</ProvidedInterfaces>
+		
+	    <ProvidedInterfaces>
+	        <Interface name="INeck" />
+	    </ProvidedInterfaces>
+	
+	    <ProvidedInterfaces>
+	        <Interface name="IRenderizable" />
+	    </ProvidedInterfaces>
+	
+	    <ProvidedInterfaces>
+	        <Interface name="IThreadProc" />
+	    </ProvidedInterfaces>
+	
+	    <ProvidedInterfaces>
+	        <Interface name="IVoice" />
+	    </ProvidedInterfaces>
+	
+		<ProvidedInterfaces>
+	        <Interface name="IWindow" />
+	    </ProvidedInterfaces>
+		
+		
+		
+		
+		<RequiredInterfaces>
+			<Interface name="IAnimation" />
+		</RequiredInterfaces>		
+				
+		<RequiredInterfaces>
+       		<Interface name="IApplication" />
+		</RequiredInterfaces>
+			
+		<RequiredInterfaces>
+			<Interface name="IAsyncFatalErrorHandler"/>
+		</RequiredInterfaces>
+	
+		<RequiredInterfaces>
+			<Interface name="IAudioQueue"/>
+		</RequiredInterfaces>
+
+		<RequiredInterfaces>
+			<Interface name="ICamera"/>
+		</RequiredInterfaces>
+		
+		<RequiredInterfaces>
+			<Interface name="IConcurrent"/>
+		</RequiredInterfaces>
+
+		<RequiredInterfaces>
+			<Interface name="IControlVoice"/>
+		</RequiredInterfaces>
+		
+		 <RequiredInterfaces>
+        	<Interface name="IDetectedFacePositionConsumer" />
+      	</RequiredInterfaces>
+
+      	<RequiredInterfaces>
+       		<Interface name="IEyes" />
+      	</RequiredInterfaces>
+		
+		<RequiredInterfaces>
+			<Interface name="IFaceExpression" />
+		</RequiredInterfaces>
+
+		<RequiredInterfaces>
+			<Interface name="IFrameEventPublisher" />
+		</RequiredInterfaces>		
+		
+		<RequiredInterfaces>
+			<Interface name="FrameEventSubscriber" />
+		</RequiredInterfaces>	
+	
+      	<RequiredInterfaces>
+        	<Interface name="INeck" />
+      	</RequiredInterfaces>
+
+      	<RequiredInterfaces>
+        	<Interface name="IRenderizable" />
+      	</RequiredInterfaces>
+
+     	<RequiredInterfaces>
+       	 	<Interface name="IThreadProc" />
+      	</RequiredInterfaces>
+
+      	<RequiredInterfaces>
+        	<Interface name="IVoice" />
+     	</RequiredInterfaces>
+
+      	<RequiredInterfaces>
+	        <Interface name="IWindow" />
+	    </RequiredInterfaces>
+		
+    </Component>
+
+   <Component  id="idTestScripting"  type="TestScripting" plugin="libTestScripting.so">
+   
+		<ProvidedInterfaces>
+			<Interface name="IAnimation" />
+		</ProvidedInterfaces>
+		
+		<ProvidedInterfaces>
+       		<Interface name="IApplication" />
+		</ProvidedInterfaces>
+		
+		<ProvidedInterfaces>
+			<Interface name="IAsyncFatalErrorHandler"/>
+		</ProvidedInterfaces>
+		
+		<ProvidedInterfaces>
+			<Interface name="IAudioQueue"/>
+		</ProvidedInterfaces>
+
+		<ProvidedInterfaces>
+			<Interface name="ICamera"/>
+		</ProvidedInterfaces>
+		
+		<ProvidedInterfaces>
+			<Interface name="IConcurrent"/>
+		</ProvidedInterfaces>
+
+		<ProvidedInterfaces>
+			<Interface name="IControlVoice"/>
+		</ProvidedInterfaces>
+		
+		<ProvidedInterfaces>
+       		<Interface name="IDetectedFacePositionConsumer" />
+      	</ProvidedInterfaces>
+
+      	<ProvidedInterfaces>
+        	<Interface name="IEyes" />
+      	</ProvidedInterfaces>
+      		
+      	<ProvidedInterfaces>
+			<Interface name="IFaceExpression" />
+		</ProvidedInterfaces>
+		
+		<ProvidedInterfaces>
+			<Interface name="IFrameEventPublisher" />
+		</ProvidedInterfaces>
+
+		<ProvidedInterfaces>
+			<Interface name="FrameEventSubscriber" />
+		</ProvidedInterfaces>
+
+	    <ProvidedInterfaces>
+	        <Interface name="INeck" />
+	    </ProvidedInterfaces>
+	
+	    <ProvidedInterfaces>
+	        <Interface name="IRenderizable" />
+	    </ProvidedInterfaces>
+	
+	    <ProvidedInterfaces>
+	        <Interface name="IThreadProc" />
+	    </ProvidedInterfaces>
+	
+	    <ProvidedInterfaces>
+	        <Interface name="IVoice" />
+	    </ProvidedInterfaces>
+	
+		<ProvidedInterfaces>
+	        <Interface name="IWindow" />
+	    </ProvidedInterfaces>
+	
+
+		<RequiredInterfaces>
+			<Interface name="IAnimation" />
+		</RequiredInterfaces>	
+	
+		<RequiredInterfaces>
+			<Interface name="IApplication" />
+		</RequiredInterfaces>			
+				
+		<RequiredInterfaces>
+			<Interface name="IAsyncFatalErrorHandler"/>
+		</RequiredInterfaces>
+
+		<RequiredInterfaces>
+			<Interface name="IAudioQueue"/>
+		</RequiredInterfaces>
+
+		<RequiredInterfaces>
+			<Interface name="ICamera"/>
+		</RequiredInterfaces>
+		
+		<RequiredInterfaces>
+			<Interface name="IConcurrent"/>
+		</RequiredInterfaces>
+
+		<RequiredInterfaces>
+			<Interface name="IControlVoice"/>
+		</RequiredInterfaces>
+		
+		 <RequiredInterfaces>
+        	<Interface name="IDetectedFacePositionConsumer" />
+      	</RequiredInterfaces>
+
+      	<RequiredInterfaces>
+       		<Interface name="IEyes" />
+      	</RequiredInterfaces>
+		
+		<RequiredInterfaces>
+			<Interface name="IFaceExpression" />
+		</RequiredInterfaces>
+		
+		<RequiredInterfaces>
+			<Interface name="IFrameEventPublisher" />
+		</RequiredInterfaces>
+		
+		<RequiredInterfaces>
+			<Interface name="FrameEventSubscriber" />
+		</RequiredInterfaces>		
+
+	    <RequiredInterfaces>
+	        <Interface name="INeck" />
+	    </RequiredInterfaces>
+	
+	    <RequiredInterfaces>
+	        <Interface name="IRenderizable" />
+	    </RequiredInterfaces>
+	
+	    <RequiredInterfaces>
+	        <Interface name="IThreadProc" />
+	    </RequiredInterfaces>
+	
+	    <RequiredInterfaces>
+	        <Interface name="IVoice" />
+	    </RequiredInterfaces>
+	
+	    <RequiredInterfaces>
+	        <Interface name="IWindow" />
+	    </RequiredInterfaces>
+			   
+    </Component>
+  
+  </ComponentDeclarations>
+  
+  
+  <!-- APPLICATION DESCRIPTION -->
+  <ApplicationDescription applicationComponent="instanceTestScripting" applicationConfig="/Eca.ini">
+    <!-- Paso 1/2: Instantiate components -->
+    <ComponentInstances>      
+      <Instance instanceName="instanceScriptingSpark" componentID ="idScriptingSpark" configuration="/ComponentConfigurations/ScriptingSpark.ini">
+      </Instance>       
+      <Instance instanceName="instanceTestScripting" componentID ="idTestScripting" >
+      </Instance>          
+    </ComponentInstances>
+    
+    <!-- Paso 2/2: Connect interfaces -->
+    <InterfaceConnections>
+
+      <Connect interface="IAnimation" providedBy="instanceScriptingSpark" requiredBy="instanceTestScripting" />
+      <Connect interface="IAnimation" providedBy="instanceTestScripting" requiredBy="instanceScriptingSpark" />
+      
+      <Connect interface="IApplication" providedBy="instanceScriptingSpark" requiredBy="instanceTestScripting" />
+      <Connect interface="IApplication" providedBy="instanceTestScripting" requiredBy="instanceScriptingSpark" />
+      
+      <Connect interface="IAsyncFatalErrorHandler" providedBy="instanceScriptingSpark" requiredBy="instanceTestScripting" />
+      <Connect interface="IAsyncFatalErrorHandler" providedBy="instanceTestScripting" requiredBy="instanceScriptingSpark" />
+         
+      <Connect interface="IAudioQueue" providedBy="instanceTestScripting" requiredBy="instanceScriptingSpark" />     
+      <Connect interface="IAudioQueue" providedBy="instanceScriptingSpark" requiredBy="instanceTestScripting" />
+      
+      <Connect interface="ICamera" providedBy="instanceScriptingSpark" requiredBy="instanceTestScripting" />
+      <Connect interface="ICamera" providedBy="instanceTestScripting" requiredBy="instanceScriptingSpark" />
+      
+      <Connect interface="IConcurrent" providedBy="instanceTestScripting" requiredBy="instanceScriptingSpark" />      
+      <Connect interface="IConcurrent" providedBy="instanceScriptingSpark" requiredBy="instanceTestScripting" />
+      
+      <Connect interface="IControlVoice" providedBy="instanceScriptingSpark" requiredBy="instanceTestScripting" />
+      <Connect interface="IControlVoice" providedBy="instanceTestScripting" requiredBy="instanceScriptingSpark" />
+      
+      <Connect interface="IDetectedFacePositionConsumer" providedBy="instanceTestScripting" requiredBy="instanceScriptingSpark" />
+      <Connect interface="IDetectedFacePositionConsumer" providedBy="instanceScriptingSpark" requiredBy="instanceTestScripting" />
+        
+      <Connect interface="IEyes" providedBy="instanceTestScripting" requiredBy="instanceScriptingSpark" />
+      <Connect interface="IEyes" providedBy="instanceScriptingSpark" requiredBy="instanceTestScripting" />
+      
+      <Connect interface="IFaceExpression" providedBy="instanceTestScripting" requiredBy="instanceScriptingSpark" />
+      <Connect interface="IFaceExpression" providedBy="instanceScriptingSpark" requiredBy="instanceTestScripting" />
+      
+      <Connect interface="IFrameEventPublisher" providedBy="instanceTestScripting" requiredBy="instanceScriptingSpark" />
+      <Connect interface="IFrameEventPublisher" providedBy="instanceScriptingSpark" requiredBy="instanceTestScripting" />
+      
+      <Connect interface="FrameEventSubscriber" providedBy="instanceTestScripting" requiredBy="instanceScriptingSpark" />
+      <Connect interface="FrameEventSubscriber" providedBy="instanceScriptingSpark" requiredBy="instanceTestScripting" />
+         
+      <Connect interface="INeck" providedBy="instanceScriptingSpark" requiredBy="instanceTestScripting" />
+      <Connect interface="INeck" providedBy="instanceTestScripting" requiredBy="instanceScriptingSpark" />
+
+      <Connect interface="IRenderizable" providedBy="instanceScriptingSpark" requiredBy="instanceTestScripting" />
+      <Connect interface="IRenderizable" providedBy="instanceTestScripting" requiredBy="instanceScriptingSpark" />
+
+      <Connect interface="IThreadProc" providedBy="instanceScriptingSpark" requiredBy="instanceTestScripting" />
+      <Connect interface="IThreadProc" providedBy="instanceTestScripting" requiredBy="instanceScriptingSpark" />
+
+      <Connect interface="IVoice" providedBy="instanceScriptingSpark" requiredBy="instanceTestScripting" />
+      <Connect interface="IVoice" providedBy="instanceTestScripting" requiredBy="instanceScriptingSpark" />
+
+      <Connect interface="IWindow" providedBy="instanceScriptingSpark" requiredBy="instanceTestScripting" />
+      <Connect interface="IWindow" providedBy="instanceTestScripting" requiredBy="instanceScriptingSpark" />
+
+    </InterfaceConnections>
+  </ApplicationDescription>
+</ComponentNetwork>

@@ -1,0 +1,1 @@
+This module implements component TestScene2DSpark.

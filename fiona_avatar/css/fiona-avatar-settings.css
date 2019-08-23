@@ -1,0 +1,28 @@
+.wrap{
+	font-size: 12pt;
+}
+
+.form_field{
+    float:right;
+    margin-right: 65%;
+}
+
+.select_form_field{
+    float:right;
+    margin-right: 82.5%;
+}
+
+label{
+    float:left;
+    margin-top: 0.5%;
+}
+
+div.form_content{
+    display: block;
+    height: auto;
+    margin-bottom: 2%;
+}
+
+.clear{
+    clear: both;
+}

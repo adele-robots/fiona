@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+"http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<!--
+	Fichero de definicion de layouts.
+-->
+<tiles-definitions>
+
+	<!-- Layout -->
+	<definition name="/principal_layout"
+		template="/WEB-INF/pages/layouts/principal_layout/principalTab.jsp">
+		<put-attribute name="title" value="FIONA" type="string" />
+		<put-attribute name="cabecera"
+			value="/WEB-INF/pages/layouts/principal_layout/cabecera/cabecera.jsp"
+			type="template" />
+		<put-attribute name="pestanias">
+			<definition extends="/principal_pestanias" />
+		</put-attribute>
+		<put-attribute name="pie"
+			value="/WEB-INF/pages/layouts/principal_layout/pie/pie.jsp"
+			type="template" />
+	</definition>
+
+	<!-- Definiciones de pestañas -->
+	<definition name="/principal_pestanias"
+		template="/WEB-INF/pages/layouts/principal_layout/cuerpo/pestanias.jsp">
+		<put-attribute name="pesActiva" value="" type="string" />
+		<put-attribute name="pesSecundariaActiva" value="" type="string" />
+		<put-attribute name="BreadCrumbs"
+			value="/WEB-INF/pages/layouts/breadcrumbs.jsp" type="template" />
+		<put-attribute name="contenido"
+			value="/WEB-INF/pages/layouts/principal_layout/cuerpo/vacio.jsp" type="template" />
+	</definition>
+	
+	
+	
+	<!-- 
+		fwn_head: Tile to insert stuff before head tag close. Ex: scripts, css, styles...
+		fwn_footer: Tile to insert stuff before body tag close. Ex: scripts, css, styles...
+	 -->
+	<definition name="/layoutFiona"
+		template="/WEB-INF/pages/layouts/fiona_layout/layoutFiona.jsp"> 
+		<put-attribute name="title" value="FIONA" type="string" />
+		<put-attribute name="fwn_head"
+			value="/WEB-INF/pages/layouts/fiona_layout/fwnhead.jsp" type="template" />
+		<put-attribute name="cabecera"
+			value="/WEB-INF/pages/layouts/fiona_layout/cabecera.jsp" type="template" />
+		<put-attribute name="contenido" value=""></put-attribute>
+		<put-attribute name="fwn_footer"
+			value="/WEB-INF/pages/layouts/fiona_layout/fwnfooter.jsp" type="template" />
+	</definition>
+	
+	<definition name="/layoutRegister"
+		template="/WEB-INF/pages/layouts/fiona_layout/layoutRegister.jsp"> 
+		<put-attribute name="title" value="FIONA" type="string" />
+		<put-attribute name="fwn_head" value=""></put-attribute>
+		<put-attribute name="cabecera"
+			value="/WEB-INF/pages/layouts/fiona_layout/cabeceraRegister.jsp" type="template" />
+		<put-attribute name="contenido" value=""></put-attribute>
+		<put-attribute name="fwn_footer" value=""></put-attribute>
+	</definition>
+
+</tiles-definitions>

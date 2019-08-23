@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node5" href="$class_local_video_output.html" title="LocalVideoOutput" alt="" coords="5,160,131,189"/>
+<area shape="rect" id="node7" href="$class_remote_video_output.html" title="RemoteVideoOutput" alt="" coords="155,160,293,189"/>
+<area shape="rect" id="node2" href="$class_thread.html" title="Base class for exception&#45;aware iterative stoppable threads." alt="" coords="115,5,176,35"/>
+</map>

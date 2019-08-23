@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<formatter 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+			xsi:noNamespaceSchemaLocation="../fwnScheme.xsd">
+
+	<destino nombre="USER_ID" sesion="SECURE_USERID">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001010" tipoDatoValor="BigDecimal" />
+	</destino>
+	<destino nombre="USER_FISTNAME" sesion="SECURE_USER_FISTNAME">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001020" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_SURNAME" sesion="SECURE_USER_SURNAME">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001030" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_MAIL" sesion="SECURE_USERMAIL">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001040" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_MAIL_ID" sesion="SECURE_USERMAIL_ID">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001041" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_PASSWORD" sesion="SECURE_USER_PASSWORD">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001050" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_ENTITY_ID" sesion="SECURE_USER_ENTITY_ID">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001060" tipoDatoValor="BigDecimal" />
+	</destino>
+	<destino nombre="USER_ENTITY_NAME" sesion="SECURE_USER_ENTITY_NAME">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001061" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_ACCOUNTTYPE_ID" sesion="SECURE_USER_ACCOUNTTYPE_ID">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001070" tipoDatoValor="BigDecimal" />
+	</destino>
+	<destino nombre="USER_ACCOUNTTYPE_NAME" sesion="SECURE_USER_ACCOUNTTYPE_NAME">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001071" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_STATUS" sesion="SECURE_USER_STATUS">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001080" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_CREDITCARD_NUMBER" sesion="SECURE_USER_CREDITCARD_NUMBER">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001090" tipoDatoValor="BigDecimal" />
+	</destino>
+	<destino nombre="USER_CREDITCARD_EXPIRATION" sesion="SECURE_USER_CREDITCARD_EXPIRATION">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001100" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_SIGNUPCODE" sesion="SECURE_USER_SIGNUPCODE">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001110" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_NICKNAME" sesion="SECURE_USER_NICKNAME">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001120" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_FULLNAME" sesion="SECURE_USER_FULLNAME">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001121" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_DISPLAYNAME" sesion="SECURE_USER_DISPLAYNAME">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001122" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_AVATARBUILDER_UMD5" sesion="SECURE_USERMAILD5">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001130" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_USERGROUP_ID" sesion="SECURE_USER_USERGROUP_ID">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001140" tipoDatoValor="BigDecimal" />
+	</destino>
+	<destino nombre="USER_USERGROUP" sesion="SECURE_USER_USERGROUP">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001141" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_TITLE" sesion="SECURE_USER_TITLE">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001150" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_FLAGENTITY" sesion="SECURE_USER_FLAG_ENTITY">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001160" tipoDatoValor="String" />
+	</destino>
+	<destino sesion="USER_CONFIG">
+		<funcion method="FuncionConstante">
+			<origen nombre="0" />
+		</funcion>
+	</destino>
+	<destino persist="ACCOUNT_AMT_MONTHLY">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001170" tipoDatoValor="BigDecimal" />
+	</destino>
+	<destino persist="ACCOUNT_AMT_YEARLY">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001180" tipoDatoValor="BigDecimal" />
+	</destino>
+	<destino persist="ACCOUNT_PERIOD" sesion="SECURE_USER_ACCOUNTTYPE_METHOD">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001190" tipoDatoValor="String" />
+	</destino>
+	<destino persist="BILLING_AGREEMENT_ID" sesion="SECURE_USER_BILLING_AGREEMENT_ID">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001200" tipoDatoValor="String" />
+	</destino>
+	<!-- 
+	<destino persist="account_credit" sesion="SECURE_USER_ACCOUNT_CREDIT">		
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001210" tipoDatoValor="BigDecimal" />
+	</destino>  -->
+	
+	<!-- Borrar los datos guardados en sesión -->
+	<destino sesion="SES_USER_FISTNAME">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino sesion="SES_USER_SURNAME">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino sesion="SES_USER_NEWPASSWORD1">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino sesion="SES_USER_ACCOUNTTYPE_ID">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino sesion="SES_USER_NICKNAME">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino sesion="SES_USER_TITLE">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino sesion="SES_USER_FLAGENTITY">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino sesion="SES_USER_ORGANIZATIONTYPE_ID">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino sesion="SES_USER_LEGALENTITYNAME">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino sesion="SES_USER_WEBSITE">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino sesion="SES_USER_WORKEMAIL">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino sesion="SES_USER_COUNTRYCODE">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino sesion="SES_USER_PHONENUMBER">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino sesion="SES_USER_EXT">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino sesion="SES_USER_ACCOUNTTYPE_METHOD">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+
+</formatter>

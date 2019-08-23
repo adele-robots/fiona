@@ -1,0 +1,4 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="$class_exception.html" title="Top level exception class carrying a message." alt="" coords="5,5,85,35"/>
+<area shape="rect" id="node3" href="$class_speech_recognition_exception.html" title="Non&#45;fatal exception indicating voice mistmatches against hypothesis." alt="" coords="135,5,327,35"/>
+</map>

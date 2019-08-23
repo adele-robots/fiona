@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="SERNEG" basedir="." default="deploy-jar">
+	
+	<import file="../../../../MvnDependences/Ant/build-negocio.xml"/>
+
+	<property name="project.name" value="SERNEG"/>
+	<property name="project.version" value="1.0"/>
+	<property name="file.jar" value="com.adelerobots.serneg.jar"/>
+	<property name="bbdd.driver" value="mysql-connector-java-5.0.8-bin.jar"/>
+	<property name="server.dir" value="${root.dir}/../../jboss-4.2.3.GA"/>
+	<property name="arq.dir" value="${server.dir}/server/default/lib/ext/com.treelogic.arq"/>
+
+	<path id="jar.classpath">
+		<fileset dir="${lib.dir}" includes="*.jar"></fileset>
+		<fileset dir="${mvn.dir}/Comun" includes="*.jar"></fileset>
+		<fileset dir="${mvn.dir}/Negocio" includes="*.jar"></fileset>
+		<fileset dir="${mvn.dir}/JNA" includes="*.jar"></fileset>
+		<fileset dir="${mvn.dir}/BBDD" includes="${bbdd.driver}"></fileset>
+		<fileset dir="${mvn.dir}/PayPal" includes="*.jar"></fileset>
+		<fileset dir="${mvn.dir}/WS" includes="*.jar"></fileset>
+	</path>
+
+	<path id="common.classpath">
+		<pathelement path="${build.dir}"/>
+		<path refid="jar.classpath"/>
+	</path>
+	
+	<property name="common.classpath" refid="common.classpath" />
+
+</project>

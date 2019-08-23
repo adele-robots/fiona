@@ -1,0 +1,15 @@
+## NOTAS SOBRE EL SPARK ##
+
+· Este Spark implementa la interfaz 'IAnimation'. Se puede lanzar una animación en el momento que se desee, o bien ir lanzando varias animaciones que se irán 
+"sumando" para formar la animación final. A medida que vayan acabando las animaciones se irán eliminando.
+Se puede usar el método 'playAnimation(char* animationName)' de 'IAnimation' para parar y eliminar animaciones concretas. Para ello es necesario pasarle en
+la llamada el parámetro "[REMOVE]"+"NombreDeLaAnimaciónADetener". Para lanzar una animación simplemente hay que hacer la llamada con el nombre de la animación
+a reproducir.
+
+· Es necesario especificar en el archivo de configuración un archivo 'BioVision' (.bvh) cualquiera, que use el modelo 3D sobre el que se vayan a hacer animaciones, 
+para ello se usa la variable 'Sample_Filename'.
+
+· No se pueden, de momento, lanzar dos animaciones con el mismo nombre (no parece tener mucho sentido). No produce ningún error, y se van a sumar bien, pero luego 
+si se quieren eliminar, se eliminará la primera que haya sido lanzada.
+
+

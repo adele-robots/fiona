@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentNetwork xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ComponentNetwork.xsd">
+
+    <!-- COMPONENT DECLARATION -->
+  <ComponentDeclarations>
+    <Component  id="idScene3DComponent"  type="Scene3DComponent" plugin="libScene3DSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IFaceExpression" />
+      </ProvidedInterfaces>
+      <ProvidedInterfaces>
+        <Interface name="IEyes" />
+      </ProvidedInterfaces>
+      <ProvidedInterfaces>
+        <Interface name="INeck" />
+      </ProvidedInterfaces>
+      <ProvidedInterfaces>
+        <Interface name="IAnimation" />
+      </ProvidedInterfaces>
+      <ProvidedInterfaces>
+        <Interface name="IRenderizable" />
+      </ProvidedInterfaces>
+    </Component>
+
+    <Component id="idThread"  type="ThreadComponent" plugin="libThreadSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IConcurrent" />
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="IAsyncFatalErrorHandler" />
+        <Interface name="IThreadProc" />
+      </RequiredInterfaces>
+    </Component>
+
+    <Component id="idLocalRendererComponent"  type="LocalRendererComponent" plugin="libLocalRendererSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IThreadProc" />
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="IAsyncFatalErrorHandler" />
+        <Interface name="IFrameBuffer" />
+        <Interface name="IRenderizable" />
+		<Interface name="IUpdateable" />
+      </RequiredInterfaces>
+    </Component>
+
+    <Component id="idWindowComponent"  type="WindowComponent" plugin="libWindowSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IApplication" />
+        <Interface name="IWindow" />
+		<Interface name="IEventQueue" />
+        <Interface name="IAsyncFatalErrorHandler" />
+      </ProvidedInterfaces>
+    </Component>
+
+
+	
+
+	
+	<Component id="idEyeContactComponent"  type="EyeContactComponent" plugin="libEyeContactSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IDetectedFacePositionConsumer" />
+      </ProvidedInterfaces>
+	  <ProvidedInterfaces>
+        <Interface name="IUpdateable1" />
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="INeck" />
+        <Interface name="IEyes" />
+      </RequiredInterfaces>
+    </Component>
+	
+	<Component id="idUpdater1"  type="Updater1" plugin="libUpdaterSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IUpdateable" />
+      </ProvidedInterfaces>
+	    <RequiredInterfaces>
+        <Interface name="IUpdateable1" />
+      </RequiredInterfaces>
+    </Component>
+	
+
+	
+  </ComponentDeclarations>
+  
+  
+  <!-- APPLICATION DESCRIPTION -->
+  <ApplicationDescription applicationComponent="instanceWindowComponent" applicationConfig="/Eca.ini">
+    <!-- Paso 1/2: Instantiate components -->
+    <ComponentInstances>
+      <Instance instanceName="instanceWindowComponent" componentID ="idWindowComponent"/>
+      <Instance instanceName="instanceScene3DComponent" componentID ="idScene3DComponent"/>
+      <Instance instanceName="instanceRenderingThread" componentID ="idThread"/>
+      <Instance instanceName="instanceLocalRendererComponent" componentID ="idLocalRendererComponent"/>
+      <Instance instanceName="instanceEyeContactComponent" componentID ="idEyeContactComponent"/>
+      <Instance instanceName="instanceUpdater1" componentID ="idUpdater1"/>
+    </ComponentInstances>
+    
+    <!-- Paso 2/2: Connect interfaces -->
+    <InterfaceConnections>
+      <Connect interface="IWindow" providedBy="instanceWindowComponent" requiredBy="instanceLocalRendererComponent" />
+	 
+      <Connect interface="IThreadProc" providedBy="instanceLocalRendererComponent" requiredBy="instanceRenderingThread" />
+      <Connect interface="IRenderizable" providedBy="instanceScene3DComponent" requiredBy="instanceLocalRendererComponent" />
+	  
+	  <Connect interface="IEyes" providedBy="instanceScene3DComponent" requiredBy="instanceEyeContactComponent" />
+	  <Connect interface="INeck" providedBy="instanceScene3DComponent" requiredBy="instanceEyeContactComponent" />
+	  
+	  <Connect interface="IUpdateable1" providedBy="instanceEyeContactComponent" requiredBy="instanceUpdater1" />
+	  <Connect interface="IUpdateable" providedBy="instanceUpdater1" requiredBy="instanceLocalRendererComponent" />
+	   
+      
+	 
+	  
+      <ConnectAll interface="IAsyncFatalErrorHandler" providedBy="instanceWindowComponent"/>
+    </InterfaceConnections>
+  </ApplicationDescription>
+</ComponentNetwork>

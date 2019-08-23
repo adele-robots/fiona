@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$class_audio_input.html" title="AudioInput" alt="" coords="105,101,188,131"/>
+<area shape="rect" id="node4" href="$class_i_audio_consumer.html" title="IAudioConsumer" alt="" coords="5,5,123,35"/>
+<area shape="rect" id="node6" href="$class_i_async_fatal_error_handler.html" title="IAsyncFatalErrorHandler" alt="" coords="147,5,312,35"/>
+</map>

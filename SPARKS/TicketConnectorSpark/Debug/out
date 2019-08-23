@@ -1,0 +1,939 @@
+In file included from /usr/include/c++/4.6/cwchar:46:0,
+                 from /usr/include/c++/4.6/bits/postypes.h:42,
+                 from /usr/include/c++/4.6/iosfwd:42,
+                 from /usr/include/c++/4.6/ios:39,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/wchar.h:75:43: error: falta un operador binario antes del elemento "("
+In file included from /usr/include/sched.h:43:0,
+                 from /usr/include/pthread.h:25,
+                 from /usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:41,
+                 from /usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr.h:170,
+                 from /usr/include/c++/4.6/ext/atomicity.h:34,
+                 from /usr/include/c++/4.6/bits/ios_base.h:41,
+                 from /usr/include/c++/4.6/ios:43,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/x86_64-linux-gnu/bits/sched.h:133:20: error: falta un operador binario antes del elemento "("
+/usr/include/x86_64-linux-gnu/bits/sched.h:171:20: error: falta un operador binario antes del elemento "("
+In file included from /usr/include/libio.h:62:0,
+                 from /usr/include/stdio.h:75,
+                 from /usr/include/c++/4.6/cstdio:44,
+                 from /usr/include/c++/4.6/ext/string_conversions.h:39,
+                 from /usr/include/c++/4.6/bits/basic_string.h:2756,
+                 from /usr/include/c++/4.6/string:54,
+                 from /usr/include/c++/4.6/bits/locale_classes.h:42,
+                 from /usr/include/c++/4.6/bits/ios_base.h:43,
+                 from /usr/include/c++/4.6/ios:43,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:43:20: error: falta un operador binario antes del elemento "("
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:56:44: error: falta un operador binario antes del elemento "("
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:61:44: error: falta un operador binario antes del elemento "("
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:149:19: error: falta un operador binario antes del elemento "("
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:162:19: error: falta un operador binario antes del elemento "("
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:224:19: error: falta un operador binario antes del elemento "("
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:233:19: error: falta un operador binario antes del elemento "("
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:240:19: error: falta un operador binario antes del elemento "("
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:249:19: error: falta un operador binario antes del elemento "("
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:258:19: error: falta un operador binario antes del elemento "("
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:270:19: error: falta un operador binario antes del elemento "("
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:280:19: error: falta un operador binario antes del elemento "("
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:289:19: error: falta un operador binario antes del elemento "("
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:297:19: error: falta un operador binario antes del elemento "("
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:311:19: error: falta un operador binario antes del elemento "("
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:319:43: error: falta un operador binario antes del elemento "("
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:342:19: error: falta un operador binario antes del elemento "("
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:351:20: error: falta un operador binario antes del elemento "("
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:356:20: error: falta un operador binario antes del elemento "("
+/usr/include/x86_64-linux-gnu/sys/cdefs.h:363:19: error: falta un operador binario antes del elemento "("
+In file included from /adele/dev/workspace/Include/ComponentSystem.h:9:0,
+                 from /adele/dev/workspace/Include/Component.h:12,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/adele/dev/workspace/Include/Configuration.h:8:0: aviso: se descarta el #pragma warning  [-Wunknown-pragmas]
+In file included from /adele/dev/workspace/Include/ErrorHandling.h:7:0,
+                 from /adele/dev/workspace/Include/Component.h:14,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/string.h:37:42: error: falta un operador binario antes del elemento "("
+In file included from /usr/local/include/opencv2/core/types_c.h:52:0,
+                 from /usr/local/include/opencv2/core/core_c.h:47,
+                 from /usr/local/include/opencv2/opencv.hpp:46,
+                 from /adele/dev/workspace/Include/Image.h:8,
+                 from /adele/dev/workspace/Include/IFlow.h:12,
+                 from ../TicketConnectorSpark.h:18,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/assert.h:39:42: error: falta un operador binario antes del elemento "("
+/usr/include/assert.h:108:42: error: falta un operador binario antes del elemento "("
+In file included from /usr/include/math.h:34:0,
+                 from /usr/local/include/opencv2/core/types_c.h:83,
+                 from /usr/local/include/opencv2/core/core_c.h:47,
+                 from /usr/local/include/opencv2/opencv.hpp:46,
+                 from /adele/dev/workspace/Include/Image.h:8,
+                 from /adele/dev/workspace/Include/IFlow.h:12,
+                 from ../TicketConnectorSpark.h:18,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/x86_64-linux-gnu/bits/huge_val.h:28:18: error: falta un operador binario antes del elemento "("
+/usr/include/x86_64-linux-gnu/bits/huge_val.h:30:20: error: falta un operador binario antes del elemento "("
+In file included from /usr/local/include/opencv2/core/types_c.h:83:0,
+                 from /usr/local/include/opencv2/core/core_c.h:47,
+                 from /usr/local/include/opencv2/opencv.hpp:46,
+                 from /adele/dev/workspace/Include/Image.h:8,
+                 from /adele/dev/workspace/Include/IFlow.h:12,
+                 from ../TicketConnectorSpark.h:18,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/math.h:404:42: error: falta un operador binario antes del elemento "("
+In file included from /usr/include/c++/4.6/cwchar:46:0,
+                 from /usr/include/c++/4.6/bits/postypes.h:42,
+                 from /usr/include/c++/4.6/iosfwd:42,
+                 from /usr/include/c++/4.6/ios:39,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/wchar.h:104:1: error: ‘__BEGIN_NAMESPACE_C99’ no nombra a un tipo
+/usr/include/wchar.h:107:1: error: ‘__END_NAMESPACE_C99’ no nombra a un tipo
+/usr/include/wchar.h:135:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/wchar.h:149:6: error: expected initializer before ‘__THROW’
+/usr/include/wchar.h:153:39: error: expected initializer before ‘__THROW’
+/usr/include/wchar.h:157:6: error: expected initializer before ‘__THROW’
+/usr/include/wchar.h:161:6: error: expected initializer before ‘__THROW’
+/usr/include/wchar.h:164:6: error: expected initializer before ‘__THROW’
+/usr/include/wchar.h:165:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/wchar.h:194:56: error: expected initializer before ‘__THROW’
+/usr/include/wchar.h:195:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/wchar.h:235:6: error: expected initializer before ‘__THROW’
+/usr/include/wchar.h:237:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/wchar.h:254:6: error: expected initializer before ‘__THROW’
+/usr/include/wchar.h:264:6: error: expected initializer before ‘__THROW’
+/usr/include/wchar.h:275:6: error: expected initializer before ‘__THROW’
+/usr/include/wchar.h:281:32: error: expected initializer before ‘__THROW’
+/usr/include/wchar.h:284:45: error: expected initializer before ‘__THROW’
+/usr/include/wchar.h:285:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/wchar.h:323:6: error: expected initializer before ‘__THROW’
+/usr/include/wchar.h:327:51: error: expected initializer before ‘__THROW’
+/usr/include/wchar.h:332:6: error: expected initializer before ‘__THROW’
+/usr/include/wchar.h:335:65: error: expected initializer before ‘__THROW’
+/usr/include/wchar.h:336:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/wchar.h:354:31: error: expected initializer before ‘__THROW’
+/usr/include/wchar.h:358:29: error: ‘mbstate_t’ no nombra a un tipo
+/usr/include/wchar.h:358:46: error: expected initializer before ‘__THROW’
+/usr/include/wchar.h:364:10: error: ‘mbstate_t’ no se ha declarado
+/usr/include/wchar.h:364:26: error: expected initializer before ‘__THROW’
+/usr/include/wchar.h:368:10: error: ‘mbstate_t’ no se ha declarado
+/usr/include/wchar.h:368:38: error: expected initializer before ‘__THROW’
+/usr/include/wchar.h:372:4: error: ‘mbstate_t’ no se ha declarado
+/usr/include/wchar.h:372:32: error: expected initializer before ‘__THROW’
+/usr/include/wchar.h:374:9: error: ‘mbstate_t’ no se ha declarado
+/usr/include/wchar.h:374:37: error: expected initializer before ‘__THROW’
+/usr/include/wchar.h:375:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/wchar.h:413:5: error: ‘mbstate_t’ no se ha declarado
+/usr/include/wchar.h:413:33: error: expected initializer before ‘__THROW’
+/usr/include/wchar.h:414:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/wchar.h:449:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/wchar.h:472:6: error: expected initializer before ‘__THROW’
+/usr/include/wchar.h:473:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/wchar.h:787:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/wchar.h:855:1: error: ‘__END_NAMESPACE_C99’ no nombra a un tipo
+In file included from /usr/include/c++/4.6/bits/postypes.h:42:0,
+                 from /usr/include/c++/4.6/iosfwd:42,
+                 from /usr/include/c++/4.6/ios:39,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/c++/4.6/cwchar:143:11: error: ‘::btowc’ no se ha declarado
+/usr/include/c++/4.6/cwchar:144:11: error: ‘::fgetwc’ no se ha declarado
+/usr/include/c++/4.6/cwchar:148:11: error: ‘::fwide’ no se ha declarado
+/usr/include/c++/4.6/cwchar:149:11: error: ‘::fwprintf’ no se ha declarado
+/usr/include/c++/4.6/cwchar:150:11: error: ‘::fwscanf’ no se ha declarado
+/usr/include/c++/4.6/cwchar:153:11: error: ‘::mbrlen’ no se ha declarado
+/usr/include/c++/4.6/cwchar:154:11: error: ‘::mbrtowc’ no se ha declarado
+/usr/include/c++/4.6/cwchar:155:11: error: ‘::mbsinit’ no se ha declarado
+/usr/include/c++/4.6/cwchar:156:11: error: ‘::mbsrtowcs’ no se ha declarado
+/usr/include/c++/4.6/cwchar:160:11: error: ‘::swprintf’ no se ha declarado
+/usr/include/c++/4.6/cwchar:162:11: error: ‘::swscanf’ no se ha declarado
+/usr/include/c++/4.6/cwchar:164:11: error: ‘::vfwprintf’ no se ha declarado
+/usr/include/c++/4.6/cwchar:166:11: error: ‘::vfwscanf’ no se ha declarado
+/usr/include/c++/4.6/cwchar:169:11: error: ‘::vswprintf’ no se ha declarado
+/usr/include/c++/4.6/cwchar:172:11: error: ‘::vswscanf’ no se ha declarado
+/usr/include/c++/4.6/cwchar:174:11: error: ‘::vwprintf’ no se ha declarado
+/usr/include/c++/4.6/cwchar:176:11: error: ‘::vwscanf’ no se ha declarado
+/usr/include/c++/4.6/cwchar:178:11: error: ‘::wcrtomb’ no se ha declarado
+/usr/include/c++/4.6/cwchar:179:11: error: ‘::wcscat’ no se ha declarado
+/usr/include/c++/4.6/cwchar:180:11: error: ‘::wcscmp’ no se ha declarado
+/usr/include/c++/4.6/cwchar:181:11: error: ‘::wcscoll’ no se ha declarado
+/usr/include/c++/4.6/cwchar:182:11: error: ‘::wcscpy’ no se ha declarado
+/usr/include/c++/4.6/cwchar:183:11: error: ‘::wcscspn’ no se ha declarado
+/usr/include/c++/4.6/cwchar:184:11: error: ‘::wcsftime’ no se ha declarado
+/usr/include/c++/4.6/cwchar:185:11: error: ‘::wcslen’ no se ha declarado
+/usr/include/c++/4.6/cwchar:186:11: error: ‘::wcsncat’ no se ha declarado
+/usr/include/c++/4.6/cwchar:187:11: error: ‘::wcsncmp’ no se ha declarado
+/usr/include/c++/4.6/cwchar:188:11: error: ‘::wcsncpy’ no se ha declarado
+/usr/include/c++/4.6/cwchar:189:11: error: ‘::wcsrtombs’ no se ha declarado
+/usr/include/c++/4.6/cwchar:190:11: error: ‘::wcsspn’ no se ha declarado
+/usr/include/c++/4.6/cwchar:191:11: error: ‘::wcstod’ no se ha declarado
+/usr/include/c++/4.6/cwchar:193:11: error: ‘::wcstof’ no se ha declarado
+/usr/include/c++/4.6/cwchar:195:11: error: ‘::wcstok’ no se ha declarado
+/usr/include/c++/4.6/cwchar:196:11: error: ‘::wcstol’ no se ha declarado
+/usr/include/c++/4.6/cwchar:197:11: error: ‘::wcstoul’ no se ha declarado
+/usr/include/c++/4.6/cwchar:198:11: error: ‘::wcsxfrm’ no se ha declarado
+/usr/include/c++/4.6/cwchar:199:11: error: ‘::wctob’ no se ha declarado
+/usr/include/c++/4.6/cwchar:200:11: error: ‘::wmemcmp’ no se ha declarado
+/usr/include/c++/4.6/cwchar:201:11: error: ‘::wmemcpy’ no se ha declarado
+/usr/include/c++/4.6/cwchar:202:11: error: ‘::wmemmove’ no se ha declarado
+/usr/include/c++/4.6/cwchar:203:11: error: ‘::wmemset’ no se ha declarado
+/usr/include/c++/4.6/cwchar:204:11: error: ‘::wprintf’ no se ha declarado
+/usr/include/c++/4.6/cwchar:205:11: error: ‘::wscanf’ no se ha declarado
+/usr/include/c++/4.6/cwchar:206:11: error: ‘::wcschr’ no se ha declarado
+/usr/include/c++/4.6/cwchar:207:11: error: ‘::wcspbrk’ no se ha declarado
+/usr/include/c++/4.6/cwchar:208:11: error: ‘::wcsrchr’ no se ha declarado
+/usr/include/c++/4.6/cwchar:209:11: error: ‘::wcsstr’ no se ha declarado
+/usr/include/c++/4.6/cwchar:210:11: error: ‘::wmemchr’ no se ha declarado
+/usr/include/c++/4.6/cwchar: En la función ‘wchar_t* std::wcschr(wchar_t*, wchar_t)’:
+/usr/include/c++/4.6/cwchar:215:55: error: conversión inválida de ‘const wchar_t*’ a ‘wchar_t*’ [-fpermissive]
+/usr/include/c++/4.6/cwchar:214:3: error:   argumento de inicialización 1 de ‘wchar_t* std::wcschr(wchar_t*, wchar_t)’ [-fpermissive]
+/usr/include/c++/4.6/cwchar: En la función ‘wchar_t* std::wcspbrk(wchar_t*, const wchar_t*)’:
+/usr/include/c++/4.6/cwchar:219:58: error: conversión inválida de ‘const wchar_t*’ a ‘wchar_t*’ [-fpermissive]
+/usr/include/c++/4.6/cwchar:218:3: error:   argumento de inicialización 1 de ‘wchar_t* std::wcspbrk(wchar_t*, const wchar_t*)’ [-fpermissive]
+/usr/include/c++/4.6/cwchar: En la función ‘wchar_t* std::wcsrchr(wchar_t*, wchar_t)’:
+/usr/include/c++/4.6/cwchar:223:56: error: conversión inválida de ‘const wchar_t*’ a ‘wchar_t*’ [-fpermissive]
+/usr/include/c++/4.6/cwchar:222:3: error:   argumento de inicialización 1 de ‘wchar_t* std::wcsrchr(wchar_t*, wchar_t)’ [-fpermissive]
+/usr/include/c++/4.6/cwchar: En la función ‘wchar_t* std::wcsstr(wchar_t*, const wchar_t*)’:
+/usr/include/c++/4.6/cwchar:227:57: error: conversión inválida de ‘const wchar_t*’ a ‘wchar_t*’ [-fpermissive]
+/usr/include/c++/4.6/cwchar:226:3: error:   argumento de inicialización 1 de ‘wchar_t* std::wcsstr(wchar_t*, const wchar_t*)’ [-fpermissive]
+/usr/include/c++/4.6/cwchar: En la función ‘wchar_t* std::wmemchr(wchar_t*, wchar_t, std::size_t)’:
+/usr/include/c++/4.6/cwchar:231:61: error: conversión inválida de ‘const wchar_t*’ a ‘wchar_t*’ [-fpermissive]
+/usr/include/c++/4.6/cwchar:230:3: error:   argumento de inicialización 1 de ‘wchar_t* std::wmemchr(wchar_t*, wchar_t, std::size_t)’ [-fpermissive]
+/usr/include/c++/4.6/cwchar: En el ámbito global:
+/usr/include/c++/4.6/cwchar:250:11: error: ‘::wcstold’ no se ha declarado
+/usr/include/c++/4.6/cwchar:259:11: error: ‘::wcstoll’ no se ha declarado
+/usr/include/c++/4.6/cwchar:260:11: error: ‘::wcstoull’ no se ha declarado
+/usr/include/c++/4.6/cwchar:266:22: error: ‘__gnu_cxx::wcstold’ no se ha declarado
+/usr/include/c++/4.6/cwchar:267:22: error: ‘__gnu_cxx::wcstoll’ no se ha declarado
+/usr/include/c++/4.6/cwchar:268:22: error: ‘__gnu_cxx::wcstoull’ no se ha declarado
+/usr/include/c++/4.6/cwchar:282:14: error: ‘std::wcstof’ no se ha declarado
+/usr/include/c++/4.6/cwchar:285:14: error: ‘std::vfwscanf’ no se ha declarado
+/usr/include/c++/4.6/cwchar:288:14: error: ‘std::vswscanf’ no se ha declarado
+/usr/include/c++/4.6/cwchar:291:14: error: ‘std::vwscanf’ no se ha declarado
+/usr/include/c++/4.6/cwchar:295:14: error: ‘std::wcstold’ no se ha declarado
+/usr/include/c++/4.6/cwchar:296:14: error: ‘std::wcstoll’ no se ha declarado
+/usr/include/c++/4.6/cwchar:297:14: error: ‘std::wcstoull’ no se ha declarado
+In file included from /usr/include/c++/4.6/iosfwd:42:0,
+                 from /usr/include/c++/4.6/ios:39,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/c++/4.6/bits/postypes.h:230:16: error: ‘mbstate_t’ no se declaró en este ámbito
+/usr/include/c++/4.6/bits/postypes.h:230:25: error: el argumento de plantilla 1 es inválido
+/usr/include/c++/4.6/bits/postypes.h:230:36: error: invalid type in declaration before ‘;’ token
+/usr/include/c++/4.6/bits/postypes.h:232:16: error: ‘mbstate_t’ no se declaró en este ámbito
+/usr/include/c++/4.6/bits/postypes.h:232:25: error: el argumento de plantilla 1 es inválido
+/usr/include/c++/4.6/bits/postypes.h:232:37: error: invalid type in declaration before ‘;’ token
+/usr/include/c++/4.6/bits/postypes.h:236:16: error: ‘mbstate_t’ no se declaró en este ámbito
+/usr/include/c++/4.6/bits/postypes.h:236:25: error: el argumento de plantilla 1 es inválido
+/usr/include/c++/4.6/bits/postypes.h:236:39: error: invalid type in declaration before ‘;’ token
+/usr/include/c++/4.6/bits/postypes.h:238:16: error: ‘mbstate_t’ no se declaró en este ámbito
+/usr/include/c++/4.6/bits/postypes.h:238:25: error: el argumento de plantilla 1 es inválido
+/usr/include/c++/4.6/bits/postypes.h:238:39: error: invalid type in declaration before ‘;’ token
+In file included from /usr/include/c++/4.6/ios:41:0,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/c++/4.6/bits/char_traits.h:65:15: error: ‘mbstate_t’ en el espacio de nombres ‘std’ no nombra un tipo
+/usr/include/c++/4.6/bits/char_traits.h:241:15: error: ‘mbstate_t’ no nombra a un tipo
+/usr/include/c++/4.6/bits/char_traits.h:312:15: error: ‘mbstate_t’ no nombra a un tipo
+/usr/include/c++/4.6/bits/char_traits.h: En la función miembro static ‘static int std::char_traits<wchar_t>::compare(const char_type*, const char_type*, std::size_t)’:
+/usr/include/c++/4.6/bits/char_traits.h:328:39: error: ‘wmemcmp’ no se declaró en este ámbito
+/usr/include/c++/4.6/bits/char_traits.h: En la función miembro static ‘static std::size_t std::char_traits<wchar_t>::length(const char_type*)’:
+/usr/include/c++/4.6/bits/char_traits.h:332:26: error: ‘wcslen’ no se declaró en este ámbito
+/usr/include/c++/4.6/bits/char_traits.h: En la función miembro static ‘static const char_type* std::char_traits<wchar_t>::find(const char_type*, std::size_t, const char_type&)’:
+/usr/include/c++/4.6/bits/char_traits.h:336:37: error: conversión inválida de ‘const char_type* {aka const wchar_t*}’ a ‘wchar_t*’ [-fpermissive]
+/usr/include/c++/4.6/cwchar:230:3: error:   argumento de inicialización 1 de ‘wchar_t* std::wmemchr(wchar_t*, wchar_t, std::size_t)’ [-fpermissive]
+/usr/include/c++/4.6/bits/char_traits.h: En la función miembro static ‘static std::char_traits<wchar_t>::char_type* std::char_traits<wchar_t>::move(std::char_traits<wchar_t>::char_type*, const char_type*, std::size_t)’:
+/usr/include/c++/4.6/bits/char_traits.h:340:40: error: ‘wmemmove’ no se declaró en este ámbito
+/usr/include/c++/4.6/bits/char_traits.h: En la función miembro static ‘static std::char_traits<wchar_t>::char_type* std::char_traits<wchar_t>::copy(std::char_traits<wchar_t>::char_type*, const char_type*, std::size_t)’:
+/usr/include/c++/4.6/bits/char_traits.h:344:39: error: ‘wmemcpy’ no se declaró en este ámbito
+/usr/include/c++/4.6/bits/char_traits.h: En la función miembro static ‘static std::char_traits<wchar_t>::char_type* std::char_traits<wchar_t>::assign(std::char_traits<wchar_t>::char_type*, std::size_t, std::char_traits<wchar_t>::char_type)’:
+/usr/include/c++/4.6/bits/char_traits.h:348:37: error: ‘wmemset’ no se declaró en este ámbito
+In file included from /usr/include/c++/4.6/ios:41:0,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/c++/4.6/bits/char_traits.h: En el ámbito global:
+/usr/include/c++/4.6/bits/char_traits.h:391:15: error: ‘mbstate_t’ no nombra a un tipo
+/usr/include/c++/4.6/bits/char_traits.h:484:15: error: ‘mbstate_t’ no nombra a un tipo
+In file included from /usr/include/c++/4.6/clocale:44:0,
+                 from /usr/include/c++/4.6/x86_64-linux-gnu/./bits/c++locale.h:42,
+                 from /usr/include/c++/4.6/bits/localefwd.h:42,
+                 from /usr/include/c++/4.6/ios:42,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/locale.h:32:1: error: ‘__BEGIN_DECLS’ no nombra a un tipo
+/usr/include/locale.h:125:65: error: expected initializer before ‘__THROW’
+/usr/include/locale.h:128:40: error: expected initializer before ‘__THROW’
+/usr/include/locale.h:130:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+In file included from /usr/include/c++/4.6/bits/localefwd.h:42:0,
+                 from /usr/include/c++/4.6/ios:42,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/c++locale.h:63:11: error: ‘__locale_t’ no nombra a un tipo
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/c++locale.h:70:26: error: ‘__c_locale’ no nombra a un tipo
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/c++locale.h: En la función ‘int std::__convert_from_v(const int&, char*, int, const char*, ...)’:
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/c++locale.h:78:19: error: ‘setlocale’ no es un miembro de ‘std’
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/c++locale.h:85:2: error: ‘setlocale’ no es un miembro de ‘std’
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/c++locale.h:105:2: error: ‘setlocale’ no es un miembro de ‘std’
+In file included from /usr/include/c++/4.6/cctype:44:0,
+                 from /usr/include/c++/4.6/bits/localefwd.h:44,
+                 from /usr/include/c++/4.6/ios:42,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/ctype.h: En el ámbito global:
+/usr/include/ctype.h:30:1: error: ‘__BEGIN_DECLS’ no nombra a un tipo
+In file included from /usr/include/c++/4.6/cctype:44:0,
+                 from /usr/include/c++/4.6/bits/localefwd.h:44,
+                 from /usr/include/c++/4.6/ios:42,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/ctype.h:82:6: error: expected initializer before ‘__THROW’
+/usr/include/ctype.h:84:6: error: expected initializer before ‘__THROW’
+/usr/include/ctype.h:86:6: error: expected initializer before ‘__THROW’
+/usr/include/ctype.h:106:1: error: ‘__BEGIN_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/ctype.h:113:1: error: expected initializer before ‘__THROW’
+/usr/include/ctype.h:114:1: error: expected initializer before ‘__THROW’
+/usr/include/ctype.h:115:1: error: expected initializer before ‘__THROW’
+/usr/include/ctype.h:116:1: error: expected initializer before ‘__THROW’
+/usr/include/ctype.h:117:1: error: expected initializer before ‘__THROW’
+/usr/include/ctype.h:118:1: error: expected initializer before ‘__THROW’
+/usr/include/ctype.h:119:1: error: expected initializer before ‘__THROW’
+/usr/include/ctype.h:120:1: error: expected initializer before ‘__THROW’
+/usr/include/ctype.h:121:1: error: expected initializer before ‘__THROW’
+/usr/include/ctype.h:122:1: error: expected initializer before ‘__THROW’
+/usr/include/ctype.h:126:30: error: expected initializer before ‘__THROW’
+/usr/include/ctype.h:129:30: error: expected initializer before ‘__THROW’
+/usr/include/ctype.h:131:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+In file included from /usr/include/c++/4.6/bits/localefwd.h:44:0,
+                 from /usr/include/c++/4.6/ios:42,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/c++/4.6/cctype:89:11: error: ‘::isblank’ no se ha declarado
+In file included from /usr/include/c++/4.6/ios:42:0,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/c++/4.6/bits/localefwd.h:135:40: error: ‘mbstate_t’ no se declaró en este ámbito
+/usr/include/c++/4.6/bits/localefwd.h:135:49: error: el argumento de plantilla 3 es inválido
+/usr/include/c++/4.6/bits/localefwd.h:137:43: error: ‘mbstate_t’ no se declaró en este ámbito
+/usr/include/c++/4.6/bits/localefwd.h:137:52: error: el argumento de plantilla 3 es inválido
+In file included from /usr/include/sched.h:34:0,
+                 from /usr/include/pthread.h:25,
+                 from /usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:41,
+                 from /usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr.h:170,
+                 from /usr/include/c++/4.6/ext/atomicity.h:34,
+                 from /usr/include/c++/4.6/bits/ios_base.h:41,
+                 from /usr/include/c++/4.6/ios:43,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/time.h:74:1: error: ‘__BEGIN_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/time.h:77:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+In file included from /usr/include/sched.h:43:0,
+                 from /usr/include/pthread.h:25,
+                 from /usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:41,
+                 from /usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr.h:170,
+                 from /usr/include/c++/4.6/ext/atomicity.h:34,
+                 from /usr/include/c++/4.6/bits/ios_base.h:41,
+                 from /usr/include/c++/4.6/ios:43,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/x86_64-linux-gnu/bits/sched.h:79:1: error: ‘__BEGIN_DECLS’ no nombra a un tipo
+/usr/include/x86_64-linux-gnu/bits/sched.h:203:1: error: ‘__BEGIN_DECLS’ no nombra a un tipo
+/usr/include/x86_64-linux-gnu/bits/sched.h:207:53: error: expected initializer before ‘__THROW’
+/usr/include/x86_64-linux-gnu/bits/sched.h:208:48: error: expected initializer before ‘__THROW’
+/usr/include/x86_64-linux-gnu/bits/sched.h:210:1: error: ‘__END_DECLS’ no nombra a un tipo
+In file included from /usr/include/pthread.h:25:0,
+                 from /usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:41,
+                 from /usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr.h:170,
+                 from /usr/include/c++/4.6/ext/atomicity.h:34,
+                 from /usr/include/c++/4.6/bits/ios_base.h:41,
+                 from /usr/include/c++/4.6/ios:43,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/sched.h:55:72: error: expected initializer before ‘__THROW’
+/usr/include/sched.h:59:48: error: expected initializer before ‘__THROW’
+/usr/include/sched.h:62:47: error: expected initializer before ‘__THROW’
+/usr/include/sched.h:65:31: error: expected initializer before ‘__THROW’
+/usr/include/sched.h:68:53: error: expected initializer before ‘__THROW’
+/usr/include/sched.h:71:53: error: expected initializer before ‘__THROW’
+/usr/include/sched.h:74:72: error: expected initializer before ‘__THROW’
+/usr/include/sched.h:126:1: error: ‘__END_DECLS’ no nombra a un tipo
+In file included from /usr/include/pthread.h:26:0,
+                 from /usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:41,
+                 from /usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr.h:170,
+                 from /usr/include/c++/4.6/ext/atomicity.h:34,
+                 from /usr/include/c++/4.6/bits/ios_base.h:41,
+                 from /usr/include/c++/4.6/ios:43,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/time.h:61:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/time.h:153:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/time.h:186:8: error: ‘time_t’ no nombra a un tipo
+/usr/include/time.h:189:25: error: ‘time_t’ no se declaró en este ámbito
+/usr/include/time.h:189:41: error: ‘time_t’ no se declaró en este ámbito
+/usr/include/time.h:189:55: error: se trata la lista de expresiones como una expresión compuesta en en inicializador [-fpermissive]
+/usr/include/time.h:190:6: error: expected ‘,’ or ‘;’ before ‘__THROW’
+/usr/include/time.h:193:8: error: ‘time_t’ no nombra a un tipo
+/usr/include/time.h:201:40: error: expected initializer before ‘__THROW’
+/usr/include/time.h:202:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/time.h:237:38: error: ‘time_t’ no nombra a un tipo
+/usr/include/time.h:237:55: error: expected initializer before ‘__THROW’
+/usr/include/time.h:238:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/time.h:258:29: error: ‘time_t’ no nombra a un tipo
+/usr/include/time.h:258:46: error: expected initializer before ‘__THROW’
+/usr/include/time.h:259:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/time.h:417:1: error: ‘__END_DECLS’ no nombra a un tipo
+In file included from /usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:41:0,
+                 from /usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr.h:170,
+                 from /usr/include/c++/4.6/ext/atomicity.h:34,
+                 from /usr/include/c++/4.6/bits/ios_base.h:41,
+                 from /usr/include/c++/4.6/ios:43,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/pthread.h:220:1: error: ‘__BEGIN_DECLS’ no nombra a un tipo
+/usr/include/pthread.h:242:26: error: ‘pthread_t’ no se declaró en este ámbito
+/usr/include/pthread.h:242:42: error: expected primary-expression before ‘void’
+/usr/include/pthread.h:242:64: error: se trata la lista de expresiones como una expresión compuesta en en inicializador [-fpermissive]
+/usr/include/pthread.h:263:28: error: ‘pthread_t’ no se declaró en este ámbito
+/usr/include/pthread.h:263:44: error: expected ‘,’ or ‘;’ before ‘__THROW’
+/usr/include/pthread.h:267:8: error: ‘pthread_t’ no nombra a un tipo
+/usr/include/pthread.h:270:27: error: ‘pthread_t’ no se declaró en este ámbito
+/usr/include/pthread.h:270:48: error: ‘pthread_t’ no se declaró en este ámbito
+/usr/include/pthread.h:270:67: error: se trata la lista de expresiones como una expresión compuesta en en inicializador [-fpermissive]
+/usr/include/pthread.h:270:69: error: expected ‘,’ or ‘;’ before ‘__THROW’
+/usr/include/pthread.h:278:55: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:282:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:287:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:292:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:298:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:303:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:310:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:315:21: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:320:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:324:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:329:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:334:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:340:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:344:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:349:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:357:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:362:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:369:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:413:35: error: ‘pthread_t’ no se declaró en este ámbito
+/usr/include/pthread.h:413:62: error: expected primary-expression before ‘int’
+/usr/include/pthread.h:414:7: error: expected primary-expression before ‘__const’
+/usr/include/pthread.h:414:42: error: se trata la lista de expresiones como una expresión compuesta en en inicializador [-fpermissive]
+/usr/include/pthread.h:415:6: error: expected ‘,’ or ‘;’ before ‘__THROW’
+/usr/include/pthread.h:418:35: error: ‘pthread_t’ no se declaró en este ámbito
+/usr/include/pthread.h:419:7: error: expected primary-expression before ‘int’
+/usr/include/pthread.h:420:7: error: expected primary-expression before ‘struct’
+/usr/include/pthread.h:420:45: error: se trata la lista de expresiones como una expresión compuesta en en inicializador [-fpermissive]
+/usr/include/pthread.h:421:6: error: expected ‘,’ or ‘;’ before ‘__THROW’
+/usr/include/pthread.h:424:34: error: ‘pthread_t’ no se declaró en este ámbito
+/usr/include/pthread.h:424:61: error: expected primary-expression before ‘int’
+/usr/include/pthread.h:424:71: error: se trata la lista de expresiones como una expresión compuesta en en inicializador [-fpermissive]
+/usr/include/pthread.h:425:6: error: expected ‘,’ or ‘;’ before ‘__THROW’
+/usr/include/pthread.h:479:36: error: expected initializer before ‘__nonnull’
+/usr/include/pthread.h:497:28: error: ‘pthread_t’ no se declaró en este ámbito
+/usr/include/pthread.h:727:70: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:735:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:739:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:743:6: error: expected initializer before ‘__THROWNL’
+/usr/include/pthread.h:747:6: error: expected initializer before ‘__THROWNL’
+/usr/include/pthread.h:758:6: error: expected initializer before ‘__THROWNL’
+/usr/include/pthread.h:765:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:772:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:791:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:795:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:801:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:806:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:825:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:831:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:837:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:842:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:954:23: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:958:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:962:6: error: expected initializer before ‘__THROWNL’
+/usr/include/pthread.h:966:6: error: expected initializer before ‘__THROWNL’
+/usr/include/pthread.h:975:6: error: expected initializer before ‘__nonnull’
+/usr/include/pthread.h:987:19: error: expected initializer before ‘__nonnull’
+/usr/include/pthread.h:993:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:997:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:1003:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:1007:21: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:1097:6: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:1100:53: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:1103:56: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:1107:30: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:1131:31: error: expected initializer before ‘__THROW’
+/usr/include/pthread.h:1143:1: error: ‘__END_DECLS’ no nombra a un tipo
+In file included from /usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:42:0,
+                 from /usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr.h:170,
+                 from /usr/include/c++/4.6/ext/atomicity.h:34,
+                 from /usr/include/c++/4.6/bits/ios_base.h:41,
+                 from /usr/include/c++/4.6/ios:43,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/unistd.h:288:54: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:335:65: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:361:8: error: ‘ssize_t’ no nombra a un tipo
+/usr/include/unistd.h:367:8: error: ‘ssize_t’ no nombra a un tipo
+/usr/include/unistd.h:418:36: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:433:52: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:475:6: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:498:41: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:512:50: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:532:27: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:535:39: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:553:30: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:565:6: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:570:6: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:575:6: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:580:6: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:586:6: error: expected initializer before ‘__THROW’
+In file included from /usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:42:0,
+                 from /usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr.h:170,
+                 from /usr/include/c++/4.6/ext/atomicity.h:34,
+                 from /usr/include/c++/4.6/bits/ios_base.h:41,
+                 from /usr/include/c++/4.6/ios:43,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/unistd.h:614:6: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:617:50: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:620:38: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:629:30: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:632:31: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:637:31: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:647:42: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:656:52: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:690:30: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:698:30: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:701:31: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:704:30: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:707:31: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:712:53: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:723:35: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:740:35: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:779:28: error: expected initializer before ‘__THROWNL’
+/usr/include/unistd.h:793:33: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:798:6: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:802:30: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:814:6: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:849:42: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:858:41: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:862:37: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:865:52: error: expected initializer before ‘__THROW’
+/usr/include/unistd.h:1174:1: error: ‘__END_DECLS’ no nombra a un tipo
+In file included from /usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr.h:170:0,
+                 from /usr/include/c++/4.6/ext/atomicity.h:34,
+                 from /usr/include/c++/4.6/bits/ios_base.h:41,
+                 from /usr/include/c++/4.6/ios:43,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:118:1: error: ‘pthread_once’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:118:1: error: invalid type in declaration before ‘;’ token
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:119:1: error: ‘pthread_getspecific’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:119:1: error: invalid type in declaration before ‘;’ token
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:120:1: error: ‘pthread_setspecific’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:120:1: error: invalid type in declaration before ‘;’ token
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:122:1: error: ‘pthread_create’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:122:1: error: invalid type in declaration before ‘;’ token
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:125:1: error: ‘pthread_self’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:125:1: error: invalid type in declaration before ‘;’ token
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:130:1: error: ‘sched_yield’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:130:1: error: invalid type in declaration before ‘;’ token
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:132:1: error: ‘pthread_mutex_lock’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:132:1: error: invalid type in declaration before ‘;’ token
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:133:1: error: ‘pthread_mutex_trylock’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:133:1: error: invalid type in declaration before ‘;’ token
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:136:1: error: ‘pthread_mutex_timedlock’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:136:1: error: invalid type in declaration before ‘;’ token
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:139:1: error: ‘pthread_mutex_unlock’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:139:1: error: invalid type in declaration before ‘;’ token
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:140:1: error: ‘pthread_mutex_init’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:140:1: error: invalid type in declaration before ‘;’ token
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:141:1: error: ‘pthread_mutex_destroy’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:141:1: error: invalid type in declaration before ‘;’ token
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:143:1: error: ‘pthread_cond_broadcast’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:143:1: error: invalid type in declaration before ‘;’ token
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:144:1: error: ‘pthread_cond_signal’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:144:1: error: invalid type in declaration before ‘;’ token
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:145:1: error: ‘pthread_cond_wait’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:145:1: error: invalid type in declaration before ‘;’ token
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:146:1: error: ‘pthread_cond_timedwait’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:146:1: error: invalid type in declaration before ‘;’ token
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:147:1: error: ‘pthread_cond_destroy’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:147:1: error: invalid type in declaration before ‘;’ token
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:150:1: error: ‘pthread_key_create’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:150:1: error: invalid type in declaration before ‘;’ token
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:151:1: error: ‘pthread_key_delete’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:151:1: error: invalid type in declaration before ‘;’ token
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:152:1: error: ‘pthread_mutexattr_init’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:152:1: error: invalid type in declaration before ‘;’ token
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:153:1: error: ‘pthread_mutexattr_settype’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:153:1: error: invalid type in declaration before ‘;’ token
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:154:1: error: ‘pthread_mutexattr_destroy’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:154:1: error: invalid type in declaration before ‘;’ token
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:660:19: error: ‘__gthread_create’ se declaró como una variable ‘inline’
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:660:19: error: ‘__gthread_t’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:660:32: error: ‘__threadid’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:660:44: error: expected primary-expression before ‘void’
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:661:5: error: expected primary-expression before ‘void’
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:661:17: error: se trata la lista de expresiones como una expresión compuesta en en inicializador [-fpermissive]
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:662:1: error: expected ‘,’ or ‘;’ before ‘{’ token
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:667:17: error: ‘__gthread_join’ se declaró como una variable ‘inline’
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:667:17: error: ‘__gthread_t’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:667:41: error: expected primary-expression before ‘void’
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:667:59: error: se trata la lista de expresiones como una expresión compuesta en en inicializador [-fpermissive]
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:668:1: error: expected ‘,’ or ‘;’ before ‘{’ token
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:673:19: error: ‘__gthread_detach’ se declaró como una variable ‘inline’
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:673:19: error: ‘__gthread_t’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:674:1: error: expected ‘,’ or ‘;’ before ‘{’ token
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:679:18: error: ‘__gthread_equal’ se declaró como una variable ‘inline’
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:679:18: error: ‘__gthread_t’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:679:36: error: ‘__gthread_t’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:679:52: error: se trata la lista de expresiones como una expresión compuesta en en inicializador [-fpermissive]
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:680:1: error: expected ‘,’ or ‘;’ before ‘{’ token
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:684:15: error: ‘__gthread_t’ no nombra a un tipo
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h: En la función ‘int __gthread_yield()’:
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:693:33: error: no se puede usar ‘__gthrw_sched_yield’ como una función
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h: En la función ‘int __gthread_once(__gthread_once_t*, void (*)())’:
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:700:50: error: no se puede usar ‘__gthrw_pthread_once’ como una función
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h: En la función ‘int __gthread_key_create(__gthread_key_t*, void (*)(void*))’:
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:708:53: error: no se puede usar ‘__gthrw_pthread_key_create’ como una función
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h: En la función ‘int __gthread_key_delete(__gthread_key_t)’:
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:714:45: error: no se puede usar ‘__gthrw_pthread_key_delete’ como una función
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h: En la función ‘void* __gthread_getspecific(__gthread_key_t)’:
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:720:46: error: no se puede usar ‘__gthrw_pthread_getspecific’ como una función
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h: En la función ‘int __gthread_setspecific(__gthread_key_t, const void*)’:
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:726:53: error: no se puede usar ‘__gthrw_pthread_setspecific’ como una función
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h: En la función ‘int __gthread_mutex_destroy(__gthread_mutex_t*)’:
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:733:52: error: no se puede usar ‘__gthrw_pthread_mutex_destroy’ como una función
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h: En la función ‘int __gthread_mutex_lock(__gthread_mutex_t*)’:
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:742:49: error: no se puede usar ‘__gthrw_pthread_mutex_lock’ como una función
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h: En la función ‘int __gthread_mutex_trylock(__gthread_mutex_t*)’:
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:751:52: error: no se puede usar ‘__gthrw_pthread_mutex_trylock’ como una función
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h: En la función ‘int __gthread_mutex_timedlock(__gthread_mutex_t*, const __gthread_time_t*)’:
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:763:69: error: no se puede usar ‘__gthrw_pthread_mutex_timedlock’ como una función
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h: En la función ‘int __gthread_mutex_unlock(__gthread_mutex_t*)’:
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:774:51: error: no se puede usar ‘__gthrw_pthread_mutex_unlock’ como una función
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h: En la función ‘int __gthread_recursive_mutex_init_function(__gthread_recursive_mutex_t*)’:
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:788:54: error: no se puede usar ‘__gthrw_pthread_mutexattr_init’ como una función
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:791:10: error: ‘PTHREAD_MUTEX_RECURSIVE’ no se declaró en este ámbito
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:791:33: error: no se puede usar ‘__gthrw_pthread_mutexattr_settype’ como una función
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:793:54: error: no se puede usar ‘__gthrw_pthread_mutex_init’ como una función
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:795:52: error: no se puede usar ‘__gthrw_pthread_mutexattr_destroy’ como una función
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h: En la función ‘int __gthread_cond_broadcast(__gthread_cond_t*)’:
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:834:50: error: no se puede usar ‘__gthrw_pthread_cond_broadcast’ como una función
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h: En la función ‘int __gthread_cond_signal(__gthread_cond_t*)’:
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:840:47: error: no se puede usar ‘__gthrw_pthread_cond_signal’ como una función
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h: En la función ‘int __gthread_cond_wait(__gthread_cond_t*, __gthread_mutex_t*)’:
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:846:54: error: no se puede usar ‘__gthrw_pthread_cond_wait’ como una función
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h: En la función ‘int __gthread_cond_timedwait(__gthread_cond_t*, __gthread_mutex_t*, const __gthread_time_t*)’:
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:853:74: error: no se puede usar ‘__gthrw_pthread_cond_timedwait’ como una función
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h: En la función ‘int __gthread_cond_destroy(__gthread_cond_t*)’:
+/usr/include/c++/4.6/x86_64-linux-gnu/./bits/gthr-default.h:874:48: error: no se puede usar ‘__gthrw_pthread_cond_destroy’ como una función
+In file included from /usr/include/c++/4.6/cstdlib:66:0,
+                 from /usr/include/c++/4.6/ext/string_conversions.h:37,
+                 from /usr/include/c++/4.6/bits/basic_string.h:2756,
+                 from /usr/include/c++/4.6/string:54,
+                 from /usr/include/c++/4.6/bits/locale_classes.h:42,
+                 from /usr/include/c++/4.6/bits/ios_base.h:43,
+                 from /usr/include/c++/4.6/ios:43,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/stdlib.h: En el ámbito global:
+/usr/include/stdlib.h:35:1: error: ‘__BEGIN_DECLS’ no nombra a un tipo
+/usr/include/stdlib.h:102:5: error: ‘div_t’ no nombra a un tipo
+/usr/include/stdlib.h:113:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/stdlib.h:143:1: error: ‘__BEGIN_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/stdlib.h:149:6: error: expected initializer before ‘__THROW’
+/usr/include/stdlib.h:152:6: error: expected initializer before ‘__THROW’
+/usr/include/stdlib.h:153:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/stdlib.h:168:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/stdlib.h:190:6: error: expected initializer before ‘__THROW’
+/usr/include/stdlib.h:191:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/stdlib.h:382:41: error: expected initializer before ‘__THROW’
+/usr/include/stdlib.h:383:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/stdlib.h:474:6: error: expected initializer before ‘__THROW’
+/usr/include/stdlib.h:475:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/stdlib.h:488:32: error: expected initializer before ‘__THROW’
+/usr/include/stdlib.h:489:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/stdlib.h:518:43: error: expected initializer before ‘__THROW’
+/usr/include/stdlib.h:531:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/stdlib.h:554:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/stdlib.h:568:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/stdlib.h:712:1: error: ‘__BEGIN_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/stdlib.h:718:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/stdlib.h:752:1: error: ‘__BEGIN_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/stdlib.h:762:6: error: ‘__compar_fn_t’ no se ha declarado
+/usr/include/stdlib.h:762:30: error: expected initializer before ‘__nonnull’
+/usr/include/stdlib.h:771:26: error: expected initializer before ‘__THROW’
+/usr/include/stdlib.h:772:37: error: expected initializer before ‘__THROW’
+/usr/include/stdlib.h:773:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/stdlib.h:788:6: error: expected initializer before ‘__THROW’
+/usr/include/stdlib.h:789:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/stdlib.h:864:48: error: expected initializer before ‘__THROW’
+/usr/include/stdlib.h:867:48: error: expected initializer before ‘__THROW’
+/usr/include/stdlib.h:872:46: error: expected initializer before ‘__THROW’
+/usr/include/stdlib.h:876:6: error: expected initializer before ‘__THROW’
+/usr/include/stdlib.h:877:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+In file included from /usr/include/c++/4.6/ext/string_conversions.h:37:0,
+                 from /usr/include/c++/4.6/bits/basic_string.h:2756,
+                 from /usr/include/c++/4.6/string:54,
+                 from /usr/include/c++/4.6/bits/locale_classes.h:42,
+                 from /usr/include/c++/4.6/bits/ios_base.h:43,
+                 from /usr/include/c++/4.6/ios:43,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/c++/4.6/cstdlib:163:11: error: ‘::lldiv_t’ no se ha declarado
+/usr/include/c++/4.6/cstdlib:169:11: error: ‘::_Exit’ no se ha declarado
+/usr/include/c++/4.6/cstdlib:176:11: error: ‘::llabs’ no se ha declarado
+/usr/include/c++/4.6/cstdlib:178:10: error: ‘lldiv_t’ no nombra a un tipo
+/usr/include/c++/4.6/cstdlib:182:11: error: ‘::lldiv’ no se ha declarado
+/usr/include/c++/4.6/cstdlib:193:11: error: ‘::atoll’ no se ha declarado
+/usr/include/c++/4.6/cstdlib:194:11: error: ‘::strtoll’ no se ha declarado
+/usr/include/c++/4.6/cstdlib:195:11: error: ‘::strtoull’ no se ha declarado
+/usr/include/c++/4.6/cstdlib:197:11: error: ‘::strtof’ no se ha declarado
+/usr/include/c++/4.6/cstdlib:198:11: error: ‘::strtold’ no se ha declarado
+/usr/include/c++/4.6/cstdlib:206:22: error: ‘__gnu_cxx::lldiv_t’ no se ha declarado
+/usr/include/c++/4.6/cstdlib:208:22: error: ‘__gnu_cxx::_Exit’ no se ha declarado
+/usr/include/c++/4.6/cstdlib:211:22: error: ‘__gnu_cxx::llabs’ no se ha declarado
+/usr/include/c++/4.6/cstdlib:212:22: error: ‘__gnu_cxx::div’ no se ha declarado
+/usr/include/c++/4.6/cstdlib:213:22: error: ‘__gnu_cxx::lldiv’ no se ha declarado
+/usr/include/c++/4.6/cstdlib:215:22: error: ‘__gnu_cxx::atoll’ no se ha declarado
+/usr/include/c++/4.6/cstdlib:216:22: error: ‘__gnu_cxx::strtof’ no se ha declarado
+/usr/include/c++/4.6/cstdlib:217:22: error: ‘__gnu_cxx::strtoll’ no se ha declarado
+/usr/include/c++/4.6/cstdlib:218:22: error: ‘__gnu_cxx::strtoull’ no se ha declarado
+/usr/include/c++/4.6/cstdlib:219:22: error: ‘__gnu_cxx::strtold’ no se ha declarado
+/usr/include/c++/4.6/cstdlib:228:14: error: ‘std::lldiv_t’ no se ha declarado
+/usr/include/c++/4.6/cstdlib:231:14: error: ‘std::llabs’ no se ha declarado
+/usr/include/c++/4.6/cstdlib:232:14: error: ‘std::lldiv’ no se ha declarado
+/usr/include/c++/4.6/cstdlib:235:14: error: ‘std::atoll’ no se ha declarado
+/usr/include/c++/4.6/cstdlib:236:14: error: ‘std::strtoll’ no se ha declarado
+/usr/include/c++/4.6/cstdlib:237:14: error: ‘std::strtoull’ no se ha declarado
+/usr/include/c++/4.6/cstdlib:239:14: error: ‘std::strtof’ no se ha declarado
+/usr/include/c++/4.6/cstdlib:240:14: error: ‘std::strtold’ no se ha declarado
+/usr/include/c++/4.6/cstdlib:245:14: error: ‘std::div’ no se ha declarado
+In file included from /usr/include/c++/4.6/cstdio:44:0,
+                 from /usr/include/c++/4.6/ext/string_conversions.h:39,
+                 from /usr/include/c++/4.6/bits/basic_string.h:2756,
+                 from /usr/include/c++/4.6/string:54,
+                 from /usr/include/c++/4.6/bits/locale_classes.h:42,
+                 from /usr/include/c++/4.6/bits/ios_base.h:43,
+                 from /usr/include/c++/4.6/ios:43,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/stdio.h:30:1: error: ‘__BEGIN_DECLS’ no nombra a un tipo
+In file included from /usr/include/c++/4.6/cstdio:44:0,
+                 from /usr/include/c++/4.6/ext/string_conversions.h:39,
+                 from /usr/include/c++/4.6/bits/basic_string.h:2756,
+                 from /usr/include/c++/4.6/string:54,
+                 from /usr/include/c++/4.6/bits/locale_classes.h:42,
+                 from /usr/include/c++/4.6/bits/ios_base.h:43,
+                 from /usr/include/c++/4.6/ios:43,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/stdio.h:47:1: error: ‘__BEGIN_NAMESPACE_STD’ no nombra a un tipo
+/usr/include/stdio.h:50:1: error: ‘__END_NAMESPACE_STD’ no nombra a un tipo
+In file included from /usr/include/libio.h:32:0,
+                 from /usr/include/stdio.h:75,
+                 from /usr/include/c++/4.6/cstdio:44,
+                 from /usr/include/c++/4.6/ext/string_conversions.h:39,
+                 from /usr/include/c++/4.6/bits/basic_string.h:2756,
+                 from /usr/include/c++/4.6/string:54,
+                 from /usr/include/c++/4.6/bits/locale_classes.h:42,
+                 from /usr/include/c++/4.6/bits/ios_base.h:43,
+                 from /usr/include/c++/4.6/ios:43,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/_G_config.h:26:3: error: ‘_G_fpos_t’ no nombra a un tipo
+In file included from /usr/include/c++/4.6/cstdio:44:0,
+                 from /usr/include/c++/4.6/ext/string_conversions.h:39,
+                 from /usr/include/c++/4.6/bits/basic_string.h:2756,
+                 from /usr/include/c++/4.6/string:54,
+                 from /usr/include/c++/4.6/bits/locale_classes.h:42,
+                 from /usr/include/c++/4.6/bits/ios_base.h:43,
+                 from /usr/include/c++/4.6/ios:43,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/stdio.h:111:9: error: ‘_G_fpos_t’ no nombra a un tipo
+In file included from /usr/include/c++/4.6/cstdio:44:0,
+                 from /usr/include/c++/4.6/ext/string_conversions.h:39,
+                 from /usr/include/c++/4.6/bits/basic_string.h:2756,
+                 from /usr/include/c++/4.6/string:54,
+                 from /usr/include/c++/4.6/bits/locale_classes.h:42,
+                 from /usr/include/c++/4.6/bits/ios_base.h:43,
+                 from /usr/include/c++/4.6/ios:43,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/stdio.h:196:8: error: ‘FILE’ no nombra a un tipo
+/usr/include/stdio.h:238:20: error: ‘FILE’ no se declaró en este ámbito
+/usr/include/stdio.h:238:26: error: ‘__stream’ no se declaró en este ámbito
+/usr/include/stdio.h:243:20: error: ‘FILE’ no se declaró en este ámbito
+/usr/include/stdio.h:243:26: error: ‘__stream’ no se declaró en este ámbito
+/usr/include/stdio.h:273:8: error: ‘FILE’ no nombra a un tipo
+/usr/include/stdio.h:279:8: error: ‘FILE’ no nombra a un tipo
+/usr/include/stdio.h:333:21: error: se declaró la variable o campo ‘setbuf’ como void
+/usr/include/stdio.h:333:21: error: ‘FILE’ no se declaró en este ámbito
+/usr/include/stdio.h:333:27: error: expected primary-expression before ‘__restrict’
+/usr/include/stdio.h:333:48: error: expected primary-expression before ‘char’
+/usr/include/stdio.h:337:21: error: ‘FILE’ no se declaró en este ámbito
+/usr/include/stdio.h:337:27: error: expected primary-expression before ‘__restrict’
+/usr/include/stdio.h:337:48: error: expected primary-expression before ‘char’
+/usr/include/stdio.h:338:7: error: expected primary-expression before ‘int’
+/usr/include/stdio.h:338:27: error: expected primary-expression before ‘__n’
+/usr/include/stdio.h:338:30: error: se trata la lista de expresiones como una expresión compuesta en en inicializador [-fpermissive]
+/usr/include/stdio.h:357:21: error: ‘FILE’ no se declaró en este ámbito
+/usr/include/stdio.h:357:27: error: expected primary-expression before ‘__restrict’
+/usr/include/stdio.h:358:7: error: expected primary-expression before ‘__const’
+/usr/include/stdio.h:358:42: error: expected primary-expression before ‘...’ token
+/usr/include/stdio.h:358:45: error: se trata la lista de expresiones como una expresión compuesta en en inicializador [-fpermissive]
+/usr/include/stdio.h:372:22: error: ‘FILE’ no se declaró en este ámbito
+/usr/include/stdio.h:372:28: error: expected primary-expression before ‘__restrict’
+/usr/include/stdio.h:372:44: error: expected primary-expression before ‘__const’
+/usr/include/stdio.h:373:19: error: expected primary-expression before ‘__arg’
+/usr/include/stdio.h:373:24: error: se trata la lista de expresiones como una expresión compuesta en en inicializador [-fpermissive]
+/usr/include/stdio.h:431:20: error: ‘FILE’ no se declaró en este ámbito
+/usr/include/stdio.h:431:26: error: expected primary-expression before ‘__restrict’
+/usr/include/stdio.h:432:6: error: expected primary-expression before ‘__const’
+/usr/include/stdio.h:432:41: error: expected primary-expression before ‘...’ token
+/usr/include/stdio.h:432:44: error: se trata la lista de expresiones como una expresión compuesta en en inicializador [-fpermissive]
+/usr/include/stdio.h:537:19: error: ‘FILE’ no se declaró en este ámbito
+/usr/include/stdio.h:537:25: error: ‘__stream’ no se declaró en este ámbito
+/usr/include/stdio.h:538:18: error: ‘FILE’ no se declaró en este ámbito
+/usr/include/stdio.h:538:24: error: ‘__stream’ no se declaró en este ámbito
+/usr/include/stdio.h:579:28: error: ‘FILE’ no se ha declarado
+/usr/include/stdio.h:580:27: error: ‘FILE’ no se ha declarado
+/usr/include/stdio.h:628:52: error: ‘FILE’ no se ha declarado
+/usr/include/stdio.h:686:49: error: ‘FILE’ no se ha declarado
+/usr/include/stdio.h:699:29: error: ‘FILE’ no se ha declarado
+/usr/include/stdio.h:707:20: error: ‘FILE’ no se ha declarado
+/usr/include/stdio.h:713:21: error: ‘FILE’ no se ha declarado
+/usr/include/stdio.h:746:19: error: ‘FILE’ no se declaró en este ámbito
+/usr/include/stdio.h:746:25: error: ‘__stream’ no se declaró en este ámbito
+/usr/include/stdio.h:746:35: error: expected primary-expression before ‘long’
+/usr/include/stdio.h:746:51: error: expected primary-expression before ‘int’
+/usr/include/stdio.h:746:63: error: se trata la lista de expresiones como una expresión compuesta en en inicializador [-fpermissive]
+/usr/include/stdio.h:751:24: error: ‘FILE’ no se declaró en este ámbito
+/usr/include/stdio.h:751:30: error: ‘__stream’ no se declaró en este ámbito
+/usr/include/stdio.h:756:21: error: se declaró la variable o campo ‘rewind’ como void
+/usr/include/stdio.h:756:21: error: ‘FILE’ no se declaró en este ámbito
+/usr/include/stdio.h:756:27: error: ‘__stream’ no se declaró en este ámbito
+/usr/include/stdio.h:795:21: error: ‘FILE’ no se declaró en este ámbito
+/usr/include/stdio.h:795:27: error: expected primary-expression before ‘__restrict’
+/usr/include/stdio.h:795:48: error: ‘fpos_t’ no se declaró en este ámbito
+/usr/include/stdio.h:795:56: error: expected primary-expression before ‘__restrict’
+/usr/include/stdio.h:795:72: error: se trata la lista de expresiones como una expresión compuesta en en inicializador [-fpermissive]
+/usr/include/stdio.h:800:21: error: ‘FILE’ no se declaró en este ámbito
+/usr/include/stdio.h:800:27: error: ‘__stream’ no se declaró en este ámbito
+/usr/include/stdio.h:800:37: error: expected primary-expression before ‘__const’
+/usr/include/stdio.h:800:58: error: se trata la lista de expresiones como una expresión compuesta en en inicializador [-fpermissive]
+/usr/include/stdio.h:823:23: error: se declaró la variable o campo ‘clearerr’ como void
+/usr/include/stdio.h:823:23: error: ‘FILE’ no se declaró en este ámbito
+/usr/include/stdio.h:823:29: error: ‘__stream’ no se declaró en este ámbito
+/usr/include/stdio.h:825:18: error: ‘FILE’ no se declaró en este ámbito
+/usr/include/stdio.h:825:24: error: ‘__stream’ no se declaró en este ámbito
+/usr/include/stdio.h:827:20: error: ‘FILE’ no se declaró en este ámbito
+/usr/include/stdio.h:827:26: error: ‘__stream’ no se declaró en este ámbito
+In file included from /usr/include/c++/4.6/cstdio:44:0,
+                 from /usr/include/c++/4.6/ext/string_conversions.h:39,
+                 from /usr/include/c++/4.6/bits/basic_string.h:2756,
+                 from /usr/include/c++/4.6/string:54,
+                 from /usr/include/c++/4.6/bits/locale_classes.h:42,
+                 from /usr/include/c++/4.6/bits/ios_base.h:43,
+                 from /usr/include/c++/4.6/ios:43,
+                 from /usr/include/c++/4.6/ostream:40,
+                 from /usr/include/c++/4.6/iostream:40,
+                 from /adele/dev/workspace/Include/Component.h:7,
+                 from ../TicketConnectorSpark.h:16,
+                 from ../TicketConnectorSpark.cpp:10:
+/usr/include/stdio.h:940:1: error: expected declaration before ‘}’ token

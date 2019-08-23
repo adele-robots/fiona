@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<formatter 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:noNamespaceSchemaLocation="../fwnScheme.xsd">
+
+	<destino nombre="00" tipoDato="BigDecimal">
+		<!-- El identificador del usuario conectado almacenado en session -->
+		<origen nombre="SECURE_USERID" />
+	</destino>
+	<destino nombre="01" tipoDato="String">
+		<origen nombre="SES_USER_FISTNAME" />
+	</destino>
+	<destino nombre="02" tipoDato="String">
+		<origen nombre="SES_USER_SURNAME" />
+	</destino>
+	<destino nombre="03" tipoDato="String">
+		<!-- @TODO: Cambiar cuando se active el AvatarBuilder encoded userpath 
+			en negocio para permitir al usuario cambiar su email. 
+			Ahora no se puede porque este campo se calcula a partir del email y si se deja cambiar
+			se pierden todos las configuraciones del avatar para el usuario
+		<origen nombre="USER_MAIL" />
+		-->
+		<origen nombre="SECURE_USERMAIL" />
+	</destino>
+	<destino nombre="04" tipoDato="String">
+		<origen nombre="SES_USER_NEWPASSWORD1" />
+	</destino>
+	<destino nombre="05" tipoDato="String">
+		<!-- El propio usuario no puede cambiar su status asi que lo cogemos de session -->
+		<origen nombre="SECURE_USER_STATUS" />
+	</destino>
+	<destino nombre="06" tipoDato="BigDecimal">
+		<!-- @TODO: Este campo esta disabled en la view asi que lo cogemos de session
+		<origen nombre="USER_ENTITY_ID" /> -->
+		<origen nombre="SECURE_USER_ENTITY_ID" />
+	</destino>
+	<destino nombre="07" tipoDato="BigDecimal">
+		<origen nombre="SES_USER_ACCOUNTTYPE_ID" />
+	</destino>
+	<destino nombre="08" tipoDato="BigDecimal">
+		<!-- @TODO: Este campo esta disabled en la view asi que lo cogemos de session
+		<origen nombre="USER_CREDITCARD_NUMBER" /> -->
+		<origen nombre="SECURE_USER_CREDITCARD_NUMBER" />
+	</destino>
+	<destino nombre="09" tipoDato="String">
+		<!-- @TODO: Este campo esta disabled en la view asi que lo cogemos de session
+		<origen nombre="USER_CREDITCARD_EXPIRATION" /> -->
+		<origen nombre="SECURE_USER_CREDITCARD_EXPIRATION" />
+	</destino>
+	<destino nombre="10" tipoDato="String">
+		<!-- El propio usuario no puede cambiar su codigo de confirmacion de registro asi que lo cogemos de session -->
+		<origen nombre="SECURE_USER_SIGNUPCODE" />
+	</destino>
+	<destino nombre="11" tipoDato="String">
+		<origen nombre="SES_USER_NICKNAME" />
+	</destino>
+	<destino nombre="12" tipoDato="BigDecimal">
+		<!-- El propio usuario no puede cambiar su rol asi que lo cogemos de session -->
+		<origen nombre="SECURE_USER_USERGROUP_ID" />
+	</destino>
+	<destino nombre="13" tipoDato="String">
+		<origen nombre="SES_USER_TITLE" />
+	</destino>
+	<destino nombre="14" tipoDato="String">
+		<origen nombre="SES_USER_FLAGENTITY" />
+	</destino>
+	<destino nombre="15" tipoDato="BigDecimal">
+		<origen nombre="SES_USER_ORGANIZATIONTYPE_ID" />
+	</destino>
+	<destino nombre="16" tipoDato="String">
+		<origen nombre="SES_USER_LEGALENTITYNAME" />
+	</destino>
+	<destino nombre="17" tipoDato="String">
+		<origen nombre="SES_USER_WEBSITE" />
+	</destino>
+	<destino nombre="18" tipoDato="String">
+		<origen nombre="SES_USER_WORKEMAIL" />
+	</destino>
+	<destino nombre="19" tipoDato="String">
+		<origen nombre="SES_USER_COUNTRYCODE" />
+	</destino>
+	<destino nombre="20" tipoDato="String">
+		<origen nombre="SES_USER_PHONENUMBER" />
+	</destino>
+	<destino nombre="21" tipoDato="String">
+		<origen nombre="SES_USER_EXT" />
+	</destino>
+	<destino nombre="22" tipoDato="String">
+		<origen nombre="SES_USER_ACCOUNTTYPE_METHOD" />
+	</destino>
+
+</formatter>

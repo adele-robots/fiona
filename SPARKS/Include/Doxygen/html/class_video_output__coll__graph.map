@@ -1,0 +1,19 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$class_thread.html" title="Base class for exception&#45;aware iterative stoppable threads." alt="" coords="1164,88,1225,117"/>
+<area shape="rect" id="node4" href="$class_i_async_fatal_error_handler.html" title="IAsyncFatalErrorHandler" alt="" coords="784,57,949,87"/>
+<area shape="rect" id="node6" href="$class_scene3_d.html" title="This class encapsulates the 3D scene rendering implementation." alt="" coords="1157,171,1232,200"/>
+<area shape="rect" id="node8" href="$class_i_scene.html" title="IScene" alt="" coords="836,111,897,140"/>
+<area shape="rect" id="node21" href="$class_motion_controller.html" title="Regulated control of character joints and morph target values." alt="" coords="1136,284,1253,313"/>
+<area shape="rect" id="node10" href="$class_i_skeleton.html" title="ISkeleton" alt="" coords="508,51,585,80"/>
+<area shape="rect" id="node12" href="$classpsisban_1_1_config.html" title="Libconfig wrapper." alt="" coords="207,107,319,136"/>
+<area shape="rect" id="node26" href="$class_lip_synch.html" title="Virtual character lip synchroniztion with the text&#45;to&#45;speech engine." alt="" coords="829,304,904,333"/>
+<area shape="rect" id="node14" href="$class_eye.html" title="Eye" alt="" coords="240,15,285,44"/>
+<area shape="rect" id="node16" href="$struct_vector.html" title="Vector" alt="" coords="7,15,65,44"/>
+<area shape="rect" id="node18" href="$class_i_morph_target_blender.html" title="IMorphTargetBlender" alt="" coords="476,188,617,217"/>
+<area shape="rect" id="node23" href="$class_perlin.html" title="Encapsulates Perlin noise funtionality." alt="" coords="840,251,893,280"/>
+<area shape="rect" id="node28" href="$class_stop_watch.html" title="Cronometer based in the high&#45;precission performance counter." alt="" coords="504,360,589,389"/>
+<area shape="rect" id="node36" href="$class_on_screen_monitor.html" title="OnScreenMonitor" alt="" coords="981,472,1104,501"/>
+<area shape="rect" id="node32" href="$class_meca_tronica_serial.html" title="MecaTronicaSerial" alt="" coords="801,423,932,452"/>
+<area shape="rect" id="node39" href="$class_window.html" title="Window" alt="" coords="1160,509,1229,539"/>
+<area shape="rect" id="node41" href="$classpsisban_1_1_i_event_handler.html" title="psisban::IEventHandler" alt="" coords="788,527,945,556"/>
+</map>

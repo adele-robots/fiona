@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources>
+    <local-tx-datasource>
+	<jndi-name>jdbc/DB_CLINEG001_XA</jndi-name>
+	<use-java-context>false</use-java-context>
+
+	<driver-class>com.mysql.jdbc.Driver</driver-class>
+
+	<!-- BBDD CLINEG  -->  
+	<connection-url>jdbc:mysql://dbmdesa.treelogic.local:3309/fionadb</connection-url>
+    	<user-name>fiona_user</user-name>
+		<password>f10na</password>  
+		<metadata>
+		    <type-mapping>MYSQL</type-mapping>
+		</metadata>
+    </local-tx-datasource>
+</datasources>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<formatter 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:noNamespaceSchemaLocation="../fwnScheme.xsd">
+
+	<destino nombre="00" tipoDato="String">
+		<origen nombre="USER_FISTNAME" />
+	</destino>
+	<destino nombre="01" tipoDato="String">
+		<origen nombre="USER_SURNAME" />
+	</destino>
+	<destino nombre="02" tipoDato="String">
+		<origen nombre="USER_MAIL" />
+	</destino>
+	<destino nombre="03" tipoDato="String">
+		<origen nombre="USER_PASSWORD1" />
+	</destino>
+	<destino nombre="04" tipoDato="BigDecimal">
+		<origen nombre="USER_ENTITY_ID" />
+	</destino>
+	<destino nombre="05" tipoDato="BigDecimal">
+		<origen nombre="USER_ACCOUNTTYPE_ID" />
+	</destino>
+	<destino nombre="06" tipoDato="BigDecimal">
+		<origen nombre="USER_CREDITCARD_NUMBER" />
+	</destino>
+	<destino nombre="07" tipoDato="String">
+		<origen nombre="USER_CREDITCARD_EXPIRATION" />
+	</destino>
+	<destino nombre="08" tipoDato="String">
+		<origen nombre="USER_NICKNAME" />
+	</destino>
+	<destino nombre="09" tipoDato="BigDecimal">
+		<funcion method="FuncionConstante">
+			<origen nombre="2" /><!-- En BBDD es ROLE_USER -->
+		</funcion>
+	</destino>
+	<destino nombre="10" tipoDato="String">
+		<origen nombre="USER_TITLE" />
+	</destino>
+	<destino nombre="11" tipoDato="String">
+		<origen nombre="USER_FLAGENTITY" />
+	</destino>
+	<destino nombre="12" tipoDato="BigDecimal">
+		<origen nombre="USER_ORGANIZATIONTYPE_ID" />
+	</destino>
+	<destino nombre="13" tipoDato="String">
+		<origen nombre="USER_LEGALENTITYNAME" />
+	</destino>
+	<destino nombre="14" tipoDato="String">
+		<origen nombre="USER_WEBSITE" />
+	</destino>
+	<destino nombre="15" tipoDato="String">
+		<origen nombre="USER_WORKEMAIL" />
+	</destino>
+	<destino nombre="16" tipoDato="String">
+		<origen nombre="USER_COUNTRYCODE" />
+	</destino>
+	<destino nombre="17" tipoDato="String">
+		<origen nombre="USER_PHONENUMBER" />
+	</destino>
+	<destino nombre="18" tipoDato="String">
+		<origen nombre="USER_EXT" />
+	</destino>
+	<destino nombre="19" tipoDato="String">
+		<origen nombre="USER_ACCOUNTTYPE_METHOD" />
+	</destino>
+
+</formatter>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<formatter 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:noNamespaceSchemaLocation="../fwnScheme.xsd">
+
+	<destino persist="USER_FISTNAME">
+		<origen nombre="USER_FISTNAME" />
+	</destino>
+	<destino persist="USER_SURNAME">
+		<origen nombre="USER_SURNAME" />
+	</destino>
+	<destino persist="USER_MAIL">
+		<origen nombre="USER_MAIL" />
+	</destino>
+	<destino persist="USER_PASSWORD1">
+		<origen nombre="USER_PASSWORD1" />
+	</destino>
+	<destino persist="USER_ENTITY_ID">
+		<origen nombre="USER_ENTITY_ID" />
+	</destino>
+	<destino persist="USER_ACCOUNTTYPE_ID">
+		<origen nombre="USER_ACCOUNTTYPE_ID" />
+	</destino>
+	<destino persist="USER_CREDITCARD_NUMBER">
+		<origen nombre="USER_CREDITCARD_NUMBER" />
+	</destino>
+	<destino persist="USER_CREDITCARD_EXPIRATION">
+		<origen nombre="USER_CREDITCARD_EXPIRATION" />
+	</destino>
+	<destino persist="USER_NICKNAME">
+		<origen nombre="USER_NICKNAME" />
+	</destino>	
+	<destino persist="USER_TITLE">
+		<origen nombre="USER_TITLE" />
+	</destino>
+	<destino persist="USER_FLAGENTITY">
+		<origen nombre="USER_FLAGENTITY" />
+	</destino>
+	<destino persist="USER_ORGANIZATIONTYPE_ID">
+		<origen nombre="USER_ORGANIZATIONTYPE_ID" />
+	</destino>
+	<destino persist="USER_LEGALENTITYNAME">
+		<origen nombre="USER_LEGALENTITYNAME" />
+	</destino>
+	<destino persist="USER_WEBSITE">
+		<origen nombre="USER_WEBSITE" />
+	</destino>
+	<destino persist="USER_WORKEMAIL">
+		<origen nombre="USER_WORKEMAIL" />
+	</destino>
+	<destino persist="USER_COUNTRYCODE">
+		<origen nombre="USER_COUNTRYCODE" />
+	</destino>
+	<destino persist="USER_PHONENUMBER">
+		<origen nombre="USER_PHONENUMBER" />
+	</destino>
+	<destino persist="USER_EXT">
+		<origen nombre="USER_EXT" />
+	</destino>
+	<destino persist="USER_ACCOUNTTYPE_METHOD">
+		<origen nombre="USER_ACCOUNTTYPE_METHOD" />
+	</destino>
+
+</formatter>

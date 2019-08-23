@@ -1,0 +1,13 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_video_queue_8h.html" title="/adele/dev/workspace/Include/VideoQueue.h" alt="" coords="184,83,464,112"/>
+<area shape="rect" id="node5" href="$_face_tracker_8h.html" title="FaceTracker class definition." alt="" coords="5,160,288,189"/>
+<area shape="rect" id="node28" href="$_v_c_image_8h.html" title="IImage wrapping an externally supplied VidCapture::CVImage." alt="" coords="488,83,752,112"/>
+<area shape="rect" id="node11" href="$_video_input_8h.html" title="VideoInput class declaration." alt="" coords="312,160,584,189"/>
+<area shape="rect" id="node7" href="$_application_8h.html" title="Application class declaration." alt="" coords="87,469,361,499"/>
+<area shape="rect" id="node9" href="$_app_teleoperacion_8h.html" title="/adele/dev/workspace/Include/AppTeleoperacion.h" alt="" coords="67,547,381,576"/>
+<area shape="rect" id="node13" href="$_remote_video_input_8h.html" title="RemoteVideoInput class declaration." alt="" coords="271,237,588,267"/>
+<area shape="rect" id="node18" href="$_a_v_input_8h.html" title="AVInput class declaration." alt="" coords="289,392,545,421"/>
+<area shape="rect" id="node23" href="$_local_video_input_8h.html" title="LocalVideoInput class declaration." alt="" coords="680,237,981,267"/>
+<area shape="rect" id="node15" href="$_f_f_mpeg_audio_video_source_8h.html" title="FFMpegAudioVideoSource class declaration." alt="" coords="235,315,600,344"/>
+<area shape="rect" id="node25" href="$_scxml_event_handler_8h.html" title="ScxmlEventHandler class definition." alt="" coords="675,315,1000,344"/>
+</map>

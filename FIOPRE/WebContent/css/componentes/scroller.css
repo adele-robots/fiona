@@ -1,0 +1,40 @@
+/******* Scroller *************/
+.rich-dtascroller-table {
+	border-style:solid;
+	border-width:0;
+	background-color: transparent;
+	text-align:right;
+}
+
+.rich-datascr-button, .rich-datascr-ctrls-separator {
+	border-style:solid;
+	border-width:0px;
+	cursor:pointer;
+	text-align:center;
+	width:25px;
+	color : #009390;
+	background-color: transparent;
+}
+
+.rich-datascr-act {
+	border-top-style:solid;
+	border-top-width:0px;
+	border-color : #009390;
+	text-align:center;
+	width:15px;
+	color : black;
+	font-weight : bold;
+	background-color: transparent;
+}
+
+.rich-datascr-inact {
+	border-top-style:solid;
+	border-top-width:0px;
+	border-color : #009390;
+	cursor:pointer;
+	text-align:center;
+	width:15px;
+	color : #009390;
+	background-color: transparent;
+	text-decoration:underline;
+}

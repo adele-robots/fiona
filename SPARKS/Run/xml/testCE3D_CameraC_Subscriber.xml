@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentNetwork xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ComponentNetwork.xsd">
+
+    <!-- COMPONENT DECLARATION -->
+  <ComponentDeclarations>
+    <Component  id="idCharacterEmbodiment3DComponent"  type="CharacterEmbodiment3DSpark" plugin="libCharacterEmbodiment3DSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IFaceExpression" />
+      </ProvidedInterfaces>
+      <ProvidedInterfaces>
+        <Interface name="IEyes" />
+      </ProvidedInterfaces>
+      <ProvidedInterfaces>
+        <Interface name="INeck" />
+      </ProvidedInterfaces>
+      <ProvidedInterfaces>
+        <Interface name="IAnimation" />
+      </ProvidedInterfaces>
+	<ProvidedInterfaces>
+        <Interface name="ICamera" />
+      </ProvidedInterfaces>
+	  <ProvidedInterfaces>
+        <Interface name="IConcurrent" />
+      </ProvidedInterfaces>
+	  <ProvidedInterfaces>
+        <Interface name="IAsyncFatalErrorHandler" />
+      </ProvidedInterfaces>
+	  <ProvidedInterfaces>
+        <Interface name="IApplication" />
+      </ProvidedInterfaces>
+      <ProvidedInterfaces>
+        <Interface name="IEventQueue" />
+      </ProvidedInterfaces>
+      <ProvidedInterfaces>
+        <Interface name="IFrameEventPublisher" />
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+	<Interface name="IAsyncFatalErrorHandler" />
+      </RequiredInterfaces>
+    </Component>
+
+    
+	
+	<Component id="idEyeContactComponent"  type="EyeContactSpark" plugin="libEyeContactSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IDetectedFacePositionConsumer" />
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="INeck" />
+        <Interface name="IEyes" />
+	<Interface name="IFrameEventPublisher" />
+      </RequiredInterfaces>
+    </Component>
+	
+    <Component id="idCameraControl"  type="CameraControlSpark" plugin="libCameraControlSpark.so">
+      <RequiredInterfaces>
+        <Interface name="ICamera" />
+	<Interface name="IFrameEventPublisher" />
+      </RequiredInterfaces>
+    </Component>
+	
+	
+  </ComponentDeclarations>
+  
+  
+  <!-- APPLICATION DESCRIPTION -->
+  <ApplicationDescription applicationComponent="instanceCharacterEmbodiment3DComponent" applicationConfig="/GeneralEca.ini">
+    <!-- Paso 1/2: Instantiate components -->
+    <ComponentInstances>
+      
+	  <Instance instanceName="instanceCharacterEmbodiment3DComponent" componentID ="idCharacterEmbodiment3DComponent" configuration="/ComponentConfigurations/CharacterEmbodiment3DSpark.ini"/>
+	  <Instance instanceName="instanceEyeContactComponent" componentID ="idEyeContactComponent"    configuration="/ComponentConfigurations/EyeContactSpark.ini" />
+	   <Instance instanceName="instanceCameraControl" componentID ="idCameraControl" configuration="/ComponentConfigurations/CameraControlSpark.ini"/>
+	  
+	  
+    </ComponentInstances>
+    
+    <!-- Paso 2/2: Connect interfaces -->
+    <InterfaceConnections>
+	  
+	  <Connect interface="IEyes" providedBy="instanceCharacterEmbodiment3DComponent"
+requiredBy="instanceEyeContactComponent" />
+	  <Connect interface="INeck" providedBy="instanceCharacterEmbodiment3DComponent" requiredBy="instanceEyeContactComponent" />
+
+	  <Connect interface="ICamera" providedBy="instanceCharacterEmbodiment3DComponent" requiredBy="instanceCameraControl" />
+	  
+      <ConnectAll interface="IAsyncFatalErrorHandler" providedBy="instanceCharacterEmbodiment3DComponent"/>
+      <ConnectAll interface="IFrameEventPublisher" providedBy="instanceCharacterEmbodiment3DComponent"/>
+    </InterfaceConnections>
+  </ApplicationDescription>
+</ComponentNetwork>

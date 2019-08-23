@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentNetwork xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ComponentNetwork.xsd">
+    <!-- COMPONENT DECLARATION -->
+  <ComponentDeclarations>
+    <Component  id="idRemoteCharacterEmbodiment3DSpark"  type="RemoteCharacterEmbodiment3DSpark" plugin="libRemoteCharacterEmbodiment3DSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IFaceExpression" />  
+        <Interface name="IEyes" />
+        <Interface name="INeck" />
+        <Interface name="IAnimation" />
+        <Interface name="ICamera" />
+        <Interface name="IConcurrent" />
+        <Interface name="IAsyncFatalErrorHandler" />
+        <Interface name="IApplication" />
+        <Interface name="IEventQueue" />
+        <Interface name="IFrameEventPublisher" />
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="IAudioQueue" />
+        <Interface name="IAsyncFatalErrorHandler" />
+        <Interface name="IControlVoice" />
+      </RequiredInterfaces>
+    </Component>
+
+		<Component  id="idFaceTrackerThreadSpark"  type="FaceTrackerThreadSpark" plugin="libFaceTrackerThreadSpark.so">
+			<ProvidedInterfaces>
+				<Interface name="IVideoConsumer" />
+				<Interface name="IConcurrent" />
+			</ProvidedInterfaces>
+			<RequiredInterfaces>
+				<Interface name="IAsyncFatalErrorHandler" />
+				<Interface name="IDetectedFacePositionConsumer" />
+			</RequiredInterfaces>
+		</Component>
+
+		<Component  id="idAudioConsumerSpark"  type="AudioConsumerSpark" plugin="libAudioConsumerSpark.so">
+			<ProvidedInterfaces>
+				<Interface name="IAudioConsumer" />
+			</ProvidedInterfaces>
+			<RequiredInterfaces>
+			</RequiredInterfaces>
+		</Component>
+
+<Component  id="idAVInputSpark"  type="AVInputSpark" plugin="libAVInputSpark.so">
+<ProvidedInterfaces>
+<Interface name="IConcurrent" />
+</ProvidedInterfaces>
+<RequiredInterfaces>
+<Interface name="IAsyncFatalErrorHandler" />
+<Interface name="IAudioConsumer" />
+<Interface name="IVideoConsumer" />
+</RequiredInterfaces>
+</Component>
+	
+	<Component id="idEyeContactComponent"  type="EyeContactSpark" plugin="libEyeContactSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IDetectedFacePositionConsumer" />
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="INeck" />
+        <Interface name="IEyes" />
+				<Interface name="IFrameEventPublisher" />
+      </RequiredInterfaces>
+    </Component>
+	
+    <Component id="idCameraControl"  type="CameraControlSpark" plugin="libCameraControlSpark.so">
+      <RequiredInterfaces>
+        <Interface name="ICamera" />
+				<Interface name="IFrameEventPublisher" />
+      </RequiredInterfaces>
+    </Component>
+	
+		<Component id="idRemoteFliteVoiceSpark"  type="RemoteFliteVoiceSpark" plugin="libRemoteFliteVoiceSpark.so">
+      <ProvidedInterfaces>
+				<Interface name="IFlow&lt;char*&gt;" />
+				<Interface name="IAudioQueue" />
+      </ProvidedInterfaces>
+    </Component>
+
+		<Component id="idVoiceStartSpark"  type="VoiceStartSpark" plugin="libVoiceStartSpark.so">
+      <ProvidedInterfaces>
+				<Interface name="IControlVoice" />	
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="IFlow&lt;char*&gt;" />
+        <Interface name="IFaceExpression" />
+        <Interface name="IFrameEventPublisher" />
+      </RequiredInterfaces>
+    </Component>	
+
+		<Component  id="idChatThreadSpark"  type="ChatThreadSpark" plugin="libChatThreadSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IFlow&lt;char*&gt;" />
+        <Interface name="IConcurrent" />
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="IFlow&lt;char*&gt;" />  
+        <Interface name="IAsyncFatalErrorHandler" />      
+      </RequiredInterfaces>
+    </Component>
+
+   <Component  id="idRebeccaAIMLSpark"  type="RebeccaAIMLSpark" plugin="libRebeccaAIMLSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IFlow&lt;char*&gt;" />
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="IFlow&lt;char*&gt;" />
+      </RequiredInterfaces>
+    </Component>
+
+	<Component id="idPublisherSpark"  type="PublisherSpark&lt;char*&gt;" plugin="libPublisherSpark.so">
+      <ProvidedInterfaces>
+				<Interface name="IPublisher&lt;char*&gt;" />
+				<Interface name="IFlow&lt;char*&gt;" />
+      </ProvidedInterfaces>
+    </Component>
+
+	<Component id="idPublisherSparkFacetrack"  type="PublisherSpark&lt;Image*&gt;" plugin="libPublisherSpark.so">
+      <ProvidedInterfaces>
+				<Interface name="IPublisher&lt;Image*&gt;" />
+				<Interface name="IFlow&lt;Image*&gt;" />
+      </ProvidedInterfaces>
+    </Component>
+
+<Component id="idPublisherSparkEye"  type="PublisherSpark&lt;int>" plugin="libPublisherSpark.so">
+      <ProvidedInterfaces>
+				<Interface name="IPublisher&lt;char*>" />
+				<Interface name="IFlow&lt;char*>" />
+      </ProvidedInterfaces>
+    </Component>
+
+<Component id="idPublisherSparkNeck"  type="PublisherSpark&lt;int>" plugin="libPublisherSpark.so">
+      <ProvidedInterfaces>
+				<Interface name="IPublisher&lt;char*>" />
+				<Interface name="IFlow&lt;char*>" />
+      </ProvidedInterfaces>
+    </Component>
+
+<Component id="idPublisherSparkFaceDetected"  type="PublisherSpark&lt;int>" plugin="libPublisherSpark.so">
+      <ProvidedInterfaces>
+				<Interface name="IPublisher&lt;char*>" />
+				<Interface name="IFlow&lt;char*>" />
+      </ProvidedInterfaces>
+    </Component>
+
+		<Component id="idSubscriberSparkChat"  type="SubscriberSpark&lt;char*&gt;" plugin="libSubscriberSpark.so">
+      <RequiredInterfaces>
+				<Interface name="IPublisher&lt;char*&gt;" />
+				<Interface name="IFlow&lt;char*&gt;" />
+      </RequiredInterfaces>
+    </Component>
+
+<Component id="idSubscriberSparkEye"  type="SubscriberSpark&lt;int>" plugin="libSubscriberSpark.so">
+      <RequiredInterfaces>
+				<Interface name="IPublisher&lt;char*>" />
+				<Interface name="IFlow&lt;char*>" />
+      </RequiredInterfaces>
+    </Component>
+<Component id="idSubscriberSparkNeck"  type="SubscriberSpark&lt;int>" plugin="libSubscriberSpark.so">
+      <RequiredInterfaces>
+				<Interface name="IPublisher&lt;char*>" />
+				<Interface name="IFlow&lt;char*>" />
+      </RequiredInterfaces>
+    </Component>
+
+<Component id="idSubscriberSparkFaceDetected"  type="SubscriberSpark&lt;int>" plugin="libSubscriberSpark.so">
+      <RequiredInterfaces>
+				<Interface name="IPublisher&lt;char*>" />
+				<Interface name="IFlow&lt;char*>" />
+      </RequiredInterfaces>
+    </Component>
+
+
+<Component id="idSubscriberSparkFakeEye"  type="SubscriberSpark&lt;int>" plugin="libSubscriberSpark.so">
+      <RequiredInterfaces>
+				<Interface name="IPublisher&lt;char*>" />
+				<Interface name="IFlow&lt;char*>" />
+      </RequiredInterfaces>
+    </Component>  
+
+<Component id="idSubscriberSparkFakeFace"  type="SubscriberSpark&lt;int>" plugin="libSubscriberSpark.so">
+      <RequiredInterfaces>
+				<Interface name="IPublisher&lt;char*>" />
+				<Interface name="IFlow&lt;char*>" />
+      </RequiredInterfaces>
+    </Component>  
+
+
+		<Component id="idSubscriberSparkFlite"  type="SubscriberSpark&lt;char*&gt;" plugin="libSubscriberSpark.so">
+      <RequiredInterfaces>
+				<Interface name="IPublisher&lt;char*&gt;" />
+				<Interface name="IFlow&lt;char*&gt;" />
+      </RequiredInterfaces>
+    </Component>  
+
+		<Component id="idSubscriberSparkFacetrack"  type="SubscriberSpark&lt;Image*&gt;" plugin="libSubscriberSpark.so">
+      <RequiredInterfaces>
+				<Interface name="IPublisher&lt;Image*&gt;" />
+				<Interface name="IFlow&lt;Image*&gt;" />
+      </RequiredInterfaces>
+    </Component>  
+
+		<Component id="idBlankSpark"  type="BlankSpark" plugin="libBlankSpark.so">      
+    </Component> 
+
+		<Component id="idEyesFakeConsumerSpark"  type="EyesFakeConsumerSpark" plugin="libEyesFakeConsumerSpark.so">
+       <ProvidedInterfaces>
+       
+      </ProvidedInterfaces>
+    </Component> 
+
+		<Component id="idFacePositionFakeConsumerSpark"  type="FacePositionFakeConsumerSpark" plugin="libFacePositionFakeConsumerSpark.so">
+       <ProvidedInterfaces>
+       
+      </ProvidedInterfaces>
+    </Component> 
+
+		<Component id="idScriptingSpark"  type="ScriptingSpark" plugin="libScriptingSpark.so">
+       <ProvidedInterfaces>
+        <Interface name="INeck" />
+      </ProvidedInterfaces>
+    </Component>
+
+  </ComponentDeclarations>
+  
+  
+  <!-- APPLICATION DESCRIPTION -->
+  <ApplicationDescription applicationComponent="instanceRemoteCharacterEmbodiment3DSpark" applicationConfig="/GeneralEca.ini">
+    <!-- Paso 1/2: Instantiate components -->
+    <ComponentInstances>      
+			<Instance instanceName="instanceEyesFakeConsumerSpark" componentID ="idEyesFakeConsumerSpark"/>
+			<Instance instanceName="instanceFacePositionFakeConsumerSpark" componentID ="idFacePositionFakeConsumerSpark"/>
+
+
+	  	<Instance instanceName="instanceBlankSpark" componentID ="idBlankSpark"/>
+	  	<Instance instanceName="instanceRemoteCharacterEmbodiment3DSpark" componentID ="idRemoteCharacterEmbodiment3DSpark" configuration="/ComponentConfigurations/CharacterEmbodiment3DSpark.ini"/>
+	  	<Instance instanceName="instanceEyeContactComponent" componentID ="idEyeContactComponent"    configuration="/ComponentConfigurations/EyeContactSpark.ini" />
+	   	<Instance instanceName="instanceCameraControl" componentID ="idCameraControl" configuration="/ComponentConfigurations/CameraControlSpark.ini"/>
+	  	<Instance instanceName="instanceRemoteFliteVoiceSpark" componentID ="idRemoteFliteVoiceSpark"/>
+	  	<Instance instanceName="instanceVoiceStartSpark" componentID ="idVoiceStartSpark" configuration="/ComponentConfigurations/VoiceStartSpark.ini"/>	  
+
+			<Instance instanceName="instanceFaceTrackerThreadSpark" componentID ="idFaceTrackerThreadSpark" configuration="/ComponentConfigurations/FaceTrackerThreadSpark.ini"/>
+			<Instance instanceName="instanceAudioConsumerSpark" componentID ="idAudioConsumerSpark" configuration="/ComponentConfigurations/AudioConsumerSpark.ini"/>
+			<Instance instanceName="instanceAVInputSpark" componentID ="idAVInputSpark" configuration="/ComponentConfigurations/AVInputSpark.ini"/>
+
+
+	  	<Instance instanceName="instancePublisherSpark" componentID ="idPublisherSpark"/>
+			<Instance instanceName="instancePublisherSparkFacetrack" componentID ="idPublisherSparkFacetrack"/>
+	  	<Instance instanceName="instanceSubscriberSparkChat" componentID ="idSubscriberSparkChat"/>
+	  	<Instance instanceName="instanceSubscriberSparkFlite" componentID ="idSubscriberSparkFlite"/>
+	  	<Instance instanceName="instanceSubscriberSparkFacetrack" componentID ="idSubscriberSparkFacetrack"/>
+
+			<Instance instanceName="instancePublisherSparkEye" componentID ="idPublisherSparkEye"/>
+	  	<Instance instanceName="instanceSubscriberSparkEye" componentID ="idSubscriberSparkEye"/>
+	  	<Instance instanceName="instanceSubscriberSparkFakeEye" componentID ="idSubscriberSparkFakeEye"/>
+
+			<Instance instanceName="instancePublisherSparkNeck" componentID ="idPublisherSparkNeck"/>
+	  	<Instance instanceName="instanceSubscriberSparkNeck" componentID ="idSubscriberSparkNeck"/>
+
+
+			<Instance instanceName="instancePublisherSparkFaceDetected" componentID ="idPublisherSparkFaceDetected"/>
+	  	<Instance instanceName="instanceSubscriberSparkFaceDetected" componentID ="idSubscriberSparkFaceDetected"/>
+	  	<Instance instanceName="instanceSubscriberSparkFakeFace" componentID ="idSubscriberSparkFakeFace"/>
+
+			<Instance instanceName="instanceChatThreadSpark" componentID ="idChatThreadSpark"></Instance>
+      <Instance instanceName="instanceRebeccaAIMLSpark" componentID ="idRebeccaAIMLSpark" configuration="/ComponentConfigurations/RebeccaAIMLSpark.ini" >
+      </Instance>
+			<Instance instanceName="instanceScriptingSpark" componentID ="idScriptingSpark" configuration="/ComponentConfigurations/ScriptingSpark.ini"/>
+    </ComponentInstances>
+    
+    <!-- Paso 2/2: Connect interfaces -->
+    <InterfaceConnections>	  
+	<!--	  <Connect interface="IEyes" providedBy="instanceRemoteCharacterEmbodiment3DSpark" requiredBy="instanceEyeContactComponent" />
+-->
+			<Connect interface="IEyes" providedBy="instancePublisherSparkEye" requiredBy="instanceEyeContactComponent" />
+			<Connect interface="IEyes" providedBy="instanceRemoteCharacterEmbodiment3DSpark" requiredBy="instanceSubscriberSparkEye" />
+			<Connect interface="IEyes" providedBy="instanceEyesFakeConsumerSpark" requiredBy="instanceSubscriberSparkFakeEye" />
+<!--
+	    <Connect interface="INeck" providedBy="instanceRemoteCharacterEmbodiment3DSpark" requiredBy="instanceEyeContactComponent" />
+-->
+			<Connect interface="INeck" providedBy="instancePublisherSparkNeck" requiredBy="instanceEyeContactComponent" />
+			<Connect interface="INeck" providedBy="instanceRemoteCharacterEmbodiment3DSpark" requiredBy="instanceSubscriberSparkNeck" />
+	  <!--<Connect interface="ICamera" providedBy="instanceRemoteCharacterEmbodiment3DSpark" requiredBy="instanceCameraControl" /> -->
+			<Connect interface="ICamera" providedBy="instanceRemoteCharacterEmbodiment3DSpark" requiredBy="instanceScriptingSpark" />
+			<Connect interface="IFaceExpression" providedBy="instanceRemoteCharacterEmbodiment3DSpark" requiredBy="instanceScriptingSpark" />
+	  	<Connect interface="IAudioQueue" providedBy="instanceRemoteFliteVoiceSpark" requiredBy="instanceRemoteCharacterEmbodiment3DSpark" />
+		  <Connect interface="IFaceExpression" providedBy="instanceRemoteCharacterEmbodiment3DSpark" requiredBy="instanceVoiceStartSpark" />	
+			<Connect interface="IControlVoice" providedBy="instanceVoiceStartSpark" requiredBy="instanceRemoteCharacterEmbodiment3DSpark" />
+
+<!--		 	<Connect interface="IAudioConsumer" providedBy="instanceAudioConsumerSpark" requiredBy="instanceAVInputSpark" /> -->
+<!--			<Connect interface="IFlow&lt;AudioWrap*&gt;" providedBy="instanceAudioConsumerSpark" requiredBy="instanceAVInputSpark" /> -->
+
+
+<!--
+ 			<Connect interface="IDetectedFacePositionConsumer" providedBy="instanceEyeContactComponent" requiredBy="instanceFaceTrackerThreadSpark" />
+-->
+			<Connect interface="IDetectedFacePositionConsumer" providedBy="instancePublisherSparkFaceDetected" requiredBy="instanceFaceTrackerThreadSpark" />
+			<Connect interface="IDetectedFacePositionConsumer" providedBy="instanceEyeContactComponent" requiredBy="instanceSubscriberSparkFaceDetected" />
+			<Connect interface="IDetectedFacePositionConsumer" providedBy="instanceFacePositionFakeConsumerSpark" requiredBy="instanceSubscriberSparkFakeFace" />
+
+	<!--		<Connect interface="IFlow&lt;Image*&gt;" providedBy="instanceFaceTrackerThreadSpark" requiredBy="instanceAVInputSpark" /> -->
+			<Connect interface="IFlow&lt;Image*&gt;" providedBy="instancePublisherSparkFacetrack" requiredBy="instanceAVInputSpark" /> 
+      <Connect interface="IPublisher&lt;Image*&gt;" providedBy="instancePublisherSparkFacetrack" requiredBy="instanceSubscriberSparkFacetrack" />
+      <Connect interface="IFlow&lt;Image*&gt;" providedBy="instanceFaceTrackerThreadSpark" requiredBy="instanceSubscriberSparkFacetrack" />
+
+			<Connect interface="IFlow&lt;char*&gt;" providedBy="instanceRemoteFliteVoiceSpark" requiredBy="instanceVoiceStartSpark" /> 
+	  	<Connect interface="IFlow&lt;char*&gt;" providedBy="instancePublisherSpark" requiredBy="instanceRebeccaAIMLSpark" />
+      <Connect interface="IFlow&lt;char*&gt;" providedBy="instanceChatThreadSpark" requiredBy="instanceSubscriberSparkChat" />
+      <Connect interface="IFlow&lt;char*&gt;" providedBy="instanceRemoteFliteVoiceSpark" requiredBy="instanceSubscriberSparkFlite" />			
+
+			
+      <Connect interface="IFlow&lt;char*&gt;" providedBy="instanceRebeccaAIMLSpark" requiredBy="instanceChatThreadSpark" />
+
+			<Connect interface="IPublisher&lt;int>" providedBy="instancePublisherSparkEye" requiredBy="instanceSubscriberSparkEye" />
+			<Connect interface="IPublisher&lt;int>" providedBy="instancePublisherSparkEye" requiredBy="instanceSubscriberSparkFakeEye" />
+
+			<Connect interface="IPublisher&lt;int>" providedBy="instancePublisherSparkNeck" requiredBy="instanceSubscriberSparkNeck" />
+			<Connect interface="IPublisher&lt;int>" providedBy="instancePublisherSparkFaceDetected" requiredBy="instanceSubscriberSparkFaceDetected" />
+			<Connect interface="IPublisher&lt;int>" providedBy="instancePublisherSparkFaceDetected" requiredBy="instanceSubscriberSparkFakeFace" />																
+	  
+      <ConnectAll interface="IAsyncFatalErrorHandler" providedBy="instanceRemoteCharacterEmbodiment3DSpark"/>
+      <ConnectAll interface="IFrameEventPublisher" providedBy="instanceRemoteCharacterEmbodiment3DSpark"/>
+			<ConnectAll interface="IPublisher&lt;char*&gt;" providedBy="instancePublisherSpark"/>
+    </InterfaceConnections>
+  </ApplicationDescription>
+</ComponentNetwork>

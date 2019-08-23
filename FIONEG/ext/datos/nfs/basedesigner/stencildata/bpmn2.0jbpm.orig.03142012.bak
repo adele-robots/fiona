@@ -1,0 +1,698 @@
+{
+	"title":"Avatar Builder",
+	"namespace":"http://b3mn.org/stencilset/bpmn2.0#",
+	"description":"This is the Avatar Builder stencil set specification.",
+ 	"propertyPackages": [
+ 		{
+ 			"name":"baseAttributes",
+ 			"properties": [
+				{
+					"id":"name",
+					"type":"String",
+					"title":"Name",
+					"value":"",
+					"description":"The descriptive name of the BPMN element.",
+					"description_de":"Bezeichnung des BPMN-Elementes.",
+					"readonly":false,
+					"optional":true,
+					"length":"",
+					"wrapLines" : true,
+					"refToView":"text_name"	
+				}
+ 			]
+ 		},
+		{
+ 			"name":"conditions",
+ 			"properties": [
+				{
+					"id":"condition",
+					"type":"String",
+					"title":"Condicion",
+					"value":"",
+					"description":"Condicion de tránsito entre estados.",
+					"readonly":false,
+					"optional":false,
+					"length":"",
+					"wrapLines" : true,
+				}
+ 			]
+ 		},
+		{
+			"name" : "bgColor",
+			"properties" : [
+				{
+					"id":"bgcolor",
+					"type":"Color",
+					"title":"BackgroundColor",
+					"title_de":"Hintergrundfarbe",
+					"value":"#ffffff",
+					"description":"",
+					"readonly":false,
+					"optional":false,
+					"refToView": "bg_frame",
+					"fill":true,
+					"stroke":false
+				}
+			]
+		},		
+		{
+			"name" : "diagram",
+			"properties" : [
+				{
+					"id":"id",
+					"type":"String",
+					"title":"ID",
+					"title_de":"ID",
+					"value":"",
+					"description":"ID",
+					"description_de":"ID",
+					"readonly":false,
+					"optional":true
+				},
+				{
+					"id":"version",
+					"type":"String",
+					"title":"Version",
+					"value":"",
+					"description":"This defines the Version number of the Diagram.",
+					"description_de":"Setzt die Versionsnummer des Diagramms.",
+					"readonly":false,
+					"optional":true,
+					"length":"50"
+				},
+				/**{
+					"id":"author",
+					"type":"String",
+					"title":"Author",
+					"title_de":"Autor",
+					"value":"",
+					"description":"This holds the name of the author of the Diagram.",
+					"description_de": "Name des Autors des Diagramms.",
+					"readonly":false,
+					"optional":true,
+					"length":"50"
+				},**/
+				{
+					"id":"language",
+					"type":"String",
+					"title":"Language",
+					"title_de":"Sprache",
+					"value":"Spanish",
+					"value_de":"Deutsch",
+					"description":"This holds the name of the language in which text is written.",
+					"description_de":"Sprache, in welcher der Text geschrieben ist.",
+					"readonly":false,
+					"optional":true,
+					"length":"50"
+				}
+			]
+		},		
+		// Guille pruebas	
+		{
+			"name": "sparks1",
+			"properties" : [
+				{
+					"id":"prompt1",
+					"type":"xml",
+					"title":"INTERFACES",
+					"value":"(ninguno)",
+					"gradient":true,
+					"description":"",
+					"readonly":false,
+					"optional":false,
+					"refToView":"fill_el",
+					"fill":true,
+					"stroke":false
+				}			
+			]
+		},
+		{
+			"name": "sparks2",
+			"properties" : [
+				{
+					"id":"prompt2",
+					"type":"xml2",
+					"title":"INTERF.",
+					"value":"(ninguno)",
+					"gradient":true,
+					"description":"",
+					"readonly":false,
+					"optional":false,
+					"refToView":"fill_el",
+					"fill":true,
+					"stroke":false
+				}			
+			]
+		},		
+		////////////////////////////////////				
+	],
+	"stencils" : [
+		{
+			"type":				"node",
+			"id":				"AvatarDiagram",
+			"title":			"AvatarDiagram",						
+			"description":		"",			
+			"view":				"diagram.svg",
+			"icon":				"diagram.png",
+			"mayBeRoot":		true,
+			"hide":				true,
+			"propertyPackages" : ["baseAttributes","diagram"],
+			"roles":			["diagram"]
+		},
+		// COMPONENTS
+		{
+			"type" : 			"node",
+			"id": 				"idScene3DComponent",
+			"title" : 			"Scene3DComponent",
+			"groups": 			["Components"],
+			"description" : 	"",
+			"view" : 			"components/component1.svg",
+			"icon" : 			"components/spark1.png",
+			"propertyPackages" :[
+				"baseAttributes"			
+			],
+			"properties" : [
+				{
+					"id":"bgcolor",
+					"type":"Color",
+					"title":"BackgroundColor",
+					"title_de":"Hintergrundfarbe",
+					"value":"#ffffff",
+					"description":"",
+					"readonly":false,
+					"optional":false,
+					"refToView": "bg_frame",
+					"fill":true,
+					"stroke":false
+				},
+				{
+					"id":"idIRenderizable",
+					"type":"String",
+					"title":"Provided",
+					"value":"IRenderizable",
+					"description":"Description of the interface",					
+					"readonly":true,
+					"optional":true,
+					"length":"",
+					"wrapLines" : true,
+					"refToView":"",
+				},
+				{
+					"id":"idIWindow",
+					"type":"String",
+					"title":"Provided",
+					"value":"IWindow",
+					"description":"Description of the interface",					
+					"readonly":true,
+					"optional":true,
+					"length":"",
+					"wrapLines" : true,
+					"refToView":"",
+				},
+				{
+					"id":"interfacesP",
+					"type":"Choice",
+					"title":"Provided Interfaces",
+					"value":"",
+					"description":"",
+					"readonly":false,
+					"optional":false,
+					"refToView":"",
+					"items": [
+						{
+							"id":"c1",
+							"title":"IFaceExpression",
+							"value":"IFaceExpression",
+							"refToView":"None"
+						},
+						{
+							"id":"c2",
+							"title":"IEyes",
+							"value":"IEyes",
+							"refToView":"None"
+						},
+						{
+							"id":"c3",
+							"title":"INeck",
+							"value":"INeck",
+							"refToView":"None"
+						},
+						{
+							"id":"c4",
+							"title":"IRenderizable",
+							"value":"IRenderizable",
+							"refToView":"None"
+						},
+						{
+							"id":"c5",
+							"title":"IWindow",
+							"value":"IWindow",
+							"refToView":"None"
+						}
+					]
+				},
+				{
+					"id":"interfacesR",
+					"type":"Choice",
+					"title":"Required Interfaces",
+					"value":"",
+					"description":"",
+					"readonly":false,
+					"optional":false,
+					"refToView":"",
+					"items": [
+						{
+							"id":"c1",
+							"title":"IAsync",
+							"value":"IAsync",
+							"refToView":"None"
+						}
+					]
+				}
+				
+			],
+			"roles" : 			[				
+				"components",
+				"ActivitiesMorph",
+				"IRenderizableP",
+				"IEyesP",
+				"INeckP",
+				"IFaceExpressionP",
+				"IWindowP"
+				
+			]
+		},		
+		{
+			"type" : 			"node",
+			"id": 				"idLocalRendererComponent",
+			"title" : 			"LocalRendererComponent",
+			"groups": 			["Components"],
+			"description" : 	"",
+			"view" : 			"components/component2.svg",
+			"icon" : 			"components/spark2.png",
+			"propertyPackages" :[
+				"baseAttributes",				
+				"properties"				
+			],
+			"roles" : 			[
+				"components",
+				"ActivitiesMorph",
+				"IRenderizableR",
+				"IUpdateableR",
+				"IWindowR",
+				"IAsyncFatalErrorHandlerR",
+				"IThreadProcP"
+			]
+		},
+		{
+			"type" : 			"node",
+			"id": 				"idWindowComponent",
+			"title" : 			"WindowComponent",
+			"groups": 			["Components"],
+			"description" : 	"",
+			"view" : 			"components/component3.svg",
+			"icon" : 			"components/spark1.png",
+			"propertyPackages" :[
+				"baseAttributes",				
+				"properties"			
+			],
+			"roles" : 			[				
+				"components",
+				"ActivitiesMorph",
+				"IAsyncFatalErrorHandlerP",
+				"IApplicationP",
+				"IWindowP"
+			]
+		},
+		{
+			"type" : 			"node",
+			"id": 				"idUpdaterComponent",
+			"title" : 			"UpdaterComponent",
+			"groups": 			["Components"],
+			"description" : 	"",
+			"view" : 			"components/component4.svg",
+			"icon" : 			"components/spark1.png",
+			"propertyPackages" :[
+				"baseAttributes",				
+				"properties"			
+			],
+			"roles" : 			[				
+				"components",
+				"ActivitiesMorph",
+				"IUpdateableP",
+				"IWindowR"
+			]
+		},
+		// INTERFACES		
+		{
+			"type": "edge",
+			"id":"IThreadProc",
+			"title":"IThreadProc",
+			"groups": ["Interfaces"],
+			"description":"",
+			"view":"interfaces/thread.svg",
+			"icon":"interfaces/provided.png",
+			"propertyPackages":[
+			
+			],
+			"roles":[
+				"interfaces",
+				"provided"
+			]
+		},		
+		{
+			"type": "edge",
+			"id":"IFaceExpression",
+			"title":"IFaceExpression",
+			"description":"",
+			"groups":["Interfaces"],
+			"view":"interfaces/provided.svg",
+			"icon":"interfaces/provided.png",
+			"propertyPackages":[
+				
+			],
+			"roles": [
+				"interfaces",
+				"provided",
+				"Scene3DComponent"
+			]
+		},
+		{
+			"type": "edge",
+			"id":"IEyes",
+			"title":"IEyes",
+			"description":"",
+			"groups":["Interfaces"],
+			"view":"interfaces/eyes.svg",
+			"icon":"interfaces/provided.png",
+			"propertyPackages":[
+				
+			],
+			"roles": [
+				"interfaces",
+				"provided",
+				"Scene3DComponent"
+			]
+		},
+		{
+			"type": "edge",
+			"id":"INeck",
+			"title":"INeck",
+			"description":"",
+			"groups":["Interfaces"],
+			"view":"interfaces/provided.svg",
+			"icon":"interfaces/provided.png",
+			"propertyPackages":[
+				
+			],
+			"roles": [
+				"interfaces",
+				"provided",
+				"Scene3DComponent"
+			]
+		},
+		{
+			"type": "edge",
+			"id":"IAsyncFatalErrorHandler",
+			"title":"IAsyncFatalErrorHandler",
+			"description":"Interface provided by the element",
+			"groups":["Interfaces"],
+			"view":"interfaces/async.svg",
+			"icon":"interfaces/provided.png",
+			"propertyPackages":[
+				
+			],
+			"roles": [
+				"interfaces",	
+				"provided"
+			]
+		},				
+		{
+			"type": "edge",
+			"id":"IWindow",
+			"title":"IWindow",
+			"description":"Interface provided by the element",
+			"groups":["Interfaces"],
+			"view":"interfaces/window.svg",
+			"icon":"interfaces/provided.png",
+			"propertyPackages":[
+				
+			],
+			"roles": [
+				"interfaces",				
+				"provided"
+			]
+		},		
+		{
+			"type": "edge",
+			"id":"IRenderizable",
+			"title":"IRenderizable",
+			"description":"Interface provided by the element",
+			"groups":["Interfaces"],
+			"view":"interfaces/render.svg",
+			"icon":"interfaces/provided.png",
+			"propertyPackages":[
+				
+			],
+			"roles": [
+				"interfaces",	
+				"provided",
+				"Scene3DComponent"
+			]
+		},		
+		{
+			"type": "edge",
+			"id":"IUpdateable",
+			"title":"IUpdateable",
+			"description":"Interface provided by the element",
+			"groups":["Interfaces"],
+			"view":"interfaces/updateable.svg",
+			"icon":"interfaces/provided.png",
+			"propertyPackages":[
+				
+			],
+			"roles": [
+				"interfaces",	
+				"provided"
+			]
+		},
+		{
+			"type": "edge",
+			"id":"IUpdateable1",
+			"title":"IUpdateable1",
+			"description":"Interface provided by the element",
+			"groups":["Interfaces"],
+			"view":"interfaces/provided.svg",
+			"icon":"interfaces/provided.png",
+			"propertyPackages":[
+				
+			],
+			"roles": [
+				"interfaces",	
+				"provided"
+			]
+		},
+		{
+			"type": "edge",
+			"id":"IApplication",
+			"title":"IApplication",
+			"description":"Interface provided by the element",
+			"groups":["Interfaces"],
+			"view":"interfaces/provided.svg",
+			"icon":"interfaces/provided.png",
+			"propertyPackages":[
+				
+			],
+			"roles": [
+				"interfaces",				
+				"provided"
+			]
+		},
+	],
+	
+	"rules" : {
+		"cardinalityRules": [
+			{
+				"role":"Startevents_all",
+				"incomingEdges": [
+					{
+						"role":"Transicion",
+						"maximum":1
+						
+					}
+				]
+			},
+			{
+				"role":"idScene3DComponent",
+				"maximumOccurrence":1,
+				"outgoingEdges": [
+					{
+						"role":"interfaces",
+						"maximum":1
+						
+					}
+				]
+			},
+			{
+				"role":"idWindowComponent",				
+				"maximumOccurrence":1,
+				"outgoingEdges": [
+					{
+						"role":"interfaces",
+						"maximum":1
+						
+					}
+				]
+			},
+			{
+				"role":"idLocalRendererComponent",
+				"maximumOccurrence":1,
+				"outgoingEdges": [
+					{
+						"role":"interfaces",
+						"maximum":1
+						
+					}
+				],
+				"incomingEdges": [
+					{
+						"role":"IWindow",
+						"maximum":1
+						
+					}
+				]
+			},
+			{
+				"role":"idUpdaterComponent",
+				"maximumOccurrence":1,
+				"outgoingEdges": [
+					{
+						"role":"interfaces",
+						"maximum":1
+						
+					}
+				]
+			}			
+		],
+		"connectionRules": [			
+			
+			{
+				"role":"IRenderizable",
+				"connects": [
+					{
+						"from":"IRenderizableP",
+						"to":["IRenderizableR"]
+					}
+				]
+			},
+			{
+				"role":"IAsyncFatalErrorHandler",
+				"connects": [
+					{
+						"from":"IAsyncFatalErrorHandlerP",
+						"to":["IAsyncFatalErrorHandlerR"]
+					}
+				]
+			},	
+			{
+				"role":"IWindow",
+				"connects": [
+					{
+						"from":"IWindowP",
+						"to":["IWindowR"]
+					}
+				]
+			},
+			{
+				"role":"IThreadProc",
+				"connects": [
+					{
+						"from":"IThreadProcP",
+						"to":["IThreadProcR"]
+					}
+				]
+			},
+			{
+				"role":"IUpdateable",
+				"connects": [
+					{
+						"from":"IUpdateableP",
+						"to":["IUpdateableR"]
+					}
+				]
+			},
+			{
+				"role":"IEyes",
+				"connects": [
+					{
+						"from":"IEyesP",
+						"to":["IEyesR"]
+					}
+				]
+			},
+			{
+				"role":"INeck",
+				"connects": [
+					{
+						"from":"INeckP",
+						"to":["INeckR"]
+					}
+				]
+			},
+			{
+				"role":"IFaceExpression",
+				"connects": [
+					{
+						"from":"IFaceExpressionP",
+						"to":["IFaceExpressionR"]
+					}
+				]
+			}			
+		],
+		"containmentRules" : [
+			{
+				"role" : "diagram",
+				"contains" : [
+					"components",
+					"interfaces",
+					"all"
+				]
+			},			
+			{
+				"role" : "EventSubprocess",
+				"contains" : [
+					"eventSubprocessElement",
+					"sequence_start",
+					"sequence_end"
+				]
+			},
+			{
+				"role" : "Pool",
+				"contains" : [
+					"Lane"
+				]
+			},
+			{
+				"role" : "Lane",
+				"contains" : ["all"]
+			}			
+		],
+		"morphingRules": [
+			{
+				"role": "ActivitiesMorph",
+				"baseMorphs": ["components"],
+				
+			}
+		],
+		"layoutRules" : [
+			{
+				"role": "ActivitiesMorph",
+				"outs":[{"edgeRole":"MessageFlow","t":2, "r":1, "b":2, "l":1},
+						{"t":1,"r":2,"b":1,"l":2}],
+				"ins": [{"edgeRole":"MessageFlow","t":2, "r":1, "b":2, "l":1},
+						{"t":1, "r":2, "b":1, "l":2}]
+			}
+		]
+	}
+}
+		

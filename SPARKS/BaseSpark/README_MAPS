@@ -1,0 +1,3 @@
+Para el funcionamiento de los 'friendly names' y para que no se produzca un fallo por lectura de archivos inexistentes:
+
+	Es necesario colocar los archivos typesMap e intefacesMap, en la ruta /adele/dev

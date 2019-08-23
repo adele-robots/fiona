@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node1" href="$class_audio_output.html" title="AudioOutput" alt="" coords="7,32,100,61"/>
+<area shape="rect" id="node3" href="$class_local_audio_output.html" title="LocalAudioOutput" alt="" coords="157,5,283,35"/>
+<area shape="rect" id="node5" href="$class_remote_audio_output.html" title="RemoteAudioOutput" alt="" coords="151,59,289,88"/>
+</map>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://avatar" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://avatar" xmlns:intf="http://avatar" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://avatar" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="write">
+    <complexType>
+     <sequence>
+      <element name="json" type="xsd:string"/>
+      <element name="user" type="xsd:string"/>
+      <element name="fsvg" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="writeResponse">
+    <complexType>
+     <sequence>
+      <element name="writeReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="read">
+     <complexType>
+     <sequence>
+      <element name="useread" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="readResponse">
+    <complexType>
+     <sequence>
+      <element name="readReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="readResponse">
+
+      <wsdl:part element="impl:readResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="readRequest">
+
+      <wsdl:part element="impl:read" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="writeResponse">
+
+      <wsdl:part element="impl:writeResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="writeRequest">
+
+      <wsdl:part element="impl:write" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="JsonEngineLogic">
+
+      <wsdl:operation name="write">
+
+         <wsdl:input message="impl:writeRequest" name="writeRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:writeResponse" name="writeResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="read">
+
+         <wsdl:input message="impl:readRequest" name="readRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:readResponse" name="readResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="JsonEngineLogicSoapBinding" type="impl:JsonEngineLogic">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="write">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="writeRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="writeResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="read">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="readRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="readResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="JsonEngineLogicService">
+
+      <wsdl:port binding="impl:JsonEngineLogicSoapBinding" name="JsonEngineLogic">
+
+         <wsdlsoap:address location="http://localhost:5050/designer/services/JsonEngineLogic"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

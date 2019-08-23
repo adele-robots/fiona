@@ -1,0 +1,14 @@
+prompt-estado-S4P1LibroVisitas.txt
+prompt-estado-S4P2FirmarLibro.txt
+prompt-estado-S4P3Exito.txt
+prompt-estado-S4P4Error.txt
+prompt-estado-S5P1RealizarEncuesta.txt
+prompt-estado-S5P3Exito.txt
+prompt-estado-S5P3Error.txt
+prompt-estado-S78P0Multimedia.txt
+prompt-estado-S7P1PublicacionMultimedia.txt
+prompt-estado-S8P1FotografoVirtual.txt
+prompt-estado-S8P2SeleccionarMarco.txt
+prompt-estado-S8P3SacarFoto.txt
+prompt-estado-S8P4AccionFoto.txt
+prompt-estado-S8P7MandarEMail.txt

@@ -1,0 +1,4 @@
+.DS*
+Debug/*.o
+Debug/*.d
+.svn/

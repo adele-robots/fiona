@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow
+	http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd"
+	parent="ARQ_Abstract-flow" start-state="ev_start">
+
+
+	<action-state id="ea_UploadSpark">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="008"></attribute>
+		</evaluate>
+		<transition on="success" to="es_inicio"></transition>
+		<transition on="error" to="ev_start"></transition>
+	</action-state>
+	<view-state id="ev_start" view="/subirSpark/uploadSpark">
+		<transition on="back" to="es_inicio"></transition>
+		<transition on="validateUpload" to="ea_UploadSpark">
+			<attribute name="fichero"
+				value="uploadSpark/UploadSpark_VO_029_008.xml">
+			</attribute>
+		</transition>
+	</view-state>
+	<subflow-state id="es_inicio" subflow="FIOPRE_flujoInicio-flow"></subflow-state>
+
+</flow>

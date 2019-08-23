@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cdtprojectproperties>
+<section name="org.eclipse.cdt.internal.ui.wizards.settingswizards.IncludePaths">
+<language name="C++ Source File">
+<includepath>${ProjDirPath}/../Include</includepath>
+<includepath>${ProjDirPath}/../../Include</includepath>
+<includepath>${ProjDirPath}/../../../Include</includepath>
+<includepath>${ProjDirPath}/../../../Dependencias/Horde3D/Horde3D/Bindings/C++</includepath>
+<includepath>${ProjDirPath}/../../../Dependencias/glfw-2.7.3/include/GL</includepath>
+<includepath>/usr/include/GL</includepath>
+
+</language>
+<language name="C Source File">
+
+</language>
+<language name="Object File">
+
+</language>
+<language name="Assembly Source File">
+
+</language>
+</section>
+<section name="org.eclipse.cdt.internal.ui.wizards.settingswizards.Macros">
+<language name="C++ Source File">
+
+</language>
+<language name="C Source File">
+
+</language>
+<language name="Object File">
+
+</language>
+<language name="Assembly Source File">
+
+</language>
+</section>
+</cdtprojectproperties>

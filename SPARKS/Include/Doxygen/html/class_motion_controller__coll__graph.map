@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$class_perlin.html" title="Encapsulates Perlin noise funtionality." alt="" coords="176,309,229,339"/>
+<area shape="rect" id="node4" href="$class_i_scene.html" title="IScene" alt="" coords="253,309,315,339"/>
+<area shape="rect" id="node6" href="$class_i_skeleton.html" title="ISkeleton" alt="" coords="76,213,153,243"/>
+<area shape="rect" id="node8" href="$classpsisban_1_1_config.html" title="Libconfig wrapper." alt="" coords="184,101,296,131"/>
+<area shape="rect" id="node17" href="$class_lip_synch.html" title="Virtual character lip synchroniztion with the text&#45;to&#45;speech engine." alt="" coords="531,309,605,339"/>
+<area shape="rect" id="node10" href="$class_eye.html" title="Eye" alt="" coords="12,101,57,131"/>
+<area shape="rect" id="node12" href="$struct_vector.html" title="Vector" alt="" coords="5,5,64,35"/>
+<area shape="rect" id="node14" href="$class_i_morph_target_blender.html" title="IMorphTargetBlender" alt="" coords="369,213,511,243"/>
+<area shape="rect" id="node19" href="$class_stop_watch.html" title="Cronometer based in the high&#45;precission performance counter." alt="" coords="732,213,817,243"/>
+<area shape="rect" id="node23" href="$class_meca_tronica_serial.html" title="MecaTronicaSerial" alt="" coords="819,309,949,339"/>
+</map>

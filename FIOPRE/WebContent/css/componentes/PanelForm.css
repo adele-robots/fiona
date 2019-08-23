@@ -1,0 +1,145 @@
+.panel-form-div
+{
+  width: 100%;
+}
+
+.cero-columnas
+{
+	width:100% !important;
+}
+
+.cero-columnas .campos-div
+{
+	width:13% !important;
+}
+
+.cero-columnas .labels-div {
+	width: 75% !important;
+}
+
+
+
+.una-columna
+{
+	width:50%;
+}	
+
+.dos-columnas
+{
+	width:48%;
+	float: left;
+}
+
+.tres-columnas
+{
+	width:33%;
+	float: left;
+}
+
+.row-div
+{
+	float:left;
+  	width: 100%;
+  	padding-bottom: 0;
+}
+
+.labels-div {
+	
+	width:37%;
+	width:41.5%;
+	float: left;
+	text-align: right;
+	margin-right:15px;	
+	margin-right:10px;
+}
+
+.campos-div {
+	
+	width:55%;
+	float: left;
+}
+.campos-div select {
+	max-width:99%;
+}
+* html .campos-div select {
+	width:99%;
+}
+
+.campo-div {
+	width:100%;
+	float:left;	
+}
+
+.etiqueta {
+	display:block;
+	/*float:right;*/
+	min-height:21px;
+	padding-top:3px;
+	/* A�adido del estilo del HDW */
+	color:#414B55;
+	/* Fin a�adido */
+}
+.etiqueta img {
+	margin-top:3px;
+	/*float:left;*/ float:right;
+}
+.etiqueta-img-requerida {
+	display:block;
+	float:left;
+	height:21px;
+	color: #0066cc;
+}
+.cero-columnas .etiqueta-img-requerida {
+	width:98%;
+}
+.dos-columnas .etiqueta-img-requerida {
+	width:95%;
+}
+.tres-columnas .etiqueta-img-requerida {
+	width:90%;
+}
+
+.etiqueta-img-requerida-detalle
+{
+	display:block;
+	height:21px;
+	float:left;
+}
+
+.etiqueta-img-requerida-detalle-TID
+{
+	display:block;
+	height:15px;
+	float:left;
+	width: 130px;
+}
+
+.obligatorios{
+	/*margin-top: 1%;*/
+	float: left;
+	width: 70%;
+}
+.obligatorios img {
+	float: left;
+	margin-top:3px;
+}
+.obligatorios label {
+	float: left;
+}
+
+.campo
+{
+	height:50px;
+	margin-bottom:5px;
+	
+	_margin-left: 0;
+	_margin-right: 0;
+	_margin-top :0;
+	_padding: 0;
+}
+
+
+.div-clean
+{
+	clear : left;
+	}

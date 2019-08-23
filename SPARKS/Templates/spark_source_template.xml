@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="false" context="org.eclipse.cdt.core.cxxSource.contenttype_context" deleted="false" description="Default source template to create a new spark. Replace interfaces with appropiate values" enabled="true" name="Default C++ Spark source template">/// @file ${file_base}.cpp
+/// @brief ${file_base} class implementation.
+
+
+//#include "stdAfx.h"
+#include "${file_base}.h"
+
+
+#ifdef _WIN32
+#else
+extern "C"
+Component *createComponent(
+		char *componentInstanceName,
+		char *componentType,
+		ComponentSystem *componentSystem
+	)
+{
+	if (!strcmp(componentType, "${file_base}")) {
+			return new ${file_base}(componentInstanceName, componentSystem);
+		}
+	else {
+			return NULL;
+		}
+}
+#endif
+
+/// Initializes ${file_base} component.
+void ${file_base}::init(void){
+}
+
+/// Unitializes the ${file_base} component.
+void ${file_base}::quit(void){
+}
+
+//**To change for your convenience**
+//Example of provided interface implementation
+//IProvidedInterface1 implementation
+void ${file_base}::interfaceProcedure1(void){
+	//do something
+	//Interface's methods example of use
+	//myInterface-&gt;interfaceMethod();
+}
+
+void ${file_base}::interfaceProcedure2(void){
+	//do something
+	//Interface's methods example of use
+	//myRequiredInterface1-&gt;interfaceMethod();
+}
+
+
+</template></templates>

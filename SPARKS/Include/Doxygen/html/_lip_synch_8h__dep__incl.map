@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_motion_controller_8h.html" title="MotionController class definition." alt="" coords="691,83,995,112"/>
+<area shape="rect" id="node7" href="$_application_8h.html" title="Application class declaration." alt="" coords="476,237,751,267"/>
+<area shape="rect" id="node23" href="$_audio_output_8h.html" title="AudioOutput class declaration." alt="" coords="1197,83,1480,112"/>
+<area shape="rect" id="node33" href="$_event_driven_dialog_manager_8h.html" title="EventDrivenDialogManager class definition." alt="" coords="5,83,373,112"/>
+<area shape="rect" id="node5" href="$_face_tracker_8h.html" title="FaceTracker class definition." alt="" coords="472,160,755,189"/>
+<area shape="rect" id="node13" href="$_video_output_8h.html" title="VideoOutput class declaration." alt="" coords="931,160,1213,189"/>
+<area shape="rect" id="node16" href="$_local_video_output_8h.html" title="/adele/dev/workspace/Include/LocalVideoOutput.h" alt="" coords="775,237,1087,267"/>
+<area shape="rect" id="node18" href="$_remote_video_output_8h.html" title="RemoteVideoOutput class declaration." alt="" coords="1111,237,1439,267"/>
+<area shape="rect" id="node9" href="$_app_teleoperacion_8h.html" title="/adele/dev/workspace/Include/AppTeleoperacion.h" alt="" coords="456,315,771,344"/>
+<area shape="rect" id="node26" href="$_local_audio_output_8h.html" title="LocalAudioOutput class declaration." alt="" coords="1288,160,1600,189"/>
+<area shape="rect" id="node28" href="$_remote_audio_output_8h.html" title="RemoteAudioOutput class declaration." alt="" coords="1624,160,1952,189"/>
+<area shape="rect" id="node30" href="$_loquendo_audio_destination_8h.html" title="LoquendoAudioDestination module implementation." alt="" coords="1605,237,1971,267"/>
+</map>

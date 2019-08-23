@@ -1,0 +1,16 @@
+@CHARSET "ISO-8859-1";
+@import url(./componentes/panel.css);
+@import url(./componentes/panelMenu.css);
+@import url(./componentes/button.css);
+@import url(./componentes/table.css);
+@import url(./componentes/scroller.css);
+@import url(./componentes/inputs.css);
+@import url(./componentes/PanelForm.css);
+@import url(./componentes/messages.css);
+@import url(./componentes/tabs.css);
+@import url(./componentes/alert.css);
+@import url(./componentes/dialog.css);
+@import url(./componentes/status.css);
+@import url(./componentes/suggestionBox.css);
+@import url(./componentes/dataList.css);
+@import url(./componentes/chaptcha.css);

@@ -1,0 +1,309 @@
+.fiona_main{
+	height: 480px;
+	position: relative !important;
+	width: 640px;
+}
+/*
+.fiona_main.ui-dialog-content.ui-widget-content {
+    height: 625px !important;
+}
+
+.ui-dialog .ui-dialog-content {
+	overflow: inherited;
+}	
+*/
+.ui-icon-closethick{
+	background-position: -32px -192px !important;
+}
+
+.ui-dialog .ui-dialog-titlebar-close{
+	background-color: white !important;
+}
+
+.fiona_main_end{
+	background-color:black !important;
+	height: 480px !important;
+	margin-left: 6px;
+	width: 640px !important;
+}
+
+#fiona.fiona_main_end #flameBoxImage{
+	/*left: 213px;*/
+    position: absolute;
+    /*top: 100px;*/
+}
+
+.fiona_main .fiona_players{	
+	background: none no-repeat scroll 50% 50% #000000;
+}
+
+.big.fiona_players{
+	height: 480px;
+	width: 640px;	
+}
+
+.small.fiona_players{
+	height: 240px;
+	width: 320px;
+}
+
+.fiona_main .fiona_players #camsenderbig{
+	position:absolute;
+	left: 470px; 
+	bottom: 0px;
+	top: 347px;
+}
+
+
+.fiona_main .fiona_players #camsenderbig.pop_up{	
+	left: 470px; 
+	/*bottom: 106px;
+	top: 0px;*/
+}
+
+
+.fiona_main .fiona_players #camsendersmall{
+	bottom: 151px;
+    /*height: 80px;*/
+    left: 270px;
+    position: relative;
+    /*width: 110px;*/
+}
+
+.fiona_main .fiona_players #camsender{
+	position:relative;
+	left: 440px; 
+	bottom: 150px;
+}
+
+.fiona_main .fiona_players #avatarimg{
+	margin:0 auto 0 0px;
+}
+
+.fiona_main .fiona_chatbox #chatboxarea{
+	color: #414B56;
+	font-family: fionafont,Arial,Verdana,sans-serif;
+	font-size: 12pt;
+	font-weight: bold;
+	margin-top: 10px;	
+	resize: none;
+	width:390px;
+}
+
+.fiona_main .fiona_chatbox #chatboxarea.small{
+	font-size: 11pt !important;	
+	width:255px !important;
+}
+
+.fiona_main .fiona_chatbox #fiona_send_button{
+	width:58px;
+	height: 34px;
+}
+
+.fiona_main .fiona_chatbox #fiona_send_button.no_camera{
+	float:right;
+	margin-top: 10px;
+}
+
+#avatarResponse{
+	background: transparent;
+	color: white;	
+	cursor: auto;	
+    font-family: fionafont,Arial,Verdana,sans-serif;    
+    font-weight: bold;
+	overflow: auto;
+	position: absolute;
+	text-shadow: 2px 2px 2px black;
+	white-space: pre-wrap;
+	word-wrap: break-word;	
+}
+
+.big#avatarResponse{	
+ 	bottom: 4px;
+ 	font-size: 14pt;
+ 	height: 65px;          
+    margin-left: 8px;        
+    width: 432px;
+}
+
+.small#avatarResponse{
+ 	bottom: 244px;
+ 	font-size: 11pt; 
+ 	height: 54px;   
+    margin-left: 6px;
+    margin-right: 7px;  
+    width: 250px;
+}
+
+.big.pop_up#avatarResponse{
+	bottom: 99px;
+}
+
+.big.pop_up.allow_camera#avatarResponse{
+	bottom: 132px;
+}
+
+.small.pop_up#avatarResponse{
+	bottom: 175px;
+}
+
+.small.pop_up.allow_camera#avatarResponse{
+	bottom: 173px;
+}
+
+
+/**************************************************************************************************************/
+
+
+.fiona_main .bgflame {
+	background-color: black;
+    float: right;
+    /*height: 100%;*/
+    /*left: 3%;*/
+    position: absolute;
+    height: 480px;
+    width: 640px;
+}
+
+.fiona_main .bgflame.small {
+	background-color: black;	
+    height: 480px;
+    width: 638px;
+}
+
+.fiona_main .bgflame-inner {
+/*	background: transparent url(../../images/fiona/flame.png) no-repeat scroll 50% 0;*/
+	float: right;
+	margin-right: 25%;
+	margin-top: 94px;
+	margin-bottom: 94px;
+	width:50%;
+	text-align: center;
+}
+
+.bgflame img {
+	margin:0 auto;
+}
+
+#flameBox  a {
+	/*background:url(http://localhost:8080/FionaHandler/img/flame2.png) no-repeat 0px -5700px;*/
+	height:300px;
+	width:200px; 
+	padding:0; 
+	display:block;
+	margin:0 auto;
+}
+
+
+
+
+.panelChat{
+	margin: 0 auto 15px;
+	position: relative;
+}
+
+.panelChat .lbltextAreaChat, 
+.panelChat .textAreaChat, 
+.panelChat .lbltextAreaChatRespuesta, 
+.panelChat .textAreaChatRespuesta {
+	width: 48.5%;
+	display: block;
+	clear: both;
+}
+
+.panelChat .lbltextAreaChat, 
+.panelChat .lbltextAreaChatRespuesta {
+}
+
+.panelChat .textAreaChat, 
+.panelChat .textAreaChatRespuesta {
+	height: 89px;
+	font-size: 14pt;
+	font-weight: bold;
+	color: #414B56;
+	resize: none;
+}
+
+.panelChat .lbltextAreaChat {
+	float:right;
+	clear: right;
+}
+.panelChat .lbltextAreaChatRespuesta {
+	float:left;
+	clear: left;
+}
+
+.panelChat .textAreaChat {
+	float:right;
+	margin-right: 9px;
+	clear: right;
+}
+
+.panelChat .textAreaChatRespuesta {
+	background: transparent;
+	border: none;
+	text-align: center;
+/* box look-n-feel */
+/*	float:left;
+	clear: left;
+	color: #139AD5;
+	text-shadow: 2px 2px 4px #38BFFA; */
+/* Subtitle look-n-feel over avatar players */
+	color:white;
+	text-shadow: 2px 2px 2px black;
+	position: absolute;
+	width: 450px; /* = panelAvatarPlayers.width (680px) - camsender.width (220px) - this.gap (5px doble) */
+	margin-right: 225px; /* = camsender.width (220px) + this.gap (5px) */
+	right: 0px;
+	top: -165px; /* = this.height (95px) + gap between panels (15px margin panelAvatar, 50px padding players) */
+	height: 95px;
+}
+.panelChat span.textAreaChatRespuesta, 
+.panelChat div.textAreaChatRespuesta {
+	overflow: auto;
+	cursor: auto;
+	padding: 2px;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+}
+.panelChat span.textAreaChatRespuesta br,
+.panelChat div.textAreaChatRespuesta br {
+	clear: both;
+	height: 5px;
+	display:block;
+	font-size: 1px;
+	width: 100%;
+}
+
+.panelChat .fio-send-button {
+	border: 1px solid #6493B5;
+	background-image: url(../../images/buttons/boton_send.png);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: none;
+	color: #000000;
+	height: 35px;
+	width: 140px;
+	line-height: 190%;
+	font-family: fionafont,  arial;
+	font-weight: bold;
+	font-size: 9pt;
+	cursor: pointer;
+	margin-right: 7px;
+	float:right;
+}
+.panelChat .rich-messages {
+	float:left; width: 80%; 
+	padding:0;
+	margin:5px;
+	font-size: 14pt;
+	text-align:center; color:red;
+}
+.panelChat .rich-messages * {
+	font-size: 13pt;
+}
+.panelChat .textAreaChatMessages {
+	float: right;
+	width: 518px;
+	text-align: left;
+}

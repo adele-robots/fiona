@@ -1,0 +1,195 @@
+#ABNF 1.0 ISO-8859-1;
+language es-es;
+mode voice;
+tag-format <semantics/1.0>;
+
+// Las reglas deben ser 'public' para ser visibles desde la API
+
+root $ruleS0P1MenuPrincipal;
+
+public $ruleS0P1MenuPrincipal = 
+	agenda |
+	eventos |
+	guia |
+	guia_turistico |
+	guia_turistica |
+	turismo |
+	firmar |
+	libro |
+	libro_visitas |
+	libro_de_visitas |
+	encuesta |
+	opinion |
+	realizar_encuesta |
+	foto |
+	fotógrafo |
+	fotomatón;
+	
+	
+public $ruleEstadoFinal =
+	menú |
+	salir |
+	volver |
+	atrás;
+	
+public $ruleS3P1GuiaTuristico =
+	vivienda_tradicional |
+	sierra |
+	sala_sierra |
+	panadería |
+	bodega |
+	sala_Cármen_Escalona |
+	Cármen_Escalona |
+	Molinos |
+	Molinos_de_aceite |
+	casa_del_topo |
+	el_campo |
+	sala_de_exposiciones |
+	exposiciones |
+	menú |
+	salir |
+	volver |
+	atrás;
+	
+public $ruleS4P1LibroVisitas =
+	firmar |
+	dejar_firma |
+	menú |
+	salir |
+	volver |
+	atrás;
+	
+
+public $ruleS7P1PublicacionMultimedia =
+	menú |
+	salir |
+	volver |
+	atrás |
+	tarjeta |
+	memoria |
+	tarjeta_de_memoria |
+	blu_tuz;
+	
+public $ruleS7Publicacion =
+	menú |
+	salir |
+	volver |
+	atrás |
+	aceptar;
+	
+public $ruleS8P1FotografoVirtual =
+	menú |
+	volver |
+	salir |
+	atrás;
+	
+public $ruleS8P3SacarFoto = 
+  menú |
+	salir |
+	volver |
+	atrás |
+	foto |
+	sacar_foto;
+	
+public $ruleS8P4Accion =
+	menú |
+	salir |
+	volver |
+	atrás |
+	i_meil |
+	enviar_i_meil |
+	blu_tuz |
+	enviar_blu_tuz;
+	
+public $ruleS8P4AccionVideo =
+	menú |
+	salir |	
+	i_meil |
+	enviar_i_meil |
+	blu_tuz |
+	enviar_blu_tuz;
+	
+public $ruleS8P5GrabarVideo =
+	menú |
+	salir |
+	volver |
+	atrás;
+	
+public $ruleS8P7MandarEMail =
+	$ruleEstadoFinal;
+	
+public $ruleS8P7MandarBluetooth =
+	menú |
+	salir |
+	aceptar;
+	
+public $ruleS8P9SeleccionDispositivo = 
+	menú |
+	salir;
+	
+	
+public $rule_estado_sala_bodega = 
+	$ruleEstadoFinal |
+	barrica |
+	prensa;
+	
+public $rule_estado_sala_del_topo =
+	$ruleEstadoFinal |
+	mesa |
+	periodicos;
+	
+
+public $rule_estado_sala_Carmen_Escalona = 
+	$ruleEstadoFinal |
+	esparto |
+	recogida |
+	aceituna ;
+	
+
+	
+public $rule_estado_sala_el_campo =
+	$ruleEstadoFinal |
+	trillo |
+	ubio ;
+	
+	
+public $rule_estado_sala_exposiciones = 
+	$ruleEstadoFinal |
+	artesania |
+	pintura ; 
+
+	
+	
+public $rule_estado_sala_Molinos_de_aceite = 
+	$ruleEstadoFinal |
+	molino_de_sangre |
+	sangre |
+	molino_mecanico |
+	mecanico ;
+	
+	
+public $rule_estado_sala_panaderia = 
+	$ruleEstadoFinal |
+	horno_de_leña |
+	pan_de_mijas;
+	
+public $rule_estado_sala_sierra = 
+	$ruleEstadoFinal |
+	cal |
+	encalar |
+	cal_para_encalar |
+	esparto |
+	fibra_de_esparto;
+
+
+
+public $rule_estado_vivienda_tradicional = 
+	$ruleEstadoFinal |
+	cocina |
+	dormitorio;
+
+
+public $rule_estado_libro_visitas = 
+	$ruleEstadoFinal |
+	firmar;
+	

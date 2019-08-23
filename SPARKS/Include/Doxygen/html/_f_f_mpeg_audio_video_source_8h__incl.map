@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node13" href="$_remote_audio_input_8h.html" title="RemoteAudioInput class declaration." alt="" coords="1123,83,1264,112"/>
+<area shape="rect" id="node24" href="$_remote_video_input_8h.html" title="RemoteVideoInput class declaration." alt="" coords="715,83,856,112"/>
+<area shape="rect" id="node42" href="$_thread_8h.html" title="Base class for several concurrent flow abstractions based on the Pthreads library." alt="" coords="1012,160,1084,189"/>
+<area shape="rect" id="node15" href="$_audio_input_8h.html" title="AudioInput class declaration." alt="" coords="1147,160,1240,189"/>
+<area shape="rect" id="node19" href="$_i_audio_consumer_8h.html" title="IAudioConsumer interface definition." alt="" coords="1384,237,1515,267"/>
+<area shape="rect" id="node17" href="$_i_async_fatal_error_handler_8h.html" title="Threads must have this handler to give up with a gobal fatal error." alt="" coords="1048,237,1224,267"/>
+<area shape="rect" id="node26" href="$_video_input_8h.html" title="VideoInput class declaration." alt="" coords="840,160,933,189"/>
+<area shape="rect" id="node36" href="$_i_video_consumer_8h.html" title="IVideoConsumer interface definition." alt="" coords="715,237,845,267"/>
+<area shape="rect" id="node28" href="$_video_queue_8h.html" title="VideoQueue.h" alt="" coords="869,237,973,267"/>
+<area shape="rect" id="node32" href="$_i_image_8h.html" title="IImage is a common interface for FFMpeg and CVCapture frames consumed by OpenCV." alt="" coords="849,315,921,344"/>
+<area shape="rect" id="node38" href="$_image_8h.html" title="Image.h" alt="" coords="745,315,815,344"/>
+<area shape="rect" id="node46" href="$_error_handling_8h.html" title="Global exception class definition, and error macro to throw it." alt="" coords="1248,237,1360,267"/>
+</map>

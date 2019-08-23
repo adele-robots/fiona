@@ -1,0 +1,160 @@
+<Model name="tipa11" geometry="tipa11.geo">
+	<!-- Morph targets: "alluring_ShapeKey" "astonishment_ShapeKey" "bored_ShapeKey" "concerned_ShapeKey" "confused_ShapeKey" "cynical_ShapeKey" "delight_ShapeKey" "eyes-closed_ShapeKey" "frightened_ShapeKey" "hmm_ShapeKey" "laugh_ShapeKey" "loathing_ShapeKey" "mad_ShapeKey" "nostrils_ShapeKey" "overjoyed_ShapeKey" "pleased_ShapeKey" "rage_ShapeKey" "silly_ShapeKey" "sly_ShapeKey" "repulsed_ShapeKey" "smooch_ShapeKey" "sorrow_ShapeKey" "sulk_ShapeKey" "sultry_ShapeKey" "vis-aa_ShapeKey" "vis-eh_ShapeKey" "vis-er_ShapeKey" "vis-f_ShapeKey" "vis-ih_ShapeKey" "vis-iy_ShapeKey" "vis-k_ShapeKey" "vis-l_ShapeKey" "vis-m_ShapeKey" "vis-ow_ShapeKey" "vis-s_ShapeKey" "vis-sh_ShapeKey" "vis-t_ShapeKey" "vis-th_ShapeKey" "vis-uw_ShapeKey" "vis-w_ShapeKey" "wince_ShapeKey" -->
+
+	<Joint name="hip" tx="0" ty="99.2399" tz="0.726643" jointIndex="1">
+		<Joint name="abdomen" tx="0" ty="13.9018" tz="0.736397" jointIndex="2">
+			<Joint name="chest" tx="0" ty="12.6797" tz="-2.19456" jointIndex="3">
+				<Joint name="neck" tx="0" ty="25.6032" tz="-3.6576" jointIndex="4">
+					<Joint name="head" tx="0" ty="8.04672" tz="0.48768" jointIndex="5">
+						<Joint name="eyeBrow" jointIndex="6" />
+						<Joint name="rEye" tx="-5.5759" ty="10.6567" tz="8.6581" jointIndex="7" />
+						<Joint name="lEye" tx="5.5759" ty="10.6567" tz="8.6581" jointIndex="8" />
+						<Joint name="upperJaw" tx="-0.009997" ty="3.05069" tz="6.89531" jointIndex="9" />
+						<Joint name="lowerJaw" tx="-0.011286" ty="5.71196" tz="3.55144" jointIndex="10">
+							<Joint name="tongueBase" tx="0.016647" ty="-8.06546" tz="5.91121" jointIndex="11">
+								<Joint name="tongue01" tx="-0.013914" ty="0.944473" tz="0.335602" rx="19" ry="-0.00147299" rz="0.00420193" jointIndex="12">
+									<Joint name="tongue02" tx="-0.00031" ty="1.05595" tz="0.820753" rx="17" ry="-0.000346926" rz="0.00127261" jointIndex="13">
+										<Joint name="tongue03" tx="-0.000107" ty="0.965714" tz="0.995729" rx="6" ry="-8.75198e-005" rz="0.000291597" jointIndex="14">
+											<Joint name="tongue04" tx="-6.4e-005" ty="0.800995" tz="1.00925" rx="-14" ry="0.00112596" rz="-0.00236011" jointIndex="15">
+												<Joint name="tongue05" tx="-0.000111" ty="0.465012" tz="0.529893" jointIndex="16">
+													<Joint name="tongueTip" tx="6.6e-005" ty="0.648849" tz="0.780902" jointIndex="17" />
+												</Joint>
+											</Joint>
+										</Joint>
+									</Joint>
+								</Joint>
+							</Joint>
+						</Joint>
+						<Mesh name="Girl4Hair" material="MaterialLibrary.mat1_Tailf.material.xml" tx="0" ty="-159.468" tz="3.83818" rx="0.029298" ry="0" rz="0" batchStart="450108" batchCount="25968" vertRStart="82470" vertREnd="87254">
+							<Mesh name="#Girl4Hair" material="MaterialLibrary.mat3_Layersf.material.xml" batchStart="476076" batchCount="44376" vertRStart="87255" vertREnd="95146" />
+							<Mesh name="#Girl4Hair" material="MaterialLibrary.mat2_FlyAwaysf.material.xml" batchStart="520452" batchCount="53880" vertRStart="95147" vertREnd="104826" />
+						</Mesh>
+						<Mesh name="cabeza-neutra-sin-grupos" material="MaterialLibrary._5_Lacrimal.material.xml" tx="0" ty="-159.471" tz="3.90144" batchStart="574332" batchCount="3252" vertRStart="104827" vertREnd="105438">
+							<Mesh name="#cabeza-neutra-sin-grupos" material="MaterialLibrary._7_Tear.material.xml" batchStart="577584" batchCount="1824" vertRStart="105439" vertREnd="105784" />
+							<Mesh name="#cabeza-neutra-sin-grupos" material="MaterialLibrary._1_EyeSocket.material.xml" batchStart="579408" batchCount="960" vertRStart="105785" vertREnd="106024" />
+							<Mesh name="#cabeza-neutra-sin-grupos" material="MaterialLibrary._1_SkinFace.material.xml" batchStart="580368" batchCount="38760" vertRStart="106025" vertREnd="112634" />
+							<Mesh name="#cabeza-neutra-sin-grupos" material="MaterialLibrary._1_Lip.material.xml" batchStart="619128" batchCount="4596" vertRStart="112635" vertREnd="113462" />
+							<Mesh name="#cabeza-neutra-sin-grupos" material="MaterialLibrary._1_Nostril.material.xml" batchStart="623724" batchCount="1092" vertRStart="113463" vertREnd="113664" />
+							<Mesh name="#cabeza-neutra-sin-grupos" material="MaterialLibrary._4_Gums.material.xml" batchStart="624816" batchCount="22320" vertRStart="113665" vertREnd="117452" />
+							<Mesh name="#cabeza-neutra-sin-grupos" material="MaterialLibrary._4_Teeth.material.xml" batchStart="647136" batchCount="36564" vertRStart="117453" vertREnd="124372" />
+							<Mesh name="#cabeza-neutra-sin-grupos" material="MaterialLibrary._4_Tongue.material.xml" batchStart="683700" batchCount="6528" vertRStart="124373" vertREnd="125793" />
+							<Mesh name="#cabeza-neutra-sin-grupos" material="MaterialLibrary._4_InnerMouth.material.xml" batchStart="690228" batchCount="3972" vertRStart="125794" vertREnd="126514" />
+							<Mesh name="#cabeza-neutra-sin-grupos" material="MaterialLibrary._2_SkinHead.material.xml" batchStart="694200" batchCount="14700" vertRStart="126515" vertREnd="129118" />
+							<Mesh name="#cabeza-neutra-sin-grupos" material="MaterialLibrary._6_Eyelash.material.xml" batchStart="708900" batchCount="14976" vertRStart="129119" vertREnd="132528" />
+						</Mesh>
+					</Joint>
+				</Joint>
+				<Joint name="rCollar" tx="-3.16992" ty="22.1894" tz="-3.90144" jointIndex="18">
+					<Joint name="rShldr" tx="-11.7043" ty="-0.487671" tz="-0.24384" jointIndex="19">
+						<Joint name="rForeArm" tx="-29.7485" ty="-2.43842" tz="1.46304" jointIndex="20">
+							<Joint name="rHand" tx="-22.1894" ty="-0.487671" tz="12.4358" jointIndex="21">
+								<Joint name="rThumb1" tx="0.511078" ty="-0.255539" tz="2.81099" jointIndex="22">
+									<Joint name="rThumb2" tx="-1.27772" ty="-0.766632" tz="4.08871" jointIndex="23">
+										<Joint name="rThumb3" tx="-2.20075" ty="-1.04187" tz="2.51517" jointIndex="24" />
+									</Joint>
+								</Joint>
+								<Joint name="rIndex1" tx="-5.62198" ty="1.02217" tz="6.38861" jointIndex="25">
+									<Joint name="rIndex2" tx="-2.64514" ty="-1.09346" tz="2.8117" jointIndex="26">
+										<Joint name="rIndex3" tx="-1.24783" ty="-1.61786" tz="1.27446" jointIndex="27" />
+									</Joint>
+								</Joint>
+								<Joint name="rMid1" tx="-6.64416" ty="1.02217" tz="4.34425" jointIndex="28">
+									<Joint name="rMid2" tx="-3.97422" ty="-1.15404" tz="2.57106" jointIndex="29">
+										<Joint name="rMid3" tx="-1.33164" ty="-2.22656" tz="1.25234" jointIndex="30" />
+									</Joint>
+								</Joint>
+								<Joint name="rRing1" tx="-7.41079" ty="-0.255539" tz="2.81099" jointIndex="31">
+									<Joint name="rRing2" tx="-3.30904" ty="-1.01323" tz="1.34176" jointIndex="32">
+										<Joint name="rRing3" tx="-1.69808" ty="-1.8913" tz="1.14658" jointIndex="33" />
+									</Joint>
+								</Joint>
+								<Joint name="rPinky1" tx="-7.41079" ty="-1.02217" tz="0.766632" jointIndex="34">
+									<Joint name="rPinky2" tx="-2.81098" ty="-1.7888" tz="1.02218" jointIndex="35">
+										<Joint name="rPinky3" tx="-0.805222" ty="-1.65875" tz="0.713888" jointIndex="36" />
+									</Joint>
+								</Joint>
+							</Joint>
+						</Joint>
+					</Joint>
+				</Joint>
+				<Joint name="lCollar" tx="3.16992" ty="22.1894" tz="-3.90144" jointIndex="37">
+					<Joint name="lShldr" tx="11.7043" ty="-0.487671" tz="-0.24384" jointIndex="38">
+						<Joint name="lForeArm" tx="29.7485" ty="-2.43842" tz="1.46304" jointIndex="39">
+							<Joint name="lHand" tx="22.1894" ty="-0.487671" tz="12.4358" jointIndex="40">
+								<Joint name="lThumb1" tx="-0.511078" ty="-0.255539" tz="2.81099" jointIndex="41">
+									<Joint name="lThumb2" tx="1.27772" ty="-0.766632" tz="4.08871" jointIndex="42">
+										<Joint name="lThumb3" tx="2.20075" ty="-1.04187" tz="2.51517" jointIndex="43" />
+									</Joint>
+								</Joint>
+								<Joint name="lIndex1" tx="5.62198" ty="1.02217" tz="6.38861" jointIndex="44">
+									<Joint name="lIndex2" tx="2.64514" ty="-1.09346" tz="2.8117" jointIndex="45">
+										<Joint name="lIndex3" tx="1.24783" ty="-1.61786" tz="1.27446" jointIndex="46" />
+									</Joint>
+								</Joint>
+								<Joint name="lMid1" tx="6.64416" ty="1.02217" tz="4.34425" jointIndex="47">
+									<Joint name="lMid2" tx="3.97422" ty="-1.15404" tz="2.57106" jointIndex="48">
+										<Joint name="lMid3" tx="1.33164" ty="-2.22656" tz="1.25234" jointIndex="49" />
+									</Joint>
+								</Joint>
+								<Joint name="lRing1" tx="7.41079" ty="-0.255539" tz="2.81099" jointIndex="50">
+									<Joint name="lRing2" tx="3.30904" ty="-1.01323" tz="1.34176" jointIndex="51">
+										<Joint name="lRing3" tx="1.69808" ty="-1.8913" tz="1.14658" jointIndex="52" />
+									</Joint>
+								</Joint>
+								<Joint name="lPinky1" tx="7.41079" ty="-1.02217" tz="0.766632" jointIndex="53">
+									<Joint name="lPinky2" tx="2.81098" ty="-1.7888" tz="1.02218" jointIndex="54">
+										<Joint name="lPinky3" tx="0.805222" ty="-1.65875" tz="0.713888" jointIndex="55" />
+									</Joint>
+								</Joint>
+							</Joint>
+						</Joint>
+					</Joint>
+				</Joint>
+			</Joint>
+		</Joint>
+		<Joint name="rThigh" tx="-9.02208" ty="-2.43547" tz="0.248717" rx="-1.99706" ry="-10.0011" rz="0.0335708" jointIndex="56">
+			<Joint name="rShin" tx="2.19456" ty="-45.8419" tz="-1.46304" rx="2.99931" ry="0.0642753" rz="-0.00114156" jointIndex="57">
+				<Joint name="rFoot" tx="0.97536" ty="-42.4282" tz="-3.6576" rx="-19.2706" ry="10.7707" rz="-5.86303" jointIndex="58">
+					<Joint name="rToe" tx="-2.04435" ty="-11.755" tz="11.2439" jointIndex="59" />
+				</Joint>
+			</Joint>
+		</Joint>
+		<Joint name="lThigh" tx="9.02208" ty="-2.43547" tz="0.248717" rx="-1.99706" ry="10.0011" rz="-0.0335708" jointIndex="60">
+			<Joint name="lShin" tx="-2.19456" ty="-45.8419" tz="-1.46304" rx="2.99931" ry="-0.0642753" rz="0.00114156" jointIndex="61">
+				<Joint name="lFoot" tx="-0.97536" ty="-42.4282" tz="-3.6576" rx="-19.2706" ry="-10.7707" rz="5.86303" jointIndex="62">
+					<Joint name="lToe" tx="2.04435" ty="-11.755" tz="11.2439" jointIndex="63" />
+				</Joint>
+			</Joint>
+		</Joint>
+	</Joint>
+
+	<Mesh name="ShoesFlats" material="MaterialLibrary.matUpperf.material.xml" batchStart="0" batchCount="16128" vertRStart="0" vertREnd="2983">
+		<Mesh name="#ShoesFlats" material="MaterialLibrary.matSolef.material.xml" batchStart="16128" batchCount="12096" vertRStart="2984" vertREnd="5179" />
+	</Mesh>
+	<Mesh name="TheGirl4" material="MaterialLibrary.mat2_SkinHipf.material.xml" batchStart="28224" batchCount="22404" vertRStart="5180" vertREnd="9276">
+		<Mesh name="#TheGirl4" material="MaterialLibrary.mat2_SkinTorsof.material.xml" batchStart="50628" batchCount="36060" vertRStart="9277" vertREnd="15833" />
+		<Mesh name="#TheGirl4" material="MaterialLibrary.mat2_Nipplef.material.xml" batchStart="86688" batchCount="3636" vertRStart="15834" vertREnd="16475" />
+		<Mesh name="#TheGirl4" material="MaterialLibrary.mat2_SkinHeadf.material.xml" batchStart="90324" batchCount="1440" vertRStart="16476" vertREnd="16765" />
+		<Mesh name="#TheGirl4" material="MaterialLibrary.mat2_SkinNeckf.material.xml" batchStart="91764" batchCount="1524" vertRStart="16766" vertREnd="17094" />
+		<Mesh name="#TheGirl4" material="MaterialLibrary.mat5_Corneaf.material.xml" batchStart="93288" batchCount="2304" vertRStart="17095" vertREnd="17512" />
+		<Mesh name="#TheGirl4" material="MaterialLibrary.mat5_Scleraf.material.xml" batchStart="95592" batchCount="6144" vertRStart="17513" vertREnd="18632" />
+		<Mesh name="#TheGirl4" material="MaterialLibrary.mat7_EyeSurfacef.material.xml" batchStart="101736" batchCount="8448" vertRStart="18633" vertREnd="20074" />
+		<Mesh name="#TheGirl4" material="MaterialLibrary.mat5_Irisf.material.xml" batchStart="110184" batchCount="4608" vertRStart="20075" vertREnd="20906" />
+		<Mesh name="#TheGirl4" material="MaterialLibrary.mat5_Pupilf.material.xml" batchStart="114792" batchCount="3072" vertRStart="20907" vertREnd="21452" />
+		<Mesh name="#TheGirl4" material="MaterialLibrary.mat3_SkinArmf.material.xml" batchStart="117864" batchCount="15312" vertRStart="21453" vertREnd="24260" />
+		<Mesh name="#TheGirl4" material="MaterialLibrary.mat3_SkinForearmf.material.xml" batchStart="133176" batchCount="16056" vertRStart="24261" vertREnd="27164" />
+		<Mesh name="#TheGirl4" material="MaterialLibrary.mat3_SkinHandf.material.xml" batchStart="149232" batchCount="52500" vertRStart="27165" vertREnd="37262" />
+		<Mesh name="#TheGirl4" material="MaterialLibrary.mat3_Fingernailf.material.xml" batchStart="201732" batchCount="7200" vertRStart="37263" vertREnd="38652" />
+		<Mesh name="#TheGirl4" material="MaterialLibrary.mat3_SkinLegf.material.xml" batchStart="208932" batchCount="22356" vertRStart="38653" vertREnd="42656" />
+		<Mesh name="#TheGirl4" material="MaterialLibrary.mat3_SkinFootf.material.xml" batchStart="231288" batchCount="38256" vertRStart="42657" vertREnd="49730" />
+		<Mesh name="#TheGirl4" material="MaterialLibrary.mat3_Toenailf.material.xml" batchStart="269544" batchCount="5280" vertRStart="49731" vertREnd="50760" />
+	</Mesh>
+	<Mesh name="TankTop" material="MaterialLibrary.matTrimf.material.xml" batchStart="274824" batchCount="35652" vertRStart="50761" vertREnd="57334">
+		<Mesh name="#TankTop" material="MaterialLibrary.matTopf.material.xml" batchStart="310476" batchCount="38712" vertRStart="57335" vertREnd="64290" />
+		<Mesh name="#TankTop" material="MaterialLibrary.matButtonsf.material.xml" batchStart="349188" batchCount="17520" vertRStart="64291" vertREnd="67421" />
+	</Mesh>
+	<Mesh name="CapriPants" material="MaterialLibrary.matButtonf.material.xml" batchStart="366708" batchCount="5904" vertRStart="67422" vertREnd="68430">
+		<Mesh name="#CapriPants" material="MaterialLibrary.matPantsf.material.xml" batchStart="372612" batchCount="70368" vertRStart="68431" vertREnd="81145" />
+		<Mesh name="#CapriPants" material="MaterialLibrary.matBeltloopsf.material.xml" batchStart="442980" batchCount="7128" vertRStart="81146" vertREnd="82469" />
+	</Mesh>
+</Model>

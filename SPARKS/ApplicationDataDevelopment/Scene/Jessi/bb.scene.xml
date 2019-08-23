@@ -1,0 +1,122 @@
+<Model name="bb" geometry="bb.geo">
+	<!-- Morph targets: "target-Figure_2Blink" "target-Figure_2mouthW" "target-Figure_2mouthM" "target-Figure_2tongueL" "target-Figure_2mouthU" "target-Figure_2mouthO" "target-Figure_2mouthTH" "target-Figure_2mouthF" "target-Figure_2mouthE" "target-Figure_2mouthCH" "target-Figure_2mouthA" "target-Figure_2NostrilFlare" -->
+
+	<Joint name="Body" tx="0" ty="107.997" tz="3.40766" jointIndex="1">
+		<Joint name="Hip" tx="0.103433" ty="4.10126" tz="-1.06109" jointIndex="2">
+			<Joint name="Abdomen" tx="-0.103433" ty="-1.06215" tz="1.06109" jointIndex="3">
+				<Joint name="Chest" tx="0" ty="17.5626" tz="1.31064" jointIndex="4">
+					<Joint name="Neck" tx="0" ty="27.5234" tz="-6.81533" jointIndex="5">
+						<Joint name="Head" tx="0" ty="10.7473" tz="1.8349" jointIndex="6">
+							<Joint name="leftEye" tx="3.14554" ty="7.60171" tz="7.86384" jointIndex="7" />
+							<Joint name="rightEye" tx="-3.14554" ty="7.60171" tz="7.86384" jointIndex="8" />
+						</Joint>
+					</Joint>
+					<Joint name="Right_Collar" tx="-2.35915" ty="23.5915" tz="-6.29107" rx="0.224854" ry="-0.4323" rz="-1.02779" jointIndex="9">
+						<Joint name="Right_Shoulder" tx="-11.0094" ty="-0.524265" tz="-1.04851" rx="9.06749" ry="-6.28399" rz="75.9322" jointIndex="10">
+							<Joint name="Right_Forearm" tx="-23.8537" ty="-1.31064" tz="0" rx="-6.62679" ry="15.5741" rz="0.435188" jointIndex="11">
+								<Joint name="Right_Hand" tx="-28.3098" ty="-0.262125" tz="3.14554" rx="12.9773" ry="9.34708" rz="18.0416" jointIndex="12">
+									<Joint name="rThumb1" tx="-3.66979" ty="-2.09703" tz="3.93192" rx="2.14855" ry="-29.2416" rz="-3.9798" jointIndex="13">
+										<Joint name="rThumb2" tx="-1.05637" ty="-1.22413" tz="2.06342" jointIndex="14">
+											<Joint name="rThumb3" tx="-2.56755" ty="-1.06476" tz="2.18303" rx="1.92881" ry="-14.6823" rz="-4.09293" jointIndex="15" />
+										</Joint>
+									</Joint>
+									<Joint name="rIndex1" tx="-10.4851" ty="-1.31064" tz="3.66979" rx="0.146071" ry="-11.4329" rz="2.50474" jointIndex="16">
+										<Joint name="rIndex2" tx="-3.59063" ty="-0.623603" tz="0.506536" jointIndex="17">
+											<Joint name="rIndex3" tx="-2.47737" ty="-0.329496" tz="0.749319" jointIndex="18" />
+										</Joint>
+									</Joint>
+									<Joint name="rMid1" tx="-11.1234" ty="-0.420443" tz="0.602656" rx="0.0112743" ry="-6.30713" rz="1.39505" jointIndex="19">
+										<Joint name="rMid2" tx="-3.12378" ty="-1.31275" tz="0.279798" jointIndex="20">
+											<Joint name="rMid3" tx="-3.00478" ty="-0.51639" tz="0.123554" jointIndex="21" />
+										</Joint>
+									</Joint>
+									<Joint name="rRing1" tx="-11.0993" ty="-0.793202" tz="-1.27479" jointIndex="22">
+										<Joint name="rRing2" tx="-2.60451" ty="-0.0600276" tz="-1.09344" jointIndex="23">
+											<Joint name="rRing3" tx="-2.06924" ty="-0.121368" tz="-0.348402" jointIndex="24" />
+										</Joint>
+									</Joint>
+									<Joint name="rPinky1" tx="-9.40279" ty="-2.0965" tz="-3.39506" rx="0.0988511" ry="14.4035" rz="-4.66317" jointIndex="25">
+										<Joint name="rPinky2" tx="-1.63961" ty="1.26241" tz="-0.418985" jointIndex="26">
+											<Joint name="rPinky3" tx="-1.75416" ty="-0.667897" tz="-1.46351" jointIndex="27" />
+										</Joint>
+									</Joint>
+								</Joint>
+							</Joint>
+						</Joint>
+					</Joint>
+					<Joint name="Left_Collar" tx="2.35915" ty="23.5915" tz="-6.29107" rx="0.187759" ry="0.38162" rz="0.997552" jointIndex="28">
+						<Joint name="Left_Shoulder" tx="11.0094" ty="-0.524265" tz="-1.04851" rx="8.78443" ry="6.23129" rz="-75.9918" jointIndex="29">
+							<Joint name="Left_Forearm" tx="23.8537" ty="-1.31064" tz="0" rx="-6.62679" ry="-15.5741" rz="-0.435188" jointIndex="30">
+								<Joint name="Left_Hand" tx="28.3098" ty="-0.262125" tz="3.14554" rx="12.9773" ry="-9.34708" rz="-18.0416" jointIndex="31">
+									<Joint name="lThumb1" tx="3.66979" ty="-2.09703" tz="3.93192" rx="2.14855" ry="29.2416" rz="3.9798" jointIndex="32">
+										<Joint name="lThumb2" tx="1.05637" ty="-1.22413" tz="2.06342" jointIndex="33">
+											<Joint name="lThumb3" tx="2.56755" ty="-1.06476" tz="2.18303" rx="1.92881" ry="14.6823" rz="4.09293" jointIndex="34" />
+										</Joint>
+									</Joint>
+									<Joint name="lIndex1" tx="10.4851" ty="-1.31064" tz="3.66979" rx="0.146071" ry="11.4329" rz="-2.50474" jointIndex="35">
+										<Joint name="lIndex2" tx="3.59063" ty="-0.623603" tz="0.506536" jointIndex="36">
+											<Joint name="lIndex3" tx="2.47737" ty="-0.329496" tz="0.749319" jointIndex="37" />
+										</Joint>
+									</Joint>
+									<Joint name="lMid1" tx="11.1234" ty="-0.420443" tz="0.602656" rx="0.0112743" ry="6.30713" rz="-1.39505" jointIndex="38">
+										<Joint name="lMid2" tx="3.12378" ty="-1.31275" tz="0.279798" jointIndex="39">
+											<Joint name="lMid3" tx="3.00478" ty="-0.51639" tz="0.123554" jointIndex="40" />
+										</Joint>
+									</Joint>
+									<Joint name="lRing1" tx="11.0993" ty="-0.793202" tz="-1.27479" jointIndex="41">
+										<Joint name="lRing2" tx="2.60451" ty="-0.0600276" tz="-1.09344" jointIndex="42">
+											<Joint name="lRing3" tx="2.06924" ty="-0.121368" tz="-0.348402" jointIndex="43" />
+										</Joint>
+									</Joint>
+									<Joint name="lPinky1" tx="9.40279" ty="-2.0965" tz="-3.39506" rx="0.0988511" ry="-14.4035" rz="4.66317" jointIndex="44">
+										<Joint name="lPinky2" tx="1.63961" ty="1.26241" tz="-0.418985" jointIndex="45">
+											<Joint name="lPinky3" tx="1.75416" ty="-0.667897" tz="-1.46351" jointIndex="46" />
+										</Joint>
+									</Joint>
+								</Joint>
+							</Joint>
+						</Joint>
+					</Joint>
+				</Joint>
+			</Joint>
+			<Joint name="Right_Thigh" tx="-9.01579" ty="-11.2851" tz="-2.87083" rx="-4.8972" ry="-5.10401" rz="1.34663" jointIndex="47">
+				<Joint name="Right_Shin" tx="1.04851" ty="-44.0375" tz="-2.09702" rx="6.87008" ry="10.1207" rz="-1.15761" jointIndex="48">
+					<Joint name="Right_Foot" tx="2.09702" ty="-46.6588" tz="-2.88341" rx="0.16267" ry="-14.7249" rz="0.185759" jointIndex="49">
+						<Joint name="rToe" tx="-0.887461" ty="-4.30451" tz="7.24036" jointIndex="50" />
+					</Joint>
+				</Joint>
+			</Joint>
+			<Joint name="Left_Thigh" tx="8.80892" ty="-11.2851" tz="-2.87083" rx="-5.19959" ry="4.81571" rz="-1.51347" jointIndex="51">
+				<Joint name="Left_Shin" tx="-1.04851" ty="-44.0375" tz="-2.09702" rx="7.33325" ry="-10.1383" rz="1.03611" jointIndex="52">
+					<Joint name="Left_Foot" tx="-2.09702" ty="-46.6588" tz="-2.88341" rx="0.0641749" ry="15.0436" rz="0.0823338" jointIndex="53">
+						<Joint name="lToe" tx="0.887461" ty="-4.30451" tz="7.24036" rx="2" ry="0" rz="0" jointIndex="54" />
+					</Joint>
+				</Joint>
+			</Joint>
+		</Joint>
+	</Joint>
+
+	<Mesh name="GROUND" material="Preview.material.xml" batchStart="0" batchCount="2400" vertRStart="0" vertREnd="440" />
+	<Mesh name="Figure_2_node" material="BottomEyelashes.material.xml" batchStart="2400" batchCount="720" vertRStart="441" vertREnd="594">
+		<Mesh name="#Figure_2_node" material="TeethTop.material.xml" batchStart="3120" batchCount="4602" vertRStart="595" vertREnd="1400" />
+		<Mesh name="#Figure_2_node" material="Gums.material.xml" batchStart="7722" batchCount="5568" vertRStart="1401" vertREnd="2556" />
+		<Mesh name="#Figure_2_node" material="TopEyelashes.material.xml" batchStart="13290" batchCount="1152" vertRStart="2557" vertREnd="2790" />
+		<Mesh name="#Figure_2_node" material="EyeCaruncle.material.xml" batchStart="14442" batchCount="384" vertRStart="2791" vertREnd="2870" />
+		<Mesh name="#Figure_2_node" material="Head.material.xml" batchStart="14826" batchCount="37926" vertRStart="2871" vertREnd="9376" />
+		<Mesh name="#Figure_2_node" material="EyeSocket.material.xml" batchStart="52752" batchCount="1848" vertRStart="9377" vertREnd="9718" />
+		<Mesh name="#Figure_2_node" material="Tongue.material.xml" batchStart="54600" batchCount="1080" vertRStart="9719" vertREnd="9900" />
+		<Mesh name="#Figure_2_node" material="TeethBottom.material.xml" batchStart="55680" batchCount="4530" vertRStart="9901" vertREnd="10720" />
+		<Mesh name="#Figure_2_node" material="Body.material.xml" batchStart="60210" batchCount="50697" vertRStart="10721" vertREnd="20189" />
+		<Mesh name="#Figure_2_node" material="Eyeball.material.xml" batchStart="110907" batchCount="5568" vertRStart="20190" vertREnd="21183" />
+		<Mesh name="#Figure_2_node" material="Iris.material.xml" batchStart="116475" batchCount="2292" vertRStart="21184" vertREnd="21631" />
+		<Mesh name="#Figure_2_node" material="Pupil.material.xml" batchStart="118767" batchCount="192" vertRStart="21632" vertREnd="21697" />
+		<Mesh name="#Figure_2_node" material="Fingernails.material.xml" batchStart="118959" batchCount="2112" vertRStart="21698" vertREnd="22131" />
+		<Mesh name="#Figure_2_node" material="Sole.material.xml" batchStart="121071" batchCount="6480" vertRStart="22132" vertREnd="23273" />
+		<Mesh name="#Figure_2_node" material="Leather.material.xml" batchStart="127551" batchCount="8784" vertRStart="23274" vertREnd="24871" />
+		<Mesh name="#Figure_2_node" material="pants.material.xml" batchStart="136335" batchCount="15456" vertRStart="24872" vertREnd="27644" />
+		<Mesh name="#Figure_2_node" material="buttons.material.xml" batchStart="151791" batchCount="1716" vertRStart="27645" vertREnd="27996" />
+		<Mesh name="#Figure_2_node" material="shirt.material.xml" batchStart="153507" batchCount="12996" vertRStart="27997" vertREnd="30305" />
+		<Mesh name="#Figure_2_node" material="sleeves.material.xml" batchStart="166503" batchCount="6720" vertRStart="30306" vertREnd="31523" />
+		<Mesh name="#Figure_2_node" material="collar.material.xml" batchStart="173223" batchCount="2880" vertRStart="31524" vertREnd="32084" />
+	</Mesh>
+</Model>

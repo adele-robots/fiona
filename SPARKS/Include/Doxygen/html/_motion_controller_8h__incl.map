@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_perlin_8h.html" title="Perlin.h" alt="" coords="123,83,189,112"/>
+<area shape="rect" id="node7" href="$_i_scene_8h.html" title="IScene.h" alt="" coords="93,160,168,190"/>
+<area shape="rect" id="node13" href="$_lip_synch_8h.html" title="LipSynch class definition." alt="" coords="488,83,573,112"/>
+<area shape="rect" id="node18" href="$_i_morph_target_blender_8h.html" title="IMorphTargetBlender.h" alt="" coords="192,160,347,190"/>
+<area shape="rect" id="node36" href="$_thread_8h.html" title="Base class for several concurrent flow abstractions based on the Pthreads library." alt="" coords="1028,83,1100,112"/>
+<area shape="rect" id="node46" href="$_meca_tronica_serial_8h.html" title="MecaTronicaSerial.h" alt="" coords="1124,83,1265,112"/>
+<area shape="rect" id="node9" href="$_configuration_8h.html" title="psisban::Config class and mainConfig global variable declarations." alt="" coords="76,238,185,267"/>
+<area shape="rect" id="node20" href="$_stop_watch_8h.html" title="Declaration of the StopWatch class supporting high precision duration measures." alt="" coords="717,160,816,190"/>
+<area shape="rect" id="node40" href="$_i_async_fatal_error_handler_8h.html" title="Threads must have this handler to give up with a gobal fatal error." alt="" coords="1125,160,1301,190"/>
+<area shape="rect" id="node42" href="$_error_handling_8h.html" title="Global exception class definition, and error macro to throw it." alt="" coords="1325,160,1437,190"/>
+</map>

@@ -1,0 +1,57 @@
+## FUNCIONAMIENTO DEL SPARK ##
+
+Ojo!! | El ProgramQAIMLSpark tiene varias dependencias de Qt4 (a saber, QtCore, QtNetwork, QtXml y QtGui), que deberían resolverse al instalar 'libqt4-dev' (y sus respectivas dependencias)
+
+Es necesario colocar la expresión "html:" antes de cada tag (ya sea de inicio o cierre). 
+Por ejemplo,
+	<a href="#">texto</a> tendría la forma <html:a href="#">texto</html:a>
+	
+Más ejemplos en spanish/sara.aiml
+
+La variable "Program_Path" en la configuración 'ProgramQAIMLSpark.ini' deberá contener la ruta a un directorio donde estén las carpetas:
+- aiml_set
+- utils
+específicas para cada usuario, y con la variable "Aiml_Set" se seleccionará el set concreto que se quiera utilizar (p.e. "spanish").
+
+
+# Ejemplos de funciones javascript
+
+Para lograr un comportamiento dinámico del avatar se pueden añadir funciones al script que se incrusta junto con el avatar, que pueden ser
+invocadas mediante las respuestas generadas con el AIML. Ejemplos:
+
+
+function probandoAIML(value){
+	
+	switch (value)
+	{
+	case 0:
+		jQuery("#chatForm\\:chatTA").val("adele robots");
+		break;
+	case 1:
+		jQuery("#chatForm\\:chatTA").val("kickstarter 1");
+		break;
+	default:
+		jQuery("#chatForm\\:chatTA").val("adele robots");		
+	}		
+	var submitButton = jQuery("input[name='chatForm:sendMessage']");
+	submitButton.click();	
+}
+function showUniMaps(){
+	
+	 var dialogOptions = {
+             /*
+              * maxHeight: 650, minHeight: 650,
+              */
+             maxWidth : 690,
+             minWidth : 690,
+             position : 'left top',
+             resizable : false,
+             show : {
+                     effect : 'drop',
+                     direction : 'up'
+             },
+            
+     };
+	
+	jQuery("#dialog").append(jQuery("<iframe />").attr({src: "http://goo.gl/maps/ChWjC",title: "Mapas",width: "690", height: "690"})).dialog(dialogOptions);	
+}

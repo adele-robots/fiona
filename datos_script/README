@@ -1,0 +1,6 @@
+reGeneraIni.sh.2013_05_29, es el script que construye el archivo "generalConf.ini" apuntando al red5 de la propia máquina
+...
+	echo "AudioVideoConfig_Remote_WebcamStream_URL= \"rtmp://195.55.126.59/FionaRed5/$2/usercam conn=S:masteruser conn=S:masterpass live=1\"; ">> /datos/nfs/users/private/$1/generalConf.ini
+...
+
+

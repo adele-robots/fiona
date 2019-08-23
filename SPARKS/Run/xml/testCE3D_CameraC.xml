@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentNetwork xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ComponentNetwork.xsd">
+
+    <!-- COMPONENT DECLARATION -->
+  <ComponentDeclarations>
+    <Component  id="idCharacterEmbodiment3DComponent"  type="CharacterEmbodiment3DSpark" plugin="libCharacterEmbodiment3DSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IFaceExpression" />
+      </ProvidedInterfaces>
+      <ProvidedInterfaces>
+        <Interface name="IEyes" />
+      </ProvidedInterfaces>
+      <ProvidedInterfaces>
+        <Interface name="INeck" />
+      </ProvidedInterfaces>
+      <ProvidedInterfaces>
+        <Interface name="IAnimation" />
+      </ProvidedInterfaces>
+	<ProvidedInterfaces>
+        <Interface name="ICamera" />
+      </ProvidedInterfaces>
+	  <ProvidedInterfaces>
+        <Interface name="IConcurrent" />
+      </ProvidedInterfaces>
+	  <ProvidedInterfaces>
+        <Interface name="IAsyncFatalErrorHandler" />
+      </ProvidedInterfaces>
+	  <ProvidedInterfaces>
+        <Interface name="IApplication" />
+      </ProvidedInterfaces>
+	  <ProvidedInterfaces>
+        <Interface name="IEventQueue" />
+      </ProvidedInterfaces>
+	  <RequiredInterfaces>
+        <Interface name="IUpdateable" />
+		<Interface name="IAsyncFatalErrorHandler" />
+      </RequiredInterfaces>
+    </Component>
+
+    
+	
+	<Component id="idEyeContactComponent"  type="EyeContactSpark" plugin="libEyeContactSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IDetectedFacePositionConsumer" />
+      </ProvidedInterfaces>
+	  <ProvidedInterfaces>
+        <Interface name="IUpdateable1" />
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="INeck" />
+        <Interface name="IEyes" />
+      </RequiredInterfaces>
+    </Component>
+	
+	<Component id="idUpdater1"  type="Updater1" plugin="libUpdaterSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IUpdateable" />
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="IUpdateable1" />
+	<Interface name="IUpdateable2" />
+      </RequiredInterfaces>
+    </Component>
+
+    <Component id="idCameraControl"  type="CameraControlSpark" plugin="libCameraControlSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IUpdateable2" />
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="ICamera" />
+      </RequiredInterfaces>
+    </Component>
+	
+	
+  </ComponentDeclarations>
+  
+  
+  <!-- APPLICATION DESCRIPTION -->
+  <ApplicationDescription applicationComponent="instanceCharacterEmbodiment3DComponent" applicationConfig="/GeneralEca.ini">
+    <!-- Paso 1/2: Instantiate components -->
+    <ComponentInstances>
+      
+	  <Instance instanceName="instanceCharacterEmbodiment3DComponent" componentID ="idCharacterEmbodiment3DComponent" configuration="/ComponentConfigurations/CharacterEmbodiment3DSpark.ini"/>
+	  <Instance instanceName="instanceEyeContactComponent" componentID ="idEyeContactComponent"    configuration="/ComponentConfigurations/EyeContactSpark.ini" />
+	  <Instance instanceName="instanceUpdater1" componentID ="idUpdater1"/>
+	   <Instance instanceName="instanceCameraControl" componentID ="idCameraControl" configuration="/ComponentConfigurations/CameraControlSpark.ini"/>
+	  
+	  
+    </ComponentInstances>
+    
+    <!-- Paso 2/2: Connect interfaces -->
+    <InterfaceConnections>
+	  
+	  <Connect interface="IEyes" providedBy="instanceCharacterEmbodiment3DComponent"
+requiredBy="instanceEyeContactComponent" />
+	  <Connect interface="INeck" providedBy="instanceCharacterEmbodiment3DComponent" requiredBy="instanceEyeContactComponent" />
+
+	  <Connect interface="ICamera" providedBy="instanceCharacterEmbodiment3DComponent" requiredBy="instanceCameraControl" />
+	 
+	  <Connect interface="IUpdateable1" providedBy="instanceEyeContactComponent" requiredBy="instanceUpdater1" />
+	  <Connect interface="IUpdateable" providedBy="instanceUpdater1" requiredBy="instanceCharacterEmbodiment3DComponent" />
+	  <Connect interface="IUpdateable2" providedBy="instanceCameraControl" requiredBy="instanceUpdater1" /> 
+	  
+      <ConnectAll interface="IAsyncFatalErrorHandler" providedBy="instanceCharacterEmbodiment3DComponent"/>
+    </InterfaceConnections>
+  </ApplicationDescription>
+</ComponentNetwork>

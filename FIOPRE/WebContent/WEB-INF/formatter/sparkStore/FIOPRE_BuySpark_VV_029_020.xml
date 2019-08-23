@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<formatter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="../fwnScheme.xsd">  
+
+		  <destino persist="SECURE_USERID">
+		    <origen nombre="SECURE_USERID" />
+		  </destino>
+		  
+		  <destino persist="spark_id">
+		    <origen nombre="spark_id" />
+		  </destino>
+		  
+		  <destino persist="selected_price">
+		  	<origen nombre="selected_price" />
+		  </destino>
+		
+</formatter>

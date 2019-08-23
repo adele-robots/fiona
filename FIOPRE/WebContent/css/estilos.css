@@ -1,0 +1,1793 @@
+/* PORTADA */
+@font-face {
+	font-family: Miso;
+	src: url('../fonts/miso-regular.ttf');
+}
+
+@font-face {
+  font-family: 'fionafont';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Dosis Regular'), local('Dosis-Regular'), url('//themes.googleusercontent.com/static/fonts/dosis/v1/xIAtSaglM8LZOYdGmG1JqQ.woff') format('woff');
+}
+@font-face {
+  font-family: 'fionafont';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Dosis SemiBold'), local('Dosis-SemiBold'), url('//themes.googleusercontent.com/static/fonts/dosis/v1/f8qltGyj2S-SS_tsOHsjgfesZW2xOQ-xsNqO47m55DA.woff') format('woff');
+}
+
+
+#portada .rich-tabpanel-content {
+	text-align: center;
+}
+
+a img {
+	border: 0px;
+}
+
+div.portada {
+	width: 98%;
+	/*background: url(../images/fiona/login_fiona.png) left no-repeat;*/
+	margin-left: 10px;
+	height: 440px;
+	background-color: white;
+	margin-bottom: 15px;
+	margin-top: 30px;
+	float: left;
+}
+
+div.portada_segunda {
+	width: 900px;
+	margin: auto;
+	/*padding-left:10%;*/
+}
+
+div.portada p.titulo {
+	font-size: 36px;
+/*	color: #0060af; */
+	color: #009fda;
+	font-weight: bold;
+	border-bottom: 1px solid #d9cfc0;
+	margin-left: 450px;
+	font-family: fionafont, Trebuchet MS, Verdana, sans-serif;
+}
+
+div.portada div.subtitulo {
+/*	background-color: #e6e6e6; */
+	background-color: transparent;
+	position:relative;
+	top:70%;
+	left:55%;
+	width:700px;
+	margin-left: -200px;
+	border-radius: 15px 15px 0px 0px;
+}
+
+div.portada div.subtitulo p {
+	font-size: 18px;
+/*	color: #4a4a30; */
+	color: #000000;
+	font-weight: bold;
+	text-align: left;
+	/*margin: 61px 11px -45px 485px;*/
+	margin: 11px 0px 0px 100px;
+	padding-bottom: 2px;
+}
+
+div.portada object {
+	margin: 18px 0;
+}
+
+div.portada form fieldset {
+	padding: 30px 0;
+	border: none;
+}
+
+
+div.portada form fieldset dl {
+	width: 50%;
+	margin: auto;
+}
+
+div.portada form fieldset dl dt,div.portada form fieldset dl dd {
+	padding-bottom: 30px;
+}
+
+div.portada form fieldset dl dt {
+	float: left;
+	width: 48%;
+	padding-right: 2%;
+	text-align: right;
+}
+
+div.portada form fieldset dl dd {
+	float: left;
+	text-align: left;
+	width: 48%;
+	margin-left: 0;
+}
+
+/* CONDICIONES DE USO Y PRIVACIDAD */
+div.condicionesPrivacidad {
+	background-image: none;
+	background-color: white;
+	text-align: justify;
+	padding-right: 2%;
+}
+
+div.condicionesPrivacidad h2 {
+	text-align: left;
+	font-size: 19px;
+	font-weight: normal;
+	width: 100%;
+	line-height: 150%;
+	color: #0066cc;
+}
+
+div.condicionesPrivacidad p {
+	text-align: justify;
+	font-size: 12px;
+	font-weight: normal;
+	width: 80%;
+	line-height: 150%;
+	color: black;
+}
+
+/* FORMULARIOS */
+.tituloPagina {
+	text-align: left;
+	font-size: large;
+	color: #696969;
+	/*font-weight: bold;
+	font-size: 17px;
+	padding-bottom: 15px;*/
+	font-size: 19px;
+	font-weight: normal;
+	width: 100%;
+	line-height: 150%;
+	color: #0066cc;
+}
+
+.tituloPagina.error {
+	color: #FF2C2C;
+}
+
+html> /**/ body .tituloPagina {
+	padding-bottom: 10px;
+}
+
+.textoError {
+	background: #f4f4f4;
+	width: 91%;
+	padding: 5px;
+	margin: 10px 0;
+}
+
+body {
+/*	background: #39D8FF;*/ 
+/*	background: #f4f4f4;*/
+	background: url(../images/fiona/bg.jpg) left top repeat;		
+/*	background: url(../images/fiona/fondo_spark.jpg) left top repeat;*/
+/*	background: transparent url(../images/fondo.gif) left top repeat;*/
+}
+
+* {
+	font-family: fionafont, Arial, Verdana, sans-serif;
+	font-size: 18px;
+}
+
+input[type="text"] {
+	padding-left: 3px;
+}
+
+.input-upperCase 
+{
+	text-transform:uppercase;
+}
+
+input,select {
+	border: 1px solid #94999f;
+	color: #414b56;
+}
+
+select {
+	color: #414b56;
+}
+
+.input_primas,.select_primas {
+	border: 1px solid #94999f;
+	width: 65px;
+	color: #414b56;
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+textarea {
+	width: 140px;
+	border-color: #94999F;
+	border-style: solid;
+	border-width: 1px;
+	color: #414B56;
+}
+
+.textAreaLarge {
+	width: auto;
+	border-color: #94999F;
+	border-style: solid;
+	border-width: 1px;
+	color: #414B56;
+}
+
+.textAreaChat {
+	clear: both;
+	float:left;
+	font-size: 12pt;
+	font-weight: bold;
+	height: 89px;
+	width: 371px;
+		
+}
+
+label {
+	font-weight: bold;
+}
+
+.label_primas {
+	float: left;
+	color: #414B55;
+	display: block;
+	height: 21px;
+	padding-top: 3px;
+}
+
+.label_primas_blue {
+	float: left;
+	color: #0069AA;
+	display: block;
+	height: 21px;
+	padding-top: 3px;
+}
+
+.label_primas_margin {
+	font-weight: bold;
+	margin-left: 200px;
+}
+
+a {
+	color: #009390
+}
+
+.label-bold {
+	font-weight: bold;
+}
+
+.separador {
+	margin-top: 10px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.separador_portada {
+	margin-top: 10px;
+	text-align: center;
+	margin-left: 500px;
+}
+
+.mensajeErrorRecibos {
+	margin-top: 2%;
+	margin-bottom: 2%;
+	text-align: center;
+	color: red;
+	background-color: #f7e6eb;
+	border-color: #b30838;
+}
+
+.calendario {
+	width: 80px;
+}
+
+.leyendaContrataciones {
+	background-color: #c7c7c7;
+	border-color: #696969;
+	border-style: solid solid solid;
+	border-width: 1px;
+	height: 25px;
+	padding-top: 5px;
+	text-align: center;
+}
+
+.leyendaContratacionesLabel {
+	color: #000000;
+	font-size: 9px;
+	font-weight: normal;
+	padding-left: 5px;
+	padding-right: 8px;
+	vertical-align: top;
+}
+
+.leyendaContratacionesBoton {
+	margin-left: 5px;
+}
+
+/* colores filas  */
+.fila1 {
+	background-color: #e6eff4;
+	height: 23px;
+}
+
+.fila2 {
+	background-color: #ffffff;
+	height: 23px;
+}
+
+.Cotizado,.Cotizada, .Valued, .VALUED, .COTIZADA, .COTIZADO{
+	background-color: #ffffff;
+	height: 22px;
+}
+
+.Pendiente,.PENDIENTE, .Pending, .PENDING {
+	background-color: #ffffff;
+	height: 22px;
+}
+
+.Aceptado,.ACEPTADO,.Aceptada,.ACEPTADA, .Accepted, .ACCEPTED{
+	background-color: #FFC600;
+	height: 22px;
+}
+
+.Retenido,.BLOQUEADO,.Bloqueado,.Retenida,.BLOQUEADA, .Blocked, .BLOCKED, .RETENIDO, .RETENIDA {
+	background-color: #E00000;
+	height: 22px;
+}
+
+.Desestimado,.Desestimada, .Dismissed, .DESESTIMADO, .DESESTIMADA, .DISMISSED {
+	background-color: #9A5700;
+	height: 22px;
+}
+
+.Emitido,.EMITIDO,.Emitida,.EMITIDA, .Issued, .ISSUED {
+	background-color: #3FAA00;
+	height: 22px;
+}
+
+.Anulado,.Anulada,.ANULADO,.ANULADA, .Canceled, .CANCELED {
+	background-color: #9A5700;
+	height: 22px;
+}
+
+.nombre {
+	width: 15%;
+}
+
+.apellidos {
+	width: 15%;
+}
+
+.estado {
+	width: 10%;
+}
+
+.columnas15 {
+	width: 15%;	
+}
+
+.columnas10 {
+	width: 10%;	
+}
+
+.columnas {
+	width: 20%;
+}
+
+.fecha {
+	width: 5%;
+}
+
+.fantasma {
+	width: 25%;
+}
+
+.fio-store-button{
+	border: 1px solid #6493B5;
+	background-image: url(../images/buttons/boton_sparkstore.png);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: 1px;
+	color: #FFFFFF;
+	height: 50px;
+	width: 161px;
+	line-height: 190%;
+	font-family: fionafont,  arial;
+	font-weight: bold;
+	font-size: 16pt;
+	cursor: pointer;
+	margin-right: 7px;
+	z-index: 6;
+	position:fixed;
+	top: 2px;
+	right: 265px;
+}
+
+.fio-usetts-button{
+	border: 1px solid #6493B5;
+	background-image: url(../images/buttons/boton_account.png);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: 1px;
+	color: #FFFFFF;
+	height: 41px;
+	width: 166px;
+	line-height: 190%;
+	font-family: fionafont,  arial;
+	font-weight: bold;
+	font-size: 16pt;
+	cursor: pointer;
+	margin-right: 7px;
+	z-index: 6;
+	position:fixed;
+	top: 6px;
+	right: 625px;
+}
+
+.fio-dev-button{
+	border: 1px solid #6493B5;
+	background-image: url(../images/buttons/boton_sparkup.png);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: 1px;
+	color: #FFFFFF;
+	height: 41px;
+	width: 166px;
+	line-height: 190%;
+	font-family: fionafont,  arial;
+	font-weight: bold;
+	font-size: 16pt;
+	cursor: pointer;
+	margin-right: 7px;
+	z-index: 6;
+	position:fixed;
+	top: 6px;
+	right: 440px;
+}
+
+.fio-botones-nav .fio-sparklink-button{
+	border: 1px solid #6493B5;
+	background-image: url(../images/buttons/boton_sparklink.png);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: none;
+	color: #000000;
+	height: 42px;
+	width: 171px;
+	line-height: 190%;
+	font-family: fionafont,  arial;
+	font-weight: bold;
+	font-size: 9pt;
+	cursor: pointer;
+	margin-right: 7px;
+
+}
+
+.fio-botones-nav .fio-produccion-button{
+	border: 1px solid #6493B5;
+	background-image: url(../images/buttons/boton_sparkrender.png);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: none;
+	color: #000000;
+	height: 44px;
+	width: 174px;
+	line-height: 190%;
+	font-family: fionafont,  arial;
+	font-weight: bold;
+	font-size: 9pt;
+	cursor: pointer;
+	margin-right: 7px;
+
+
+}
+
+.fio-botones-run .fio-start-button{
+	border: 1px solid #6493B5;
+	background-image: url(../images/buttons/boton_start.png);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: none;
+	color: #000000;
+	height: 35px;
+	width: 140px;
+	line-height: 190%;
+	font-family: fionafont,  arial;
+	font-weight: bold;
+	font-size: 9pt;
+	cursor: pointer;
+	margin-right: 7px;
+
+}
+
+.fio-botones-run .fio-stop-button{
+	border: 1px solid #6493B5;
+	background-image: url(../images/buttons/boton_stop.png);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: none;
+	color: #000000;
+	height: 35px;
+	width: 140px;
+	line-height: 190%;
+	font-family: fionafont,  arial;
+	font-weight: bold;
+	font-size: 9pt;
+	cursor: pointer;
+	margin-right: 7px;
+
+
+}
+
+.fio-login-button{
+	border: 1px solid #6493B5;
+	background-image: url(../images/buttons/boton_login_blue.png);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: none;
+	color: #000000;
+	height: 35px;
+	width: 140px;
+	line-height: 190%;
+	font-family: fionafont,  arial;
+	font-weight: bold;
+	font-size: 9pt;
+	cursor: pointer;
+	margin-right: 7px;
+
+}
+
+.fio-register-button{
+	background-image: url(../images/buttons/boton_register_blue.png);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: outset;
+	border-radius: 10px;
+	border-color:#6493B5;
+	border-radius: 10px;
+	height: 35px;
+	width: 140px;
+	line-height: 190%;
+	font-family: fionafont,  arial;
+	font-weight: bold;
+	font-size: 9pt;
+	cursor: pointer;
+	margin-right: 7px;
+	position:relative;
+	left:75px !important;
+	bottom:0px !important; 
+	}
+	
+.fio-passwordrestore-button{
+	background-image: url(../images/buttons/boton_resetpassword_blue.png);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: outset;
+	border-radius: 10px;
+	border-color:#6493B5;
+	border-radius: 10px;
+	height: 35px;
+	width: 145px;
+	line-height: 190%;
+	font-family: fionafont,  arial;
+	font-weight: bold;
+	font-size: 9pt;
+	cursor: pointer;
+	margin-right: 7px;
+	position:relative;
+	left:268px;
+	bottom:272px; 
+	}
+
+.fio-back-button{
+	border: 1px solid #6493B5;
+	background-image: url(../images/buttons/boton_back_blue.png);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: none;
+	color: #000000;
+	height: 35px;
+	width: 140px;
+	line-height: 190%;
+	float: left;
+	font-family: fionafont,  arial;
+	font-weight: bold;
+	font-size: 9pt;
+	cursor: pointer;
+	margin-right: 7px;
+
+}
+
+.fio-enter-button{
+	background-image: url(../images/buttons/boton_enter_blue.png);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border-radius: 10px;
+	border: outset;
+	border-color:#6493B5;
+	height: 35px;
+	width: 140px;
+	line-height: 190%;
+	font-family: fionafont,  arial;
+	font-weight: bold;
+	font-size: 9pt;
+	cursor: pointer;
+	margin-right: 7px;
+	position: relative;
+	left:255px;
+	bottom: 5px;
+
+}
+
+.fio-clear-button{
+	
+	border: 1px solid #6493B5;
+	background-image: url(../images/buttons/boton_clear_blue.png);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: none;
+	color: #000000;
+	height: 35px;
+	width: 140px;
+	line-height: 190%;
+	font-family: fionafont,  arial;
+	font-weight: bold;
+	font-size: 9pt;
+	cursor: pointer;
+	margin-right: 7px;
+	
+}
+
+.fio-save-button{
+	border: 1px solid #6493B5;
+	background-image: url(../images/buttons/boton_save_blue.png);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: none;
+	color: #000000;
+	height: 35px;
+	width: 140px;
+	line-height: 190%;
+	font-family: fionafont,  arial;
+	font-weight: bold;
+	font-size: 9pt;
+	cursor: pointer;
+	margin-right: 7px;
+
+}
+
+/* Estilos especificos para botones*/ /* Componente button */
+.normal-button {
+	border: 1px solid #6493B5;
+	background-image: url(../images/boton.gif);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: none;
+	color: #FFFFFF;
+	height: 22px;
+	width: 86px;
+	line-height: 190%;
+	font-family: fionafont, arial;
+	font-weight: bold;
+	font-size: 12pt;
+	cursor: pointer;
+	margin-right: 7px;
+}
+
+.normal-button-press {
+	border: 1px solid #6493B5;
+	background-image: url(../images/buttons/boton_press.gif);
+	border: none;
+	color: #FFFFFF;
+	height: 25px;
+	width: 89px;
+	font-family: fionafont, arial;
+	font-weight: bold;
+	font-size: 12pt;
+}
+
+.normal-button-disabled {
+	border: 1px solid #6493B5;
+	background-image: url(../images/buttons/boton_disabled.gif);
+	border: none;
+	color: #FFFFFF;
+	height: 25px;
+	width: 89px;
+	font-family: fionafont, arial;
+	font-weight: bold;
+	font-size: 12pt;
+	cursor: pointer;
+	/* A�adido del estilo del HDW */
+	line-height: 190%;
+	/* Fin a�adido*/
+}
+
+.boton-modificar {
+	background-image: url(../images/iconos/modificar.gif);
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: medium none;
+	height: 21px;
+	/*width:90px;*/
+	padding-left: 25px;
+	text-decoration: underline;
+	color: #009490;
+	cursor: pointer;
+	display: inline;
+	float: left;
+}
+
+.boton-detalle {
+	background-image: url(../images/iconos/usuario.gif);
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: medium none;
+	height: 21px;
+	padding-left: 16px;
+	text-decoration: underline;
+	color: #009490;
+	cursor: pointer;
+	display: inline;
+	float: left;
+}
+
+.boton-borrar {
+	background-image: url(../images/iconos/borrar.gif);
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: medium none;
+	height: 22px;
+	padding-left: 20px;
+	text-decoration: underline;
+	color: #009490;
+	cursor: pointer;
+	display: inline;
+	float: left;
+}
+
+.boton-borrar-des {
+	background-image: url(../images/iconos/borrar.gif);
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: medium none;
+	height: 22px;
+	padding-left: 20px;
+}
+
+.boton-large {
+	background-image: url(../images/boton-large.gif);
+	background-repeat: no-repeat;
+	border: 1px solid #6493B5;
+	border: none;
+	color: #FFFFFF;
+	height: 22px;
+	background-color: #FFFFFF;
+	background-repeat: no-repeat;
+	height: 22px;
+	width: 150px;
+	font-family: fionafont, arial;
+	font-weight: bold;
+	font-size: 12pt;
+	cursor: pointer;
+	line-height: 190%;
+	margin-right: 5px;
+}
+
+.boton-extra-large {
+	background-image: url(../images/boton-extra-large.gif);
+	background-repeat: no-repeat;
+	border: 1px solid #6493B5;
+	border: none;
+	color: #FFFFFF;
+	height: 22px;
+	background-color: #FFFFFF;
+	background-repeat: no-repeat;
+	font-family: fionafont, arial;
+	font-weight: bold;
+	font-size: 12pt;
+	cursor: pointer;
+	line-height: 190%;
+	width: 169px;
+	margin-right: 2px;
+}
+
+.boton-row {
+	text-align: center;
+	margin-row: 10px;
+	cursor: pointer;
+}
+
+
+.boton-return-ES {
+	background-image: url(../images/return.png);
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: medium none;
+	height: 25px;
+	/*
+	text-align: right;
+	float:right;
+	margin-right: 5px;
+	*/
+	width: 70px;
+	cursor: pointer;
+	position: absolute;
+	right: 2%;
+	position: absolute;
+	right: 2%;
+	text-decoration: underline;
+}
+
+.boton-return-es {
+	background-image: url(../images/return.png);
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: medium none;
+	height: 25px;
+	width: 70px;
+	cursor: pointer;
+	position: absolute;
+	right: 2%;
+	position: absolute;
+	right: 2%;
+	text-decoration: underline;
+}
+
+.boton-return-EN {
+	background-image: url(../images/return.png);
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: medium none;
+	height: 25px;
+	/*
+	text-align: right;
+	float:right;
+	margin-right: 5px;
+	*/
+	width: 70px;
+	cursor: pointer;
+	position: absolute;
+	right: 2%;
+	position: absolute;
+	right: 2%;
+	text-decoration: underline;
+}
+
+.nombreProducto {
+	font-weight: bold;
+	margin-left: 1em;
+}
+
+.imagenProducto {
+	vertical-align: middle;
+}
+
+.mensajeListaVacia {
+	margin-left: 40%;
+	color: #414B55;
+	font-weight: bold;
+}
+
+.mensajePass {
+	color: red;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 3%;
+	margin-top: 3%;
+}
+
+.listBoxesLeftStyle {
+	color: #414B56;
+	height: 150px;
+	width: 200px;
+	float: left;	
+}
+
+.listBoxesRightStyle {
+	color: #414B56;
+	height: 150px;
+	width: 200px;
+	float: left;
+	margin-left: 80px;
+}
+
+.listBoxesStyle {
+	color: #414B56;
+	height: 150px;
+	width: 200px;
+	float: left;
+}
+
+.listAllInterfaces {
+	color: #069D43;
+	height: 150px;
+	width: 200px;
+	float: left;	
+}
+
+.listRequiredInterfaces {
+	color: #4F338B;
+	height: 150px;
+	width: 200px;
+	float: left;
+	margin-left: 80px;
+}
+
+.listProvidedInterfaces {
+	color: #069D43;
+	height: 150px;
+	width: 200px;
+	float: left;
+}
+
+.verticalButtons {
+	float: left;
+	margin-top: 40px;
+	text-align: center;
+	width: 80px;
+}
+
+.headerAsignation {
+	float: left;
+	width: 100%;
+	margin-bottom: 15px;
+}
+
+.headerAsignationBlue {
+	float: left;
+	width: 100%;
+	margin-bottom: 15px;
+	margin-left: 190px;
+}
+
+.headerAsignationBlueRoles {
+	float: left;
+	width: 100%;
+	margin-bottom: 15px;
+	margin-left: 240px;
+}
+
+.labelLeftAsignation {
+	margin-right: 150px;
+	margin-left: 200px;
+}
+
+/* DATOS USUARIO */
+#datosUsuario { /*height:20px;*/
+	padding-top: 5px;
+	margin-left: 50%;
+}
+
+#datosUsuario .usuario {
+	float: left;
+	padding-top: 3px;
+}
+
+#datosUsuario .logout {
+	float: left;
+	margin-left: 15px;
+}
+
+#datosUsuario .logout a {
+	margin-right: 5px;
+}
+
+#datosUsuario .usuario img,#datosUsuario .logout img,#datosUsuario  img
+	{
+	vertical-align: middle;
+	/*margin: 25px 17px;*/
+	color: transparent;
+}
+
+#contenedora {
+	clear: both;
+}
+
+.errorPanel {
+	-moz-background-clip: border;
+	-moz-background-inline-policy: continuous;
+	-moz-background-origin: padding;
+	background: #FFEEDD url(../images/error.gif) no-repeat scroll 20px 18px;
+	border: 1px dotted #D21033;
+	color: #D21033;
+	font-size: 17px;
+	margin-bottom: 0.5em;
+	padding-bottom: 29px;
+	padding-top: 1.9em;
+	text-align: center;
+}
+
+/* CONDICIONES DE USO Y PRIVACIDAD */
+div.condicionesPrivacidad {
+	background-image: none;
+	background-color: white;
+	text-align: justify;
+	padding-right: 2%;
+}
+
+div.condicionesPrivacidad h2 {
+	text-align: left;
+	font-size: 19px;
+	font-weight: normal;
+	width: 100%;
+	line-height: 150%;
+	color: #0066cc;
+}
+
+div.condicionesPrivacidad p {
+	text-align: justify;
+	font-size: 12px;
+	font-weight: normal;
+	width: 80%;
+	line-height: 150%;
+	color: black;
+}
+
+/* PORTADA */
+#portada .rich-tabpanel-content {
+	background: url(../images/fondo-portada.gif) left top no-repeat fixed;
+	text-align: center;
+}
+
+a img {
+	border: 0px;
+}
+
+/*
+div.portada {
+	width: 900px;
+	margin: auto;
+	/*padding-left:10%;*/
+}
+
+div.portada p.titulo {
+	font-size: 30px;
+	color: #0060af;
+	font-weight: bold;
+	border-bottom: 1px solid #d9cfc0;
+}
+
+div.portada p.subtitulo {
+	font-size: 18px;
+	color: #4a4a30;
+}
+
+div.portada object {
+	margin: 18px 0;
+}
+
+div.portada form fieldset {
+	padding: 30px 0;
+	border: none;
+}
+
+div.portada form fieldset.datos {
+	padding-bottom: 0;
+/*	background-color: #e6e6e6;*/ 
+	background-color: transparent;
+	border-radius: 0px 0px 15px 15px;	
+	/*padding-top: 60px;*/	
+	margin-left: 350px;
+	position:relative;
+	width:700px;
+	margin-top: 15%;
+	left: 15%;
+}
+
+div.portada form fieldset dl {
+	width: 50%;
+	margin: auto;
+}
+
+div.portada form fieldset dl dt,div.portada form fieldset dl dd {
+	padding-bottom: 30px;
+}
+
+div.portada form fieldset dl dt {
+	float: left;
+	width: 48%;
+	padding-right: 2%;
+	text-align: right;
+}
+
+div.portada form fieldset dl dd {
+	float: left;
+	text-align: left;
+	width: 48%;
+	margin-left: 0;
+}
+*/
+
+.imagen-excel {
+	float: left;
+}
+
+.imagen-excel input {
+	border: none;
+}
+
+.exportar-Fondo {
+	display: block;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index: 1001;
+	-moz-opacity: 0.8;
+	opacity: .80;
+	filter: alpha(opacity =   80);
+}
+
+.exportar-Contenedor {
+	display: block;
+	position: absolute;
+	top: 25%;
+	left: 25%;
+	width: 50%;
+	height: 50%;
+	padding: 16px;
+	border: 16px solid orange;
+	background-color: white;
+	z-index: 1002;
+	overflow: auto;
+}
+
+.numerico {
+	text-align: right;
+}
+
+.cuenta-entidadOficina {
+	margin-left: 5px;
+	text-align: center;
+	width: 32px;
+}
+
+.cuenta-entidadOficinaAsociada {
+	margin-left: 5px;
+	text-align: center;
+	width: 32px;
+	margin-bottom: 14px;
+	background-color: none !important;
+	border-color: none !important;
+}
+
+.cuenta-digitoControl {
+	margin-left: 10px;
+	text-align: center;
+	width: 22px;
+}
+
+.cuenta-digitoControlAsociada {
+	margin-left: 10px;
+	margin-bottom: 14px;
+	text-align: center;
+	width: 22px;
+}
+
+.cuenta-numero {
+	margin-left: 10px;
+	text-align: center;
+	width: 69px;
+}
+
+.cuenta-numeroAsociada {
+	margin-left: 10px;
+	margin-bottom: 14px;
+	text-align: center;
+	width: 69px;
+}
+
+.etiquetaCuentaBancaria {
+	margin-left: 10px;
+	color: #0066CC;
+	font-weight: bold;
+}
+
+.etiquetaCuentaBancariaAsociada {
+	margin-left: 41px;
+	margin-bottom: 14px;
+	font-weight: bold;
+	color: #414B55;
+	display: block;
+	float: left;
+	padding-top: 3px;
+}
+/* filtros contrataciones */
+.input-tomador-filtro
+{
+ width: 240px !important;
+}
+
+/* Estilos boton plegat paneles */
+
+.panelPlegar{
+	color:#0066CC;
+	font-size:19px;
+	font-weight:normal;
+	line-height:150%;
+	text-align:right;
+	width:100%;
+	}
+
+/*Estilos botones desplegar Castellano */
+.botonPlegar-ES{
+
+	background-color:transparent;
+	background-image:url(../images/buttons/boton_ocultar.gif);
+	border:medium none;
+	color:#FFFFFF;
+	cursor:pointer;
+	font-size:11px;
+	font-weight:bold;
+	margin-right:0;
+	padding:0.5em 0 0.5em 0;
+	width:130px;
+}
+
+.botonPlegar-ES:hover{
+
+	background-color:transparent;
+	background-image:url(../images/buttons/boton_ocultar_over.gif);
+	border:medium none;
+	color:#FFFFFF;
+	cursor:pointer;
+	font-size:11px;
+	font-weight:bold;
+	margin-right:0;
+	padding:0.5em 0 0.5em 0;
+	width:130px;
+}
+
+.botonDesplegar-ES{
+
+	background-color:transparent;
+	background-image:url(../images/buttons/boton_mostrar.gif);
+	border:medium none;
+	color:#FFFFFF;
+	cursor:pointer;
+	font-size:11px;
+	font-weight:bold;
+	padding:0.5em 0 0.5em 0;
+	width:136px;
+}
+
+.botonDesplegar-ES:hover{
+
+	background-color:transparent;
+	background-image:url(../images/buttons/boton_mostrar_over.gif);
+	border:medium none;
+	color:#FFFFFF;
+	cursor:pointer;
+	font-size:11px;
+	font-weight:bold;
+	padding:0.5em 0 0.5em 0;
+	width:136px;
+}
+
+/*Estilos botones desplegar Ingles */
+
+.botonPlegar-EN{
+
+	background-color:transparent;
+	background-image:url(../images/buttons/boton_ocultar.gif);
+	border:medium none;
+	color:#FFFFFF;
+	cursor:pointer;
+	font-size:11px;
+	font-weight:bold;
+	margin-right:0;
+	padding:0.5em 0 0.5em 0;
+	width:130px;
+}
+
+.botonPlegar-EN:hover{
+
+	background-color:transparent;
+	background-image:url(../images/buttons/boton_ocultar_over.gif);
+	border:medium none;
+	color:#FFFFFF;
+	cursor:pointer;
+	font-size:11px;
+	font-weight:bold;
+	margin-right:0;
+	padding:0.5em 0 0.5em 0;
+	width:130px;
+}
+
+.botonDesplegar-EN{
+	background-color:transparent;
+	background-image:url(../images/buttons/boton_mostrar.gif);
+	border:medium none;
+	color:#FFFFFF;
+	cursor:pointer;
+	font-size:11px;
+	font-weight:bold;
+	padding:0.5em 0 0.5em 0;
+	width:136px;
+}
+
+.botonDesplegar-EN:hover{
+	background-color:transparent;
+	background-image:url(../images/buttons/boton_mostrar_over.gif);
+	border:medium none;
+	color:#FFFFFF;
+	cursor:pointer;
+	font-size:11px;
+	font-weight:bold;
+	padding:0.5em 0 0.5em 0;
+	width:136px;
+}
+
+.departamentosDescripcion{
+	width: 350px;
+	height: 70px;
+}
+
+.etiqueta-img-requerida-azul {
+	color: #0066CC;
+}
+
+
+/* Estilos tabla contrataciones */
+.contr-tabla
+{
+ table-layout:fixed;	
+}
+
+.contr-col
+{
+ overflow:hidden; 
+ white-space:nowrap; 
+}
+.contr-filtro-combo
+{
+  width:90px;
+}
+.headerContr-col-filtro-ico
+{
+	width:30px;
+	padding:0 0 0 5px; 
+}
+.headerContr-col-proy
+{
+	padding:0 0 0 5px;
+ 	width: 80px; 	
+}
+
+.headerContr-col-cot
+{
+	padding:0 0 0 5px;
+ 	width: 80px; 	
+}
+
+.headerContr-col-fecha
+{
+	padding:0 0 0 5px;
+	width:65px; 
+}
+.headerContr-col-hora
+{
+	padding:0 0 0 5px;
+  	width:45px; 	
+}
+.headerContr-col-corr
+{
+	padding:0 0 0 5px;
+	width: 85px;
+	
+}
+.headerContr-col-tom
+{
+	padding:0 0 0 5px;
+	overflow:hidden; 
+ 	white-space:nowrap; 
+	
+}
+.headerContr-col-pol
+{
+	padding:0 0 0 5px;
+	width:80px; 
+}
+.headerContr-col-estado
+{
+	padding:0 0 0 5px;
+	width:60px; 
+}
+.headerContr-col-fpago
+{
+	padding:0 0 0 5px;
+	width:60px; 
+}
+.headerContr-col-prod
+{
+	padding:0 0 0 5px;
+	width:50px; 
+}
+.headerContr-col-descr
+{
+	padding:0 0 0 5px;
+	overflow:hidden; 
+ 	white-space:nowrap; 
+}
+.headerContr-col-prima
+{
+	padding:0 0 0 5px;
+	width:50px; 	
+}
+.headerContr-col-plat
+{
+	padding:0 0 0 5px;
+	width:105px; 
+}
+
+/* Estilos tabla polizas */
+
+.pol-tabla
+{
+ table-layout:fixed;	
+}
+
+.pol-col
+{
+ overflow:hidden; 
+ white-space:nowrap; 
+}
+.pol-filtro-combo
+{
+  width:90px;
+}
+.headerPol-col-filtro-ico
+{
+	width:30px;
+	padding:0 0 0 5px; 
+}
+.headerPol-col-proy
+{
+	padding:0 0 0 5px;
+ 	width: 80px; 	
+}
+
+
+.headerPol-col-fecha
+{
+	padding:0 0 0 5px;
+	width:65px; 
+}
+
+.headerPol-col-corr
+{
+	padding:0 0 0 5px;
+	width: 85px;
+	
+}
+.headerPol-col-tom
+{
+	padding:0 0 0 5px;
+	overflow:hidden; 
+ 	white-space:nowrap; 
+	
+}
+.headerPol-col-pol
+{
+	padding:0 0 0 5px;
+	width:80px; 
+}
+.headerPol-col-estado
+{
+	padding:0 0 0 5px;
+	width:60px; 
+}
+.headerPol-col-fpago
+{
+	padding:0 0 0 5px;
+	width:60px; 
+}
+.headerPol-col-prod
+{
+	padding:0 0 0 5px;
+	width:50px; 
+}
+.headerPol-col-descr
+{
+	padding:0 0 0 5px;
+	overflow:hidden; 
+ 	white-space:nowrap; 
+}
+
+.headerPol-col-tipo
+{
+	padding:0 0 0 5px;
+	width:105px; 
+}
+
+.headerPol-col-supl
+{
+	padding:0 0 0 5px;
+	width:30px; 	
+}
+
+/* Estilos tabla suplementos */
+
+.sup-tabla
+{
+ table-layout:fixed;	
+}
+
+.sup-col
+{
+ overflow:hidden; 
+ white-space:nowrap; 
+}
+
+
+.sup-filtro-combo
+{
+  width:90px;
+}
+
+.headerSup-col-filtro-ico
+{
+	width:30px;
+	padding:0 0 0 5px; 
+}
+.headerSup-col-fecha
+{
+	padding:0 0 0 5px;
+ 	width: 85px; 	
+}
+
+.headerSup-col-hora
+{
+	padding:0 0 0 5px;
+ 	width: 50px; 	
+}
+
+.headerSup-col-corr
+{
+	padding:0 0 0 5px;
+ 	width: 130px; 	
+}
+
+.headerSup-col-poliza
+{
+	padding:0 0 0 5px;
+ 	width: 80px; 	
+}
+
+.headerSup-col-estado
+{
+	padding:0 0 0 5px;
+ 	width: 80px; 	
+}
+
+.headerSup-col-ramo
+{
+	padding:0 0 0 5px;
+ 	width: 110px; 	
+}
+
+.headerSup-col-producto
+{
+	padding:0 0 0 5px;
+ 	width: 50px; 	
+}
+
+.sup-combo-prod
+{
+	padding:0 0 0 5px;
+ 	width: 40px; 	
+}
+
+.foot
+{
+	position:fixed;
+	bottom:5%;
+	right: 5%;
+}
+
+
+
+
+html,
+body.login-page {
+	height: 100%;
+	margin:0;
+	padding:0;
+}
+body.login-page {
+	height: 95%;
+}
+
+body.login-page #contenedora,
+body.login-page #contenido {
+	width: 100%;
+	height: 100%;
+}
+body.login-page form, 
+body.login-page form fieldset {
+	padding:0; margin:0; border:none;
+}
+body.login-page form fieldset {
+	margin:104px 4% 0px 40px;
+	width: 93%;
+}
+body.login-page form fieldset dl {
+	width: 50%;
+	margin: auto;
+}
+body.login-page form fieldset dl dt, 
+body.login-page form fieldset dl dd {
+	padding-bottom: 30px;
+}
+body.login-page form fieldset dl dt {
+	float: left;
+	width: 48%;
+	padding-right: 2%;
+	text-align: right;
+}
+body.login-page form fieldset dl dd {
+	float: left;
+	text-align: left;
+	width: 48%;
+	margin-left: 0;
+}
+body.login-page .formlogo, 
+body.login-page .formbox, 
+body.login-page .formbox-signup {
+	position: absolute;
+	top: 175px;
+	z-index: 0;
+}
+body.login-page .formlogo {
+	image-rendering:auto;
+	width:300px;
+	left: 150px;
+	top: 178px;
+}
+body.login-page .formbox, 
+body.login-page .formbox-signup {
+	width: 730px;
+	height: 320px;
+	bottom: 24px;
+	left: 550px;
+}
+body.login-page .formbox { 
+	background: url('../images/fiona/loginbox.png') right top no-repeat;
+}
+body.login-page .formbox input.textbox {
+	width: 250px;
+}
+body.login-page .formbox-signup {
+	width: auto;
+	height: auto;
+}
+body.login-page .formbox-signup fieldset {
+	margin:136% 0% 0px 15px;
+}
+body.login-page .formbox-signup fieldset input.fio-register-button{
+	position: relative;
+	left: 40%;
+	bottom: 0;
+}
+
+body.login-page .errors {
+	-moz-background-clip: border;
+	-moz-background-inline-policy: continuous;
+	-moz-background-origin: padding;
+	background: white url(../images/error.gif) no-repeat scroll 12px 50%;
+	border: 1px dotted #D21033;
+	color: #D21033;
+	font-size: 15px;
+	margin: 10px 0 15px 543px;
+	padding: 15px 10px 15px 75px;
+	text-align: center;
+	width: 633px;
+}
+body.login-page .errors * {
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+
+#campos_panel{
+	position: relative;
+	top: 21%;		
+	width: 100%;
+}
+
+/* Página upload sparks */
+
+.interfacesContent {
+	float:left; 
+	margin-right: 300px; 
+	width: 800px;	
+}
+
+.labelInfoText {
+	font-size: 14px;
+}
+
+.configButtons {
+	width: 581px;
+}
+
+.userParamsTable {
+	height:190px;
+}
+
+.tablaValoresLista {
+	width:311px;
+	height:197px;
+	text-align:center;
+	float:left;
+}
+
+.addNewListValueButton {
+	position:relative;
+	left:3px;
+}
+
+.tooltip #spaan {
+	display: none;
+	margin: 0 0 0 10px;
+	padding: 5px 5px;
+}
+
+.tooltip:hover #spaan {
+	display: inline;
+	position: absolute;
+	border: 1px solid #cccccc;
+	background: #000000;
+	color: #ffffff;
+	opacity: 0.8;
+	font-size: 14px;
+	margin-left: 50px;
+}
+
+.paypalECButton{
+	height: auto;
+}
+
+body.cancellation-page .formlogo{
+	image-rendering:auto;
+	left: 150px;
+	position: absolute;	
+	top: 178px;
+	width:300px;
+	z-index: 0;
+}
+
+.contenedorTextoCancelAccount{
+	-moz-border-radius:35px;
+	-webkit-border-radius:35px;
+	border-radius:35px;
+	
+	background-color: #0078A4;		
+	height: 36%;	
+	left: 500px;
+	position: absolute;
+	top: 189px;
+	width: 50%;	
+}
+
+.textoCancelAccount{	
+	color: white;
+	font-family: fionafont,  Trebuchet MS, Verdana, sans-serif;	
+	font-size: 20pt;
+	font-weight: bold;
+	margin-top: 8%;
+	position: absolute;	
+	text-align: center;	
+	top:20%;
+}

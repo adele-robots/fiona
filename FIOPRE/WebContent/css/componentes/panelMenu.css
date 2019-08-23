@@ -1,0 +1,77 @@
+@CHARSET "ISO-8859-1";
+
+.rich-pmenu {
+overflow:hidden;
+padding-right:4px;
+}
+.rich-pmenu-group {
+border-top:1px solid;
+cursor:pointer;
+margin-top:1px;
+padding:2px 1px 1px;
+}
+.rich-pmenu-top-group {
+background-position:left top;
+background-repeat:repeat-x;
+border-top:medium none;
+cursor:pointer;
+height:20px;
+margin-top:0;
+padding:2px 1px 2px 2px;
+}
+.rich-pmenu-item {
+border-top:1px solid;
+cursor:pointer;
+margin-top:1px;
+padding:2px 1px 1px;
+}
+.rich-pmenu-top-group-div {
+border:1px solid;
+margin-bottom:3px;
+overflow:hidden;
+padding:1px;
+width:100%;
+}
+.rich-pmenu-group-self-label {
+padding-left:5px;
+width:100%;
+}
+.rich-pmenu-nowrap {
+white-space:nowrap;
+}
+.rich-pmenu-group {
+border-top-color:#C4C0C9;
+color:#000000;
+font-family:  Arial,Verdana,sans-serif;
+font-size:11px;
+font-weight:bold;
+}
+.rich-pmenu-top-group {
+background-color:#D4CFC7;
+background-image:url(../../images/panelMenu/cabecera_panelMenu.png);
+color:#000000;
+font-family:  Arial,Verdana,sans-serif;
+font-size:11px;
+font-weight:bold;
+}
+.rich-pmenu-item {
+border-top-color:#C4C0C9;
+color:#000000;
+font-family:  Arial,Verdana,sans-serif;
+font-size:11px;
+}
+.rich-pmenu-top-group-div {
+border-color:#C4C0B9;
+}
+.rich-pmenu-disabled-element {
+color:#B1ADA7;
+}
+.rich-pmenu-hovered-element {
+background-color:#F1EEE9;
+}
+.rich-pmenu-disabled-element {
+cursor:default;
+}
+.rich-pmenu-selected-element {
+font-style:italic;
+}

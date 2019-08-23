@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow
+	http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd"
+	parent="ARQ_Abstract-flow" start-state="ea_SNListSparksByCriteria">	
+	
+	
+	 <action-state id="ea_SNListSparksByCriteria">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="023"></attribute>
+		</evaluate>
+		<transition to="ev_Spark_Store" on="success">			
+			<attribute name="fichero" value="sparkStore/FIOPRE_ListSparksByCriteria_OV_029_023.xml"/>			
+		</transition>
+	</action-state>
+	
+	<action-state id="ea_SNListAllSparks">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="015"></attribute>
+		</evaluate>
+		<transition to="ev_Sparks_List" on="success">			
+			<attribute name="fichero" value="sparkStore/FIOPRE_ListAllSparks_OV_029_015.xml"/>			
+		</transition>
+	</action-state>
+	
+	 <action-state id="ea_SNGetSparkInformation">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="016"></attribute>
+		</evaluate>
+		<transition to="ev_Get_Spark_Information" on="success">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkInformation_OV_029_016.xml"/>			
+		</transition>
+	</action-state>
+	
+	<action-state id="ea_SNListAllSparksByPrice">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="022"></attribute>
+		</evaluate>
+		<transition to="ev_List_All_Sparks_By_Prize" on="success">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkAllFreePaid_OV_029_022.xml"/>			
+		</transition>
+	</action-state>
+			
+	
+	<action-state id="ea_SNSearchSparksByKeywords">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="025"></attribute>
+		</evaluate>
+		<transition to="ev_Search_Results" on="success">			
+			<attribute name="fichero" value="sparkStore/FIOPRE_SearchSparksByKeywords_OV_029_025.xml" />
+		</transition>			
+		
+	</action-state>
+	
+	<action-state id="ea_SNChangeSparkStatus">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="017"></attribute>
+		</evaluate>
+		<transition to="ev_ChangeStatusConfirmation" on="success">			
+			<attribute name="fichero" value="sparkStore/FIOPRE_ChangeSparkStatus_OV_029_017.xml" />
+		</transition>			
+		
+	</action-state>
+		
+	<view-state id="ev_Spark_Store"
+		view="/store/sparkStore">
+				
+		<transition on="top" to="ea_SNListSparksByCriteria">
+			<attribute name="fichero" value="sparkStore/FIOPRE_ListSparksByCriteria_VO_029_023.xml"/>
+		</transition>
+		<transition on="latest" to="ea_SNListSparksByCriteria">
+			<attribute name="fichero" value="sparkStore/FIOPRE_ListSparksByCriteria_VO_029_023.xml"/>
+		</transition>		
+		<transition on="basics" to="ea_SNListSparksByCriteria">
+			<attribute name="fichero" value="sparkStore/FIOPRE_ListSparksByCriteria_VO_029_023.xml"/>
+		</transition>	
+			
+		<transition on="search" to="ea_SNSearchSparksByKeywords">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SearchSparksByKeywords_VO_029_025.xml"/>
+		</transition>
+		<transition on="viewDetails" to="ea_SNGetSparkInformation">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkInformation_VO_029_016.xml"/>
+		</transition>
+		<transition on="viewAll" to="ea_SNListAllSparksByPrice">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkAllFreePaid_VO_029_022.xml"/>
+		</transition>
+		
+		<transition on="allSparks" to="ea_SNListAllSparks"/>
+		
+		<!-- volver a la main page -->
+		<transition on="back" to="ef_SparkStoreGlobalAdministration"></transition>
+	</view-state>
+	
+	
+	<view-state id="ev_Get_Spark_Information"
+		view="/store/sparkInformation">
+				
+		 <transition on="sendOpinion" to="ea_SNSendSparkOpinion">
+		 	<attribute name="fichero" value="sparkStore/FIOPRE_SendSparkOpinion_VO_029_024.xml"/>
+		 </transition>
+		 <transition on="buyOK" to="ea_SNBuySpark">
+			<attribute name="fichero" value="sparkStore/FIOPRE_BuySpark_VO_029_020.xml"/>
+		 </transition>		
+		 <transition on="trialOK" to="ea_SNTrialSpark">
+		 	<attribute name="fichero" value="sparkStore/FIOPRE_TrialSpark_VO_029_019.xml"/>
+		 </transition>
+		 <transition on="changeStatus" to="ea_SNChangeSparkStatus">
+		 	<attribute name="fichero" value="sparkStore/FIOPRE_ChangeSparkStatus_VO_029_017.xml"/>
+		 </transition> 
+		 
+		 <transition on="back" to="ev_Spark_Store"></transition>		 
+		 
+	</view-state>		
+	
+	<view-state id="ev_List_All_Sparks_By_Prize"
+		view="/store/allSparksByPrize">
+		
+		<transition on="viewDetails" to="ea_SNGetSparkInformationFromPrizeList">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkInformation_VO_029_016.xml"/>
+		</transition>
+				
+		<transition on="back" to="ev_Spark_Store"></transition>
+	</view-state>	
+	
+	<view-state id="ev_Search_Results"
+		view="/store/searchResults">
+		<transition on="viewDetails" to="ea_SNGetSparkInformation">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkInformation_VO_029_016.xml"/>
+		</transition>
+		<transition on="back" to="ev_Spark_Store"></transition>		
+	</view-state>
+	
+	<view-state id="ev_Sparks_List"
+		view="/store/allSparks">
+		<transition on="viewDetails" to="ea_SNGetSparkInformation">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkInformation_VO_029_016.xml"/>
+		</transition>
+		<transition on="back" to="ev_Spark_Store"></transition>		
+	</view-state>
+	
+	<view-state id="ev_ChangeStatusConfirmation"
+		view="/store/changeStatusConfirm">
+		<transition on="ok" to="ea_SNGetSparkInformation">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkInformation_VO_029_016.xml"/>
+		</transition>
+	</view-state>
+	
+
+	
+	<!--  Estado final del flujo -->	
+	<end-state id="ef_SparkStoreGlobalAdministration">
+	</end-state>
+	
+	
+
+
+</flow>

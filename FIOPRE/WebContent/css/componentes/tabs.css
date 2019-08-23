@@ -1,0 +1,138 @@
+/******** tab Panel ******************/
+.rich-tabhdr-side-cell {
+	border-top-style: none;
+	border-top-width: 0;
+}
+
+.rich-tabhdr-side-border {
+	background-image: none;
+}
+
+.rich-tab-bottom-line {
+	border-bottom: 1px solid #C4C0B9;
+}
+
+.rich-tabpanel-content { /*border:1px solid #C4C0B9;*/
+	vertical-align: top;
+	/*background-image: url(../../images/fiona/bg.jpg);*/
+	background-color: #F0FFFF;
+}
+
+.rich-tab-active {
+	background-image: url(../../images/fiona/bg.jpg);
+	background-position: center top;
+	background-repeat: repeat-x;
+	border-style: solid;
+	border-width: 0;
+	padding: 3px 10px 4px;
+	height: 31px;
+	color: #4A4A30;
+}
+
+.rich-tab-inactive {
+	background-color: #E3DED5;
+	background-image: url(../../images/tabs/pestania_cuerpo_azul.gif);
+	background-position: center top;
+	background-repeat: repeat-x;
+	border-color: #FFFFFF;
+	border-style: solid;
+	border-width: 0;
+	cursor: pointer;
+	color: white;
+}
+
+/************ Estilos nerea  ******************/ /*
+.rich-tabhdr-side-cell table tbody tr 
+{
+	background:url(../../images/tabs/esquina-dcha.gif) no-repeat right -2px !important;
+	border:0;
+}
+.rich-tabhdr-side-cell table tbody tr td 
+{
+	background:url(../../images/tabs/esquina-izda.gif) no-repeat 0px 0px !important; 
+	height:27px;
+
+}*/
+td.rich-tabhdr-side-border img {
+	display: none;
+}
+
+.rich-tabhdr-cell-inactive table,.rich-tabhdr-cell-inactive tbody,.rich-tabhdr-cell-inactive thead,.rich-tabhdr-cell-inactive tr,.rich-tabhdr-cell-inactive th,.rich-tabhdr-cell-inactive td,.rich-tabhdr-cell-active table,.rich-tabhdr-cell-active tbody,.rich-tabhdr-cell-active thead,.rich-tabhdr-cell-active tr,.rich-tabhdr-cell-active th,.rich-tabhdr-cell-active td
+	{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family:   inherit;
+	vertical-align: baseline;
+}
+
+.rich-tabhdr-cell-inactive table,.rich-tabhdr-cell-active table {
+	border-collapse: separate;
+	border-spacing: 0;
+}
+
+.rich-tabhdr-cell-inactive table tbody tr td {
+	background: url(../../images/tabs/inactiva-der.gif) no-repeat !important
+		;
+	/*background-position : right -3px !important;*/
+	background-position: right 0px !important;
+	border: 0;
+}
+
+.rich-tabhdr-cell-inactive table tbody tr td table tbody tr td {
+	background: url(../../images/tabs/inactiva-izq.gif) no-repeat !important
+		;
+	/*background-position : -2px -3px !important;*/
+	background-position: 0px 0px !important;
+	height: 27px;
+	font-family:   arial;
+	font-size: 9pt;
+	font-weight: bold;
+	padding: 0 15px;
+	line-height: 30px;
+}
+
+.rich-tabhdr-cell-active table tbody tr td {
+	background: url(../../images/tabs/activa-der.gif) no-repeat right 0px
+		!important;
+	border: 0;
+	position: relative;
+	top: 1px;
+	/*z-index:3 !important;*/
+	display: block;
+}
+
+.rich-tabhdr-cell-active table tbody tr td table tbody tr td {
+	background: url(../../images/tabs/activa-izq.gif) no-repeat 0px 0px
+		!important;
+	height: 36px;
+	font-family:   arial;
+	font-size: 9pt;
+	font-weight: bold;
+	padding: 0 15px;
+	line-height: 30px;
+	vertical-align: bottom;
+	position: relative;
+	top: 0px;
+	/*z-index:3 !important;*/
+	display: block;
+}
+
+.rich-tabhdr-cell-disabled,.rich-tabhdr-cell-inactive {
+	padding-top: 6px;
+}
+
+.rich-tab-disabled {
+	background-color: transparent;
+	background-image:none;
+	border-color: #FFFFFF;
+	color: #B1ADA7;
+}
+
+.rich-tabpanel-content-position {
+	z-index: 2;
+}

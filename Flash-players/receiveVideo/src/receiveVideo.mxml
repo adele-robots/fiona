@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rtmpy:ReceiveVideo xmlns:mx="http://www.adobe.com/2006/mxml"
+					xmlns:rtmpy="org.rtmpy.examples.simple.receiveVideo.*"
+					backgroundAlpha="0.0" layout="absolute" paddingBottom="0" paddingLeft="0"
+					paddingRight="0" paddingTop="0">
+	<mx:Style>		
+		.firewallicon {
+			up-skin: Embed(source="firewall_icon.png");
+			over-skin: Embed(source="firewall_icon.png");
+			down-skin: Embed(source="firewall_icon.png");
+		}
+		
+	</mx:Style>
+	
+	<mx:VBox verticalAlign="top" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0">
+		<mx:HBox id="box" width="100%" paddingLeft="0" paddingRight="0" paddingTop="0" paddingBottom="0">
+			<mx:UIComponent id="videoPanel"/>
+		</mx:HBox>
+		<mx:HSlider thumbPress="start_scrub()" thumbRelease="stop_scrub()"
+					visible="false" id="position" width="100%" height="0"
+					showDataTip="true" toolTip="Playback" click="scrubVideo(event)"/>
+	</mx:VBox>
+	
+</rtmpy:ReceiveVideo>

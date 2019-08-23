@@ -1,0 +1,40 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$class_i_async_fatal_error_handler.html" title="IAsyncFatalErrorHandler" alt="" coords="384,564,549,593"/>
+<area shape="rect" id="node36" href="$class_event_driven_dialog_manager.html" title="Stand alone dialog manager." alt="" coords="1965,757,2147,787"/>
+<area shape="rect" id="node41" href="$class_thread.html" title="Base class for exception&#45;aware iterative stoppable threads." alt="" coords="1095,585,1156,615"/>
+<area shape="rect" id="node67" href="$class_a_v_input.html" title="AVInput" alt="" coords="2021,292,2091,321"/>
+<area shape="rect" id="node69" href="$class_video_input.html" title="VideoInput" alt="" coords="767,192,849,221"/>
+<area shape="rect" id="node86" href="$class_audio_input.html" title="AudioInput" alt="" coords="767,395,849,424"/>
+<area shape="rect" id="node4" href="$class_scene3_d.html" title="This class encapsulates the 3D scene rendering implementation." alt="" coords="1556,1107,1631,1136"/>
+<area shape="rect" id="node98" href="$class_video_output.html" title="VideoOutput" alt="" coords="2009,1097,2103,1127"/>
+<area shape="rect" id="node6" href="$class_i_scene.html" title="IScene" alt="" coords="1095,1004,1156,1033"/>
+<area shape="rect" id="node54" href="$class_motion_controller.html" title="Regulated control of character joints and morph target values." alt="" coords="1535,1160,1652,1189"/>
+<area shape="rect" id="node8" href="$class_i_skeleton.html" title="ISkeleton" alt="" coords="769,1004,847,1033"/>
+<area shape="rect" id="node10" href="$classpsisban_1_1_config.html" title="Libconfig wrapper." alt="" coords="411,1276,523,1305"/>
+<area shape="rect" id="node26" href="$class_lip_synch.html" title="Virtual character lip synchroniztion with the text&#45;to&#45;speech engine." alt="" coords="1088,1356,1163,1385"/>
+<area shape="rect" id="node12" href="$class_eye.html" title="Eye" alt="" coords="444,996,489,1025"/>
+<area shape="rect" id="node14" href="$struct_vector.html" title="Vector" alt="" coords="171,996,229,1025"/>
+<area shape="rect" id="node16" href="$class_i_morph_target_blender.html" title="IMorphTargetBlender" alt="" coords="737,1337,879,1367"/>
+<area shape="rect" id="node19" href="$class_original_window.html" title="OriginalWindow" alt="" coords="2000,1028,2112,1057"/>
+<area shape="rect" id="node21" href="$class_window.html" title="Window" alt="" coords="1559,1053,1628,1083"/>
+<area shape="rect" id="node23" href="$classpsisban_1_1_i_event_handler.html" title="psisban::IEventHandler" alt="" coords="1047,871,1204,900"/>
+<area shape="rect" id="node64" href="$class_audio_output.html" title="AudioOutput" alt="" coords="1772,1352,1865,1381"/>
+<area shape="rect" id="node28" href="$class_stop_watch.html" title="Cronometer based in the high&#45;precission performance counter." alt="" coords="765,1179,851,1208"/>
+<area shape="rect" id="node103" href="$class_on_screen_monitor.html" title="OnScreenMonitor" alt="" coords="1293,1319,1416,1348"/>
+<area shape="rect" id="node32" href="$class_meca_tronica_serial.html" title="MecaTronicaSerial" alt="" coords="1060,1249,1191,1279"/>
+<area shape="rect" id="node34" href="$class_f_f_mpeg_audio_video_destination.html" title="FFMpegAudioVideoDestination" alt="" coords="1955,1576,2157,1605"/>
+<area shape="rect" id="node39" href="$class_integration.html" title="Integration" alt="" coords="1552,637,1635,667"/>
+<area shape="rect" id="node81" href="$class_f_f_mpeg_audio_video_source.html" title="FFMpegAudioVideoSource" alt="" coords="1505,292,1681,321"/>
+<area shape="rect" id="node108" href="$class_face_tracker.html" title="Class that wraps openCV algorithm for Face Detection based on Haar classifiers." alt="" coords="2009,173,2103,203"/>
+<area shape="rect" id="node44" href="$class_tcp_connection.html" title="Interface for OS&#45;independent TCP socket functionality." alt="" coords="1071,673,1180,703"/>
+<area shape="rect" id="node47" href="$class_a_s_r.html" title="This class encapsulates the Loquendo speech recognition engine." alt="" coords="1568,533,1619,563"/>
+<area shape="rect" id="node49" href="$class_i_audio_consumer.html" title="IAudioConsumer" alt="" coords="408,395,525,424"/>
+<area shape="rect" id="node52" href="$class_interruption_prompts.html" title="Loads the interruptions file and stores and recover them." alt="" coords="1525,691,1661,720"/>
+<area shape="rect" id="node56" href="$class_perlin.html" title="Encapsulates Perlin noise funtionality." alt="" coords="1099,1065,1152,1095"/>
+<area shape="rect" id="node90" href="$class_remote_video_input.html" title="RemoteVideoInput" alt="" coords="1060,224,1191,253"/>
+<area shape="rect" id="node71" href="$class_video_queue.html" title="Video frame queue." alt="" coords="420,151,513,180"/>
+<area shape="rect" id="node73" href="$struct_video_buffer.html" title="VideoBuffer" alt="" coords="155,151,245,180"/>
+<area shape="rect" id="node75" href="$class_i_image.html" title="IImage" alt="" coords="7,151,68,180"/>
+<area shape="rect" id="node77" href="$class_i_video_consumer.html" title="IVideoConsumer" alt="" coords="408,56,525,85"/>
+<area shape="rect" id="node84" href="$class_remote_audio_input.html" title="RemoteAudioInput" alt="" coords="1060,343,1191,372"/>
+</map>

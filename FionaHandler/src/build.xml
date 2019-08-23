@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="FionaHandler" basedir="." default="desploy-des">
+	
+	<property name="project.name" value="FionaHandler"/>
+	<property name="project.version" value="1.0"/>
+	<property name="file.war" value="FionaHandler.war"/>	
+	<property name="root.dir" value="../" />
+	<property name="build.dir" value="${root.dir}/bin" />
+	<property name="dist.dir" value="${root.dir}/dist" />
+	<property name="conf.dir" value="${root.dir}/conf"/>
+	<property name="mvn.dir" value="${root.dir}/../MvnDependences" />
+	<property name="webContent.dir" value="${root.dir}/WebContent" />
+	<property name="src.dir" value="${root.dir}/src" />	
+	<property name="resources.dir" value="${root.dir}/src/main/resources" />
+	<property name="config.dir" value="${root.dir}/src/conf" />
+	<property name="lib.dir" value="${root.dir}/lib" />
+	<property name="war.dir" value="${dist.dir}/war" />
+	<property name="jbossDeploy.dir" value="/adele/dev/fawna2/jboss-4.2.3.GA/server/default/deploy/" />
+	
+	
+	
+	<path id="jar.classpath">
+		<fileset dir="${lib.dir}" includes="*.jar"></fileset>
+		<fileset dir="${mvn.dir}/Comun" includes="*.jar"></fileset>
+		<fileset dir="${mvn.dir}/Presentacion" includes="*.jar"></fileset>
+	</path>
+
+	<path id="common.classpath">
+		<pathelement path="${build.dir}"/>
+		<path refid="jar.classpath"/>
+	</path>
+	
+	<property name="common.classpath" refid="common.classpath" />
+	
+		
+	<!-- Target clean -->
+	<target name="clean" description="Borra los directorios bin y dist.">
+		<echo message="Limpiando directorios ..." />
+		<delete dir="${build.dir}" />
+		<delete dir="${dist.dir}" />
+	</target>
+	
+	<!-- Target init -->
+	<target name="init" depends="clean" description="Crea los directorios necesarios para una compilacion y distribucion.">
+		<echo message="Creando directorios ..." />
+		<mkdir dir="${build.dir}" />
+		<mkdir dir="${dist.dir}" />
+	</target>		
+	
+	<!-- Target compile -->
+	<target name="compile" depends="init" description="Compila los fuentes.">
+		<echo message="Compilando ..." />
+		<javac srcdir="${src.dir}" destdir="${build.dir}" debug="on" classpath="/adele/dev/fawna2/Tomcat 6.0/lib/servlet-api.jar;/adele/dev/fawna2/Tomcat 6.0/lib/jsp-api.jar;/adele/dev/fawna2/Tomcat 6.0/lib/el-api.jar">
+			<classpath>
+				<pathelement path="${common.classpath}" />
+			</classpath>
+		</javac>
+	</target>
+	
+	<!-- Target make-war -->
+	<target name="make-war" depends="compile" 
+				description="Crea el war de la aplicacion y lo coloca en la carpeta dist/war.">
+		<echo message="Generando .war ..." />
+			
+		<!-- Estructura WebContent -->
+		<copy todir="${war.dir}">
+			<fileset dir="${webContent.dir}"/>				
+		</copy>
+
+		<!-- clases java -->
+		<copy todir="${war.dir}/WEB-INF/classes">
+			<fileset dir="${build.dir}" />
+		</copy>	
+		
+		<!-- contenido de la carpeta conf -->
+		<copy todir="${war.dir}/conf">
+			<fileset dir="${conf.dir}" />
+		</copy>
+		
+		
+		<!-- MvnDependences -->
+		<copy todir="${war.dir}/WEB-INF/lib">
+			<fileset dir="${mvn.dir}/Comun" includes="jdon-1.1.jar"/>
+			<fileset dir="${mvn.dir}/Presentacion" includes="xercesImpl-2.9.1.jar"/>
+			<fileset dir="${lib.dir}" includes="*.jar"/>
+				
+		</copy>
+
+		<jar basedir="${war.dir}" compress="true" jarfile="${dist.dir}/${file.war}" />
+		
+		<delete dir="${war.dir}"/>
+		<mkdir dir="${war.dir}" />
+		<move file="${dist.dir}/${file.war}" todir="${war.dir}"/>
+	</target>
+		
+	<!-- Tarea para desplegar en el jboss el war en local -->
+	<target name="desploy-des" depends="make-war" description="Copia el war en el directorio del jboss en local">
+		<echo message="Desplegando war en el jboss" />
+		
+		<!-- Copiar el archivo .war en el directorio del jboss -->
+		<copy todir="${jbossDeploy.dir}">
+			<fileset dir="${war.dir}" />
+		</copy>
+	</target>
+	
+</project>

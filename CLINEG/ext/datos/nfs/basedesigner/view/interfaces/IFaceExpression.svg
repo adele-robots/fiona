@@ -1,0 +1,16 @@
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:oryx="http://www.b3mn.org/oryx"
+	version="1.0"
+	oryx:edge="edge" >
+	<defs>
+	  	
+	  	<marker id="end" refX="0" refY="6" markerUnits="userSpaceOnUse" markerWidth="15" markerHeight="12" orient="auto" stroke = "white" stroke-width = "2" fill = "none">
+	  		<circle cx = "6" cy = "6" r = "5"/>
+	  	</marker>
+	</defs>
+	<g id="edge">
+		<path d="M10 50 L100 50" stroke="white" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"  />
+		<text id="condition" x="0" y="0" oryx:edgePosition="endTop" style="font-size:15px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Dosis">IFaceExpression</text>
+	</g>
+</svg>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentNetwork xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ComponentNetwork.xsd">
+
+    <!-- COMPONENT DECLARATION -->
+  <ComponentDeclarations>
+
+
+   <Component  id="idLocalFliteVoiceComponent"  type="LocalFliteVoiceComponent" plugin="libLocalFliteVoiceComponent.so">
+      <ProvidedInterfaces>
+        <Interface name="IVoice" />
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="IAsyncFatalErrorHandler" />
+      </RequiredInterfaces>
+	
+    </Component>
+
+
+    <Component id="idTestLocalFliteComponent"  type="TestLocalFliteComponent" plugin="libTestLocalFliteComponent.so">
+      <ProvidedInterfaces>
+        <Interface name="IApplication" />
+      </ProvidedInterfaces>
+      <ProvidedInterfaces>
+        <Interface name="IAsyncFatalErrorHandler" />
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="IVoice" />
+      </RequiredInterfaces>
+     </Component>
+
+  </ComponentDeclarations>
+  
+  
+  <!-- APPLICATION DESCRIPTION -->
+  <ApplicationDescription applicationComponent="instanceTestLocalFliteComponent" applicationConfig="/Eca.ini">
+    <!-- Paso 1/2: Instantiate components -->
+    <ComponentInstances>
+
+      <Instance instanceName="instanceLocalFliteVoiceComponent" componentID ="idLocalFliteVoiceComponent" >
+      </Instance>
+      
+      <Instance instanceName="instanceTestLocalFliteComponent" componentID ="idTestLocalFliteComponent" >
+      </Instance>
+       
+    </ComponentInstances>
+    
+    <!-- Paso 2/2: Connect interfaces -->
+    <InterfaceConnections>
+      <Connect interface="IVoice" providedBy="instanceLocalFliteVoiceComponent" requiredBy="instanceTestLocalFliteComponent" />
+      <Connect interface="IAsyncFatalErrorHandler" providedBy="instanceTestLocalFliteComponent" requiredBy="instanceLocalFliteVoiceComponent" />
+    </InterfaceConnections>
+  </ApplicationDescription>
+</ComponentNetwork>

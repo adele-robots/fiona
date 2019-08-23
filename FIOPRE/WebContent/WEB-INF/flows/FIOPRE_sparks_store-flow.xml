@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow
+	http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd"
+	parent="ARQ_Abstract-flow" start-state="ed_spark_store_init">
+	
+	
+	<action-state id="ed_spark_store_init"><!-- Decisor que determina las acciones a tomar al solicitar el inicio del flujo -->
+		<evaluate expression="genericDecisor.ejecutar">
+			<attribute name="clase"
+				value="SparksStoreFlowInitSetupDecisor">
+			</attribute>
+		</evaluate>
+		<transition on="beginning" to="ea_SNListSparksByCriteria">
+			<attribute name="fichero" value="sparkStore/FIOPRE_ListSparksByCriteria_VO_029_023.xml">
+			</attribute>
+		</transition>
+		<transition on="returned" to="ed_create_billing_agreement">			
+		</transition>
+		<transition on="cancelled" to="ea_SNListSparksByCriteria">	<!-- Cuando se cancele el acuerdo devolvemos al usuario al inicio del flujo - lista de sparks -->		
+			<attribute name="fichero" value="sparkStore/FIOPRE_ListSparksByCriteria_VO_029_023.xml">
+			</attribute>
+		</transition>
+	</action-state>
+	
+	
+	 <action-state id="ea_SNListSparksByCriteria">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="023"></attribute>
+		</evaluate>
+		<transition to="ev_Spark_Store" on="success">			
+			<attribute name="fichero" value="sparkStore/FIOPRE_ListSparksByCriteria_OV_029_023.xml"/>			
+		</transition>
+	</action-state>
+	
+	 <action-state id="ea_SNGetSparkInformation">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="016"></attribute>
+		</evaluate>
+		<transition to="ev_Get_Spark_Information" on="success">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkInformation_OV_029_016.xml"/>			
+		</transition>
+	</action-state>
+	
+	<!--
+	 <action-state id="ea_SNGetSparkInformationFromPrincipalList">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="016"></attribute>
+		</evaluate>
+		<transition to="ev_Get_Spark_Information_for_principal_list" on="success">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkInformation_OV_029_016.xml"/>			
+		</transition>
+	</action-state>
+	
+	<action-state id="ea_SNGetSparkInformationFromPrizeList">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="016"></attribute>
+		</evaluate>
+		<transition to="ev_Get_Spark_Information_for_prize_list" on="success">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkInformation_OV_029_016.xml"/>			
+		</transition>
+	</action-state>
+	-->
+	<action-state id="ea_SNListAllSparksByPrice">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="022"></attribute>
+		</evaluate>
+		<transition to="ev_List_All_Sparks_By_Prize" on="success">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkAllFreePaid_OV_029_022.xml"/>			
+		</transition>
+	</action-state>
+	 
+	<action-state id="ea_SNBuySpark">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="020"></attribute>
+		</evaluate>	
+		
+		<!-- <transition to="ev_Buy_Spark_verification" on="success">			
+			<attribute name="fichero" value="sparkStore/FIOPRE_BuySpark_OV_029_020.xml" />
+		</transition> -->
+		
+		<transition to="ea_SNGetSparkInformation" on="success">
+			<attribute name="fichero" value="sparkStore/FIOPRE_BuySpark_OO_029_020.xml" />
+		</transition>
+		
+		<transition to="ea_SNGetSparkInformation" on="errorAplicacion">
+			<attribute name="fichero" value="sparkStore/FIOPRE_GetSparkInformation_CBA_VO_029_016.xml" />
+		</transition>
+				
+		
+	</action-state>
+	
+	<action-state id="ea_SNUninstallSpark">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="058"></attribute>
+		</evaluate>
+		<transition to="ea_SNGetSparkInformation" on="success">			
+			<attribute name="fichero" value="sparkStore/FIOPRE_BuySpark_OO_029_020.xml" />
+		</transition>
+	</action-state>
+	
+	<action-state id="ea_SNSendSparkOpinion">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="024"></attribute>
+		</evaluate>
+		<transition to="ea_SNGetSparkInformation" on="success">			
+			<attribute name="fichero" value="sparkStore/FIOPRE_BuySpark_OO_029_020.xml" />
+		</transition>			
+		
+	</action-state>
+
+
+	<action-state id="ea_SNTrialSpark">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="019"></attribute>
+		</evaluate>	
+		
+		<!--<transition to="ev_Buy_Spark_verification" on="success">			
+			<attribute name="fichero" value="sparkStore/FIOPRE_TrialSpark_OV_029_019.xml" />
+		</transition>-->
+		<transition to="ea_SNGetSparkInformation" on="success">
+			<attribute name="fichero" value="sparkStore/FIOPRE_BuySpark_OO_029_020.xml" />
+		</transition>			
+		
+	</action-state> 
+	
+	
+	<action-state id="ea_SNSearchSparksByKeywords">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="025"></attribute>
+		</evaluate>
+		<transition to="ev_Search_Results" on="success">			
+			<attribute name="fichero" value="sparkStore/FIOPRE_SearchSparksByKeywords_OV_029_025.xml" />
+		</transition>			
+		
+	</action-state>
+	
+	<action-state id="ea_SNGetBuyLog">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="026"></attribute>
+		</evaluate>
+		<transition to="ev_Buy_Log" on="success">			
+			<attribute name="fichero" value="sparkStore/FIOPRE_GetBuyLog_OV_029_026.xml" />
+		</transition>			
+		
+	</action-state>
+	
+	<action-state id="ea_SNListAllSparks">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="015"></attribute>
+		</evaluate>
+		<transition to="ev_Sparks_List" on="success">			
+			<attribute name="fichero" value="sparkStore/FIOPRE_ListAllSparks_OV_029_015.xml"/>			
+		</transition>
+	</action-state>
+	
+	<action-state id="ea_SNChangeSparkStatus">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="017"></attribute>
+		</evaluate>
+		<!-- <transition to="ev_ChangeStatusConfirmation" on="success">
+			<attribute name="fichero" value="sparkStore/FIOPRE_ChangeSparkStatus_OV_029_017.xml" />
+		</transition>-->
+		
+		<transition to="ea_SNGetSparkInformation" on="success">
+			<attribute name="fichero" value="sparkStore/FIOPRE_BuySpark_OO_029_020.xml" />
+		</transition>		
+		
+	</action-state>
+	
+		
+	<view-state id="ev_Spark_Store"
+		view="/store/sparkStore">
+				
+		<transition on="top" to="ea_SNListSparksByCriteria">
+			<attribute name="fichero" value="sparkStore/FIOPRE_ListSparksByCriteria_VO_029_023.xml"/>
+		</transition>
+		<transition on="latest" to="ea_SNListSparksByCriteria">
+			<attribute name="fichero" value="sparkStore/FIOPRE_ListSparksByCriteria_VO_029_023.xml"/>
+		</transition>		
+		<transition on="basics" to="ea_SNListSparksByCriteria">
+			<attribute name="fichero" value="sparkStore/FIOPRE_ListSparksByCriteria_VO_029_023.xml"/>
+		</transition>	
+			
+		<transition on="search" to="ea_SNSearchSparksByKeywords">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SearchSparksByKeywords_VO_029_025.xml"/>
+		</transition>
+		<transition on="viewDetails" to="ea_SNGetSparkInformation">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkInformation_VO_029_016.xml"/>
+		</transition>
+		<transition on="viewAll" to="ea_SNListAllSparksByPrice">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkAllFreePaid_VO_029_022.xml"/>
+		</transition>
+		
+		<transition on="buyMovements" to="ea_SNGetBuyLog">
+			<attribute name="fichero" value="sparkStore/FIOPRE_GetBuyLog_VO_029_026.xml"/>
+		</transition>			
+		
+		<transition on="allSparks" to="ea_SNListAllSparks"/>
+		
+		<transition on="listSparksDeveloper" to="sf_SparkStoreDeveloper">
+			<attribute name="fichero" value="sparkStore/FIOPRE_ListSparksDeveloper_VO_029_028.xml"/>
+		</transition>
+
+		<transition on="getFree" to="ea_SNGetSparkInformation">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkInformation_VO_029_016.xml"/>
+		</transition>
+		
+		<transition on="buy" to="ea_SNGetSparkInformation">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkInformation_VO_029_016.xml"/>
+		</transition>
+		
+		<!-- volver a la main page -->
+		<transition on="back" to="ef_SparkStore"></transition>		
+	</view-state>
+	
+	
+	<view-state id="ev_Get_Spark_Information"
+		view="/store/sparkInformation">
+		
+		<transition on="viewDetails" to="ea_SNGetSparkInformation">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkInformation_VO_029_016.xml"/>
+		</transition>
+		<transition on="getFree" to="ea_SNGetSparkInformation">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkInformation_VO_029_016.xml"/>
+		</transition>
+		
+		<transition on="buy" to="ea_SNGetSparkInformation">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkInformation_VO_029_016.xml"/>
+		</transition>
+						
+		<transition on="sendOpinion" to="ea_SNSendSparkOpinion">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SendSparkOpinion_VO_029_024.xml"/>
+		</transition>
+		<!-- <transition on="buyOK" to="ea_SNBuySpark">
+			<attribute name="fichero" value="sparkStore/FIOPRE_BuySpark_V0_029_020.xml"/>
+		</transition> -->
+		<transition on="freeOK" to="ea_SNBuySpark">
+			<attribute name="fichero" value="sparkStore/FIOPRE_BuySpark_VO_029_020.xml"/>
+		</transition>
+		<transition on="buyOK" to="ed_check_active_agreement">
+			<attribute name="fichero" value="sparkStore/FIOPRE_BuySpark_VV_029_020.xml"></attribute>
+		</transition>
+		<transition on="uninstallOK" to="ea_SNUninstallSpark">
+		<attribute name="fichero" value="sparkStore/FIOPRE_UninstallSpark_VO_029_058.xml"/>
+		</transition>		
+		<transition on="trialOK" to="ea_SNTrialSpark">
+			<attribute name="fichero" value="sparkStore/FIOPRE_TrialSpark_VO_029_019.xml"/>
+		</transition> 
+		
+		<transition on="changeStatus" to="ea_SNChangeSparkStatus">
+			<attribute name="fichero" value="sparkStore/FIOPRE_ChangeSparkStatus_VO_029_017.xml"/>
+		</transition> 
+		
+		<transition on="back" to="ea_SNListSparksByCriteria">			
+			<attribute name="fichero" value="sparkStore/FIOPRE_ListSparksByCriteria_VO_029_023.xml"/>
+		</transition>		 
+		<!-- <transition on="back" to="#{flowScope.previousViewStateId}"></transition> -->
+		 
+	</view-state>
+	
+	<action-state id="ed_check_active_agreement">
+		<evaluate expression="genericDecisor.ejecutar">
+			<attribute name="clase"
+				value="CheckAgreementStatusDecisor">
+			</attribute>
+		</evaluate>
+		<transition on="noAgreement" to="ev_signup_paypal_agreement_initial">
+			<attribute name="fichero"
+				value="sparkStore/FIOPRE_BuySpark_VV_029_020.xml">
+			</attribute>
+		</transition>
+		<transition on="agreement" to="ea_SNBuySpark">
+			<attribute name="fichero"
+				value="sparkStore/FIOPRE_BuySpark_VO_029_020.xml">
+			</attribute>
+		</transition>
+	</action-state>
+	
+	<!-- 
+	<view-state id="ev_Get_Spark_Information_for_principal_list"
+		view="/store/sparkInformation">
+				
+		 <transition on="sendOpinion" to="ea_SNSendSparkOpinion">
+		 	<attribute name="fichero" value="sparkStore/FIOPRE_SendSparkOpinion_VO_029_024.xml"/>
+		 </transition>
+		 <transition on="buyOK" to="ea_SNBuySpark">
+			<attribute name="fichero" value="sparkStore/FIOPRE_BuySpark_VO_029_020.xml"/>
+		 </transition>		
+		 <transition on="trialOK" to="ea_SNTrialSpark">
+		 	<attribute name="fichero" value="sparkStore/FIOPRE_TrialSpark_VO_029_019.xml"/>
+		 </transition> 
+		 
+		 <transition on="back" to="ev_Spark_Store"></transition>		 
+		 
+	</view-state>
+	
+	
+	
+	<view-state id="ev_Get_Spark_Information_for_prize_list"
+		view="/store/sparkInformation">
+		
+		  <transition on="sendOpinion" to="ea_SNSendSparkOpinion">
+		 	<attribute name="fichero" value="sparkStore/FIOPRE_SendSparkOpinion_VO_029_024.xml"/>
+		  </transition>
+		  
+		  <transition on="buyOK" to="ea_SNBuySpark">
+			<attribute name="fichero" value="sparkStore/FIOPRE_BuySpark_VO_029_020.xml"/>
+		  </transition>
+		  
+		  <transition on="trialOK" to="ea_SNTrialSpark">
+		 	<attribute name="fichero" value="sparkStore/FIOPRE_TrialSpark_VO_029_019.xml"/>
+		 </transition>
+		  
+		 <transition on="back" to="ev_List_All_Sparks_By_Prize"></transition>
+	</view-state>
+	-->
+	
+	<view-state id="ev_List_All_Sparks_By_Prize"
+		view="/store/allSparksByPrize">
+		
+		<transition on="viewDetails" to="ea_SNGetSparkInformation">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkInformation_VO_029_016.xml"/>
+		</transition>
+		
+		<transition on="getFree" to="ea_SNGetSparkInformation">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkInformation_VO_029_016.xml"/>
+		</transition>
+		
+		<transition on="buy" to="ea_SNGetSparkInformation">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkInformation_VO_029_016.xml"/>
+		</transition>
+				
+		<transition on="back" to="ev_Spark_Store"></transition>
+	</view-state>	
+	
+	 
+	<view-state id="ev_Buy_Spark_verification"
+		view="/store/buySparkConfirmation">
+				
+		<transition on="cancel" to="ea_SNGetSparkInformation">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkInformation_VO_029_016.xml"/>
+		</transition>
+		
+	</view-state>	
+	 
+	
+	<view-state id="ev_Search_Results"
+		view="/store/searchResults">
+		<transition on="viewDetails" to="ea_SNGetSparkInformation">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkInformation_VO_029_016.xml"/>
+		</transition>
+		
+		<transition on="getFree" to="ea_SNGetSparkInformation">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkInformation_VO_029_016.xml"/>
+		</transition>
+		
+		<transition on="buy" to="ea_SNGetSparkInformation">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkInformation_VO_029_016.xml"/>
+		</transition>
+		
+		<transition on="back" to="ev_Spark_Store"></transition>		
+	</view-state>
+	
+	<view-state id="ev_Buy_Log"
+		view="/store/userSparks">
+		<transition on="viewDetails" to="ea_SNGetSparkInformation">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkInformation_VO_029_016.xml"/>
+		</transition>
+		<transition on="back" to="ev_Spark_Store"></transition>
+	</view-state>
+	
+	<view-state id="ev_Sparks_List"
+		view="/store/allSparks">
+		<transition on="viewDetails" to="ea_SNGetSparkInformation">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkInformation_VO_029_016.xml"/>
+		</transition>
+		<transition on="back" to="ev_Spark_Store"></transition>		
+	</view-state>
+	
+	<view-state id="ev_ChangeStatusConfirmation"
+		view="/store/changeStatusConfirm">
+		<transition on="ok" to="ea_SNGetSparkInformation">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkInformation_VO_029_016.xml"/>
+		</transition>
+	</view-state>	
+	
+			
+	<!-- [INICIO] Estado de subflujo para el detalle de spark -->
+	<!-- 
+	<subflow-state id="sf_SparkStoreDetalle" subflow="FIOPRE_sparks_store_detalle_spark-flow">		
+		<transition to="ea_SNListSparksByCriteria" on="ef_SparkStoreDetalle">
+			<attribute name="fichero" value="sparkStore/FIOPRE_ListSparksByCriteria_VO_029_023.xml"/>
+		</transition>			
+	</subflow-state> -->
+	<!-- [FIN] Estado de subflujo para el detalle de spark -->
+	
+	<!-- [INICIO] Estado de subflujo para el desarrollador -->
+	<subflow-state id="sf_SparkStoreDeveloper"
+		subflow="FIOPRE_sparks_developer-flow">
+		<transition to="ev_Spark_Store" on="ef_SparkStoreDeveloper" />	
+		<transition to="ef_manageMyProfile" on="ef_manageMyProfile"/>
+		<transition to="ef_uploadSpark" on="ef_uploadSpark"/>
+		
+	</subflow-state>	
+	<!-- [FIN] Estado de subflujo para el desarrollador -->
+	
+	
+	<!-- [INICIO] Parte Paypal del flujo -->	
+	<action-state id="ed_create_billing_agreement">
+		<evaluate expression="genericDecisor.ejecutar">
+			<attribute name="clase"	value="CreateBillingAgreementStoreDecisor"/>			
+		</evaluate>
+				
+		<!-- <transition on="success" to="ev_signup_save_success"></transition> -->
+		<!-- <transition to="ea_SNGetSparkInformation" on="success">
+			<attribute name="fichero" value="sparkStore/FIOPRE_BuySpark_OO_029_020.xml" />
+		</transition>-->
+		<!-- Llamamos al servicio que realmente realiza la compra del spark -->		
+		<transition on="success" to="ea_SNBuySpark">
+			<attribute name="fichero" value="sparkStore/FIOPRE_BuySpark_VO_029_020.xml"/>
+		</transition>		
+		<transition on="error" to="ea_SNGetSparkInformation">
+			<attribute name="fichero" value="sparkStore/FIOPRE_GetSparkInformation_CBA_VO_029_016.xml" />
+		</transition>
+	</action-state>
+
+	<view-state id="ev_signup_paypal_agreement_initial"
+		view="/store/billingAgreementInitialView">
+
+		<transition on="success" to="ev_signup_paypal_agreement_approved">
+		</transition>	
+		
+		<transition on="back" to="ea_SNListSparksByCriteria">
+			<attribute name="fichero" value="sparkStore/FIOPRE_ListSparksByCriteria_VO_029_023.xml"/>
+		</transition>
+		
+	</view-state>
+	
+	
+	<view-state id="ev_signup_paypal_agreement_approved" view="/signuppaypalagreement/signupAgreementReturnEC">
+		<!-- <transition on="back" to="ev_signup_save_success"></transition> -->
+		<transition to="ea_SNGetSparkInformation" on="back">
+			<attribute name="fichero" value="sparkStore/FIOPRE_BuySpark_OO_029_020.xml" />
+		</transition>
+	</view-state>
+	<!-- [FIN] Parte Paypal del flujo -->
+	
+	
+	<!--  Estado final del flujo -->	
+	<end-state id="ef_SparkStore" parent="ARQ_Abstract-flow#ev_manageMyAvatarRunPreview">
+	</end-state>
+	
+	
+	<end-state id="ef_manageMyProfile">
+	</end-state>
+	
+	<end-state id="ef_uploadSpark">
+	</end-state>	
+	
+	<global-transitions>
+	
+		<transition on="store" to="ea_SNListSparksByCriteria">
+			<attribute name="fichero" value="sparkStore/FIOPRE_ListSparksByCriteria_VO_029_023.xml"/>
+		</transition>
+		<transition on="manageMyProfile" to="ef_manageMyProfile"/>
+		<transition on="develop" to="ef_uploadSpark"/>
+		
+	</global-transitions>
+		
+
+</flow>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formatter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="../fwnScheme.xsd">
+
+		<destino nombre="spark_id">
+			<origen nombre="FIONEGN004" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG004010" />
+		</destino>
+		
+</formatter>

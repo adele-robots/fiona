@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_lip_synch_8h.html" title="LipSynch class definition." alt="" coords="689,83,953,112"/>
+<area shape="rect" id="node20" href="$_remote_video_output_8h.html" title="RemoteVideoOutput class declaration." alt="" coords="1775,315,2103,344"/>
+<area shape="rect" id="node39" href="$_on_screen_monitor_8h.html" title="OnScreenMonitor class declaration." alt="" coords="1605,83,1915,112"/>
+<area shape="rect" id="node5" href="$_motion_controller_8h.html" title="MotionController class definition." alt="" coords="1211,160,1515,189"/>
+<area shape="rect" id="node9" href="$_application_8h.html" title="Application class declaration." alt="" coords="717,315,992,344"/>
+<area shape="rect" id="node25" href="$_audio_output_8h.html" title="AudioOutput class declaration." alt="" coords="680,160,963,189"/>
+<area shape="rect" id="node35" href="$_event_driven_dialog_manager_8h.html" title="EventDrivenDialogManager class definition." alt="" coords="5,160,373,189"/>
+<area shape="rect" id="node7" href="$_face_tracker_8h.html" title="FaceTracker class definition." alt="" coords="859,237,1141,267"/>
+<area shape="rect" id="node15" href="$_video_output_8h.html" title="VideoOutput class declaration." alt="" coords="1619,237,1901,267"/>
+<area shape="rect" id="node18" href="$_local_video_output_8h.html" title="/adele/dev/workspace/Include/LocalVideoOutput.h" alt="" coords="1439,315,1751,344"/>
+<area shape="rect" id="node11" href="$_app_teleoperacion_8h.html" title="/adele/dev/workspace/Include/AppTeleoperacion.h" alt="" coords="697,392,1012,421"/>
+<area shape="rect" id="node28" href="$_local_audio_output_8h.html" title="LocalAudioOutput class declaration." alt="" coords="472,237,784,267"/>
+<area shape="rect" id="node30" href="$_remote_audio_output_8h.html" title="RemoteAudioOutput class declaration." alt="" coords="1216,237,1544,267"/>
+<area shape="rect" id="node32" href="$_loquendo_audio_destination_8h.html" title="LoquendoAudioDestination module implementation." alt="" coords="1049,315,1415,344"/>
+</map>

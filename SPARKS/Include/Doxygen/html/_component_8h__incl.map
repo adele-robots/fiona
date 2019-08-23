@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node9" href="$_component_system_8h.html" title="ComponentSystem.h" alt="" coords="197,83,341,112"/>
+<area shape="rect" id="node32" href="$_logger_8h.html" title="Application logging functions declarations, both ASCII and wide&#45;character." alt="" coords="365,83,437,112"/>
+<area shape="rect" id="node34" href="$_error_handling_8h.html" title="Global exception class definition, and error macro to throw it." alt="" coords="461,83,573,112"/>
+<area shape="rect" id="node15" href="$_x_m_l_parser_8h.html" title="XMLParser.h" alt="" coords="344,160,443,189"/>
+<area shape="rect" id="node26" href="$_configuration_8h.html" title="psisban::Config class and mainConfig global variable declarations." alt="" coords="211,160,320,189"/>
+<area shape="rect" id="node30" href="$_i_application_8h.html" title="IApplication.h" alt="" coords="467,160,568,189"/>
+<area shape="rect" id="node18" href="$pugixml_8hpp.html" title="pugixml.hpp" alt="" coords="348,237,439,267"/>
+<area shape="rect" id="node20" href="$pugiconfig_8hpp.html" title="pugiconfig.hpp" alt="" coords="224,315,331,344"/>
+</map>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+       xmlns:p="http://www.springframework.org/schema/p" 
+       xmlns:context="http://www.springframework.org/schema/context" 
+       xmlns:tx="http://www.springframework.org/schema/tx" 
+       xmlns:webflow="http://www.springframework.org/schema/webflow-config" 
+       xmlns:faces="http://www.springframework.org/schema/faces" 
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd 
+           http://www.springframework.org/schema/context 
+           http://www.springframework.org/schema/context/spring-context-3.0.xsd 
+           http://www.springframework.org/schema/tx 
+           http://www.springframework.org/schema/tx/spring-tx-3.0.xsd 
+           http://www.springframework.org/schema/webflow-config 
+           http://www.springframework.org/schema/webflow-config/spring-webflow-config-2.0.xsd 
+           http://www.springframework.org/schema/faces 
+           http://www.springframework.org/schema/faces/spring-faces.xsd" 
+       default-autowire="byName">
+
+	<!-- Inicializacion de beans -->
+	<bean id="genericRenderAction" class="com.treelogic.fawna.presentacion.core.webflow.action.GenericRenderAction"/>
+	<bean id="genericAction" class="com.treelogic.fawna.presentacion.core.webflow.action.GenericAction"/>
+	<bean id="genericDecisor" class="com.treelogic.fawna.presentacion.core.webflow.action.GenericDecisor"/>
+	<bean id="genericCustomAction" class="com.treelogic.fawna.presentacion.core.webflow.action.CustomAction"/>
+
+	<bean id="contextoVentanaFactory" class="com.treelogic.fawna.presentacion.core.persistencia.ContextoVentanaFactory"/>
+	<bean id="contextoOperacionFactory" class="com.treelogic.fawna.presentacion.core.persistencia.ContextoOperacionFactory"/>
+	<bean id="contextoFlujoFactory" class="com.treelogic.fawna.presentacion.core.persistencia.ContextoFlujoFactory"/>
+
+
+	<!-- Definicion renderAction para errores -->
+	<bean id="PresentacionRenderActionError" class="com.treelogic.fawna.presentacion.core.webflow.action.PresentacionRenderActionError"/>
+
+	<!-- Maps request URIs to controllers -->
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/*">flowController</prop>
+			</props>
+		</property>
+		<property name="defaultHandler">
+			<!-- Selects view names to render based on the request URI: e.g. /main selects "main" -->
+			<bean class="org.springframework.web.servlet.mvc.UrlFilenameViewController"/>
+		</property>
+	</bean>
+
+	<!-- Handles requests mapped to the Spring Web Flow system -->
+	<bean id="flowController" class="org.springframework.webflow.mvc.servlet.FlowController">
+		<property name="ajaxHandler">
+			<bean class="com.treelogic.fawna.presentacion.core.servlet.PresentacionAjaxViewHandler"/>
+		</property> 
+	</bean>
+
+	<!-- Definicion de listeners de flujo -->  
+	<bean id="controlFlujoListener" class="com.treelogic.fawna.presentacion.core.webflow.listener.ControlFlujoListener"></bean>
+	<bean id="formatterTransitionListener" class="com.treelogic.fawna.presentacion.core.webflow.listener.FormatterTransitionListener"/>
+
+	<bean id="facesContextListener" class="org.springframework.faces.webflow.FlowFacesContextLifecycleListener" />
+	<bean id="manageSpringSecurityListener" class="com.adelerobots.fawna.webflow.ManageSpringSecurityFlowExecutionListener"></bean>
+	<bean id="controlLocaleListener" class="com.adelerobots.fawna.webflow.ControlLocaleFlowExecutionListener">
+		<property name="fallbackLocale" value="en"></property>
+	</bean>
+
+	<!-- Executes flows: the central entry point into the Spring Web Flow system -->
+	<webflow:flow-executor id="flowExecutor">
+		<webflow:flow-execution-listeners>
+			<webflow:listener ref="facesContextListener"/>
+			<!--<webflow:listener ref="manageSpringSecurityListener"/> Lo ponemos aqui porque controlFlujoListener nos borra las variables de Spring Security -->
+			<webflow:listener ref="controlFlujoListener"/>
+			<webflow:listener ref="controlLocaleListener"/>
+			<webflow:listener ref="formatterTransitionListener"/>
+		</webflow:flow-execution-listeners>
+	</webflow:flow-executor>
+
+	<!-- The registry of executable flow definitions -->
+	<webflow:flow-registry id="flowRegistry" flow-builder-services="facesFlowBuilderServices">
+		<webflow:flow-location-pattern value="/WEB-INF/flows/**/*-flow.xml"/>
+		<!--
+		<webflow:flow-builder id="myBuilder" class="com.treelogic.fawna.presentacion.core.webflow.builder.MetropolisXmlFlowBuilder"></webflow:flow-builder>
+		-->
+	</webflow:flow-registry>
+
+	<!-- Configures the Spring Web Flow JSF integration -->
+	<faces:flow-builder-services id="facesFlowBuilderServices"/>
+
+</beans>

@@ -1,0 +1,11 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_audio_input_8h.html" title="AudioInput class declaration." alt="" coords="445,83,717,112"/>
+<area shape="rect" id="node5" href="$_remote_audio_input_8h.html" title="RemoteAudioInput class declaration." alt="" coords="53,160,371,189"/>
+<area shape="rect" id="node13" href="$_a_v_input_8h.html" title="AVInput class declaration." alt="" coords="265,315,521,344"/>
+<area shape="rect" id="node18" href="$_local_audio_input_8h.html" title="LocalAudioInput class declaration." alt="" coords="596,160,897,189"/>
+<area shape="rect" id="node21" href="$_a_s_r_8h.html" title="ASR class definition for speech recognition." alt="" coords="800,83,1037,112"/>
+<area shape="rect" id="node9" href="$_application_8h.html" title="Application class declaration." alt="" coords="339,392,613,421"/>
+<area shape="rect" id="node7" href="$_f_f_mpeg_audio_video_source_8h.html" title="FFMpegAudioVideoSource class declaration." alt="" coords="5,237,371,267"/>
+<area shape="rect" id="node11" href="$_app_teleoperacion_8h.html" title="/adele/dev/workspace/Include/AppTeleoperacion.h" alt="" coords="319,469,633,499"/>
+<area shape="rect" id="node23" href="$_event_driven_dialog_manager_8h.html" title="EventDrivenDialogManager class definition." alt="" coords="673,237,1041,267"/>
+</map>

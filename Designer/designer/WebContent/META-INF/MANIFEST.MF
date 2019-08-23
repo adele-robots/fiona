@@ -1,0 +1,9 @@
+Bundle-Name: Process Designer
+Manifest-Version: 1.0
+Bundle-Version: 2.0
+Created-By: Buildr
+Build-Jdk: 
+Implementation-Version: 
+Implementation-Title: jBPM Process Designer
+Bundle-SymbolicName: designer
+

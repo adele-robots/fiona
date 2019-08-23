@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<formatter 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+			xsi:noNamespaceSchemaLocation="../fwnScheme.xsd">
+
+	<destino persist="USER_ID">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001010" tipoDatoValor="BigDecimal" />
+	</destino>
+	<destino nombre="USER_FISTNAME">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001020" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_SURNAME">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001030" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_MAIL">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001040" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_MAIL_ID">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001041" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_PASSWORD">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001050" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_ENTITY_ID">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001060" tipoDatoValor="BigDecimal" />
+	</destino>
+	<destino nombre="USER_ENTITY_NAME">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001061" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_ACCOUNTTYPE_ID">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001070" tipoDatoValor="BigDecimal" />
+	</destino>
+	<destino nombre="USER_ACCOUNTTYPE_NAME">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001071" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_STATUS">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001080" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_CREDITCARD_NUMBER">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001090" tipoDatoValor="BigDecimal" />
+	</destino>
+	<destino nombre="USER_CREDITCARD_EXPIRATION">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001100" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_SIGNUPCODE">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001110" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_NICKNAME">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001120" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_FULLNAME">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001121" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_DISPLAYNAME">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001122" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_AVATARBUILDER_UMD5">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001130" tipoDatoValor="String" />
+	</destino>
+	<destino nombre="USER_USERGROUP_ID">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001140" tipoDatoValor="BigDecimal" />
+	</destino>
+	<destino nombre="USER_USERGROUP">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001141" tipoDatoValor="String" />
+	</destino>
+	<destino persist="ACCOUNT_AMT_MONTHLY">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001170" tipoDatoValor="BigDecimal" />
+	</destino>
+	<destino persist="ACCOUNT_AMT_YEARLY">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001180" tipoDatoValor="BigDecimal" />
+	</destino>
+	<destino persist="ACCOUNT_PERIOD">
+		<origen nombre="FIONEGN001" propiedadValor="FIONEG001190" tipoDatoValor="String" />
+	</destino>
+
+</formatter>

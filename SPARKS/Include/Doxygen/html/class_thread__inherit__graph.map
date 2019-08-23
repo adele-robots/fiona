@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$class_face_tracker.html" title="Class that wraps openCV algorithm for Face Detection based on Haar classifiers." alt="" coords="5,83,99,112"/>
+<area shape="rect" id="node5" href="$class_f_f_mpeg_audio_video_source.html" title="FFMpegAudioVideoSource" alt="" coords="123,83,299,112"/>
+<area shape="rect" id="node7" href="$class_integration.html" title="Integration" alt="" coords="323,83,405,112"/>
+<area shape="rect" id="node9" href="$class_video_output.html" title="VideoOutput" alt="" coords="429,83,523,112"/>
+<area shape="rect" id="node15" href="$class_web_server.html" title="WebServer" alt="" coords="547,83,632,112"/>
+<area shape="rect" id="node11" href="$class_local_video_output.html" title="LocalVideoOutput" alt="" coords="335,160,460,189"/>
+<area shape="rect" id="node13" href="$class_remote_video_output.html" title="RemoteVideoOutput" alt="" coords="484,160,623,189"/>
+</map>

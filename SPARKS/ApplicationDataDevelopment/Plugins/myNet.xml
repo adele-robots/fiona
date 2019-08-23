@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentNetwork 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="ComponentNetwork.xsd"
+>
+  <!-- COMPONENT DECLARATION -->
+  <ComponentDeclarations>
+
+    <Component id="myApp"  type="App" plugin="Component1.dll">
+      <ProvidedInterfaces>
+        <Interface name="IApplication" />
+      </ProvidedInterfaces>
+    </Component>
+
+    <Component id="component1"  type="ASR" plugin="Component1.dll">
+      <ProvidedInterfaces>
+        <Interface name="ProvidedInterface1" />
+        <Interface name="ProvidedInterface2" />
+      </ProvidedInterfaces>
+
+      <RequiredInterfaces>
+        <Interface name="RequiredInterface1" />
+        <Interface name="RequiredInterface2" />
+      </RequiredInterfaces>
+
+      <Parameters>
+        <Parameter name="Component1-Param1" />
+        <Parameter name="Component1-Param2" />
+      </Parameters>
+    </Component>
+
+    <Component id="component2"  type="ASR" plugin="Component1.dll">
+      <ProvidedInterfaces>
+        <Interface name="ProvidedInterface1" />
+        <Interface name="ProvidedInterface2" />
+      </ProvidedInterfaces>
+
+      <RequiredInterfaces>
+        <Interface name="RequiredInterface1" />
+        <Interface name="RequiredInterface2bb" />
+      </RequiredInterfaces>
+
+      <Parameters>
+        <Parameter name="Component1-Param1" />
+        <Parameter name="Component1-Param2" />
+      </Parameters>
+    </Component>
+
+
+  </ComponentDeclarations>
+  
+  
+  <!-- APPLICATION DESCRIPTION -->
+  <ApplicationDescription applicationComponent="myApplication" applicationConfig="/eca.ini">
+    <!-- Paso 1/2: Instantiate components -->
+    <ComponentInstances>
+      <Instance instanceName="myInstanceOfComponent1" componentID ="component1" configuration="/ComponentConfigurations/Componenent1Config.INI">
+        <ParameterValues>
+          <assing parameter="Component1-Param1" value="bob" />
+          <assing parameter="Component1-Param2" value="alice" />
+        </ParameterValues>
+      </Instance>
+    </ComponentInstances>
+    <!-- Paso 2/2: Connect interfaces -->
+    <InterfaceConnections>
+      <Connect interface="ProvidedInterface1" providedBy="myInstanceOfComponent1" requiredBy="myInstanceOfComponent2" />
+      <Connect interface="ProvidedInterface2" providedBy="myInstanceOfComponent1" requiredBy="myInstanceOfComponent2" />
+      <ConnectAll interface="ProvidedInterface2" providedBy="myInstanceOfComponent1"/>
+    </InterfaceConnections>
+  </ApplicationDescription>
+</ComponentNetwork>

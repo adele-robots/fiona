@@ -1,0 +1,1287 @@
+{
+	"title":"Avatar Builder",
+	"namespace":"http://b3mn.org/stencilset/bpmn2.0#",
+	"description":"This is the Avatar Builder stencil set specification.",
+ 	"propertyPackages": [
+ 		{
+ 			"name":"baseAttributes",
+ 			"properties": [
+				{
+					"id":"name",
+					"type":"String",
+					"title":"Name",
+					"value":"",
+					"description":"The descriptive name of the BPMN element.",
+					"description_de":"Bezeichnung des BPMN-Elementes.",
+					"readonly":false,
+					"optional":true,
+					"length":"",
+					"wrapLines" : true,
+					"refToView":"text_name"	
+				}
+ 			]
+ 		},
+		{
+ 			"name":"conditions",
+ 			"properties": [
+				{
+					"id":"condition",
+					"type":"String",
+					"title":"Condicion",
+					"value":"",
+					"description":"Condicion de tránsito entre estados.",
+					"readonly":false,
+					"optional":false,
+					"length":"",
+					"wrapLines" : true,
+				}
+ 			]
+ 		},
+		{
+			"name" : "bgColor",
+			"properties" : [
+				{
+					"id":"bgcolor",
+					"type":"Color",
+					"title":"BackgroundColor",
+					"title_de":"Hintergrundfarbe",
+					"value":"#ffffff",
+					"description":"",
+					"readonly":false,
+					"optional":false,
+					"refToView": "bg_frame",
+					"fill":true,
+					"stroke":false
+				}
+			]
+		},
+		{
+			"name":"boundaryevent",
+			"properties":[
+				{
+					"id":"boundarycancelactivity",
+					"type":"Boolean",
+					"title":"CancelActivity",
+					"title_de":"AktivitÃ¤t abbrechen",
+					"value":"",
+					"description":"Denotes whether the activity should be cancelled or not, i.e., whether the boundary catch event acts as an error or an escalation. If the activity is not cancelled, multiple instances of that handler can run concurrently.",
+					"description_de":"Kennzeichnet ob eine AktivitÃ¤t abgebrochen werden soll.",
+					"readonly":false,
+					"optional":true
+				}
+			]
+		},
+		{
+			"name" : "diagram",
+			"properties" : [
+				{
+					"id":"id",
+					"type":"String",
+					"title":"ID",
+					"title_de":"ID",
+					"value":"",
+					"description":"ID",
+					"description_de":"ID",
+					"readonly":false,
+					"optional":true
+				},
+				{
+					"id":"version",
+					"type":"String",
+					"title":"Version",
+					"value":"",
+					"description":"This defines the Version number of the Diagram.",
+					"description_de":"Setzt die Versionsnummer des Diagramms.",
+					"readonly":false,
+					"optional":true,
+					"length":"50"
+				},
+				/**{
+					"id":"author",
+					"type":"String",
+					"title":"Author",
+					"title_de":"Autor",
+					"value":"",
+					"description":"This holds the name of the author of the Diagram.",
+					"description_de": "Name des Autors des Diagramms.",
+					"readonly":false,
+					"optional":true,
+					"length":"50"
+				},**/
+				{
+					"id":"language",
+					"type":"String",
+					"title":"Language",
+					"title_de":"Sprache",
+					"value":"Spanish",
+					"value_de":"Deutsch",
+					"description":"This holds the name of the language in which text is written.",
+					"description_de":"Sprache, in welcher der Text geschrieben ist.",
+					"readonly":false,
+					"optional":true,
+					"length":"50"
+				}
+			]
+		},
+		{
+			"name": "flowElement",
+			"properties" : [
+				/**{
+					"id":"categories",
+					"type":"String",
+					"title":"Categories",
+					"title_de":"Kategorien",
+					"value":"",
+					"description":"",
+					"readonly":false,
+					"optional":true,
+					"refToView":"",
+					"length":"50",
+					"wrapLines":true
+				}**/
+			]
+		},
+		{
+			"name" : "estado_receptor"
+		},
+		
+		
+		
+		
+		// Guille pruebas
+		
+		{
+			"name": "sparks1",
+			"properties" : [
+				{
+					"id":"prompt1",
+					"type":"xml",
+					"title":"INTERFACES",
+					"value":"(ninguno)",
+					"gradient":true,
+					"description":"",
+					"readonly":false,
+					"optional":false,
+					"refToView":"fill_el",
+					"fill":true,
+					"stroke":false
+				}			
+			]
+		},
+		{
+			"name": "sparks2",
+			"properties" : [
+				{
+					"id":"prompt2",
+					"type":"xml2",
+					"title":"INTERF.",
+					"value":"(ninguno)",
+					"gradient":true,
+					"description":"",
+					"readonly":false,
+					"optional":false,
+					"refToView":"fill_el",
+					"fill":true,
+					"stroke":false
+				}			
+			]
+		},
+		
+		
+		
+		
+		
+		
+		////////////////////////////////////
+		
+		
+		{
+			"name" : "estado",
+			"properties" : [	
+				{
+					"id":"prompt",
+					"type":"prompt",
+					"title":"Prompt",
+					"value":"(ninguno)",
+					"gradient":true,
+					"description":"",
+					"readonly":false,
+					"optional":false,
+					"refToView":"fill_el",
+					"fill":true,
+					"stroke":false
+				},	
+				{
+					"id":"anim",
+					"type":"Choice",
+					"title":"Animación",
+					"value":"0",
+					"gradient":true,
+					"description":"",
+					"readonly":false,
+					"optional":false,
+					"refToView":"fill_el",
+					"fill":true,
+					"stroke":false,
+					"items": [
+						{
+							"id":"c0",
+							"title":"(ninguna)",
+							"value":"0",
+							"refToView":""
+						},
+						{
+							"id":"c1",
+							"title":"mi-mocap.anim",
+							"value":"mi-mocap.anim",
+							"refToView":""
+						},
+						{
+							"id":"c2",
+							"title":"keyframe.anim",
+							"value":"keyframe.anim",
+							"refToView":""
+						},
+						{
+							"id":"c3",
+							"title":"punch.anim",
+							"value":"punch.anim",
+							"refToView":""
+						},
+						{
+							"id":"c4",
+							"title":"quieto.anim",
+							"value":"quieto.anim",
+							"refToView":""
+						}			
+					]
+				},	
+				{
+					"id":"exp",
+					"type":"Choice",
+					"title":"Expresión",
+					"value":"0",
+					"gradient":true,
+					"description":"",
+					"readonly":false,
+					"optional":false,
+					"refToView":"fill_el",
+					"fill":true,
+					"stroke":false,
+					"items": [
+						{
+							"id":"c0",
+							"title":"(ninguna)",
+							"value":"0",
+							"refToView":""
+						},
+						{
+							"id":"c1",
+							"title":"alluring_ShapeKey",
+							"value":"alluring_ShapeKey",
+							"refToView":""
+						},
+						{
+							"id":"c2",
+							"title":"astonishment_ShapeKey",
+							"value":"astonishment_ShapeKey",
+							"refToView":""
+						},
+						{
+							"id":"c3",
+							"title":"bored_ShapeKey",
+							"value":"bored_ShapeKey",
+							"refToView":""
+						},
+						{
+							"id":"c4",
+							"title":"concerned_ShapeKey",
+							"value":"concerned_ShapeKey",
+							"refToView":""
+						},
+						{
+							"id":"c5",
+							"title":"confused_ShapeKey",
+							"value":"confused_ShapeKey",
+							"refToView":""
+						},
+						{
+							"id":"c6",
+							"title":"cynical_ShapeKey",
+							"value":"cynical_ShapeKey",
+							"refToView":""
+						},
+						{
+							"id":"c7",
+							"title":"delight_ShapeKey",
+							"value":"delight_ShapeKey",
+							"refToView":""
+						},
+						{
+							"id":"c8",
+							"title":"eyes-closed_ShapeKey",
+							"value":"eyes-closed_ShapeKey",
+							"refToView":""
+						},
+						{
+							"id":"c9",
+							"title":"frightened_ShapeKey",
+							"value":"frightened_ShapeKey",
+							"refToView":""
+						},
+						{
+							"id":"c10",
+							"title":"hmm_ShapeKey",
+							"value":"hmm_ShapeKey",
+							"refToView":""
+						},
+						{
+							"id":"c11",
+							"title":"laugh_ShapeKey",
+							"value":"laugh_ShapeKey",
+							"refToView":""
+						},
+						{
+							"id":"c12",
+							"title":"loathing_ShapeKey",
+							"value":"loathing_ShapeKey",
+							"refToView":""
+						},
+						{
+							"id":"c13",
+							"title":"mad_ShapeKey",
+							"value":"mad_ShapeKey",
+							"refToView":""
+						},
+						{
+							"id":"c14",
+							"title":"nostrils_ShapeKey",
+							"value":"nostrils_ShapeKey",
+							"refToView":""
+						},
+						{
+							"id":"c15",
+							"title":"overjoyed_ShapeKey",
+							"value":"overjoyed_ShapeKey",
+							"refToView":""
+						},
+						{
+							"id":"c16",
+							"title":"pleased_ShapeKey",
+							"value":"pleased_ShapeKey",
+							"refToView":""
+						},
+						{
+							"id":"c17",
+							"title":"rage_ShapeKey",
+							"value":"rage_ShapeKey",
+							"refToView":""
+						},
+						{
+							"id":"c18",
+							"title":"silly_ShapeKey",
+							"value":"silly_ShapeKey",
+							"refToView":""
+						},
+						{
+							"id":"c19",
+							"title":"sly_ShapeKey",
+							"value":"sly_ShapeKey",
+							"refToView":""
+						},
+						{
+							"id":"c20",
+							"title":"repulsed_ShapeKey",
+							"value":"repulsed_ShapeKey",
+							"refToView":""
+						},
+						{
+							"id":"c21",
+							"title":"repulsed_ShapeKey",
+							"value":"repulsed_ShapeKey",
+							"refToView":""
+						},
+						{
+							"id":"c22",
+							"title":"sorrow_ShapeKey",
+							"value":"sorrow_ShapeKey",
+							"refToView":""
+						},
+						{
+							"id":"c23",
+							"title":"sulk_ShapeKey",
+							"value":"sulk_ShapeKey",
+							"refToView":""
+						},
+						{
+							"id":"c24",
+							"title":"sultry_ShapeKey",
+							"value":"sultry_ShapeKey",
+							"refToView":""
+						}					
+					]
+				},	
+				{
+					"id":"com",
+					"type":"Choice",
+					"title":"Comandos de Voz",
+					"value":"0",
+					"gradient":true,
+					"description":"",
+					"readonly":false,
+					"optional":false,
+					"refToView":"fill_el",
+					"fill":true,
+					"stroke":false,
+					"items": [
+						{
+							"id":"c0",
+							"title":"(ninguno)",
+							"value":"0",
+							"refToView":""
+						},
+						{
+							"id":"c1",
+							"title":"ruleS0P1MenuPrincipal",
+							"value":"ruleS0P1MenuPrincipal",
+							"refToView":""
+						},
+						{
+							"id":"c2",
+							"title":"ruleS1P1Inicio",
+							"value":"ruleS1P1Inicio",
+							"refToView":""
+						}						
+					]
+				},
+				{
+					"id":"url",
+					"type":"Choice",
+					"title":"Página Web",
+					"value":"0",
+					"gradient":true,
+					"description":"",
+					"readonly":false,
+					"optional":false,
+					"refToView":"fill_el",
+					"fill":true,
+					"stroke":false,
+					"items": [
+						{
+							"id":"c0",
+							"title":"(ninguna)",
+							"value":"0",
+							"refToView":""
+						},
+						{
+							"id":"c1",
+							"title":"/home",
+							"value":"/home",
+							"refToView":""
+						},
+						{
+							"id":"c2",
+							"title":"/agenda",
+							"value":"/agenda",
+							"refToView":""
+						},
+						{
+							"id":"c3",
+							"title":"/guia",
+							"value":"/guia",
+							"refToView":""
+						},
+						{
+							"id":"c4",
+							"title":"/foto",
+							"value":"/foto",
+							"refToView":""
+						},
+						{
+							"id":"c5",
+							"title":"/multimedia",
+							"value":"/multimedia",
+							"refToView":""
+						},
+						{
+							"id":"c6",
+							"title":"/encuesta",
+							"value":"/encuesta",
+							"refToView":""
+						},
+						{
+							"id":"c7",
+							"title":"/visitas",
+							"value":"/visitas",
+							"refToView":""
+						}					
+					]
+				}
+			]
+		}
+	],
+	"stencils" : [
+		{
+			"type":				"node",
+			"id":				"AvatarDiagram",
+			"title":			"AvatarDiagram",						
+			"description":		"",			
+			"view":				"diagram.svg",
+			"icon":				"diagram.png",
+			"mayBeRoot":		true,
+			"hide":				true,
+			"propertyPackages" : ["baseAttributes","diagram"],
+			"roles":			["diagram"]
+		},
+		// COMPONENTES
+		{
+			"type" : 			"node",
+			"id": 				"idScene3DComponent",
+			"title" : 			"Scene3DComponent",
+			"groups": 			["Components"],
+			"description" : 	"",
+			"view" : 			"components/spark1.svg",
+			"icon" : 			"components/spark1.png",
+			"propertyPackages" :[
+				"baseAttributes",
+				"sparks1",
+				"properties"			
+			],
+			"roles" : 			[				
+				"components",
+				"ActivitiesMorph",
+				"IRenderizableP"
+				
+			]
+		},		
+		{
+			"type" : 			"node",
+			"id": 				"idLocalRendererComponent",
+			"title" : 			"LocalRendererComponent",
+			"groups": 			["Components"],
+			"description" : 	"",
+			"view" : 			"components/spark2.svg",
+			"icon" : 			"components/spark2.png",
+			"propertyPackages" :[
+				"baseAttributes",
+				"estado",
+				"properties"				
+			],
+			"roles" : 			[
+				"components",
+				"ActivitiesMorph",
+				"IRenderizableR",
+				"IUpdateableR",
+				"IWindowR",
+				"IAsyncFatalErrorHandlerR",
+				"IThreadProcP"
+			]
+		},
+		{
+			"type" : 			"node",
+			"id": 				"idWindowComponent",
+			"title" : 			"WindowComponent",
+			"groups": 			["Components"],
+			"description" : 	"",
+			"view" : 			"components/spark1.svg",
+			"icon" : 			"components/spark1.png",
+			"propertyPackages" :[
+				"baseAttributes",
+				"sparks1",
+				"properties"			
+			],
+			"roles" : 			[				
+				"components",
+				"ActivitiesMorph",
+				"IAsyncFatalErrorHandlerP",
+				"IApplicationP",
+				"IWindowP"
+			]
+		},
+		{
+			"type" : 			"node",
+			"id": 				"idUpdaterComponent",
+			"title" : 			"UpdaterComponent",
+			"groups": 			["Components"],
+			"description" : 	"",
+			"view" : 			"components/spark1.svg",
+			"icon" : 			"components/spark1.png",
+			"propertyPackages" :[
+				"baseAttributes",
+				"sparks1",
+				"properties"			
+			],
+			"roles" : 			[				
+				"components",
+				"ActivitiesMorph",
+			]
+		},
+		// INTERFACES		
+		{
+			"type": "edge",
+			"id":"idIThreadProcP",
+			"title":"IThreadProc",
+			"groups": ["Interfaces"],
+			"description":"",
+			"view":"interfaces/provided.svg",
+			"icon":"interfaces/provided.png",
+			"propertyPackages":[
+			
+			],
+			"roles":[
+				"interfaces",
+				"provided"
+			]
+		},		
+		{
+			"type": "edge",
+			"id":"idIFaceExpressionP",
+			"title":"IFaceExpression",
+			"description":"",
+			"groups":["Interfaces"],
+			"view":"interfaces/provided.svg",
+			"icon":"interfaces/provided.png",
+			"propertyPackages":[
+				
+			],
+			"roles": [
+				"interfaces",
+				"provided",
+				"Scene3DComponent"
+			]
+		},
+		{
+			"type": "edge",
+			"id":"idIEyesP",
+			"title":"IEyes",
+			"description":"",
+			"groups":["Interfaces"],
+			"view":"interfaces/eyes.svg",
+			"icon":"interfaces/provided.png",
+			"propertyPackages":[
+				
+			],
+			"roles": [
+				"interfaces",
+				"provided",
+				"Scene3DComponent"
+			]
+		},
+		{
+			"type": "edge",
+			"id":"idINeckP",
+			"title":"INeck",
+			"description":"",
+			"groups":["Interfaces"],
+			"view":"interfaces/provided.svg",
+			"icon":"interfaces/provided.png",
+			"propertyPackages":[
+				
+			],
+			"roles": [
+				"interfaces",
+				"provided",
+				"Scene3DComponent"
+			]
+		},
+		{
+			"type": "edge",
+			"id":"idIAsyncFatalErrorHandlerR",
+			"title":"IAsyncFatalErrorHandler",
+			"description":"Interface required by the element",
+			"groups":["Interfaces"],
+			"view":"interfaces/required.svg",
+			"icon":"interfaces/required.png",
+			"propertyPackages":[
+				
+			],
+			"roles": [
+				"interfaces",	
+				"required"
+			]
+		},
+		{
+			"type": "edge",
+			"id":"idIAsyncFatalErrorHandlerP",
+			"title":"IAsyncFatalErrorHandler",
+			"description":"Interface provided by the element",
+			"groups":["Interfaces"],
+			"view":"interfaces/provided.svg",
+			"icon":"interfaces/provided.png",
+			"propertyPackages":[
+				
+			],
+			"roles": [
+				"interfaces",	
+				"provided"	
+			]
+		},
+		{
+			"type": "edge",
+			"id":"idIWindowR",
+			"title":"IWindow",
+			"description":"Interface required by the element",
+			"groups":["Interfaces"],
+			"view":"interfaces/required.svg",
+			"icon":"interfaces/required.png",
+			"propertyPackages":[
+				
+			],
+			"roles": [
+				"interfaces",				
+				"required"
+			]
+		},
+		{
+			"type": "edge",
+			"id":"idIWindowP",
+			"title":"IWindow",
+			"description":"Interface provided by the element",
+			"groups":["Interfaces"],
+			"view":"interfaces/provided.svg",
+			"icon":"interfaces/provided.png",
+			"propertyPackages":[
+				
+			],
+			"roles": [
+				"interfaces",				
+				"provided"
+			]
+		},
+		{
+			"type": "edge",
+			"id":"idIRenderizableR",
+			"title":"IRenderizable",
+			"description":"Interface required by the element",
+			"groups":["Interfaces"],
+			"view":"interfaces/required.svg",
+			"icon":"interfaces/required.png",
+			"propertyPackages":[
+				
+			],
+			"roles": [
+				"interfaces",	
+				"required"
+			]
+		},
+		{
+			"type": "edge",
+			"id":"idIRenderizableP",
+			"title":"IRenderizable",
+			"description":"Interface provided by the element",
+			"groups":["Interfaces"],
+			"view":"interfaces/provided.svg",
+			"icon":"interfaces/provided.png",
+			"propertyPackages":[
+				
+			],
+			"roles": [
+				"interfaces",	
+				"provided",
+				"Scene3DComponent"
+			]
+		},
+		{
+			"type": "edge",
+			"id":"idIUpdateableR",
+			"title":"IUpdateable",
+			"description":"Interface required by the element",
+			"groups":["Interfaces"],
+			"view":"interfaces/required.svg",
+			"icon":"interfaces/required.png",
+			"propertyPackages":[
+				
+			],
+			"roles": [
+				"interfaces",	
+				"required"
+			]
+		},
+		{
+			"type": "edge",
+			"id":"idIUpdateableP",
+			"title":"IUpdateable",
+			"description":"Interface provided by the element",
+			"groups":["Interfaces"],
+			"view":"interfaces/provided.svg",
+			"icon":"interfaces/provided.png",
+			"propertyPackages":[
+				
+			],
+			"roles": [
+				"interfaces",	
+				"provided"
+			]
+		},
+		{
+			"type": "edge",
+			"id":"idIUpdateable1R",
+			"title":"IUpdateable1",
+			"description":"Interface required by the element",
+			"groups":["Interfaces"],
+			"view":"interfaces/required.svg",
+			"icon":"interfaces/required.png",
+			"propertyPackages":[
+				
+			],
+			"roles": [
+				"interfaces",	
+				"required"
+			]
+		},
+		{
+			"type": "edge",
+			"id":"idIApplicationP",
+			"title":"IApplication",
+			"description":"Interface provided by the element",
+			"groups":["Interfaces"],
+			"view":"interfaces/provided.svg",
+			"icon":"interfaces/provided.png",
+			"propertyPackages":[
+				
+			],
+			"roles": [
+				"interfaces",				
+				"provided"
+			]
+		},
+	],
+	
+	"rules" : {
+		"cardinalityRules": [
+			{
+				"role":"Startevents_all",
+				"incomingEdges": [
+					{
+						"role":"Transicion",
+						"maximum":1
+						
+					}
+				]
+			},
+			{
+				"role":"idScene3DComponent",
+				"outgoingEdges": [
+					{
+						"role":"Scene3DComponent",
+						"maximum":1
+						
+					}
+				]
+			},
+			{
+				"role":"solo_un_evento_web",
+				"outgoingEdges": [
+					{
+						"role":"ComandoWeb",
+						"maximum":1
+						
+					}
+				]
+			},
+			{
+				"role":"solo_un_evento_por_voz",
+				"outgoingEdges": [
+					{
+						"role":"ComandoPorVoz",
+						"maximum":1
+						
+					}
+				]
+			},
+			{
+				"role":"solo_un_evento_de_reloj",
+				"outgoingEdges": [
+					{
+						"role":"Reloj",
+						"maximum":1
+						
+					}
+				]
+			}
+			
+		],
+		"connectionRules": [			
+			
+			{
+				"role":"idIRenderizableP",
+				"connects": [
+					{
+						"from":"IRenderizableP",
+						"to":["IRenderizableR"]
+					}
+				]
+			},
+			{
+				"role":"idIAsyncFatalErrorHandlerP",
+				"connects": [
+					{
+						"from":"IAsyncFatalErrorHandlerP",
+						"to":["IAsyncFatalErrorHandlerR"]
+					}
+				]
+			},	
+			{
+				"role":"idIWindowP",
+				"connects": [
+					{
+						"from":"IWindowP",
+						"to":["IWindowR"]
+					}
+				]
+			},
+			{
+				"role":"idIThreadProcP",
+				"connects": [
+					{
+						"from":"IThreadProcP",
+						"to":["IThreadProcR"]
+					}
+				]
+			},
+			
+			{
+				"role":"MessageFlow",
+				"connects": [
+					{
+						"from":"messageflow_start",
+						"to":["messageflow_end"]
+					}
+				]
+			},
+			{
+				"role":"ChoreographyMessageFlowStart",
+				"connects": [
+					{
+						"from":"messageflow_start",
+						"to":["choreography_messageflow_end"]
+					}
+				]
+			},
+			{
+				"role":"ChoreographyMessageFlowEnd",
+				"connects": [
+					{
+						"from":"choreography_messageflow_start",
+						"to":["messageflow_end"]
+					}
+				]
+			},
+			{
+				"role":"IntermediateEventOnActivityBoundary",
+				"connects": [
+					{
+						"from":"Estado",
+						"to":["IntermediateEventOnActivityBoundary"]
+					},
+					{
+						"from":"EstadoInicial",
+						"to":["IntermediateEventOnActivityBoundary"]
+					}
+				]
+			},
+			{
+				"role":"IntermediateEventOnSubprocessBoundary",
+				"connects": [
+					{
+						"from":"CollapsedSubprocess",
+						"to":["IntermediateEventOnSubprocessBoundary"]
+					},
+					{
+						"from":"Subprocess",
+						"to":["IntermediateEventOnSubprocessBoundary"]
+					}
+				]
+			},
+			{
+				"role":"EventOnChoreographyActivityBoundary",
+				"connects": [
+					{
+						"from":"ChoreographyMorph",
+						"to":["EventOnChoreographyActivityBoundary"]
+					}
+				]
+			},
+			{
+				"role" : "Directed_Association",
+				"connects" : [
+					{
+						"from" : "from_task_event",
+						"to" : ["DataObject"]
+					},
+					{
+						"from" : "from_task_event",
+						"to" : ["DataStore"]
+					},
+					{
+						"from" : "from_task_event",
+						"to" : ["ITSystem"]
+					},
+					{
+						"from" : "DataObject",
+						"to" : ["to_task_event"]
+					},
+					{
+						"from" : "DataStore",
+						"to" : ["to_task_event"]
+					},
+					{
+						"from" : "ITSystem",
+						"to" : ["to_task_event"]
+					},
+					{
+						"from" : "IntermediateCompensationEventCatching",
+						"to" : ["to_task_event"]
+					}
+				]
+			},
+			{
+				"role" : "Association_Undirected",
+				"connects" : [
+					{
+						"from" : "Transicion",
+						"to" : ["DataObject"]
+					},
+					{
+						"from" : "DataObject",
+						"to" : ["Transicion"]
+					},
+					{
+						"from" : "DataObject",
+						"to" : ["MessageFlow"]
+					},
+					{
+						"from" : "MessageFlow",
+						"to" : ["DataObject"]
+					},
+					{
+						"from" : "ITSystem",
+						"to" : ["to_task_event"]
+					},
+					{
+						"from" : "from_task_event",
+						"to" : ["ITSystem"]
+					},
+					{
+						"from" : "DataStore",
+						"to" : ["to_task_event"]
+					},
+					{
+						"from" : "from_task_event",
+						"to" : ["DataStore"]
+					},
+					{
+						"from" : "fromtoall",
+						"to" : ["TextAnnotation"]
+					},
+					{
+						"from" : "TextAnnotation",
+						"to" : "fromtoall"
+					},
+					{
+						"from" : "Message",
+						"to" : ["MessageFlow"]
+					},
+					{
+						"from" : "MessageFlow",
+						"to" : ["Message"]
+					},
+					{
+						"from" : "Message",
+						"to" : ["ChoreographyElement"]
+					},
+					{
+						"from" : "ChoreographyElement",
+						"to" : ["Message"]
+					},
+					{
+						"from" : "ChoreographyElement",
+						"to" : ["TextAnnotation"]
+					},
+					{
+						"from" : "TextAnnotation",
+						"to" : "ChoreographyElement"
+					},
+					{
+					   "from" : "ActivitiesMorph",
+					   "to" : ["to_participant"]
+					},
+					{
+					   "from" : "to_participant",
+					   "to" : ["ActivitiesMorph"]
+					}
+				]
+			}
+		],
+		"containmentRules" : [
+			{
+				"role" : "diagram",
+				"contains" : [
+					"components",
+					"interfaces",
+					"all"
+				]
+			},			
+			{
+				"role" : "EventSubprocess",
+				"contains" : [
+					"eventSubprocessElement",
+					"sequence_start",
+					"sequence_end"
+				]
+			},
+			{
+				"role" : "Pool",
+				"contains" : [
+					"Lane"
+				]
+			},
+			{
+				"role" : "Lane",
+				"contains" : ["all"]
+			},
+			{
+				"role" : "Subprocess",
+				"contains" : [
+					"sequence_start",
+					"sequence_end",
+					"from_task_event",
+					"to_task_event",
+					"EventSubprocess",
+					"CollapsedEventSubprocess",
+					"TextAnnotation",
+					"from_participant"
+				]
+			},
+			{
+				"role" : "AdHocSubprocess",
+				"contains" : [
+					"sequence_start",
+					"sequence_end",
+					"from_task_event",
+					"to_task_event",
+					"EventSubprocess",
+					"CollapsedEventSubprocess",
+					"TextAnnotation",
+					"from_participant"
+				]
+			},
+			{
+				"role" : "MessageContainer",
+				"contains" : ["Message"]
+			},
+			{
+				"role" : "ChoreographyElement",
+				"contains" : ["ChoreographyParticipant"]
+			},
+			{
+				"role" : "ChoreographySubprocessExpanded",
+				"contains":	[
+								"ChoreographyElement",
+								"choreography_sequence_start",
+								"choreography_sequence_end",
+								"Message",
+								"TextAnnotation"
+																
+							]
+			}
+		],
+		"morphingRules": [
+			{
+				"role": "ActivitiesMorph",
+				"baseMorphs": ["components"],
+				
+			},
+			{
+				"role": "EventActivitiesMorph",
+				"baseMorphs": ["CollapsedEventSubprocess"]
+			},
+			{
+				"role": "GatewaysMorph",
+				"baseMorphs": ["Exclusive_Databased_Gateway"]
+			},
+			{
+				"role": "StartEventsMorph",
+				"baseMorphs": ["StartNoneEvent"],
+				"showInShapeMenu":false
+			},
+			{
+				"role": "IntermediateEventsMorph",
+				"baseMorphs": ["IntermediateEvent"]
+			},
+			{
+				"role": "EndEventsMorph",
+				"baseMorphs": ["EndNoneEvent"]
+			},
+			{
+				"role": "TextAnnotationMorph",
+				"baseMorphs": ["TextAnnotation"]
+			},
+			{
+				"role": "DataObjectMorph",
+				"baseMorphs": ["DataObject"]
+			},
+			{
+				"role": "ConnectingObjectsMorph",
+				"baseMorphs": ["Transicion"]
+			},
+			{
+				"role": "ChoreographyMorph",
+				"baseMorphs": ["ChoreographyTask"]
+			},
+			{
+				"role": "AssociationMorph",
+				"baseMorphs": [""]
+			}
+		],
+		"layoutRules" : [
+			{
+				"role": "ActivitiesMorph",
+				"outs":[{"edgeRole":"MessageFlow","t":2, "r":1, "b":2, "l":1},
+						{"t":1,"r":2,"b":1,"l":2}],
+				"ins": [{"edgeRole":"MessageFlow","t":2, "r":1, "b":2, "l":1},
+						{"t":1, "r":2, "b":1, "l":2}]
+			},
+			{
+				"role": "EventActivitiesMorph",
+				"outs":[{"edgeRole":"MessageFlow","t":2, "r":1, "b":2, "l":1},
+						{"t":1,"r":2,"b":1,"l":2}],
+				"ins": [{"edgeRole":"MessageFlow","t":2, "r":1, "b":2, "l":1},
+						{"t":1, "r":2, "b":1, "l":2}]
+			},
+			{
+				"role": "ChoreographyMorph",
+				"outs":[{"edgeRole":"MessageFlow","t":2, "r":1, "b":2, "l":1},
+						{"t":1,"r":2,"b":1,"l":2}],
+				"ins": [{"edgeRole":"MessageFlow","t":2, "r":1, "b":2, "l":1},
+						{"t":1, "r":2, "b":1, "l":2}]
+			},
+			{
+				"role": "GatewaysMorph",
+				"outs": [{"t":2, "r":1, "b":2, "l":1}]
+			},
+			{
+				"role": "StartEventsMorph",
+				"outs":[{"edgeRole":"MessageFlow","t":2, "r":1, "b":2, "l":1},
+						{"t":1,"r":2,"b":1,"l":2}],
+				"ins": [{"edgeRole":"MessageFlow","t":2, "r":1, "b":2, "l":1},
+						{"t":1, "r":2, "b":1, "l":2}]
+			},
+			{
+				"role": "IntermediateEventsMorph",
+				"outs":[{"edgeRole":"MessageFlow","t":2, "r":1, "b":2, "l":1},
+						{"t":1,"r":2,"b":1,"l":2}],
+				"ins": [{"edgeRole":"MessageFlow","t":2, "r":1, "b":2, "l":1},
+						{"t":1, "r":2, "b":1, "l":2}]
+			},
+			{
+				"role": "EndEventsMorph",
+				"outs":[{"edgeRole":"MessageFlow","t":2, "r":1, "b":2, "l":1},
+						{"t":1,"r":2,"b":1,"l":2}],
+				"ins": [{"edgeRole":"MessageFlow","t":2, "r":1, "b":2, "l":1},
+						{"t":1, "r":2, "b":1, "l":2}]
+			}
+		]
+	}
+}
+		

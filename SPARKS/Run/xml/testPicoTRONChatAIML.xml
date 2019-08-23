@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentNetwork xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ComponentNetwork.xsd">
+    <!-- COMPONENT DECLARATION -->
+  <ComponentDeclarations>    
+	<Component  id="idRemoteCharacterEmbodiment3DSpark"  type="RemoteCharacterEmbodiment3DSpark" plugin="libRemoteCharacterEmbodiment3DSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IFaceExpression" />  
+        <Interface name="IEyes" />
+        <Interface name="INeck" />
+        <Interface name="IAnimation" />
+        <Interface name="ICamera" />
+        <Interface name="IConcurrent" />
+        <Interface name="IAsyncFatalErrorHandler" />
+        <Interface name="IApplication" />
+        <Interface name="IEventQueue" />
+        <Interface name="IFrameEventPublisher" />
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="IAudioQueue" />
+        <Interface name="IAsyncFatalErrorHandler" />
+        <Interface name="IControlVoice" />
+      </RequiredInterfaces>
+    </Component>
+
+		<Component id="idPicoTTSThreadSpark"  type="PicoTTSThreadSpark" plugin="libPicoTTSThreadSpark.so">
+    	<ProvidedInterfaces>
+      	<Interface name="IConcurrent" />   
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+      	<Interface name="IAsyncFatalErrorHandler" />      
+      </RequiredInterfaces>
+    </Component> 
+
+
+		<Component id="idVoiceStartSpark"  type="VoiceStartSpark" plugin="libVoiceStartSpark.so">
+      <ProvidedInterfaces>
+				<Interface name="IControlVoice" />	 
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="IFlow&lt;char*>" />
+        <Interface name="IFaceExpression" />
+        <Interface name="IFrameEventPublisher" />
+      </RequiredInterfaces>
+    </Component>	
+
+		<Component  id="idTimerThreadSpark"  type="TimerThreadSpark" plugin="libTimerThreadSpark.so">
+      <ProvidedInterfaces>
+       <Interface name="IConcurrent" />   
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="IAsyncFatalErrorHandler" />      
+      </RequiredInterfaces>
+    </Component>
+
+		<Component  id="idRebeccaLogAIMLSpark"  type="RebeccaLogAIMLSpark" plugin="libRebeccaLogAIMLSpark.so">
+			<ProvidedInterfaces>
+				<Interface name="IFlow&lt;char*&gt;" />
+			</ProvidedInterfaces>
+			<RequiredInterfaces>
+				<Interface name="IFlow&lt;char*&gt;" />
+			</RequiredInterfaces>
+		</Component>
+
+		<Component  id="idProgramQAIMLSpark"  type="ProgramQAIMLSpark" plugin="libProgramQAIMLSpark.so">
+			<ProvidedInterfaces>
+				<Interface name="IFlow&lt;char*&gt;" />
+			</ProvidedInterfaces>			
+		</Component>
+
+		<Component  id="idTRONHandlerThreadSpark"  type="TRONHandlerThreadSpark" plugin="libTRONHandlerThreadSpark.so">
+      <ProvidedInterfaces>
+       <Interface name="IConcurrent" />   
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="IAsyncFatalErrorHandler" />      
+      </RequiredInterfaces>
+    </Component>
+
+		<Component id="idBlankSpark"  type="BlankSpark" plugin="libBlankSpark.so">
+       <ProvidedInterfaces>
+        <Interface name="INeck" />
+      </ProvidedInterfaces>
+    </Component> 
+
+  </ComponentDeclarations>
+  
+  
+  <!-- APPLICATION DESCRIPTION -->
+   <ApplicationDescription applicationComponent="instanceRemoteCharacterEmbodiment3DSpark" applicationConfig="/GeneralEca.ini">
+    <!-- Paso 1/2: Instantiate components -->
+    <ComponentInstances>      
+	  	<Instance instanceName="instanceBlankSpark" componentID ="idBlankSpark"/>
+			<Instance instanceName="instanceRemoteCharacterEmbodiment3DSpark" componentID ="idRemoteCharacterEmbodiment3DSpark" configuration="/ComponentConfigurations/CharacterEmbodiment3DSpark.ini"/>
+<!--			<Instance instanceName="instanceRebeccaLogAIMLSpark" componentID ="idRebeccaLogAIMLSpark" configuration="/ComponentConfigurations/RebeccaLogAIMLSpark.ini" />
+-->
+			<Instance instanceName="instanceTRONHandlerThreadSpark" componentID ="idTRONHandlerThreadSpark"  />
+
+			<Instance instanceName="instanceProgramQAIMLSpark" componentID ="idProgramQAIMLSpark"  />
+			<Instance instanceName="instancePicoTTSThreadSpark" componentID ="idPicoTTSThreadSpark" configuration="/ComponentConfigurations/PicoTTSThreadSpark.ini"/>
+		  <Instance instanceName="instanceVoiceStartSpark" componentID ="idVoiceStartSpark" configuration="/ComponentConfigurations/VoiceStartSpark.ini"/>	
+			<Instance instanceName="instanceTimerThreadSpark" componentID ="idTimerThreadSpark" configuration="/ComponentConfigurations/TimerThreadSpark.ini"></Instance> 
+    </ComponentInstances>
+    
+    <!-- Paso 2/2: Connect interfaces -->
+    <InterfaceConnections>	  	
+	  	<Connect interface="IAudioQueue" providedBy="instancePicoTTSThreadSpark" requiredBy="instanceRemoteCharacterEmbodiment3DSpark" />	  
+
+	  <Connect interface="IFlow&lt;char*>" providedBy="instancePicoTTSThreadSpark" requiredBy="instanceVoiceStartSpark" />
+<!--
+  	<Connect interface="IFlow&lt;char*&gt;" providedBy="instanceRebeccaLogAIMLSpark" requiredBy="instanceTimerThreadSpark" />
+  	<Connect interface="IFlow&lt;char*&gt;" providedBy="instancePicoTTSThreadSpark" requiredBy="instanceRebeccaLogAIMLSpark" />
+-->
+
+		<Connect interface="IFlow&lt;char*&gt;" providedBy="instancePicoTTSThreadSpark" requiredBy="instanceTRONHandlerThreadSpark" />
+
+	  	<Connect interface="IControlVoice" providedBy="instanceVoiceStartSpark" requiredBy="instanceRemoteCharacterEmbodiment3DSpark" />
+	  	<Connect interface="IFaceExpression" providedBy="instanceRemoteCharacterEmbodiment3DSpark" requiredBy="instanceVoiceStartSpark" />
+
+      <ConnectAll interface="IAsyncFatalErrorHandler" providedBy="instanceRemoteCharacterEmbodiment3DSpark"/>
+      <ConnectAll interface="IFrameEventPublisher" providedBy="instanceRemoteCharacterEmbodiment3DSpark"/>  
+    </InterfaceConnections>
+  </ApplicationDescription>
+</ComponentNetwork>

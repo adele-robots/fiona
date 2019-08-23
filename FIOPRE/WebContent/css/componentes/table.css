@@ -1,0 +1,222 @@
+/* TABLAS */
+/*.extdt-subheader {
+	background-color: #6493B5;
+	background-image:url(../../images/table/cabecera.gif) left top repeat-x;
+}
+.extdt-table-layout, .extdt-subheadercell, .extdt-cell, .extdt-empty-cell, 
+.rich-dtascroller-table, .rich-datascr-button {
+	border-color: #053A8A;
+}
+.rich-dtascroller-table {
+	margin-top: 1em;
+}
+.extdt-cell-div {
+	color: #454545;
+}*/
+
+.rich-table {
+	background-color:#FFFFFF;
+	border-collapse:collapse;
+	border-left:none;
+	border-top:none;
+	border-bottom:1px solid #D7D7D7;
+	empty-cells:show;
+	width: 100%;
+	/*margin-top: 1%;*/
+	/*margin-top: 10px;*/
+	margin-top: 4px;
+	/*margin-bottom: 1%;*/
+	/*margin-bottom: 10px;*/
+	margin-bottom: 4px;
+}
+
+.rich-table > tr:last-child {
+	border-bottom:1px #fff solid;
+}
+
+/* Añadido del estilo del HDW */
+.tablaUnaColumna{
+	background-color:#FFFFFF;
+	border-collapse:collapse;
+	border-left:none;
+	border-top:none;
+	empty-cells:show;	
+	margin-top: 1%;
+	margin-bottom: 1%;
+	width: 50%;
+	}
+/* Fin añadido*/	
+
+.narrow-rich-table{
+	background-color:#FFFFFF;
+	border-collapse:collapse;
+	border-left:none;
+	border-top:none;
+	empty-cells:show;
+	width: 50%;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+.rich-table-subheader {
+	text-align: left;
+}
+
+.rich-table-thead {
+	border-bottom: none;
+}
+
+.rich-table-cell {
+	border-bottom:none;
+	border-right:none;
+	color:#000000;
+	font-family:Arial,Verdana,sans-serif;
+	font-size:11px;
+	padding:1px 4px;
+}
+/** estilos Columnas **/
+.columna
+{
+ 	border-right:1px solid #D7D7D7;
+}
+.fila1 .columna {
+	border-right:1px solid #C6CBCF;
+}
+.columnaUltima
+{
+	border-right:none;
+}
+/** estilo titulo de la tabla **/
+
+.table-title
+{
+ padding: 0;
+ background-image: url(../../images/panel/panel_cabecera_central.gif);
+ background-repeat: repeat-x;	
+}
+
+/** estilos cabecera **/
+
+.header-primera
+{
+ 	background: #b4b4b4 url(../../images/table/cabecera/cabecera.gif) no-repeat scroll -3px -2px;
+	height: 35px; height: 30px;
+	padding: 0px;
+	text-align:left;
+	padding-left:13px;
+}
+
+.header
+{
+	background:#b4b4b4  url(../../images/table/cabecera/cabecera.gif) repeat-x scroll -10px -2px;
+	height: 35px; height: 30px;
+	padding: 0px;
+	text-align:left;
+	padding-left:13px;
+
+}
+
+.header-ultima
+{
+	background:#B4B4B4 url(../../images/table/cabecera/cabecera.gif) no-repeat scroll 99.5% -2px;
+	height: 35px; height: 30px;
+	border-right:none;
+	padding: 0px;
+
+	
+}
+
+/*Seleccionable */
+.table-seleccion
+{
+  background-color: #fff0d5;
+  border:1px solid #ed9d19 !important;
+  height: 20px;	
+}
+
+.table-seleccion-pointer
+{
+  cursor: pointer;
+}
+
+
+/* Filtros */
+
+.rowFilterPrimera
+{
+	background: url(../../images/table/filtro/filtro.gif) repeat-x scroll 0 -3px;
+	height: 29px;
+	text-align:left;
+	border-right:1px solid #C4C0C9;	
+	padding: 0 0 0 10px;	
+	
+}
+
+.rowFilter {
+	background: url(../../images/table/filtro/filtro.gif) repeat-x scroll -5px -3px;
+	height: 29px;
+	text-align:left;
+	 border-right:1px solid #C4C0C9;
+	 padding: 0 0 0 10px;
+}
+
+.rowFilter input, 
+.rowFilter select, 
+.rowFilterPrimera input, 
+.rowFilterPrimera select {
+	width:90%;
+}	
+
+.rowFilterUltimo {
+	background: transparent url(../../images/table/filtro/filtro.gif) repeat-x scroll 100% -3px;
+	height: 29px;
+	text-align:left;
+	border-right:none;	
+	padding: 0 0 0 10px;
+}
+
+.tablaSN-filter-button
+{
+	text-align:center;
+}
+
+.icono-filtro
+{
+	border : 0px;
+	text-align:center;
+	width: 20px !important;
+ 	height: 16px !important;
+}
+
+/* colores filas  */
+
+.fila1{
+ background-color: #e6eff4;
+
+}
+
+.fila2{
+ background-color: #ffffff; 
+}
+
+.column-verysmall-width{
+	width: 45px;
+ }
+
+.column-small-width{
+	width: 65px;
+ }
+ 
+.column-middle-width{
+	width: 110px;
+ }
+ 
+ .column-large-width{
+	width: 320px;
+ }
+
+.column-numerica-alignrigth{
+	text-align:right;
+ }
+
+ 

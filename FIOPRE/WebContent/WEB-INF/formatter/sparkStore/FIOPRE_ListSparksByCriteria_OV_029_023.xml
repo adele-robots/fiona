@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<formatter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="../fwnScheme.xsd">  
+
+	<componenteIterativo nombre="sparksTabla"
+		persist="lstInitialSparks">
+
+		<destino nombre="spark_id">
+			<origen nombre="FIONEGN004" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG004010" />
+		</destino>
+
+		<destino nombre="nombre">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004020" />
+		</destino>
+
+		<destino nombre="descripcion">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004040" />
+		</destino>
+		
+		<destino nombre="comprado">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004190" />
+		</destino>
+		
+		<destino nombre="iconPath">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004230" />
+		</destino>
+		
+		<destino nombre="statusDate">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004240" />
+		</destino>
+		
+		<!-- Usado únicamente para identificar el tipo
+		de tarifa elegida por el usuario en presentación  -->
+		<destino nombre="idTarifa">			
+				<origen nombre="FIONEGN004" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG004290" />		
+			
+		</destino>
+	
+
+	</componenteIterativo>
+	
+	
+	
+	<componenteIterativo nombre="listadoBanners"
+		persist="listadoBanners">	
+		
+		<destino nombre="spark_id">
+			<origen nombre="FIONEGN005" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG005010" />
+		</destino>	
+		
+		<destino nombre="bannerPath">
+			<origen nombre="FIONEGN005" tipoDatoValor="String"
+				propiedadValor="FIONEG005170" />
+		</destino>	
+		
+		<destino nombre="usermd5">
+			<origen nombre="FIONEGN005" tipoDatoValor="String"
+				propiedadValor="FIONEG005280" />
+		</destino>		
+		
+	</componenteIterativo>	
+	
+	<destino nombre="sizeLstDevelopedSparks" persist="sizeLstDevelopedSparks">
+		<origen nombre="FIONEGN003" tipoDatoValor="String"
+			propiedadValor="FIONEG003010" />
+	</destino>
+
+	
+</formatter>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<!--
+	Fichero de definicion para los tiles de la aplicación.
+-->
+<tiles-definitions>
+	
+	
+	<!-- [INI] FIOPRE_Signup-flow views -->
+	<definition name="/signup/signupNewFormView" extends="/layoutRegister">
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/signup/signupNewFormView.jsp" type="template" />
+		<put-attribute name="fwn_footer" value="/WEB-INF/pages/layouts/fiona_layout/gascript.jsp" type="template" />
+	</definition>
+	<definition name="/signup/signupNewSuccessView" extends="/layoutRegister">
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/signup/signupNewSuccessView.jsp" type="template" />
+		<put-attribute name="fwn_footer" value="/WEB-INF/pages/layouts/fiona_layout/gascript.jsp" type="template" />
+	</definition>
+	<definition name="/signup/signupNewFailureView" extends="/layoutRegister">
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/signup/signupNewFailureView.jsp" type="template" />
+		<put-attribute name="fwn_footer" value="/WEB-INF/pages/layouts/fiona_layout/gascript.jsp" type="template" />
+	</definition>
+	<!-- [END] FIOPRE_Signup-flow views -->	
+	
+	<!-- [INI] FIOPRE_SignupPaypalAgreement-flow views-->
+	<definition name="/signuppaypalagreement/signupAgreementInitial" extends="/layoutFiona">
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/signuppaypalagreement/signupAgreementInitialView.jsp" type="template" />
+		<put-attribute name="fwn_footer" value="/WEB-INF/pages/layouts/fiona_layout/gascript.jsp" type="template" />
+	</definition>
+	<definition name="/signuppaypalagreement/signupAgreementCancel" extends="/layoutFiona">
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/signuppaypalagreement/signupAgreementCancelView.jsp" type="template" />
+		<put-attribute name="fwn_footer" value="/WEB-INF/pages/layouts/fiona_layout/gascript.jsp" type="template" />
+	</definition>
+	<definition name="/signuppaypalagreement/signupAgreementReturnEC" extends="/layoutFiona">
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/signuppaypalagreement/signupAgreementReturnECView.jsp" type="template" />
+		<put-attribute name="fwn_footer" value="/WEB-INF/pages/layouts/fiona_layout/gascript.jsp" type="template" />
+	</definition>
+	<!-- [END] FIOPRE_SignupPaypalAgreement-flow views-->
+	
+	
+	<!-- [INI] FIOPRE_Signup-confirm-flow views -->
+	<definition name="/signup/signupConfirmSuccessView" extends="/layoutRegister">
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/signup/signupConfirmSuccessView.jsp" type="template" />
+		<put-attribute name="fwn_footer" value="/WEB-INF/pages/layouts/fiona_layout/gascript.jsp" type="template" />
+	</definition>
+	<definition name="/signup/signupConfirmFailureView" extends="/layoutRegister">
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/signup/signupConfirmFailureView.jsp" type="template" />
+		<put-attribute name="fwn_footer" value="/WEB-INF/pages/layouts/fiona_layout/gascript.jsp" type="template" />
+	</definition>
+	<!-- [END] FIOPRE_Signup-confirm-flow views -->
+	
+	
+	<!-- [INI] FIOPRE_passwordrestore-flow views -->
+	<definition name="/passwordrestore/passwordrestoreFormView" extends="/layoutRegister">
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/passwordrestore/passwordrestoreFormView.jsp" type="template" />
+		<put-attribute name="fwn_footer" value="/WEB-INF/pages/layouts/fiona_layout/gascript.jsp" type="template" />
+	</definition>
+	<definition name="/passwordrestore/passwordrestoreSuccessView" extends="/layoutRegister">
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/passwordrestore/passwordrestoreSuccessView.jsp" type="template" />
+		<put-attribute name="fwn_footer" value="/WEB-INF/pages/layouts/fiona_layout/gascript.jsp" type="template" />
+	</definition>
+	<definition name="/passwordrestore/passwordrestoreFailureView" extends="/layoutRegister">
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/passwordrestore/passwordrestoreFailureView.jsp" type="template" />
+		<put-attribute name="fwn_footer" value="/WEB-INF/pages/layouts/fiona_layout/gascript.jsp" type="template" />
+	</definition>
+	<!-- [END] FIOPRE_passwordrestore-flow views -->
+	
+	<!-- [INI] FIOPRE_Usermail-confirm-flow views -->
+	<definition name="/signup/usermailConfirmSuccessView" extends="/layoutRegister">
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/signup/usermailConfirmSuccessView.jsp" type="template" />
+		<put-attribute name="fwn_footer" value="/WEB-INF/pages/layouts/fiona_layout/gascript.jsp" type="template" />
+	</definition>
+	<definition name="/signup/usermailConfirmFailureView" extends="/layoutRegister">
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/signup/usermailConfirmFailureView.jsp" type="template" />
+		<put-attribute name="fwn_footer" value="/WEB-INF/pages/layouts/fiona_layout/gascript.jsp" type="template" />
+	</definition>
+	<!-- [END] FIOPRE_Usermail-confirm-flow views -->
+
+
+
+	<!-- [INI] myprofile-flow views -->
+	<definition name="/myprofile/myProfileEditFormView" extends="/layoutFiona">
+		<display-name>myProfileEditFormView</display-name>
+		<description>Presenta el formulario de edicion del perfil de usuario</description>
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/myprofile/myProfileEditFormView.jsp" type="template" />
+	</definition>
+	<definition name="/myprofile/myProfileEditSuccessView" extends="/layoutFiona">
+		<display-name>myProfileEditSuccessView</display-name>
+		<description>Presenta la pantalla de informacion sobre perfil editado correctamente</description>
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/myprofile/myProfileEditSuccessView.jsp" type="template" />
+	</definition>
+	<definition name="/myprofile/myProfileAccountCreditView" extends="/layoutFiona">
+		<display-name>myProfileAccountCreditView</display-name>
+		<description>Presenta la pantalla de información sobre crédito de cuenta disponible</description>
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/myprofile/myProfileAccountCreditView.jsp" type="template" />
+	</definition>
+	<!-- [END] myprofile-flow views -->
+
+
+
+	<!-- [INICIO] JSP temporal para invitar nuevos usuarios -->
+	<definition name="/modificarUsuarios/sendInvitations" extends="/layoutFiona">
+		<description />
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/modificarUsuario/sendInvitations.jsp" type="template" />
+	</definition>
+	<definition name="/modificarUsuarios/sentConfirm" extends="/layoutFiona">
+		<description />
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/modificarUsuario/sentConfirm.jsp" type="template" />
+	</definition>
+	<!-- [FIN] JSP temporal para invitar nuevos usuarios -->
+	
+	<definition name="/modificarUsuarios/mainPage" extends="/layoutFiona">
+		<description />
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/modificarUsuario/mainPage.jsp" type="template" />
+	</definition>	
+	<definition name="/modificarUsuarios/billingAgreementInitialView" extends="/layoutFiona">
+		<description />
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/modificarUsuario/billingAgreementInitialView.jsp" type="template" />
+	</definition>
+	
+	<definition name="/subirSpark/uploadSpark" extends="/layoutFiona">
+		<description />
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/subirSpark/uploadSpark.jsp" type="template" />
+	</definition>
+	
+	
+	<definition name="/modificarUsuarios/avatarBuilder" extends="/layoutFiona">
+		<description />
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/modificarUsuario/avatarBuilder.jsp" type="template" />
+	</definition>
+	
+	<definition name="/modificarUsuarios/confirmRestore" extends="/layoutFiona">
+		<description />
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/avisos/confirmRestore.jsp" type="template" />
+	</definition>
+
+	<definition name="/avisos/notyet" extends="/layoutFiona">
+		<description />
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/avisos/notyet.jsp" type="template" />
+	</definition>
+	
+	<definition name="/error/defaulterror" extends="/layoutRegister">
+		<description />
+		<put-attribute name="contenido" value="/WEB-INF/pages/error/error.jsp" type="template" />
+	</definition>
+	
+	<!-- *********************************************** -->
+	<!-- ********JSPS STORE-INTEGRATOR_BUYER************ -->
+	<!-- *********************************************** -->
+	
+	<!-- [INICIO] JSP inicial del store -->
+	<definition name="/store/sparkStore" extends="/layoutFiona">
+		<description />
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/store/spark_store.jsp" type="template" />
+	</definition>
+	<!-- [FIN] JSP inicial del store -->
+	<!-- [INICIO] JSP de visualización del spark -->
+	<definition name="/store/sparkInformation" extends="/layoutFiona">
+		<description />
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/store/spark_information.jsp" type="template" />
+	</definition>
+	<definition name="/store/billingAgreementInitialView" extends="/layoutFiona">
+		<description/>
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/store/billingAgreementInitialView.jsp" type="template"/>
+	</definition>
+	<!-- [FIN] JSP de visualización del spark -->
+	<!-- [INICIO] JSP con el listado de sparks gratuitos o de pago -->	
+	<definition name="/store/allSparksByPrize" extends="/layoutFiona">
+		<description />
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/store/all_sparks_by_price.jsp" type="template" />
+	</definition>
+	<!-- [FIN] JSP con el listado de sparks gratuitos o de pago -->	
+	<!-- [INICIO] JSP de confirmación de compra -->	
+	<definition name="/store/buySparkConfirmation" extends="/layoutFiona">
+		<description />
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/store/buy_spark_confirmation.jsp" type="template" />
+	</definition>
+	<!-- [FIN] JSP de confirmación de compra -->
+	<!-- [INICIO] JSP de resumen de resultados de búsqueda -->
+	<definition name="/store/searchResults" extends="/layoutFiona">
+		<description />
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/store/sparks_search_results.jsp" type="template" />
+	</definition>
+	<!-- [FIN] JSP de resumen de resultados de búsqueda -->	
+	<!-- [INICIO] JSP de resumen de resultados de búsqueda -->
+	<definition name="/store/userSparks" extends="/layoutFiona">
+		<description />
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/store/all_user_sparks.jsp" type="template" />
+	</definition>
+	<!-- [FIN] JSP de resumen de resultados de búsqueda -->
+	
+	
+	<!-- *********************************************** -->
+	<!-- *******JSPS STORE-GLOBAL_ADMINISTRATION******** -->
+	<!-- *********************************************** -->	
+			
+	<!-- [INICIO] JSP de resumen de resultados de búsqueda -->
+	<definition name="/store/allSparks" extends="/layoutFiona">
+		<description />
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/store/all_sparks.jsp" type="template" />
+	</definition>
+	<!-- [FIN] JSP de resumen de resultados de búsqueda -->
+	
+	<!-- [INICIO] JSP de confirmación cambio status -->
+	<definition name="/store/changeStatusConfirm" extends="/layoutFiona">
+		<description />
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/store/change_status_confirmation.jsp" type="template" />
+	</definition>
+	<!-- [FIN] JSP de confirmación cambio status -->
+	
+	<!-- *********************************************** -->
+	<!-- *************JSPS STORE-MANAGEMENT************* -->
+	<!-- *********************************************** -->
+		
+	<!-- [INICIO] JSP de listado de sparks del developer -->
+	<definition name="/store/sparksListDeveloper" extends="/layoutFiona">
+		<description />
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/store/list_sparks_developer.jsp" type="template" />
+	</definition>
+	<!-- [FIN] JSP de listado de sparks del developer -->
+	
+	<!-- [INICIO] JSP de confirmación de borrado -->
+	<definition name="/store/deleteConfirm" extends="/layoutFiona">
+		<description />
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/store/delete_confirmation.jsp" type="template" />
+	</definition>
+	<!-- [FIN] JSP de confirmación de borrado -->
+	
+	<!-- [INICIO] JSP de edición de spark -->
+	<definition name="/store/sparkInformationForEdition" extends="/layoutFiona">
+		<description />
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/store/spark_info_for_edition.jsp" type="template" />
+	</definition>
+	<!-- [FIN] JSP de edición de spark -->
+	
+	<!-- [INICIO] JSP de confirmación de modificación -->
+	<definition name="/store/saveConfirm" extends="/layoutFiona">
+		<description />
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/store/save_confirmation.jsp" type="template" />
+	</definition>
+	<!-- [FIN] JSP de confirmación de modificación -->
+	
+	<!-- [INICIO] JSP de error de borrado -->
+	<definition name="/store/deleteFailed" extends="/layoutFiona">
+		<description />
+		<put-attribute name="contenido" value="/WEB-INF/pages/view/store/delete_failure.jsp" type="template" />
+	</definition>
+	<!-- [FIN] JSP de error de borrado -->
+	
+	
+</tiles-definitions>

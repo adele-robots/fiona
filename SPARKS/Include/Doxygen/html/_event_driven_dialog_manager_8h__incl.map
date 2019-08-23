@@ -1,0 +1,17 @@
+<map id="G" name="G">
+<area shape="rect" id="node4" href="$_lip_synch_8h.html" title="LipSynch class definition." alt="" coords="520,83,605,112"/>
+<area shape="rect" id="node30" href="$_integration_8h.html" title="Integration class declaration." alt="" coords="1280,83,1373,112"/>
+<area shape="rect" id="node46" href="$_interruption_prompts_8h.html" title="InterruptionPrompts class declaration." alt="" coords="132,83,279,112"/>
+<area shape="rect" id="node49" href="$_a_s_r_8h.html" title="ASR class definition for speech recognition." alt="" coords="1497,83,1559,112"/>
+<area shape="rect" id="node56" href="$_events_8h.html" title="Events.h" alt="" coords="1583,83,1657,112"/>
+<area shape="rect" id="node58" href="$_s_c_x_m_l_state_machine_8h.html" title="IStateMachine factory and state machine operation declarations." alt="" coords="1056,83,1213,112"/>
+<area shape="rect" id="node8" href="$_i_scene_8h.html" title="IScene.h" alt="" coords="88,160,163,190"/>
+<area shape="rect" id="node14" href="$_i_morph_target_blender_8h.html" title="IMorphTargetBlender.h" alt="" coords="187,160,341,190"/>
+<area shape="rect" id="node16" href="$_stop_watch_8h.html" title="Declaration of the StopWatch class supporting high precision duration measures." alt="" coords="365,160,464,190"/>
+<area shape="rect" id="node10" href="$_configuration_8h.html" title="psisban::Config class and mainConfig global variable declarations." alt="" coords="71,238,180,267"/>
+<area shape="rect" id="node34" href="$_thread_8h.html" title="Base class for several concurrent flow abstractions based on the Pthreads library." alt="" coords="1312,160,1384,190"/>
+<area shape="rect" id="node44" href="$_tcp_connection_8h.html" title="Declaration of the TcpConnection interface." alt="" coords="1408,160,1528,190"/>
+<area shape="rect" id="node38" href="$_i_async_fatal_error_handler_8h.html" title="Threads must have this handler to give up with a gobal fatal error." alt="" coords="1269,238,1445,267"/>
+<area shape="rect" id="node40" href="$_error_handling_8h.html" title="Global exception class definition, and error macro to throw it." alt="" coords="1489,238,1601,267"/>
+<area shape="rect" id="node52" href="$_i_audio_consumer_8h.html" title="IAudioConsumer interface definition." alt="" coords="1603,160,1733,190"/>
+</map>

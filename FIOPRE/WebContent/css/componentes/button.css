@@ -1,0 +1,25 @@
+span.button, span.button-over, span.button-disabled {
+	
+    cursor: pointer;
+    margin-right: 10px;
+    padding: 1em 0 1em 7px;
+}
+
+span.button input, span.button-over input, span.button-disabled input {
+	font-weight:bold; 
+	font-size: 11px; 
+	
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin: 0 -5px 0 0;
+    padding: 1em 10px 1em 5px;
+}
+
+span.button-over, span.button-over input {
+	background-image: url(../../images/buttons/boton_press.gif);
+}
+
+span.button-disabled, span.button-disabled input {
+	background-image: url(../../images/buttons/boton_disabled.gif);
+}

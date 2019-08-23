@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<formatter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="../fwnScheme.xsd">  
+
+		<destino nombre="spark_id">
+			<origen nombre="FIONEGN004" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG004010" />
+		</destino>
+
+		<destino nombre="nombre">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004020" />
+		</destino>
+
+		<destino nombre="descripcion">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004040" />
+		</destino>
+		
+		<destino nombre="version">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004050" />
+		</destino>
+		
+		<destino nombre="descCorta">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004060" />
+		</destino>
+		
+		<destino nombre="novedades">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004070" />
+		</destino>
+		
+		<destino nombre="otrosKeywords">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004080" />
+		</destino>
+		
+		<destino nombre="email">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004090" />
+		</destino>
+		
+		<destino nombre="marketingURL">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004100" />
+		</destino>		
+		
+		<destino nombre="esTrial">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004140" />
+		</destino>
+		
+		<destino nombre="diasTrial">
+			<origen nombre="FIONEGN004" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG004150" />
+		</destino>
+		
+		<destino nombre="icono">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004160" />
+		</destino>
+				
+		<destino nombre="banner">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004170" />
+		</destino>
+		
+		<destino nombre="video">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004180" />
+		</destino>	
+		
+		<destino nombre="comprado">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004190" />
+		</destino>
+		
+		<destino nombre="status_id">
+			<origen nombre="FIONEGN004" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG004200" />
+		</destino>
+		
+		<destino nombre="status">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004210" />
+		</destino>
+		
+		<destino nombre="borrado">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004220" />
+		</destino>
+		
+		<destino nombre="iconPath">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004230" />
+		</destino>	
+		
+		
+		<destino nombre="valoracion">
+			<funcion method="FuncionConstante">
+		    	<origen nombre="0"></origen>
+		    </funcion>
+		</destino>
+		
+		<!-- Usado únicamente para identificar el tipo
+		de tarifa elegida por el usuario en presentación  -->
+		<destino nombre="idTarifa">			
+				<origen nombre="FIONEGN004" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG004290" />		
+			
+		</destino>
+		
+		<destino nombre="idTarifaProd">			
+				<origen nombre="FIONEGN004" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG004300" />		
+			
+		</destino>
+		
+		<!-- Campos pertenecientes al precio de un spark comprado
+		por un usuario -->
+		<destino nombre="precio_usuarios">
+			<origen nombre="FIONEGN004" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG004120"/>
+		</destino>
+		
+		<destino nombre="precio_unidad">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004130"/>
+		</destino> 
+		
+		<destino nombre="precio_cantidad">
+			<origen nombre="FIONEGN004" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG004250"/>
+		</destino>
+		
+		<destino nombre="precio_precio">
+			<origen nombre="FIONEGN004" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG004260"/>
+		</destino>
+		
+		<!-- Valoración media del spark -->
+		<destino nombre="valoracion_media">
+			<origen nombre="FIONEGN004" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG004310"/>
+		</destino>
+		
+		<!-- Número total de opiniones del spark -->
+		<destino nombre="num_opiniones">
+			<origen nombre="FIONEGN004" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG004320"/>
+		</destino>
+		
+		<!-- Nombre del usuario que desarrolló el spark -->
+		<destino nombre="nombre_usuario_desarrollador">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004330"/>
+		</destino>
+		
+		<!-- Email de la cuenta Paypal del usuario -->
+		<destino nombre="emailPaypal">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004340"/>
+		</destino>
+		
+				
+		
+		<componenteIterativo nombre="opinionTabla"
+		persist="lstOpiniones">
+
+			<destino nombre="opinion_id">
+				<origen nombre="FIONEGN006" tipoDatoValor="BigDecimal"
+					propiedadValor="FIONEG006010" />
+			</destino>
+	
+			<destino nombre="opinion_rate">
+				<origen nombre="FIONEGN006" tipoDatoValor="BigDecimal"
+					propiedadValor="FIONEG006020" />
+			</destino>
+	
+			<destino nombre="opinion_descripcion">
+				<origen nombre="FIONEGN006" tipoDatoValor="String"
+					propiedadValor="FIONEG006030" />
+			</destino>
+			
+			<destino nombre="opinion_titulo">
+				<origen nombre="FIONEGN006" tipoDatoValor="String"
+					propiedadValor="FIONEG006040" />
+			</destino>
+			
+			<destino nombre="opinion_fecha">
+				<origen nombre="FIONEGN006" tipoDatoValor="String"
+					propiedadValor="FIONEG006050" />
+			</destino>		 
+			
+
+		</componenteIterativo>
+		
+		<componenteIterativo nombre="keywordTabla"
+		persist="lstSparkKeywords">				 
+			
+			<destino nombre="productonoasignado">
+				<origen nombre="FIONEGN012" tipoDatoValor="BigDecimal"
+					tipoDatoEtiqueta="String" propiedadValor="FIONEG012010"
+					propiedadEtiqueta="FIONEG012020" />
+			</destino>
+			
+
+		</componenteIterativo>
+		
+		
+		<componenteIterativo nombre="precioTabla"
+		persist="preciosList">	
+		
+			<destino nombre="price_id">
+				<origen nombre="FIONEGN019" tipoDatoValor="BigDecimal"
+					propiedadValor="FIONEG019010" />
+			</destino>			 
+			
+			<destino nombre="num_usuarios">
+				<origen nombre="FIONEGN019" tipoDatoValor="BigDecimal"
+					propiedadValor="FIONEG019020" />
+			</destino>		
+			
+			<destino nombre="cantidad">
+				<origen nombre="FIONEGN019" tipoDatoValor="BigDecimal"
+					propiedadValor="FIONEG019050" />
+			</destino>
+			
+			<destino nombre="euros">
+				<origen nombre="FIONEGN019" tipoDatoValor="BigDecimal"
+					propiedadValor="FIONEG019060" />
+			</destino>
+			
+			<destino nombre="unidad_nombre">
+				<origen nombre="FIONEGN019" tipoDatoValor="String"
+					propiedadValor="FIONEG019080" />
+			</destino>
+			
+			<destino nombre="es_activo">
+				<origen nombre="FIONEGN019" tipoDatoValor="String"
+					propiedadValor="FIONEG019090"/>
+			</destino>
+			
+			<destino nombre="es_usado">
+				<origen nombre="FIONEGN019" tipoDatoValor="String"
+					propiedadValor="FIONEG019100"/>
+			</destino>
+			
+
+		</componenteIterativo>
+		
+		<componenteIterativo nombre="precioTabla"
+		persist="preciosProdList">	
+		
+			<destino nombre="price_id">
+				<origen nombre="FIONEGN022" tipoDatoValor="BigDecimal"
+					propiedadValor="FIONEG022010" />
+			</destino>			 
+			
+			<destino nombre="num_usuarios">
+				<origen nombre="FIONEGN022" tipoDatoValor="BigDecimal"
+					propiedadValor="FIONEG022020" />
+			</destino>		
+			
+			<destino nombre="cantidad">
+				<origen nombre="FIONEGN022" tipoDatoValor="BigDecimal"
+					propiedadValor="FIONEG022050" />
+			</destino>
+			
+			<destino nombre="euros">
+				<origen nombre="FIONEGN022" tipoDatoValor="BigDecimal"
+					propiedadValor="FIONEG022060" />
+			</destino>
+			
+			<destino nombre="unidad_nombre">
+				<origen nombre="FIONEGN022" tipoDatoValor="String"
+					propiedadValor="FIONEG022080" />
+			</destino>
+			
+			<destino nombre="es_activo">
+				<origen nombre="FIONEGN022" tipoDatoValor="String"
+					propiedadValor="FIONEG022090"/>
+			</destino>
+			
+			<destino nombre="es_usado">
+				<origen nombre="FIONEGN022" tipoDatoValor="String"
+					propiedadValor="FIONEG022100"/>
+			</destino>
+			
+
+		</componenteIterativo>
+		
+		<componenteIterativo nombre="sparksTabla"
+		persist="lstRelatedSparks">
+
+			<destino nombre="spark_id">
+				<origen nombre="FIONEGN004" tipoDatoValor="BigDecimal"
+					propiedadValor="FIONEG004010" />
+			</destino>
+	
+			<destino nombre="nombre">
+				<origen nombre="FIONEGN004" tipoDatoValor="String"
+					propiedadValor="FIONEG004020" />
+			</destino>
+	
+			<destino nombre="descripcion">
+				<origen nombre="FIONEGN004" tipoDatoValor="String"
+					propiedadValor="FIONEG004040" />
+			</destino>
+			
+			<destino nombre="comprado">
+				<origen nombre="FIONEGN004" tipoDatoValor="String"
+					propiedadValor="FIONEG004190" />
+			</destino>
+			
+			<destino nombre="iconPath">
+				<origen nombre="FIONEGN004" tipoDatoValor="String"
+					propiedadValor="FIONEG004230" />
+			</destino>
+			
+			<destino nombre="statusDate">
+				<origen nombre="FIONEGN004" tipoDatoValor="String"
+					propiedadValor="FIONEG004240" />
+			</destino>
+			
+			<!-- Usado únicamente para identificar el tipo
+			de tarifa elegida por el usuario en presentación  -->
+			<destino nombre="idTarifa">			
+					<origen nombre="FIONEGN004" tipoDatoValor="BigDecimal"
+					propiedadValor="FIONEG004290" />		
+				
+			</destino>
+	
+
+		</componenteIterativo>
+
+			
+</formatter>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/FionaHandler">		
+	
+	<Environment name="url/logFIOHandler" override="true"
+		type="java.lang.String"
+		value="file:///JAVA/configuracion/FionaHandler/log4j.properties" />
+
+
+	<Environment name="conf/FionaHandler" override="true"
+		type="java.lang.String"
+		value="file:///JAVA/configuracion/FionaHandler/FionaHandler.properties" />	
+		
+			
+</Context>

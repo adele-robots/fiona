@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_video_queue_8h.html" title="VideoQueue.h" alt="" coords="5,83,109,112"/>
+<area shape="rect" id="node11" href="$_i_async_fatal_error_handler_8h.html" title="Threads must have this handler to give up with a gobal fatal error." alt="" coords="133,83,309,112"/>
+<area shape="rect" id="node13" href="$_i_video_consumer_8h.html" title="IVideoConsumer interface definition." alt="" coords="333,83,464,112"/>
+<area shape="rect" id="node7" href="$_i_image_8h.html" title="IImage is a common interface for FFMpeg and CVCapture frames consumed by OpenCV." alt="" coords="156,160,228,189"/>
+<area shape="rect" id="node15" href="$_image_8h.html" title="Image.h" alt="" coords="327,160,396,189"/>
+</map>

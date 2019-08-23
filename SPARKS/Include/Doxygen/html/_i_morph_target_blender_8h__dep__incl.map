@@ -1,0 +1,17 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_lip_synch_8h.html" title="LipSynch class definition." alt="" coords="518,83,782,112"/>
+<area shape="rect" id="node5" href="$_motion_controller_8h.html" title="MotionController class definition." alt="" coords="1188,160,1492,189"/>
+<area shape="rect" id="node9" href="$_application_8h.html" title="Application class declaration." alt="" coords="342,315,616,344"/>
+<area shape="rect" id="node41" href="$_morph_target_blender3_d_8h.html" title="/adele/dev/workspace/Include/MorphTargetBlender3D.h" alt="" coords="22,83,366,112"/>
+<area shape="rect" id="node44" href="$_morph_target_blender2_d_8h.html" title="/adele/dev/workspace/Include/MorphTargetBlender2D.h" alt="" coords="47,160,391,189"/>
+<area shape="rect" id="node25" href="$_audio_output_8h.html" title="AudioOutput class declaration." alt="" coords="882,160,1164,189"/>
+<area shape="rect" id="node35" href="$_event_driven_dialog_manager_8h.html" title="EventDrivenDialogManager class definition." alt="" coords="466,160,834,189"/>
+<area shape="rect" id="node7" href="$_face_tracker_8h.html" title="FaceTracker class definition." alt="" coords="903,237,1186,267"/>
+<area shape="rect" id="node15" href="$_video_output_8h.html" title="VideoOutput class declaration." alt="" coords="1612,237,1895,267"/>
+<area shape="rect" id="node18" href="$_local_video_output_8h.html" title="/adele/dev/workspace/Include/LocalVideoOutput.h" alt="" coords="1912,315,2224,344"/>
+<area shape="rect" id="node20" href="$_remote_video_output_8h.html" title="RemoteVideoOutput class declaration." alt="" coords="1560,315,1888,344"/>
+<area shape="rect" id="node11" href="$_app_teleoperacion_8h.html" title="/adele/dev/workspace/Include/AppTeleoperacion.h" alt="" coords="322,392,636,421"/>
+<area shape="rect" id="node28" href="$_local_audio_output_8h.html" title="LocalAudioOutput class declaration." alt="" coords="567,237,879,267"/>
+<area shape="rect" id="node30" href="$_remote_audio_output_8h.html" title="RemoteAudioOutput class declaration." alt="" coords="1260,237,1588,267"/>
+<area shape="rect" id="node32" href="$_loquendo_audio_destination_8h.html" title="LoquendoAudioDestination module implementation." alt="" coords="1171,315,1536,344"/>
+</map>

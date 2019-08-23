@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow abstract="true" xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+
+	<!-- Flujo de arquitectura del que tiene que heredar todo flujo de aplicacion -->
+
+	<view-state id="ev_ARCH_errorIfrt" view="/WEB-INF/pages/error/errorIfrt.jsp"></view-state>
+	<view-state id="ev_ARCH_errorNegocio" view="/WEB-INF/pages/error/errorNegocio.jsp"></view-state>
+	<view-state id="ev_ARCH_Error_External_Redirect"  view="externalRedirect:#{conversationScope.previousViewUrl}"></view-state>
+	
+	<end-state id="flowRedirect" view="flowRedirect:#{conversationScope.ARCH_submittedFlowRedirect}"></end-state>
+	
+	<!-- Views de transicion a partes comunes de todas las paginas -->
+	<end-state id="ev_logout" view="flowRedirect:logout-flow" ></end-state>
+	<end-state id="ev_manageMyProfile" view="flowRedirect:myprofile-flow" ></end-state>
+	<end-state id="ev_manageMyAvatarRunPreview" view="flowRedirect:FIOPRE_flujoInicio-flow" ></end-state>
+	
+	<global-transitions>
+		<transition on="errorAplicacion" to="ev_ARCH_Error_External_Redirect"/>
+		<transition on="avisoAplicacion" to="ev_ARCH_Error_External_Redirect"/>
+		<transition on="errorIfrt" to="ev_ARCH_errorIfrt"/>
+		<transition on="flowRedirect" to="flowRedirect"/>
+		
+		<!-- Transitions a partes comunes de todas las paginas -->
+		<transition on="logout" to="ev_logout"/>
+		<transition on="manageMyProfile" to="ev_manageMyProfile"/>
+		<transition on="manageMyAvatarRunPreview" to="ev_manageMyAvatarRunPreview"/>
+	</global-transitions>
+
+</flow>

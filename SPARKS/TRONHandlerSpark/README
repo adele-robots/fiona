@@ -1,0 +1,8 @@
+This is a README file.
+
+Modos de teleoperacion:
+1: Solo habla con el operador
+2: Habla con Rebecca hasta que se conecta el operador
+3: Habla con Rebecca hasta que no sepa responder. El operador contestará esa pregunta
+4: Habla con Rebecca hasta que no sepa responder. El operador continúa el resto de la conversación
+5: Habla con Rebecca hasta que llegue a un número espacífico de mensajes. El operador continúa el resto de la conversación

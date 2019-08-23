@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentNetwork xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ComponentNetwork.xsd">
+
+<!-- COMPONENT DECLARATION -->
+<ComponentDeclarations>
+<Component  id="idRemoteCharacterEmbodiment3DSpark"  type="RemoteCharacterEmbodiment3DSpark" plugin="libRemoteCharacterEmbodiment3DSpark.so">
+<ProvidedInterfaces>
+<Interface name="ICamera" />
+<Interface name="IAnimation" />
+<Interface name="IEyes" />
+<Interface name="IConcurrent" />
+<Interface name="IFrameEventPublisher" />
+<Interface name="IFaceExpression" />
+<Interface name="IApplication" />
+<Interface name="IEventQueue" />
+<Interface name="INeck" />
+<Interface name="IAsyncFatalErrorHandler" />
+</ProvidedInterfaces>
+<RequiredInterfaces>
+<Interface name="IControlVoice" />
+<Interface name="IAsyncFatalErrorHandler" />
+<Interface name="IAudioQueue" />
+</RequiredInterfaces>
+</Component>
+
+<Component  id="idEyeContactSpark"  type="EyeContactSpark" plugin="libEyeContactSpark.so">
+<ProvidedInterfaces>
+<Interface name="IDetectedFacePositionConsumer" />
+</ProvidedInterfaces>
+<RequiredInterfaces>
+<Interface name="IFrameEventPublisher" />
+<Interface name="INeck" />
+<Interface name="IEyes" />
+</RequiredInterfaces>
+</Component>
+
+<Component  id="idRemoteFliteVoiceSpark"  type="RemoteFliteVoiceSpark" plugin="libRemoteFliteVoiceSpark.so">
+<ProvidedInterfaces>
+<Interface name="IVoice" />
+<Interface name="IAudioQueue" />
+</ProvidedInterfaces>
+<RequiredInterfaces>
+</RequiredInterfaces>
+</Component>
+
+<Component  id="idVoiceStartSpark"  type="VoiceStartSpark" plugin="libVoiceStartSpark.so">
+<ProvidedInterfaces>
+<Interface name="IControlVoice" />
+</ProvidedInterfaces>
+<RequiredInterfaces>
+<Interface name="IVoice" />
+<Interface name="IFaceExpression" />
+<Interface name="IFrameEventPublisher" />
+</RequiredInterfaces>
+</Component>
+
+<Component  id="idCameraControlSpark"  type="CameraControlSpark" plugin="libCameraControlSpark.so">
+<ProvidedInterfaces>
+</ProvidedInterfaces>
+<RequiredInterfaces>
+<Interface name="ICamera" />
+<Interface name="IFrameEventPublisher" />
+</RequiredInterfaces>
+</Component>
+
+
+<Component  id="idChatThreadSpark"  type="ChatThreadSpark" plugin="libChatThreadSpark.so">
+<ProvidedInterfaces>
+<Interface name="IVoice" />
+<Interface name="IConcurrent" />
+</ProvidedInterfaces>
+<RequiredInterfaces>
+<Interface name="IVoice" />  
+<Interface name="IAsyncFatalErrorHandler" />      
+</RequiredInterfaces>
+</Component>
+
+<Component  id="idRebeccaAIMLSpark"  type="RebeccaAIMLSpark" plugin="libRebeccaAIMLSpark.so">
+<ProvidedInterfaces>
+<Interface name="IVoice" />
+</ProvidedInterfaces>
+<RequiredInterfaces>
+<Interface name="IVoice" />
+</RequiredInterfaces>
+</Component>
+
+</ComponentDeclarations>
+
+<!-- APPLICATION DESCRIPTION -->
+<ApplicationDescription applicationComponent="instanceRemoteCharacterEmbodiment3DSpark" applicationConfig="/generalConf.ini">
+<!-- Paso 1/2: Instantiate components -->
+
+<ComponentInstances>
+<Instance instanceName="instanceRemoteCharacterEmbodiment3DSpark" componentID ="idRemoteCharacterEmbodiment3DSpark" configuration="/RemoteCharacterEmbodiment3DSpark.ini"/>
+<Instance instanceName="instanceEyeContactSpark" componentID ="idEyeContactSpark" configuration="/EyeContactSpark.ini"/>
+<Instance instanceName="instanceRemoteFliteVoiceSpark" componentID ="idRemoteFliteVoiceSpark" configuration="/RemoteFliteVoiceSpark.ini"/>
+<Instance instanceName="instanceVoiceStartSpark" componentID ="idVoiceStartSpark" configuration="/VoiceStartSpark.ini"/>
+<Instance instanceName="instanceCameraControlSpark" componentID ="idCameraControlSpark" configuration="/CameraControlSpark.ini"/>
+<Instance instanceName="instanceChatThreadSpark" componentID ="idChatThreadSpark"></Instance>
+<Instance instanceName="instanceRebeccaAIMLSpark" componentID ="idRebeccaAIMLSpark" configuration="/RebeccaAIMLSpark.ini" ></Instance> 
+</ComponentInstances>
+
+<!-- Paso 2/2: Connect interfaces -->
+<InterfaceConnections>
+ <Connect interface="INeck" providedBy="instanceRemoteCharacterEmbodiment3DSpark" requiredBy="instanceEyeContactSpark" />
+ <Connect interface="IEyes" providedBy="instanceRemoteCharacterEmbodiment3DSpark" requiredBy="instanceEyeContactSpark" />
+ <Connect interface="ICamera" providedBy="instanceRemoteCharacterEmbodiment3DSpark" requiredBy="instanceCameraControlSpark" />
+ <Connect interface="IVoice" providedBy="instanceRemoteFliteVoiceSpark" requiredBy="instanceVoiceStartSpark" />
+ <Connect interface="IControlVoice" providedBy="instanceVoiceStartSpark" requiredBy="instanceRemoteCharacterEmbodiment3DSpark" />
+ <Connect interface="IAudioQueue" providedBy="instanceRemoteFliteVoiceSpark" requiredBy="instanceRemoteCharacterEmbodiment3DSpark" />
+ <Connect interface="IFaceExpression" providedBy="instanceRemoteCharacterEmbodiment3DSpark" requiredBy="instanceVoiceStartSpark" />
+<Connect interface="IVoice" providedBy="instanceChatThreadSpark" requiredBy="instanceRebeccaAIMLSpark" />
+<Connect interface="IVoice" providedBy="instanceRebeccaAIMLSpark" requiredBy="instanceChatThreadSpark" />
+<ConnectAll interface="IAsyncFatalErrorHandler" providedBy="instanceRemoteCharacterEmbodiment3DSpark"/>
+<ConnectAll interface="IFrameEventPublisher" providedBy="instanceRemoteCharacterEmbodiment3DSpark"/>
+
+</InterfaceConnections>
+</ApplicationDescription>
+</ComponentNetwork>

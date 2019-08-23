@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/ServiceMngHandler">		
+	
+	<Environment name="url/logServiceMngHandler" override="true"
+		type="java.lang.String"
+		value="file:///JAVA/configuracion/ServiceMngHandler/log4j.properties" />
+
+
+	<Environment name="conf/ServiceMngHandler" override="true"
+		type="java.lang.String"
+		value="file:///JAVA/configuracion/ServiceMngHandler/ServiceMngHandler.properties" />	
+		
+			
+</Context>

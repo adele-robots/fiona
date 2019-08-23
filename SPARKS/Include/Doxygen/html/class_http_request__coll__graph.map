@@ -1,0 +1,9 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$structhttpd.html" title="httpd" alt="" coords="276,203,327,232"/>
+<area shape="rect" id="node4" href="$struct__httpd__dir.html" title="_httpd_dir" alt="" coords="5,104,83,133"/>
+<area shape="rect" id="node7" href="$struct__httpd__content.html" title="_httpd_content" alt="" coords="84,5,191,35"/>
+<area shape="rect" id="node18" href="$structhttp_res.html" title="httpRes" alt="" coords="176,104,243,133"/>
+<area shape="rect" id="node10" href="$structip__acl__s.html" title="ip_acl_s" alt="" coords="267,104,336,133"/>
+<area shape="rect" id="node13" href="$struct__httpd__var.html" title="_httpd_var" alt="" coords="409,104,492,133"/>
+<area shape="rect" id="node16" href="$structhttp_req.html" title="httpReq" alt="" coords="613,104,680,133"/>
+</map>

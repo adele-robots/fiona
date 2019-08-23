@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+	<Environment name="url/logPresentacionFIOPRE" override="true"
+		type="java.lang.String"
+		value="file:///adele/dev/fawna2/configuracion/FIOPRE/log4jPresentacion.properties" />
+		
+	<Environment name="conf/FIOPRE" override="true"
+		type="java.lang.String"
+		value="file:///adele/dev/fawna2/configuracion/FIOPRE/configuracion.properties" />
+		
+</Context>

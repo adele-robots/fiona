@@ -1,0 +1,5 @@
+<map id="G" name="G">
+<area shape="rect" id="node2" href="$class_thread.html" title="Base class for exception&#45;aware iterative stoppable threads." alt="" coords="57,101,119,131"/>
+<area shape="rect" id="node4" href="$class_i_async_fatal_error_handler.html" title="IAsyncFatalErrorHandler" alt="" coords="5,5,171,35"/>
+<area shape="rect" id="node6" href="$class_tcp_connection.html" title="Interface for OS&#45;independent TCP socket functionality." alt="" coords="143,101,252,131"/>
+</map>

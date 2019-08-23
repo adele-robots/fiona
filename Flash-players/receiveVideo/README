@@ -1,0 +1,54 @@
+
+RECEIVEVIDEO 
+
+- 10/06/2013
+
+A la fecha usamos el player customizado -> receivevideo.swf
+
+Los plugins que usamos actualmente son ‘receivevideo.swf’ (para recibir el stream del avatar) y ‘vidpublish.swf’ (para publicar el stream de la webcam del usuario).
+
+Modificaciones del ‘receivevideo.swf’:
+
+receiveVideo.swf acepta los siguientes parámetros
+	* server - URL del media server + aplicación (e.g. rtmp://server/oflaDemo)
+	* defaultport  - Puerto al que va a atacar en el primer intento al media server (default: defaultport=1935). [OPCIONAL]
+	* stream - name of the stream to be viewed
+	* width  - width of the video window to be displayed (default: 160)
+	* height - height of the video window to be displayed (default: 120)
+	* buffertime - audio-video stream buffer length, seconds (default: 1)
+	* username - nombre de usuario para la aplicación FionaRed5 	[OPCIONAL]
+	* password - contraseña para la aplicación FionaRed5 	[OPCIONAL]
+	* debug - flag para que se muestre por consola distintas trazas (default: false) 	[OPCIONAL]. OJO! Para que funcione es necesario que esté definida la 		siguiente función de Javascript:
+
+		function fromFlash(msg){
+        console.log("From receivevideo.swf -> "+msg);
+		}
+		
+	* rtmpticon - flag para que se muestre el icono que indica que se está usando el protocolo RTMPT (default: false) [OPCIONAL]
+Para que cuando se haga click en el icono te salga un aviso, es necesario definir una función:
+
+		function showInfoRTMPT(){
+        	alert("Conectado por RTMPT!");
+		}
+		
+
+
+* Si el parámetro ‘server’ que se le pasa al swf ya indica un puerto en concreto (por ejemplo, rtmp://server:1936/oflaDemo) se intenta conectar en primer término a esa dirección tal cual se pasa. Se hace esto para conservar compatibilidad con incrustaciones anteriores del player en las páginas web. 
+Si falla en esa primera conexión, intentará una nueva por RTMPT (por ejemplo, rtmpt://server/oflaDemo) y se visualizará un distintivo (si se le pasa el parámetro ‘rtmpticon’ a ‘true’) que indique que se está haciendo uno de una conexión más lenta. 
+Haciendo click en él se ejecuta la función ‘showInfoRTMPT()’, donde por ejemplo, se puede insertar un alert, etc.
+La antigua opción donde haciendo click te lleva a la wiki, donde se explica un poco, en la dirección
+http://www.sparkingtogether.com/wiki/index.php/User_Guide#Connection_issues
+se mantiene en el código por si se quiere volver a cambiar en algún momento.
+
+* Si el parámetro ‘server’ que se le pasa al swf no indica un puerto en concreto (por ejemplo, rtmp://server/oflaDemo) se recupera el parámetro ‘defaultport’ y se intenta conectar primero a rtmp://server:defaultport/oflaDemo. Si no se le pasa el parámetro ‘defaultport’ se intenta conectar por defecto a la dirección rtmp://server:1935/oflaDemo
+Si falla en esa primera conexión, intentará una nueva por RTMPT (por ejemplo, rtmpt://server/oflaDemo) y se visualizará un distintivo (si se le pasa el parámetro ‘rtmpticon’ a ‘true’) que indique que se está haciendo uno de una conexión más lenta. 
+Haciendo click en él se ejecuta la función ‘showInfoRTMPT()’, donde por ejemplo, se puede insertar un alert, etc.
+La antigua opción donde haciendo click te lleva a la wiki, donde se explica un poco se mantiene en el código por si se quiere volver a cambiar en algún momento.
+
+La situación idónea es pasar como ‘defaultport’ el 80, para intentar una conexión vía RTMP por este puerto que será satisfactoria en la mayoría de casos. 
+
+
+
+
+
+

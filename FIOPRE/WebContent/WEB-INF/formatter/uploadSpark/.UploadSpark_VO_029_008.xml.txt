@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<mapeos mapeo="vo">
+  <origen>
+    <layout nombre="/subirSpark/uploadSpark" />
+  </origen>
+  <destino>
+    <cc cc="029" />
+    <co co="008" />
+  </destino>
+  <origen_mapeo tipo="contexto" />
+  <origen_mapeo tipo="contexto" />
+  <origen_mapeo tipo="jsp" />
+</mapeos>

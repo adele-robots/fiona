@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<formatter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="../fwnScheme.xsd">  
+	
+	
+	<componenteIterativo nombre="sparksTabla"
+		persist="lstSparks">
+
+		<destino nombre="spark_id">
+			<origen nombre="FIONEGN004" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG004010" />
+		</destino>
+
+		<destino nombre="nombre">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004020" />
+		</destino>
+
+		<destino nombre="descripcion">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004040" />
+		</destino>
+	 
+		<!-- Usado únicamente para identificar el tipo
+		de tarifa elegida por el usuario en presentación  -->
+		<destino nombre="idTarifa">			
+				<origen nombre="FIONEGN004" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG004290" />		
+			
+		</destino>	
+		
+		<destino nombre="comprado">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004190" />
+		</destino> 
+		
+		<destino nombre="iconPath">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004230" />
+		</destino>
+
+	</componenteIterativo>
+
+	
+</formatter>

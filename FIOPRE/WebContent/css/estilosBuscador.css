@@ -1,0 +1,114 @@
+.negrita {
+	font-weight: bold;
+}
+
+.contenido {
+	width: 100%;
+	min-width: 700px;
+	/*margin: 2% auto;*/
+	/* margin: 5% auto 2%; */
+}
+
+
+.contenido.error {
+	background:#fff;
+	margin-top:1.5em;
+	width:80%;
+	padding:1.5em 0 1.5em 5%;
+}
+
+.contenido_list_corredurias {
+	width: 100%;
+	min-width: 700px;
+	margin: 2% auto;
+	margin: 1px auto;
+}
+
+.cabecera {
+	text-align: center;
+	/* margin-bottom:-16px; */
+	margin-left: auto;
+	margin-right: auto;
+}
+.cabecera.error {
+	margin-right:10px;
+	margin-bottom:0px;
+}
+
+.cuerpo {
+	margin-bottom: 3%;
+	margin-bottom: 10px;
+}
+
+.foot {
+	color: #444444;
+	margin-left: 1%;
+	margin-top: 1%;
+}
+.foot.error {
+	width:80%;
+	margin:2em auto auto;
+}
+
+.foot-nocolor-text {
+	font-size:6pt;
+	color: #444444;
+	text-decoration: none;
+}
+
+.foot-color-text {
+	color: #009490;
+	text-decoration: underline;
+	margin-left: 3px;
+	cursor: pointer;
+	border: none;
+	background-color: transparent;
+}
+
+.input,.texto {
+	margin-bottom: 1%;
+	text-align: right;
+	width: 40%;
+}
+
+.texto {
+	text-align: left;
+}
+
+.input input {
+	margin-left: 3%;
+}
+
+.divResultados {
+	margin: 2% 0;
+}
+
+.divResultados table.rich-table {
+	margin: auto;
+	width: 93%;
+}
+
+.divResultados .scrollResultados {
+	margin: 0 auto;
+	width: 93%;
+}
+
+.divResultados .scrollResultados .rich-dtascroller-table {
+	margin: 3% auto 0;
+}
+
+.divMessages {
+	min-height: 30px;
+	max-height: 30px;
+	height: 30px;
+}
+
+.separador {
+	margin-top: 3%;
+	margin-top: 10px;
+}
+
+.header-style {
+	font-weight: bold;
+	font-size: 13px;
+}

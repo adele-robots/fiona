@@ -1,0 +1,225 @@
+/**
+* imgResize // 10/01/2010 // jQuery 1.4.4+
+* http://twelve6.com/rep/jqresize.js
+* Luis Ramirez @ twelve6.com
+* call this plug in Ex:
+*$('img#yourimage').imgResize();
+*options: animate: true or false;
+*speed: 1000 //////1sec for animation
+*/
+
+
+(function($) {
+ $.fn.extend({ 
+ 	imgResize: function(options) {
+ 		var defaults = {
+ 		autoCenter: false, //future
+ 		animate: false,
+ 		speed: 1000,
+ 		maxWidth: 10000, //future
+ 		maxHeight: 10000, //future
+ 		minWidth: 0, //future
+ 		minHeight: 0 //future
+ 		};
+ 		
+ 		var options = $.extend(defaults, options);
+ 		
+		 this.each(function() {
+			var o = options;
+			
+			var obj = $(this);
+			
+			//get all images inside obj
+			var items = $('img', obj);
+
+			
+
+  	//this fixed safari issues with loading js before page load as opposed to just the resize(obj); declaration
+  	$(window).load(function() {
+ 		resize(obj);
+	});
+
+	
+	$(window).bind('resize', function() {
+	    resize(obj);
+	});//end window bind resize
+	
+	//resize the image, based on windows width and height
+    function resize(obj){
+        var windowH      = $(window).height();
+        var windowW      = $(window).width();
+        var theImage     = new Image();
+        theImage.src     = obj.attr("src");
+        var imgwidth     = theImage.width;
+        var imgheight    = theImage.height;
+
+        if((imgwidth > windowW)||(imgheight > windowH)) {
+            if(imgwidth > imgheight){
+                var newwidth = windowW;
+                var ratio = imgwidth / windowW;
+                var newheight = imgheight / ratio;
+                theImage.height = newheight;
+                theImage.width= newwidth;
+                if(newheight > windowH) {
+                    var newnewheight = windowH;
+                    var newratio = newheight/windowH;
+                    var newnewwidth =newwidth/newratio;
+                    theImage.width = newnewwidth;
+                    theImage.height= newnewheight;
+                }
+            }
+            else{
+                var newheight = windowH;
+                var ratio = imgheight / windowH;
+                var newwidth = imgwidth / ratio;
+                theImage.height = newheight;
+                theImage.width= newwidth;
+                if(newwidth > windowW) {
+                    var newnewwidth = windowW;
+                    var newratio = newwidth/windowW;
+                    var newnewheight =newheight/newratio;
+                    theImage.height = newnewheight;
+                    theImage.width= newnewwidth;
+                }
+            }
+        }
+        if((o.animate == true)&&(!$.browser.msie))
+            obj.stop(true).animate({
+                'width':theImage.width+'px',
+                'height':theImage.height+'px'
+            },o.speed);
+        else
+            obj.css({
+                'width':theImage.width+'px',
+                'height':theImage.height+'px'                
+            });
+    }
+	
+	
+});//return this each /main code above this
+}//plug in name end
+}); //fn extend end
+})(jQuery);//end ready
+
+    function resize(obj){
+//    	alert("helo");
+        var windowH      = $(window).height();
+        var windowW      = $(window).width();
+        var theImage     = new Image();
+        theImage.src     = obj.attr("src");
+        var imgwidth     = theImage.width;
+        var imgheight    = theImage.height;
+
+/*        if((imgwidth > windowW)||(imgheight > windowH)) {
+            if(imgwidth > imgheight){
+                var newwidth = windowW;
+                var ratio = imgwidth / windowW;
+                var newheight = imgheight / ratio;
+                theImage.height = newheight;
+                theImage.width= newwidth;
+                if(newheight > windowH) {
+                    var newnewheight = windowH;
+                    var newratio = newheight/windowH;
+                    var newnewwidth =newwidth/newratio;
+                    theImage.width = newnewwidth;
+                    theImage.height= newnewheight;
+                }
+            }
+            else{
+                var newheight = windowH;
+                var ratio = imgheight / windowH;
+                var newwidth = imgwidth / ratio;
+                theImage.height = newheight;
+                theImage.width= newwidth;
+                if(newwidth > windowW) {
+                    var newnewwidth = windowW;
+                    var newratio = newwidth/windowW;
+                    var newnewheight =newheight/newratio;
+                    theImage.height = newnewheight;
+                    theImage.width= newnewwidth;
+                }
+            }
+        }
+        else {
+
+ */       	desingW = 1436; //Design width
+        	var ratio = windowW / desingW;
+alert(theImage.height);
+          var newheight = imgheight * ratio;
+          var newwidth = imgwidth * ratio;
+          theImage.height = newheight;
+          theImage.width= newwidth;
+          if(newheight > windowH) {
+              var newnewheight = windowH;
+              var newratio = newheight/windowH;
+              var newnewwidth =newwidth/newratio;
+              theImage.width = newnewwidth;
+              theImage.height= newnewheight;
+			 	  	}
+/*			 	  var topstr = $('#logopos').css('top');
+			 	  alert(topstr);
+			 	  var top = topstr.substring(0, topstr.indexOf('px'));
+			 	  var left = $('#logopos').css('left');
+			 	  if (!isNaN(top))
+			 	  	top = top * ratio;
+			 	  if (!isNaN(left))
+				 	  left = left * ratio;
+        }
+//        if((o.animate == true)&&(!$.browser.msie))
+//            obj.stop(true).animate({
+//                'width':theImage.width+'px',
+//                'height':theImage.height+'px'
+ //           },o.speed);
+ //       else
+ */           obj.css({
+                'width':theImage.width+'px',
+                'height':theImage.height+'px'                
+//                'top':top+'px',
+//                'left':left+'px'                
+            });	
+    }
+
+
+    function resizebg(obj){
+        var windowH      = $(window).height();
+        var windowW      = $(window).width();
+        var theImage     = new Image();
+//        alert($.Edge.getSymbol($("#stage")));
+//        alert(obj.css("background-image.url"));
+        var src          = obj.css("background-image");
+        alert(src);
+        if(src != undefined){
+        	theImage.src     = src.substring(4,src.length-1);
+	        alert(theImage.src);
+        	
+        }
+        var imgwidth     = theImage.width;
+        var imgheight    = theImage.height;
+
+       	desingW = 1436; //Design width
+        	var ratio = windowW / desingW;
+          var newheight = imgheight * ratio;
+          var newwidth = imgwidth * ratio;
+          theImage.height = newheight;
+          theImage.width= newwidth;
+          if(newheight > windowH) {
+              var newnewheight = windowH;
+              var newratio = newheight/windowH;
+              var newnewwidth =newwidth/newratio;
+              theImage.width = newnewwidth;
+              theImage.height= newnewheight;
+			 	  	}
+           obj.css({
+                'width':theImage.width+'px',
+                'height':theImage.height+'px'                
+            });
+    }
+
+function resizeAll(){
+//	    resize($('img#header_bg_img'));
+//	    resize($('img#logo_img'));
+//	    alert($('#tage_brainworld'));
+	    resizebg($('#Stage_brainworld'));
+//	    resize($('img#stuff_img'));
+
+}

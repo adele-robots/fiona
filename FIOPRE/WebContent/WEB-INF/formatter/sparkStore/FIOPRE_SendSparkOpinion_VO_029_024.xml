@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<formatter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="../fwnScheme.xsd">  
+
+		  <destino nombre="00" tipoDato="BigDecimal">
+		    <origen nombre="spark_id" />
+		  </destino>
+
+		  <destino nombre="01" tipoDato="BigDecimal">
+		    <origen nombre="SECURE_USERID" />
+		  </destino>
+		  
+		  <destino nombre="02" tipoDato="BigDecimal">
+		    <origen nombre="valoracion" />
+		  </destino>
+		  
+		   <destino nombre="03" tipoDato="String">
+		    <origen nombre="opinion" />
+		  </destino>
+		  
+		  <destino nombre="04" tipoDato="String">
+		    <origen nombre="titulo" />
+		  </destino>
+		  
+		
+</formatter>

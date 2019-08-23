@@ -1,0 +1,33 @@
+<config>
+	<context-values>
+		<resource path="src/main/resources/templates/mail_team_signup-html.ftl">
+			<value key="ConfigUtils" object-class="com.adelerobots.fioneg.util.keys.Constantes"/>
+			<value key="FunctionUtils" object-class="com.adelerobots.fioneg.util.FunctionUtils"/>
+			<value key="user" object-class="com.adelerobots.fioneg.entity.UsuarioC"/>
+			<value key="rawPasswd" object-class="java.lang.String"/>
+			<value key="UserStatusEnum" object-class="com.adelerobots.fioneg.entity.UserStatusEnum"/>
+		</resource>
+		<resource path="src/main/resources/templates/mail_invitation-html.ftl">
+			<value key="invitedName" object-class="java.lang.String"/>
+		</resource>
+		<resource path="src/main/resources/templates/mail_user_signup-html.ftl">
+			<value key="FunctionUtils" object-class="com.adelerobots.fioneg.util.FunctionUtils"/>
+			<value key="ConfigUtils" object-class="com.adelerobots.fioneg.util.keys.Constantes"/>
+			<value key="user" object-class="com.adelerobots.fioneg.entity.UsuarioC"/>
+			<value key="rawPasswd" object-class="java.lang.String"/>
+			<value key="UserStatusEnum" object-class="com.adelerobots.fioneg.entity.UserStatusEnum"/>
+		</resource>
+		<resource path="src/main/resources/templates/mail_invitation-html.ftl">
+			<value key="ConfigUtils" object-class="com.adelerobots.fioneg.util.keys.Constantes"/>
+			<value key="FunctionUtils" object-class="com.adelerobots.fioneg.util.FunctionUtils"/>
+			<value key="user" object-class="com.adelerobots.fioneg.entity.UsuarioC"/>
+			<value key="UserStatusEnum" object-class="com.adelerobots.fioneg.entity.UserStatusEnum"/>
+			<value key="guestName" object-class="java.lang.String"/>
+			<value key="guestSurname" object-class="java.lang.String"/>
+			<value key="guestEmail" object-class="java.lang.String"/>
+			<value key="message" object-class="java.lang.String"/>
+		</resource>
+	</context-values>
+	<macro-library>
+	</macro-library>
+</config>

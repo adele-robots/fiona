@@ -1,0 +1,161 @@
+/********** alert ************/
+
+
+.alertFondo {
+	display: none;
+	position: fixed;
+	z-index:100;
+	top: 0px;
+	left: 0px;
+	height:100%;
+	width:100%;
+	background-color:#404040;
+	filter:alpha(opacity=35);
+	-moz-opacity: 0.35;
+	opacity: 0.35;
+}
+.alertContenedor {
+	position: fixed;
+	background-image: url(../../images/alert/pop_up01.gif);		
+	background-repeat: no-repeat;
+	width: 500px;
+	height: 163px;
+	padding: 3px;
+	z-index: 6000;
+	color:#000000;
+	display:none;
+	text-align:left;
+	top:25%;
+	left:30%;
+}
+
+
+.alertCabecera
+{
+  width: 100%;
+  height: 13%;
+  padding-top: 0.5%;
+}
+.alertTituloCabecera
+{
+  text-align: left;
+  vertical-align : middle;
+  font-size: 10pt;
+  font-family: sans-serif;
+  width: 93%;	
+  height: 100%;
+  color: #4a4a30;
+  font-weight: bold;
+  float: left;
+  padding-left: 1%;
+}
+
+.alertImagenCabecera
+{
+  width: 6%;
+  height:100%;	
+  background-image: url(../../images/alert/cierreModal.gif);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  float: left;
+  cursor: pointer;
+  
+}
+
+.alertImagenInfo
+{
+    background-image: url(../../images/alert/ip001.gif);
+ 	background-repeat: no-repeat;
+ 	width: 100xp;
+	height: 100px;
+	float:left;
+	margin-left: 3%;
+	margin-top: 3%;
+	margin-right:10px;
+	width:100px;
+}
+
+.alertImagenWarning
+{
+    background-image: url(../../images/alert/ip002.gif);
+ 	background-repeat: no-repeat;
+	width: 100px;
+	height: 100px;
+	float:left;
+	margin-left: 3%;
+	margin-top: 3%;
+	margin-right:10px;
+}
+
+.alertImagenError
+{
+    background-image: url(../../images/alert/ip000.gif);
+ 	background-repeat: no-repeat;
+	width: 100px;
+	height: 100px;
+	float:left;
+	margin-left: 3%;
+	margin-top: 3%;
+	margin-right:10px;
+}
+
+.alertImagenCheck
+{
+    background-image: url(../../images/alert/ip004.gif);
+ 	background-repeat: no-repeat;
+	width: 100px;
+	height: 100px;
+	float:left;
+	margin-left: 3%;
+	margin-top: 3%;
+	margin-right:10px;
+}
+
+.alertImagenConfirm
+{
+    background-image: url(../../images/alert/ip003.gif);
+ 	background-repeat: no-repeat;
+	width: 100px;
+	height: 100px;
+	float:left;
+	margin-left: 3%;
+	margin-top: 3%;
+	margin-right:10px;
+}
+
+.alertDerecha
+{
+   width:70%;
+   float:left;
+}
+
+.alertTitulo
+{
+  font-weight: bold;
+  text-align: left;
+  font-size: 14pt;
+  font-family: sans-serif;
+  margin-top: 5%;
+  width: 100%;
+  color: #4a4a30;
+}
+
+.alertTexto
+{
+  text-align: left;
+  font-size: 10pt;
+  font-family: sans-serif;
+  margin-top: 3%;
+  width: 100%;
+  color: #4a4a30;
+}
+
+.alertBotonera
+{
+ width: 60%;
+ text-align: center;
+ margin-top: 1%;
+ float:left;
+}
+
+

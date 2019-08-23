@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentNetwork xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ComponentNetwork.xsd">
+
+    <!-- COMPONENT DECLARATION -->
+  <ComponentDeclarations>
+
+	<Component  id="idChatThreadSpark"  type="ChatThreadSpark" plugin="libChatThreadSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IVoice" />
+        <Interface name="IConcurrent" />
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="IVoice" />  
+        <Interface name="IAsyncFatalErrorHandler" />      
+      </RequiredInterfaces>
+    </Component>
+
+   <Component  id="idRebeccaAIMLSpark"  type="RebeccaAIMLSpark" plugin="libRebeccaAIMLSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IVoice" />
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="IVoice" />
+      </RequiredInterfaces>
+    </Component>
+
+   <Component  id="idTestChatSpark"  type="TestChatSpark" plugin="libTestChatSpark.so">
+     <ProvidedInterfaces>
+        <Interface name="IApplication" />        
+		<Interface name="IAsyncFatalErrorHandler" />
+      </ProvidedInterfaces>
+   </Component>
+  
+  </ComponentDeclarations>
+  
+  
+  <!-- APPLICATION DESCRIPTION -->
+  <ApplicationDescription applicationComponent="instanceTestChatSpark" applicationConfig="/Eca.ini">
+    <!-- Paso 1/2: Instantiate components -->
+    <ComponentInstances>
+	  
+	  <Instance instanceName="instanceChatThreadSpark" componentID ="idChatThreadSpark">
+      </Instance>
+      <Instance instanceName="instanceRebeccaAIMLSpark" componentID ="idRebeccaAIMLSpark" configuration="/ComponentConfigurations/RebeccaAIMLSpark.ini" >
+      </Instance>
+      <Instance instanceName="instanceTestChatSpark" componentID ="idTestChatSpark" >
+      </Instance>      
+       
+    </ComponentInstances>
+    
+    <!-- Paso 2/2: Connect interfaces -->
+    <InterfaceConnections>
+      <Connect interface="IVoice" providedBy="instanceChatThreadSpark" requiredBy="instanceRebeccaAIMLSpark" />
+      <Connect interface="IVoice" providedBy="instanceRebeccaAIMLSpark" requiredBy="instanceChatThreadSpark" />
+      <ConnectAll interface="IAsyncFatalErrorHandler" providedBy="instanceTestChatSpark"/>
+    </InterfaceConnections>
+  </ApplicationDescription>
+</ComponentNetwork>

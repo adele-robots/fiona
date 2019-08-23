@@ -1,0 +1,44 @@
+## NOTAS SOBRE EL SPARK ##
+
+· Este Spark implementa la funcionalidad de proactividad en el avatar. Ha de ir conectado al Spark de AIML, tanto su interfaz IFlow<char*> proveída como requerida.
+
+· Tiene archivo de configuración -> 'ProactiveThreadSpark.ini'
+
+· Dependencias:
+	-StopWatch
+
+· El funcionamiento básico consiste en:
+  	Al pasar 'X' segundos (parámetro de configuración) sin que haya interacción del usuario con el avatar, este Spark le enviará el patrón "REENGANCHE 1" al AIML
+  	para que proactivamente le envie un mensaje al usuario. Si sigue sin haber feedback por parte del usuario le enviará el patrón "REENGANCHE 2".
+  	Por otra parte, actualmente este Spark está pensando para ser también proactivo parar cerrar ventas. Cuando desde el AIML se avisa de que se ha entrado en la
+  	parte de cierre (con un envío de <![CDATA[<cierre>]]> en el template que se decida), el Spark si detecta que no hay interacción por parte del usuario irá 
+  	enviando fórmulas de cierre un número de veces que es parámetro de configuración. Si el usuario reacciona a alguna de esas fórmulas el contador volverá a cero.
+
+· Para que esté Spark funcione es necesario que el intérprete AIML utilizado cargue algún archivo con:
+
+<category><pattern>CIERRE</pattern>
+<template> 
+	<random> 
+	<li></li>   
+    <li></li>
+  </random>
+</template>
+</category>
+
+<category><pattern>REENGANCHE 1</pattern>
+<template> 
+	<random> 
+	  <li></li>
+	  <li></li>
+  </random>
+</template>
+</category>
+
+<category><pattern>REENGANCHE 2</pattern>
+<template> 
+	<random> 
+	  <li></li>	  
+  </random>
+</template>
+</category>
+

@@ -1,0 +1,28 @@
+## NOTAS SOBRE EL SPARK ##
+
+· Este Spark ha de situarse a la escucha del Chat (entrada del usuario) y el AIML, distingue el origen consultando la pila de llamadas 'stacktrace'. Guarda la
+  entrada del usuario y según sea la respuesta que le da el AIML realiza distintas acciones, como guardar parámetros indicados o hacer llamadas HTTP con la 
+  información indicada.
+
+· Tiene archivo de configuración -> 'SpeechFilterSpark.ini'
+
+· Dependencias:
+	- pugixml (XML-DOM parser) Está compilado con el Spark, necesita las cabeceras 'pugiconfig.hpp' y 'pugixml.hpp'que están en la carpeta Include
+	- happyhttp
+	- boost_regex
+
+· Funcionamiento:
+	Para que el Spark funcione desde el AIML han de hacerse ciertas acciones
+	- Para indicar al Spark que la anterior entrada del usuario ha de guardarse en un mapa ('nombre de parámetro','valor') tiene que incluirse en el template
+	<![CDATA[<xml><param name='nombre_parametro'/></xml>]]> donde nombre_parametro será la key del mapa, el valor será la entrada anterior del usuario que ha
+	generado dicha última <template>
+	- Para indicar al Spark que debe hacerse una llamada HTTP con los los parámetros indicados, tiene que incluirse en el template (por ejemplo)
+	<![CDATA[ <xml><service>
+					 <request host='localhost' url='"/imprimir_server.php"' port='80' method='POST'>
+						<param name='email'/>
+						<param name='name'/>
+						<param name='age'/>
+					 </request>
+				    </service></xml> ]]> 
+
+	pueden indicarse más de una request a efectuar...el atributo "host" y "url" son necesarios.

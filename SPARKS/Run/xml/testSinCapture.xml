@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentNetwork xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ComponentNetwork.xsd">
+
+    <!-- COMPONENT DECLARATION -->
+  <ComponentDeclarations>
+    <Component  id="idRemoteCharacterEmbodiment3DComponent"  type="RemoteCharacterEmbodiment3DComponent" plugin="libRemoteCharacterEmbodiment3DSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IFaceExpression" />
+      </ProvidedInterfaces>
+      <ProvidedInterfaces>
+        <Interface name="IEyes" />
+      </ProvidedInterfaces>
+      <ProvidedInterfaces>
+        <Interface name="INeck" />
+      </ProvidedInterfaces>
+      <ProvidedInterfaces>
+        <Interface name="IAnimation" />
+      </ProvidedInterfaces>
+	  <ProvidedInterfaces>
+        <Interface name="IConcurrent" />
+      </ProvidedInterfaces>
+	  <ProvidedInterfaces>
+        <Interface name="IAsyncFatalErrorHandler" />
+      </ProvidedInterfaces>
+	  <ProvidedInterfaces>
+        <Interface name="IApplication" />
+      </ProvidedInterfaces>
+	  <ProvidedInterfaces>
+        <Interface name="IEventQueue" />
+      </ProvidedInterfaces>
+	  <RequiredInterfaces>
+        <Interface name="IUpdateable" />
+		<Interface name="IAudioQueue" />
+		<Interface name="IAsyncFatalErrorHandler" />
+      </RequiredInterfaces>
+    </Component>
+
+    <Component id="idRemoteLoquendoVoiceComponent"  type="RemoteLoquendoVoiceComponent" plugin="libRemoteLoquendoVoiceSpark.so">
+      <ProvidedInterfaces>
+	<Interface name="IAudioQueue" />
+      </ProvidedInterfaces>
+    </Component>
+
+	
+    <Component id="idEyeContactComponent"  type="EyeContactComponent" plugin="libEyeContactSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IDetectedFacePositionConsumer" />
+      </ProvidedInterfaces>
+	  <ProvidedInterfaces>
+        <Interface name="IUpdateable1" />
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="INeck" />
+        <Interface name="IEyes" />
+      </RequiredInterfaces>
+    </Component>
+	
+     <Component id="idUpdater1"  type="Updater1" plugin="libUpdaterSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IUpdateable" />
+      </ProvidedInterfaces>
+	    <RequiredInterfaces>
+        <Interface name="IUpdateable1" />
+      </RequiredInterfaces>
+    </Component>
+	
+     <Component id="idAVInputComponent"  type="AVInputComponent" plugin="libAVInputSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IConcurrent" />
+      </ProvidedInterfaces>
+	
+      <RequiredInterfaces>
+        <Interface name="IAsyncFatalErrorHandler" />
+	<Interface name="IAudioConsumer" />
+	<Interface name="IVideoConsumer" />
+      </RequiredInterfaces>
+    </Component>
+
+    <Component id="idFaceTrackerThreadComponent"  type="FaceTrackerThreadComponent" plugin="libFaceTrackerThreadComponent.so">
+      <ProvidedInterfaces>
+        <Interface name="IVideoConsumer" />
+	<Interface name="IConcurrent" />
+      </ProvidedInterfaces>
+	
+      <RequiredInterfaces>
+        <Interface name="IDetectedFacePositionConsumer" />
+	<Interface name="IAsyncFatalErrorHandler" />
+      </RequiredInterfaces>
+    </Component>
+
+	 <Component id="idAudioConsumerComponent"  type="AudioConsumerComponent" plugin="libAudioConsumerComponent.so">
+      <ProvidedInterfaces>
+        <Interface name="IAudioConsumer" />
+      </ProvidedInterfaces>
+	
+      <RequiredInterfaces>
+      </RequiredInterfaces>
+    </Component>
+
+	
+  </ComponentDeclarations>
+  
+  
+  <!-- APPLICATION DESCRIPTION -->
+  <ApplicationDescription applicationComponent="instanceRemoteCharacterEmbodiment3DComponent" applicationConfig="/Eca.ini">
+    <!-- Paso 1/2: Instantiate components -->
+    <ComponentInstances>
+      
+	  <Instance instanceName="instanceRemoteCharacterEmbodiment3DComponent" componentID ="idRemoteCharacterEmbodiment3DComponent"/>
+	  
+	  <Instance instanceName="instanceEyeContactComponent" componentID ="idEyeContactComponent"/>
+	  
+	  <Instance instanceName="instanceUpdater1" componentID ="idUpdater1"/>
+	  
+	  <Instance instanceName="instanceRemoteLoquendoVoiceComponent" componentID ="idRemoteLoquendoVoiceComponent"/>
+
+	
+
+	  <Instance instanceName="instanceFaceTrackerThreadComponent" componentID ="idFaceTrackerThreadComponent"/>
+
+	 
+	  	  
+    </ComponentInstances>
+    
+    <!-- Paso 2/2: Connect interfaces -->
+    <InterfaceConnections>
+	  
+	  
+	  <Connect interface="IEyes" providedBy="instanceRemoteCharacterEmbodiment3DComponent" requiredBy="instanceEyeContactComponent" />
+	  <Connect interface="INeck" providedBy="instanceRemoteCharacterEmbodiment3DComponent" requiredBy="instanceEyeContactComponent" />
+	  <Connect interface="IAudioQueue" providedBy="instanceRemoteLoquendoVoiceComponent" requiredBy="instanceRemoteCharacterEmbodiment3DComponent" />
+	  
+
+	  <Connect interface="IVoice" providedBy="instanceRemoteLoquendoVoiceComponent" requiredBy="instanceTestRemoteRendererComponent" />
+	  
+	  <Connect interface="IUpdateable1" providedBy="instanceEyeContactComponent" requiredBy="instanceUpdater1" />
+	  <Connect interface="IUpdateable" providedBy="instanceUpdater1" requiredBy="instanceRemoteCharacterEmbodiment3DComponent" />
+
+
+<Connect interface="IDetectedFacePositionConsumer" providedBy="instanceEyeContactComponent" requiredBy="instanceFaceTrackerThreadComponent" />
+	
+	  
+      <ConnectAll interface="IAsyncFatalErrorHandler" providedBy="instanceRemoteCharacterEmbodiment3DComponent"/>
+    </InterfaceConnections>
+  </ApplicationDescription>
+</ComponentNetwork>

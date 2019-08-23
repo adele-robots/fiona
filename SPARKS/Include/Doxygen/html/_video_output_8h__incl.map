@@ -1,0 +1,17 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_i_scene_8h.html" title="IScene.h" alt="" coords="536,237,611,267"/>
+<area shape="rect" id="node9" href="$_scene3_d_8h.html" title="Scene3D.h" alt="" coords="531,160,616,189"/>
+<area shape="rect" id="node14" href="$_motion_controller_8h.html" title="MotionController class definition." alt="" coords="1104,83,1232,112"/>
+<area shape="rect" id="node44" href="$_thread_8h.html" title="Base class for several concurrent flow abstractions based on the Pthreads library." alt="" coords="1404,160,1476,189"/>
+<area shape="rect" id="node48" href="$_i_async_fatal_error_handler_8h.html" title="Threads must have this handler to give up with a gobal fatal error." alt="" coords="1352,237,1528,267"/>
+<area shape="rect" id="node50" href="$_error_handling_8h.html" title="Global exception class definition, and error macro to throw it." alt="" coords="1651,237,1763,267"/>
+<area shape="rect" id="node56" href="$_on_screen_monitor_8h.html" title="OnScreenMonitor class declaration." alt="" coords="255,160,388,189"/>
+<area shape="rect" id="node68" href="$_window_8h.html" title="Window.h" alt="" coords="1552,83,1632,112"/>
+<area shape="rect" id="node5" href="$_configuration_8h.html" title="psisban::Config class and mainConfig global variable declarations." alt="" coords="519,315,628,344"/>
+<area shape="rect" id="node16" href="$_perlin_8h.html" title="Perlin.h" alt="" coords="1263,160,1329,189"/>
+<area shape="rect" id="node21" href="$_lip_synch_8h.html" title="LipSynch class definition." alt="" coords="777,160,863,189"/>
+<area shape="rect" id="node26" href="$_i_morph_target_blender_8h.html" title="IMorphTargetBlender.h" alt="" coords="1085,237,1240,267"/>
+<area shape="rect" id="node54" href="$_meca_tronica_serial_8h.html" title="MecaTronicaSerial.h" alt="" coords="1097,160,1239,189"/>
+<area shape="rect" id="node28" href="$_stop_watch_8h.html" title="Declaration of the StopWatch class supporting high precision duration measures." alt="" coords="331,237,429,267"/>
+<area shape="rect" id="node72" href="$_events_8h.html" title="Events.h" alt="" coords="1657,160,1732,189"/>
+</map>

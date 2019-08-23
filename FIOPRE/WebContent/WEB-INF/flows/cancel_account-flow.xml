@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow parent="ARQ_Abstract-flow" start-state="ea_logout_init"
+	xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+
+
+	<action-state id="ea_logout_init"><!--NCGDOC-ActionState: Inicializa el flujo para logout-->
+		<evaluate expression="genericCustomAction.ejecutar">
+			<attribute name="clase"
+				value="com.adelerobots.web.fiopre.action.SecurityLogoutInitCustomAction" />
+		</evaluate>		
+		<transition on="success" to="ea_logout_intern" />
+		<transition on="error" to="ea_logout_intern" />
+		<transition on="errorAplicacion" to="ea_logout_intern" /><!--NCGDOC-TransitionState: Redefinir error arquitectura para hacer el siguiente paso, pase lo que pase-->
+		<transition on="avisoAplicacion" to="ea_logout_intern" /><!--NCGDOC-TransitionState: Redefinir error arquitectura para hacer el siguiente paso, pase lo que pase-->
+		<transition on="errorIfrt" to="ea_logout_intern" /><!--NCGDOC-TransitionState: Redefinir error arquitectura para hacer el siguiente paso, pase lo que pase-->
+	</action-state>	
+	<action-state id="ea_logout_intern"><!--NCGDOC-ActionState: Borra de los contextos todas las variables almacenadas-->
+		<evaluate expression="genericCustomAction.ejecutar">
+			<attribute name="clase"
+				value="com.adelerobots.web.fiopre.action.SecurityLogoutCustomAction" />
+		</evaluate>
+		<transition on="success" to="ef_logout_end_view" />
+		<transition on="error" to="ef_logout_end_redirect" />
+		<transition on="errorAplicacion" to="ef_logout_end_redirect" /><!--NCGDOC-TransitionState: Redefinir error arquitectura para hacer el siguiente paso, pase lo que pase-->
+		<transition on="avisoAplicacion" to="ef_logout_end_redirect" /><!--NCGDOC-TransitionState: Redefinir error arquitectura para hacer el siguiente paso, pase lo que pase-->
+		<transition on="errorIfrt" to="ef_logout_end_redirect" /><!--NCGDOC-TransitionState: Redefinir error arquitectura para hacer el siguiente paso, pase lo que pase-->
+	</action-state>
+	<end-state id="ef_logout_end_redirect"
+		view="externalRedirect:contextRelative:/j_security_logout"><!--NCGDOC-EndState: Realiza el logout de Spring Security--></end-state>
+	<end-state id="ef_logout_end_view"
+		view="/WEB-INF/pages/security/cancel_account_logout.jsp"><!--NCGDOC-EndState: Realiza el logout de Spring Security en modo diferido, mostrando un mensaje "Su session de usuario se ha cerrado correctamente, en breves momentos será redirigido a...."--></end-state>
+
+</flow>

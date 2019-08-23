@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$_motion_controller_8h.html" title="MotionController class definition." alt="" coords="401,83,705,112"/>
+<area shape="rect" id="node5" href="$_face_tracker_8h.html" title="FaceTracker class definition." alt="" coords="611,160,893,189"/>
+<area shape="rect" id="node7" href="$_application_8h.html" title="Application class declaration." alt="" coords="1053,237,1328,267"/>
+<area shape="rect" id="node13" href="$_video_output_8h.html" title="VideoOutput class declaration." alt="" coords="203,160,485,189"/>
+<area shape="rect" id="node23" href="$_f_f_mpeg_audio_video_source_8h.html" title="FFMpegAudioVideoSource class declaration." alt="" coords="1356,83,1721,112"/>
+<area shape="rect" id="node31" href="$_integration_8h.html" title="Integration class declaration." alt="" coords="967,83,1236,112"/>
+<area shape="rect" id="node37" href="$_web_server_8h.html" title="/adele/dev/workspace/Include/WebServer.h" alt="" coords="1531,237,1805,267"/>
+<area shape="rect" id="node16" href="$_local_video_output_8h.html" title="/adele/dev/workspace/Include/LocalVideoOutput.h" alt="" coords="360,237,672,267"/>
+<area shape="rect" id="node18" href="$_remote_video_output_8h.html" title="RemoteVideoOutput class declaration." alt="" coords="5,237,333,267"/>
+<area shape="rect" id="node9" href="$_app_teleoperacion_8h.html" title="/adele/dev/workspace/Include/AppTeleoperacion.h" alt="" coords="1272,315,1587,344"/>
+<area shape="rect" id="node26" href="$_a_v_input_8h.html" title="AVInput class declaration." alt="" coords="1384,160,1640,189"/>
+<area shape="rect" id="node33" href="$_event_driven_dialog_manager_8h.html" title="EventDrivenDialogManager class definition." alt="" coords="917,160,1285,189"/>
+</map>

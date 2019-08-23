@@ -1,0 +1,28 @@
+span.captcha-panel-contenedor {
+	display: block;
+	width: 370px;
+}
+span.captcha-panel-contenedor span.captcha-panel-imagen {
+	display:block;
+}
+span.captcha-panel-contenedor span.captcha-panel-imagen img {
+	width: 100%;
+}
+span.captcha-panel-contenedor span.captcha-panel-imagen span.captcha-panel-link {
+	display:block;
+	float:right; text-align: center;
+	padding-top:6px;
+	width: 48%;
+}
+span.captcha-panel-contenedor span.captcha-panel-imagen span.captcha-panel-link a {
+	display:block;
+	font-size: .7em;
+}
+span.captcha-panel-contenedor span.captcha-panel-texto {
+	display:block;
+	float:left;
+	width: 48%;
+}
+span.captcha-panel-contenedor span.captcha-panel-texto input {
+	width:98%;
+}

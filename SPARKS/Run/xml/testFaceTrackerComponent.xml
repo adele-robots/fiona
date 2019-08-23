@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentNetwork xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ComponentNetwork.xsd">
+
+  <!-- COMPONENT DECLARATION -->
+  <ComponentDeclarations>
+
+     <Component id="idAVInputSpark"  type="AVInputSpark" plugin="libAVInputSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IConcurrent" />
+        
+      </ProvidedInterfaces>
+      
+      <RequiredInterfaces>
+        <Interface name="IAsyncFatalErrorHandler" />
+ 	<Interface name="IVideoConsumer" /> 
+	<Interface name="IAudioConsumer" />
+
+      </RequiredInterfaces>
+    </Component>
+
+    
+    <Component id="idFaceTrackerComponent"  type="FaceTrackerSpark" plugin="libFaceTrackerSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IVideoConsumer" />
+        <Interface name="IThreadProc" />
+      </ProvidedInterfaces>
+      
+	    <RequiredInterfaces>
+        <Interface name="IDetectedFacePositionConsumer" />
+      </RequiredInterfaces>
+    </Component>
+	
+	 <Component id="idThreadComponent"  type="ThreadComponent" plugin="libThreadSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IConcurrent" />
+      </ProvidedInterfaces>
+	  
+      <RequiredInterfaces>
+        <Interface name="IThreadProc" />
+		    <Interface name="IAsyncFatalErrorHandler" />
+      </RequiredInterfaces>
+    </Component>
+	
+	  <Component id="idTestFaceTrackerComponent"  type="TestFaceTrackerSpark" plugin="libTestFaceTrackerSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IApplication" />
+        <Interface name="IThreadProc" />
+		    <Interface name="IAsyncFatalErrorHandler" />
+      </ProvidedInterfaces>
+    </Component>
+
+	
+	 <Component id="idAudioConsumerSpark"  type="AudioConsumerSpark" plugin="libAudioConsumerSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IAudioConsumer" />
+      </ProvidedInterfaces>
+	
+      <RequiredInterfaces>
+      </RequiredInterfaces>
+    </Component>
+
+	   <Component id="idFaceTrackerThreadSpark"  type="FaceTrackerThreadSpark" plugin="libFaceTrackerThreadSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IVideoConsumer" />
+	<Interface name="IConcurrent" />
+      </ProvidedInterfaces>
+	
+      <RequiredInterfaces>
+        <Interface name="IDetectedFacePositionConsumer" />
+	<Interface name="IAsyncFatalErrorHandler" />
+      </RequiredInterfaces>
+    </Component>
+
+
+  </ComponentDeclarations>
+  
+  
+  <!-- APPLICATION DESCRIPTION -->
+  <ApplicationDescription applicationComponent="instanceTestFaceTrackerComponent" applicationConfig="/Eca.ini">
+    <!-- Paso 1/2: Instantiate components -->
+    <ComponentInstances>
+     
+	<Instance instanceName="instanceAudioConsumerSpark" componentID ="idAudioConsumerSpark"/>
+      <Instance instanceName="instanceAVInputSpark" componentID ="idAVInputSpark" config="/path/to/specific/file.ini">
+         </Instance>
+      <Instance instanceName="instanceFaceTrackerThreadSpark" componentID ="idFaceTrackerThreadSpark" config="/path/to/specific/file.ini">
+         </Instance>
+      <Instance instanceName="instanceTestFaceTrackerComponent" componentID ="idTestFaceTrackerComponent"/>
+  
+  	
+    </ComponentInstances>
+    <!-- Paso 2/2: Connect interfaces -->
+    <InterfaceConnections>
+       <Connect interface="IDetectedFacePositionConsumer" providedBy="instanceTestFaceTrackerComponent" requiredBy="instanceFaceTrackerThreadSpark" />
+       <Connect interface="IVideoConsumer" providedBy="instanceFaceTrackerThreadSpark" requiredBy="instanceAVInputSpark" />
+	<Connect interface="IAudioConsumer" providedBy="instanceAudioConsumerSpark" requiredBy="instanceAVInputSpark" />
+
+      <ConnectAll interface="IAsyncFatalErrorHandler" providedBy="instanceTestFaceTrackerComponent"/>
+    </InterfaceConnections>
+  </ApplicationDescription>
+</ComponentNetwork>
+

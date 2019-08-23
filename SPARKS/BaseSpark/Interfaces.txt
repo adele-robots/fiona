@@ -1,0 +1,42 @@
+
+Interfaces utilizados por el sistema de componentes:
+====================================================
+
+El sistema de Componentes trata de modo especial dos interfaces:
+
+1-. IApplication: Implementa run(), que se correrá en el hilo principal. El atributo
+	'applicationComponent' del elemento /ComponentNetwork/ApplicationDescription del
+	XML de la red de componentes tendrá por valor el nombre de instancia del 
+	componente que implemente IApplication.
+
+2.- IConcurrent: Componentes que generan hilos que duran toda la aplicación.
+	Implementan start() y stop(). 
+
+
+Flujo:
+======================
+
+El sistema de componentes impone este flujo:
+
+1.- El sistema llama los métodos Componente::init() de todos los componentes por orden de 
+	instanciación.
+
+2.- Despues se llama a los métodos start() de todos los que implementen IConcurrent. 
+
+3.- Se invoca IApplication::run() 
+
+4.- Se llama a los métodos stop() de todos los que implementen IConcurrent. 
+
+5.- El sistema llama los métodos quit() de todos los componentes por orden inverso
+	al de instanciación.
+
+
+Típicamente habrá una cola de eventos, y IApplication::run() procesará los eventos 
+de dicha cola. El componente de la cola implementará un interface IFatalErrorHandler
+que origine el fin del bucle de proceso de eventos de la cola. 
+
+La macro ERR lanza una excepción. IFatalErrorHandler se invocará en el tratamiento de 
+excepciones de los hilos no principales de la app. En el caso de callbacks (siempre
+invocadas por hilos creados en dependencias), habrá que capturar las excepciones. En 
+el caso de hilos creados por componentes tipo Thread, las excepciones son tratadas
+por dicho componente.

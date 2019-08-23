@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		    http://www.springframework.org/schema/webflow 
+		    http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd"
+	parent="ARQ_Abstract-flow" start-state="ea_usermail_confirm_init">
+
+	<action-state id="ea_usermail_confirm_init">
+		<evaluate expression="genericCustomAction.ejecutar">
+			<attribute name="clase"
+				value="com.adelerobots.web.fiopre.action.UsermailConfirmInitSetupCustomAction">
+			</attribute>
+		</evaluate>
+		<transition on="success" to="ea_usermail_confirm_save">
+			<attribute name="fichero"
+				value="signup/UsermailConfirm_Save_OO_029_039.xml">
+			</attribute>
+		</transition>
+		<transition on="error" to="ev_usermail_confirm_save_failure"></transition>
+		<transition on="errorAplicacion" to="ev_usermail_confirm_save_failure" />
+		<transition on="avisoAplicacion" to="ev_usermail_confirm_save_failure" />
+		<transition on="errorIfrt" to="ev_usermail_confirm_save_failure" />
+	</action-state>
+
+	<action-state id="ea_usermail_confirm_save">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="039"></attribute>
+		</evaluate>
+		<transition on="success" to="ev_usermail_confirm_save_success">
+			<attribute name="fichero"
+				value="signup/UsermailConfirm_Save_OV_029_039.xml">
+			</attribute>
+		</transition>
+		<transition on="error" to="ev_usermail_confirm_save_failure"></transition>
+		<transition on="errorAplicacion" to="ev_usermail_confirm_save_failure" /><!--NCGDOC-TransitionState: Redefinir error arquitectura para hacer el siguiente paso, pase lo que pase-->
+		<transition on="avisoAplicacion" to="ev_usermail_confirm_save_failure" /><!--NCGDOC-TransitionState: Redefinir error arquitectura para hacer el siguiente paso, pase lo que pase-->
+		<transition on="errorIfrt" to="ev_usermail_confirm_save_failure" /><!--NCGDOC-TransitionState: Redefinir error arquitectura para hacer el siguiente paso, pase lo que pase-->
+	</action-state>
+
+	<view-state id="ev_usermail_confirm_save_success"
+		view="/signup/usermailConfirmSuccessView">
+		<transition on="back" to="ef_usermail_backToLogin"></transition>
+	</view-state>
+
+	<view-state id="ev_usermail_confirm_save_failure"
+		view="/signup/usermailConfirmFailureView">
+		<transition on="back" to="ef_usermail_backToLogin"></transition>
+	</view-state>
+
+	<end-state id="ef_usermail_backToLogin"
+		view="flowRedirect:login-flow">
+	</end-state>
+
+	<end-state id="ef_usermail_backToWebsite"
+		view="externalRedirect:serverRelative:/">
+	</end-state>
+
+</flow>

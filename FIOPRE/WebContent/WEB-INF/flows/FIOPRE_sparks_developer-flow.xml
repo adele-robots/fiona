@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow
+	http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd"
+	parent="ARQ_Abstract-flow" start-state="ea_SNListSparksDeveloper">
+	
+	
+
+	 <action-state id="ea_SNGetSparkInformationForEdition">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="016"></attribute>
+		</evaluate>
+		<transition to="ev_Get_Spark_Information_Edition" on="success">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkInformation_OV_029_016.xml"/>			
+		</transition>
+	</action-state>
+	 
+
+	<action-state id="ea_SNChangeSparkStatus">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="017"></attribute>
+		</evaluate>
+		<transition to="ev_ChangeStatusConfirmation" on="success">			
+			<attribute name="fichero" value="sparkStore/FIOPRE_ChangeSparkStatus_OV_029_017.xml" />
+		</transition>			
+		
+	</action-state>
+	
+	<action-state id="ea_SNListSparksDeveloper">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="028"></attribute>
+		</evaluate>
+		<transition to="ev_Sparks_List_Developer" on="success">			
+			<attribute name="fichero" value="sparkStore/FIOPRE_ListSparksDeveloper_OV_029_028.xml" />
+		</transition>			
+		
+	</action-state>
+	
+	<action-state id="ea_SNDeleteSpark">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="032"></attribute>
+		</evaluate>
+		<transition to="ed_RespuestaDelete" on="success">
+			<attribute name="fichero" value="sparkStore/FIOPRE_DeleteSpark_OV_029_032.xml"/>
+		</transition>				
+		
+	</action-state>
+	<!-- 
+	<action-state id="ea_SNListRejectionDetails">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="030"></attribute>
+		</evaluate>
+		<transition to="ev_Rejection_Details" on="success">			
+			<attribute name="fichero" value="sparkStore/FIOPRE_ListRejectionDetails_OV_029_030.xml" />
+		</transition>	
+		
+	</action-state>
+	
+	<action-state id="ea_SNListCrashLogs">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="031"></attribute>
+		</evaluate>
+		<transition to="ev_Crash_Logs" on="success">			
+			<attribute name="fichero" value="sparkStore/FIOPRE_ListCrashLogs_OV_029_031.xml" />
+		</transition>	
+		
+	</action-state> -->
+	
+	<action-state id="ea_SNSaveSpark">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="033"></attribute>
+		</evaluate>
+		<!-- <transition to="ev_SaveConfirmation" on="success">			
+			<attribute name="fichero" value="sparkStore/FIOPRE_SaveSpark_OV_029_033.xml" />
+		</transition>-->
+		<transition on="success" to="ea_SNListSparksDeveloper">
+			<attribute name="fichero" value="sparkStore/FIOPRE_ListSparksDeveloper_VO_029_028.xml"/>
+		</transition>	
+		
+	</action-state>
+	
+	<action-state id="ea_SNListStatus">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="029"></attribute>
+		</evaluate>
+		<transition to="ev_Get_Spark_Information_Edition" on="success">			
+			<attribute name="fichero" value="sparkStore/FIOPRE_ListStatus_OV_029_029.xml" />
+		</transition>	
+		
+	</action-state>
+	
+	
+	<!-- Estado decisor que nos permite determinar si la acción "Delete"
+	ha borrado realmente el spark -->
+	<action-state id="ed_RespuestaDelete">
+		<evaluate expression="genericDecisor.ejecutar">
+			<attribute name="clase" value="ComprobarLogicDelete" />			
+		</evaluate>
+
+		<!-- Si las contraseñas coinciden -->
+		<transition to="ev_DeleteConfirmation"
+			on="deleted">		
+			<attribute name="fichero" value="sparkStore/FIOPRE_DeleteSpark_OV_029_032.xml"/>
+		</transition>
+		<!-- En caso de error se redirige al usuario a una página de comunicación de error -->
+		<transition on="notDeleted" to="ev_DeleteFailed">			
+		</transition>
+	</action-state>	
+	
+	<action-state id="ea_validateUpload">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="008"></attribute>
+		</evaluate>
+		<transition on="error" to="ev_uploadSpark"></transition>
+		<transition on="success" to="ev_mainPage"></transition>
+	</action-state>
+	
+		
+	<view-state id="ev_Get_Spark_Information"
+		view="/store/sparkInformation">
+		<!-- 		
+		 <transition on="sendOpinion" to="ea_SNSendSparkOpinion">
+		 	<attribute name="fichero" value="sparkStore/FIOPRE_SendSparkOpinion_VO_029_024.xml"/>
+		 </transition>
+		 <transition on="buyOK" to="ea_SNBuySpark">
+			<attribute name="fichero" value="sparkStore/FIOPRE_BuySpark_VO_029_020.xml"/>
+		 </transition>		
+		 <transition on="trialOK" to="ea_SNTrialSpark">
+		 	<attribute name="fichero" value="sparkStore/FIOPRE_TrialSpark_VO_029_019.xml"/>
+		 </transition> --> 
+		 
+		 <transition on="changeStatus" to="ea_SNChangeSparkStatus">
+		 	<attribute name="fichero" value="sparkStore/FIOPRE_ChangeSparkStatus_VO_029_017.xml"/>
+		 </transition> 
+		 
+		 <transition on="back" to="ev_Spark_Store"></transition>		 
+		 <!-- <transition on="back" to="#{flowScope.previousViewStateId}"></transition> -->
+		 
+	</view-state>
+			
+	<view-state id="ev_ChangeStatusConfirmation"
+		view="/store/changeStatusConfirm">
+		<transition on="ok" to="ea_SNListSparksDeveloper">
+			<attribute name="fichero" value="sparkStore/FIOPRE_ListSparksDeveloper_VO_029_028.xml"/>
+		</transition>
+	</view-state>
+	
+	<view-state id="ev_Sparks_List_Developer"
+		view="/store/sparksListDeveloper">
+				
+		<transition on="deleteOK" to="ea_SNDeleteSpark">
+			<attribute name="fichero" value="sparkStore/FIOPRE_DeleteSpark_VO_029_032.xml"/>
+		</transition>
+		
+		<transition on="changeStatusOK" to="ea_SNChangeSparkStatus">
+		 	<attribute name="fichero" value="sparkStore/FIOPRE_ChangeSparkStatus_VO_029_017.xml"/>
+		</transition>
+		
+		<transition on="edit" to="ea_SNGetSparkInformationForEdition">
+		 	<attribute name="fichero" value="sparkStore/FIOPRE_SparkInformation_VO_029_016.xml"/>
+		</transition> 	
+		
+		<transition on="overwrite" to="ev_uploadSpark" />
+		
+		<transition on="back" to="ef_SparkStoreDeveloper"/>	
+		
+	</view-state>
+	
+	<view-state id="ev_DeleteConfirmation"
+		view="/store/deleteConfirm">
+		<transition on="ok" to="ea_SNListSparksDeveloper">
+			<attribute name="fichero" value="sparkStore/FIOPRE_ListSparksDeveloper_VO_029_028.xml"/>
+		</transition>
+	</view-state>
+	
+	<view-state id="ev_DeleteFailed"
+		view="/store/deleteFailed">
+		<transition on="ok" to="ea_SNListSparksDeveloper">
+			<attribute name="fichero" value="sparkStore/FIOPRE_ListSparksDeveloper_VO_029_028.xml"/>
+		</transition>
+	</view-state>
+	
+	<view-state id="ev_SaveConfirmation"
+		view="/store/saveConfirm">
+		<transition on="ok" to="ea_SNGetSparkInformationForEdition">
+			<attribute name="fichero" value="sparkStore/FIOPRE_SparkInformation_VO_029_016.xml"/>
+		</transition>
+	</view-state>
+		
+	<view-state id="ev_Get_Spark_Information_Edition"
+		view="/store/sparkInformationForEdition">
+		
+		<transition on="deleteOK" to="ea_SNDeleteSpark">
+			<attribute name="fichero" value="sparkStore/FIOPRE_DeleteSpark_VO_029_032.xml"/>
+		</transition>
+		
+		<transition on="changeStatusOK" to="ea_SNChangeSparkStatus">
+		 	<attribute name="fichero" value="sparkStore/FIOPRE_ChangeSparkStatus_VO_029_017.xml"/>
+		</transition>
+		
+		<transition on="save" to="ea_SNSaveSpark">
+		 	<attribute name="fichero" value="sparkStore/FIOPRE_SaveSpark_VO_029_033.xml"/>
+		</transition>
+		
+		<transition on="overwrite" to="ev_uploadSpark" />
+				
+		<transition on="back" to="ev_Sparks_List_Developer"/>	
+		
+	</view-state>
+	
+	<view-state id="ev_uploadSpark" view="/subirSpark/uploadSpark">
+		<transition on="validate_upload" to="ea_validateUpload">
+			<attribute name="fichero"
+				value="uploadSpark/UploadSpark_VO_029_008.xml">
+			</attribute>
+		</transition>
+		<transition on="back" to="ev_Sparks_List_Developer"></transition>		
+	</view-state>
+		
+	
+	
+	<!--  Estado final del flujo -->	
+	<end-state id="ef_SparkStoreDeveloper">
+	</end-state>
+	
+	<end-state id="ef_uploadSpark">
+	</end-state>
+	
+	<end-state id="ef_manageMyProfile"></end-state>	
+	
+	<global-transitions>
+	
+		<transition on="store" to="ef_SparkStoreDeveloper"/>
+			
+		<transition on="manageMyProfile" to="ef_manageMyProfile"/>
+		
+		<transition on="develop" to="ef_uploadSpark"/>
+		
+		
+	</global-transitions>
+
+
+
+</flow>

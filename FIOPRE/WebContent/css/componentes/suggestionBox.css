@@ -1,0 +1,96 @@
+.rich-sb-common-container {
+	position: absolute;
+	text-align: left;
+	background-color: inherit;
+}
+
+.rich-sb-ext-decor-1 {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 2;
+}
+
+.rich-sb-ext-decor-2 {
+	border: 1px solid;
+	height: 100%;
+	width: 100%;
+}
+
+.rich-sb-ext-decor-3 {
+	height: 100%;
+	width: 100%;
+}
+
+.rich-sb-overflow {
+	overflow: auto;
+}
+
+.rich-sb-int-decor-table {
+	width: 100%;
+}
+
+.rich-sb-shadow {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	border: 1px solid;
+	z-index: 1;
+}
+
+.rich-sb-int-sel {
+	cursor: default;
+	background-position: left top;
+	background-repeat: repeat-x;
+}
+
+.rich-sb-cell-padding {
+	padding: 1px 3px 1px 5px;
+}
+
+.rich-sb-int {
+	cursor: pointer;
+}
+
+.rich-sb-ext-decor-2 {
+	border-color: #C4C0B9;
+	background-color: #F1EEE9;
+}
+
+.rich-sb-shadow {
+	background-color: #000;
+	border-color: #000;
+	opacity: 1;
+}
+
+.rich-sb-int {
+	font-size: 11px;
+	font-family: Arial, Verdana, sans-serif;
+	color: #000;
+}
+
+.rich-sb-int-sel {
+	background-color: #D4CFC7;
+	font-size: 11px;
+	font-family: Arial, Verdana, sans-serif;
+	color: #000;
+	background-image:
+		url(/E2000/fawna/a4j/g/3_3_2.SR1org.richfaces.renderkit.html.GradientA/DATB/eAF79urt8fNXmAAXoQUq)
+		;
+}
+
+.image-loader-suggest-visible
+{
+	background-image:url(../../images/suggest/ajax-loader-suggest.gif);
+	background-position:right center;
+	background-repeat:no-repeat;
+	padding-right:20px;
+}
+
+.image-loader-suggest-hide
+{
+	background-position:right center;
+	background-repeat:no-repeat;
+	padding-right:20px;
+}
+

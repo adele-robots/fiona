@@ -1,0 +1,32 @@
+<vars>
+ <set name="aimlpath">/home/guille/Installations/AIML/ProgramQv2.0/prueba/aiml_set/alice</set>
+ <set name="application">internet</set>
+ <set name="badanswer-input"></set>
+ <set name="browser"></set>
+ <set name="failed">passed</set>
+ <set name="father">hammadi</set>
+ <set name="fifth">friend bots</set>
+ <set name="fourth">jose</set>
+ <set name="he">Johnny 5</set>
+ <set name="it">website</set>
+ <set name="last">ou</set>
+ <set name="location"></set>
+ <set name="name">Test passed.</set>
+ <set name="oldtopic">=5+5</set>
+ <set name="passed">failed</set>
+ <set name="personality">polite</set>
+ <set name="predicate">PredicateTestResulte</set>
+ <set name="second">robot</set>
+ <set name="seventh">date</set>
+ <set name="sixth">bots</set>
+ <set name="speak">yes</set>
+ <set name="test">test passed</set>
+ <set name="test1"></set>
+ <set name="testcase">Test passed.</set>
+ <set name="third">you sucks</set>
+ <set name="top">website</set>
+ <set name="topic">website</set>
+ <set name="tospeak">Looking on the internethttp://www.google.com/search?q=+houssem is not installed</set>
+ <set name="url">http://www.google.com/search?q=+houssem</set>
+ <set name="we"></set>
+</vars>

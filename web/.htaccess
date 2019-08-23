@@ -1,0 +1,21 @@
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress
+
+
+AddType text/x-component .htc
+AddType image/svg+xml .svg
+AddType image/vnd.wap.wbmp .wbmp
+AddType application/x-font-woff .woff
+AddType application/x-font-truetype .ttf
+AddType application/x-font-opentype .otf
+AddType application/vnd.ms-fontobject .eot

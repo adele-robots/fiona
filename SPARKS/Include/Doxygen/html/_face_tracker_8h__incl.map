@@ -1,0 +1,17 @@
+<map id="G" name="G">
+<area shape="rect" id="node5" href="$_motion_controller_8h.html" title="MotionController class definition." alt="" coords="517,83,645,112"/>
+<area shape="rect" id="node40" href="$_thread_8h.html" title="Base class for several concurrent flow abstractions based on the Pthreads library." alt="" coords="1247,160,1319,189"/>
+<area shape="rect" id="node52" href="$_video_queue_8h.html" title="VideoQueue.h" alt="" coords="1329,83,1433,112"/>
+<area shape="rect" id="node55" href="$_i_image_8h.html" title="IImage is a common interface for FFMpeg and CVCapture frames consumed by OpenCV." alt="" coords="1419,160,1491,189"/>
+<area shape="rect" id="node58" href="$_i_video_consumer_8h.html" title="IVideoConsumer interface definition." alt="" coords="1565,83,1696,112"/>
+<area shape="rect" id="node7" href="$_perlin_8h.html" title="Perlin.h" alt="" coords="28,160,95,189"/>
+<area shape="rect" id="node11" href="$_i_scene_8h.html" title="IScene.h" alt="" coords="93,237,168,267"/>
+<area shape="rect" id="node17" href="$_lip_synch_8h.html" title="LipSynch class definition." alt="" coords="539,160,624,189"/>
+<area shape="rect" id="node22" href="$_i_morph_target_blender_8h.html" title="IMorphTargetBlender.h" alt="" coords="192,237,347,267"/>
+<area shape="rect" id="node50" href="$_meca_tronica_serial_8h.html" title="MecaTronicaSerial.h" alt="" coords="648,160,789,189"/>
+<area shape="rect" id="node13" href="$_configuration_8h.html" title="psisban::Config class and mainConfig global variable declarations." alt="" coords="76,315,185,344"/>
+<area shape="rect" id="node24" href="$_stop_watch_8h.html" title="Declaration of the StopWatch class supporting high precision duration measures." alt="" coords="453,237,552,267"/>
+<area shape="rect" id="node44" href="$_i_async_fatal_error_handler_8h.html" title="Threads must have this handler to give up with a gobal fatal error." alt="" coords="1027,237,1203,267"/>
+<area shape="rect" id="node46" href="$_error_handling_8h.html" title="Global exception class definition, and error macro to throw it." alt="" coords="1227,237,1339,267"/>
+<area shape="rect" id="node60" href="$_image_8h.html" title="Image.h" alt="" coords="1580,160,1649,189"/>
+</map>

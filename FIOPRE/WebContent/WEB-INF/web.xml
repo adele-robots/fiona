@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4">
+
+	<resource-ref>
+		<description>log4jPresentacion.properties</description>
+		<res-ref-name>url/logPresentacionFIOPRE</res-ref-name>
+		<res-type>java.net.URL</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+
+	<resource-ref>
+		<description>configuracion.properties</description>
+		<res-ref-name>conf/FIOPRE</res-ref-name>
+		<res-type>java.net.URL</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+
+	<context-param>
+		<param-name>Configuracion.properties</param-name>
+		<param-value>conf/FIOPRE</param-value>
+	</context-param>
+	<context-param>
+		<param-name>org.jboss.jbossfaces.WAR_BUNDLES_JSF_IMPL</param-name>
+		<param-value>true</param-value>
+	</context-param>
+
+	<context-param>
+		<description>Listeners de sesion</description>
+		<param-name>com.treelogic.fawna.presentacion.core.servlet.listener.ChainHttpSessionListener.LISTENERS</param-name>
+		<param-value>
+			com.treelogic.fawna.presentacion.core.servlet.listener.PresentacionSessionControler
+		</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>org.apache.tiles.impl.BasicTilesContainer.DEFINITIONS_CONFIG</param-name>
+		<param-value>
+			/WEB-INF/tiles-def/aplicacion-tiles-defs.xml,/WEB-INF/tiles-def/ifrt-tiles-defs.xml
+		</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>org.apache.tiles.factory.AbstractTilesContainerFactory</param-name>
+		<param-value>
+			com.treelogic.fawna.presentacion.core.tiles.PresentacionTilesContainerFactory
+		</param-value>
+	</context-param>
+
+	<context-param>
+		<description>Listeners de contexto</description>
+		<param-name>
+			com.treelogic.fawna.presentacion.core.servlet.listener.ChainServletContextListener.LISTENERS
+		</param-name>
+		<param-value>
+			com.treelogic.fawna.presentacion.core.servlet.listener.ConfiguracionListener,
+			com.treelogic.fawna.presentacion.core.servlet.listener.Log4jConfiguratorListener
+		</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/config/web-application-config.xml</param-value>
+	</context-param>
+
+	<!-- Este filtro está comentado ya que pasaba lo siguiente:
+	Este filtro configura el flujo al que se dirige cuando se expira sesión, típicamente el comportamiento deseado
+	es que el usuario tras un periodo determinado de inactividad en la página, al intentar realizar una acción
+	haga una redirección hacia ese flujo, en este caso lo más lógico es el login.
+	
+	Sin embargo, esta página de login queda sustituida por la barra superior de login del portal en el apache.
+	
+	El problema venía cuando al intentar acceder desde el portal (apache) hacia el registro, al no disponer de 
+	sesión el navegador, se ejecutaba este filtro y se redirigía a este flujo donde el navegador obtenía sesión
+	anónima para poder acceder al resto de la web (no securizada). Si se retornaba hacia el portal y se volvía 
+	a pulsar el botón de registro, ya se podía acceder al tener el navegador una cookie de sesión.
+	
+	Tras eliminar el filtro y todavía no sé muy bien porqué, el comportamiento en session-timeout sigue siendo el mismo
+	y sigue redirigiendo al flujo de login. El comportamiento deseable sería que redireccionase hacia el portal...
+	"Estamos truabajandou en ello"
+	-->
+	<!-- Filtro configuracion sesion caducada
+	<filter>
+		<filter-name>SessionExpiredFilter</filter-name>
+		<filter-class>com.treelogic.fawna.presentacion.core.filters.SessionExpiredFilter</filter-class>
+		<init-param>
+			<param-name>sessionExpiredFlow</param-name>
+			<param-value>adele/login-flow</param-value>
+		</init-param>
+		<init-param>
+			<param-name>sessionExpiredExclusionFlows</param-name>
+			<param-value>adele/login-flow.xml</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>SessionExpiredFilter</filter-name>
+		<url-pattern>/adele/*</url-pattern>
+	</filter-mapping>
+ -->
+
+	<!-- Tiempo de caducidad de la sesion (minutos) -->
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+
+	<!-- Spring Security  -->
+	<filter> 
+		<filter-name>springSecurityFilterChain</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>springSecurityFilterChain</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- Rich Faces Configuration -->
+	<filter>
+		<display-name>RichFaces Filter</display-name>
+		<filter-name>richfaces</filter-name>
+		<filter-class>org.ajax4jsf.Filter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>richfaces</filter-name>
+		<servlet-name>FAWNA MVC Dispatcher Servlet</servlet-name>
+		<dispatcher>REQUEST</dispatcher>
+		<dispatcher>FORWARD</dispatcher>
+		<dispatcher>INCLUDE</dispatcher>
+	</filter-mapping>
+
+	<!-- Tomahawk Filters -->
+	<filter>
+		<filter-name>MyFacesExtensionsFilter</filter-name>
+		<filter-class>org.apache.myfaces.webapp.filter.ExtensionsFilter</filter-class>
+		<init-param>
+			<description>
+				Set the size limit for uploaded files. Format: 10 - 10 bytes 10k - 10 KB 10m - 10 MB
+				1g - 1 GB
+			</description>
+			<param-name>uploadMaxFileSize</param-name>
+			<param-value>20m</param-value>
+		</init-param>
+	</filter>
+
+	<!-- Extension mapping for adding <script/>, <link/>, and other resource tags to JSF-pages  -->
+	<filter-mapping>
+		<filter-name>MyFacesExtensionsFilter</filter-name>
+		<!-- servlet-name must match the name of your javax.faces.webapp.FacesServlet entry -->
+		<servlet-name>FAWNA MVC Dispatcher Servlet</servlet-name>
+	</filter-mapping>
+
+	<!-- Extension mapping for serving page-independent resources (javascript, stylesheets, images, etc.)  -->
+	<filter-mapping>
+		<filter-name>MyFacesExtensionsFilter</filter-name>
+		<url-pattern>/faces/myFacesExtensionResource/*</url-pattern>
+	</filter-mapping>
+
+	<!-- Extension mapping for adding <script/>, <link/>, and other resource tags to JSF-pages  -->
+	<filter-mapping>
+		<filter-name>MyFacesExtensionsFilter</filter-name>
+		<url-pattern>*.jsf</url-pattern>
+	</filter-mapping>
+
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<!-- Listener que informa de los cambios producidos en el contexto de sesion -->
+	<listener>
+		<listener-class>com.treelogic.fawna.presentacion.core.servlet.listener.ChainHttpSessionListener</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>com.treelogic.fawna.presentacion.core.servlet.listener.PresentacionTilesListener</listener-class>
+	</listener>
+
+	<!-- Listener que cierra el proceso del avatar si existe en expiración de sessión
+	-->
+
+	<!-- Listener que informa de los cambios producidos en el contexto de aplicacion -->
+	<listener>
+		<listener-class>
+			com.treelogic.fawna.presentacion.core.servlet.listener.ChainServletContextListener
+		</listener-class>
+	</listener>
+
+
+	<!-- Servlet controlador de la aplicacion, responable de manejar todas las peticiones realizadas -->
+	<servlet>
+		<servlet-name>FAWNA MVC Dispatcher Servlet</servlet-name>
+		<servlet-class>
+			com.treelogic.fawna.presentacion.core.servlet.PresentacionDispatcherServlet
+		</servlet-class>
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<param-value>
+				<!-- /WEB-INF/webflow-config.xml
+					/WEB-INF/applicationContext-security.xml-->
+			</param-value>
+		</init-param>
+		<init-param>
+			<param-name>com.treelogic.fawna.presentacion.core.exception.PresentacionException</param-name>
+			<param-value>/adele/ARQ_Error-flow</param-value>
+		</init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+
+	<!--  Mapea todas las peticiones a FAWNA MVC Dispatcher Servlet-->
+	<servlet-mapping>
+		<servlet-name>FAWNA MVC Dispatcher Servlet</servlet-name>
+		<url-pattern>/adele/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Inicializacion de la aplicacion JSF, no es utilizado en tiempo de ejecucion -->
+	<servlet>
+		<servlet-name>Faces Servlet</servlet-name>
+		<servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Faces Servlet</servlet-name>
+		<url-pattern>*.faces</url-pattern>
+	</servlet-mapping>
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<!-- Seguridad -->
+	<!-- 
+	<security-constraint>
+		<web-resource-collection>
+			<web-resource-name>All resources</web-resource-name>
+			<description>Protects all resources</description>
+			<url-pattern>/*</url-pattern>
+		</web-resource-collection>
+		<auth-constraint>
+			<role-name>WebAppUser</role-name>
+		</auth-constraint>
+	</security-constraint>
+		
+	<security-role>
+		<role-name>WebAppUser</role-name>
+	</security-role>
+		
+	<login-config>
+		<auth-method>BASIC</auth-method>
+		<realm-name>FAWNA Realm</realm-name>
+	</login-config>
+	-->
+
+	<mime-mapping>
+		<extension>htc</extension>
+		<mime-type>text/x-component</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>svg</extension>
+		<mime-type>image/svg+xml</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>wbmp</extension>
+		<mime-type>image/vnd.wap.wbmp</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>woff</extension>
+		<mime-type>application/x-font-woff</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>ttf</extension>
+		<mime-type>application/x-font-truetype</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>otf</extension>
+		<mime-type>application/x-font-opentype</mime-type>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>eot</extension>
+		<mime-type>application/vnd.ms-fontobject</mime-type>
+	</mime-mapping>
+</web-app>

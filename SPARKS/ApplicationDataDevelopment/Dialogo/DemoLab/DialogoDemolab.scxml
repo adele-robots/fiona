@@ -1,0 +1,877 @@
+<?xml version="1.0" encoding="windows-1252"?>
+
+<scxml name="MyMachine" version="1.0" initial="estado-S0P1MenuPrincipal">
+  <datamodel>
+    <data id="prompt"/>
+    <data id="final_state"/>
+    <data id="stateNumber"/>
+    <data id="rule"/>
+  </datamodel>
+  
+  
+  <state id="estado-S0P1MenuPrincipal">
+    <onentry>
+      <execute expr="stateNumber='0'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-S0P1MenuPrincipal.txt'"/>
+      <execute expr="rule='ruleS0P1MenuPrincipal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+    
+ 
+    <transition event="agenda" target="estado-S2P1AgendaEventos"/>
+    <transition event="eventos" target="estado-S2P1AgendaEventos"/>
+    <transition event="4" target="estado-S2P1AgendaEventos"/>
+
+    <transition event="guia" target="estado-S3P1GuiaTuristico"/>
+    <transition event="guia_turistico" target="estado-S3P1GuiaTuristico"/>
+    <transition event="guia_turistica" target="estado-S3P1GuiaTuristico"/>
+    <transition event="turismo" target="estado-S3P1GuiaTuristico"/>
+    <transition event="51" target="estado-S3P1GuiaTuristico"/>
+
+    <transition event="visitas" target="estado-S4P1LibroVisitas"/>
+    <transition event="firmar" target="estado-S4P1LibroVisitas"/>
+    <transition event="libro" target="estado-S4P1LibroVisitas"/>
+    <transition event="libro_visitas" target="estado-S4P1LibroVisitas"/>
+    <transition event="libro_de_visitas" target="estado-S4P1LibroVisitas"/>
+    <transition event="14" target="estado-S4P1LibroVisitas"/>
+
+    <transition event="encuesta" target="estado-S5P1RealizarEncuesta"/>
+    <transition event="opinion" target="estado-S5P1RealizarEncuesta"/>
+    <transition event="realizar_encuesta" target="estado-S5P1RealizarEncuesta"/>
+    <transition event="18" target="estado-S5P1RealizarEncuesta"/>
+
+    <transition event="foto" target="estado-S8P3SacarFoto"/>
+    <transition event="fotógrafo" target="estado-S8P3SacarFoto"/>
+    <transition event="fotomatón" target="estado-S8P3SacarFoto"/>
+    <transition event="31" target="estado-S8P3SacarFoto"/>
+    
+  
+  </state>
+
+
+
+<!-- GUIA TURÍSTICO -->
+  
+
+  <state id="estado-S3P1GuiaTuristico">
+    <onentry>
+      <execute expr="stateNumber='51'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-S3P1GuiaTuristico.txt'"/>
+	  	<execute expr="rule='ruleS3P1GuiaTuristico'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-S0P1MenuPrincipal"/>
+    <transition event="atrás" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+    
+		<transition event="vivienda_tradicional" target="estado-sala-vivienda-tradicional"/>
+		<transition event="sierra" target="estado-sala-sierra"/>
+		<transition event="sala_sierra" target="estado-sala-sierra"/>
+		<transition event="panadería" target="estado-sala-panaderia"/>
+		<transition event="bodega" target="estado-sala-bodega"/>
+		<transition event="sala_Cármen_Escalona" target="estado-sala-Carmen-Escalona"/>
+		<transition event="Cármen_Escalona" target="estado-sala-Carmen-Escalona"/>
+		<transition event="Molinos" target="estado-sala-Molinos-de-aceite"/>
+		<transition event="Molinos_de_aceite" target="estado-sala-Molinos-de-aceite"/>
+		<transition event="casa_del_topo" target="estado-sala-del-topo"/>
+		<transition event="el_campo" target="estado-sala-el-campo"/>
+		<transition event="sala_de_exposiciones" target="estado-sala-exposiciones"/>
+		<transition event="exposiciones" target="estado-sala-exposiciones"/>
+		
+		<transition event="60" target="estado-sala-bodega"/>
+		<transition event="63" target="estado-sala-del-topo"/>
+		<transition event="66" target="estado-sala-Carmen-Escalona"/>
+		<transition event="69" target="estado-sala-el-campo"/>
+		<transition event="72" target="estado-sala-exposiciones"/>
+		<transition event="75" target="estado-sala-Molinos-de-aceite"/>
+		<transition event="78" target="estado-sala-panaderia"/>
+		<transition event="81" target="estado-sala-sierra"/>
+		<transition event="84" target="estado-sala-vivienda-tradicional"/>
+		
+    
+  </state>
+
+
+	<!-- BODEGA -->  
+
+
+  <state id="estado-sala-bodega">
+    <onentry>
+      <execute expr="stateNumber='60'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-sala-bodega.txt'"/>
+	  <execute expr="rule='rule_estado_sala_bodega'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-S0P1MenuPrincipal"/>
+    <transition event="atrás" target="estado-S3P1GuiaTuristico"/>
+		<transition event="51" target="estado-S3P1GuiaTuristico"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="barrica" target="estado-sala-bodega-muestra-barrica"/>
+    <transition event="61" target="estado-sala-bodega-muestra-barrica"/>
+    <transition event="prensa" target="estado-sala-bodega-muestra-prensa"/>
+    <transition event="62" target="estado-sala-bodega-muestra-prensa"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    
+  </state>
+  
+  
+  <state id="estado-sala-bodega-muestra-barrica">
+    <onentry>
+      <execute expr="stateNumber='61'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-sala-bodega-muestra-barrica.txt'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-sala-bodega"/>
+    <transition event="atrás" target="estado-sala-bodega"/>
+    <transition event="60" target="estado-sala-bodega"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+  </state>
+  
+  
+  <state id="estado-sala-bodega-muestra-prensa">
+    <onentry>
+      <execute expr="stateNumber='62'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-sala-bodega-muestra-prensa.txt'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-sala-bodega"/>
+    <transition event="atrás" target="estado-sala-bodega"/>
+    <transition event="60" target="estado-sala-bodega"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+  </state>
+  
+  
+  <!-- SALA DEL TOPO -->
+  
+
+
+  <state id="estado-sala-del-topo">
+    <onentry>
+      <execute expr="stateNumber='63'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-sala-casa-del-topo.txt'"/>
+	  	<execute expr="rule='rule_estado_sala_del_topo'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-S0P1MenuPrincipal"/>
+    <transition event="atrás" target="estado-S3P1GuiaTuristico"/>
+		<transition event="51" target="estado-S3P1GuiaTuristico"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="mesa" target="estado-sala-del-topo-muestra-mesa"/>
+    <transition event="64" target="estado-sala-del-topo-muestra-mesa"/>
+    <transition event="periodicos" target="estado-sala-del-topo-muestra-prensa"/>
+    <transition event="65" target="estado-sala-del-topo-muestra-prensa"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+
+    
+  </state>
+  
+  
+  <state id="estado-sala-del-topo-muestra-mesa">
+    <onentry>
+      <execute expr="stateNumber='64'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-sala-del-topo-muestra-mesa.txt'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-sala-del-topo"/>
+    <transition event="atrás" target="estado-sala-del-topo"/>
+    <transition event="63" target="estado-sala-del-topo"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+  </state>
+  
+  <state id="estado-sala-del-topo-muestra-prensa">
+    <onentry>
+      <execute expr="stateNumber='65'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-sala-del-topo-muestra-prensa.txt'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-sala-del-topo"/>
+    <transition event="atrás" target="estado-sala-del-topo"/>
+    <transition event="63" target="estado-sala-del-topo"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+  </state>
+  
+  
+  <!-- CARMEN ESCALONA -->
+
+
+  <state id="estado-sala-Carmen-Escalona">
+    <onentry>
+      <execute expr="stateNumber='66'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-sala-Carmen-Escalona.txt'"/>
+	  <execute expr="rule='rule_estado_sala_Carmen_Escalona'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-S0P1MenuPrincipal"/>
+    <transition event="atrás" target="estado-S3P1GuiaTuristico"/>
+		<transition event="51" target="estado-S3P1GuiaTuristico"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="esparto" target="estado-sala-Carmen-Escalona-muestra-esparto"/>
+    <transition event="67" target="estado-sala-Carmen-Escalona-muestra-esparto"/>
+    <transition event="recogida_de_aceituna" target="estado-sala-Carmen-Escalona-muestra-recogida-aceituna"/>
+    <transition event="68" target="estado-sala-Carmen-Escalona-muestra-recogida-aceituna"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+  </state>
+  
+  
+  
+  
+
+  <state id="estado-sala-Carmen-Escalona-muestra-esparto">
+    <onentry>
+      <execute expr="stateNumber='67'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-sala-Carmen-Escalona-muestra-esparto.txt'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-S0P1MenuPrincipal"/>
+    <transition event="atrás" target="estado-sala-Carmen-Escalona"/>
+    <transition event="66" target="estado-sala-Carmen-Escalona"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+  </state>
+  
+  <state id="estado-sala-Carmen-Escalona-muestra-recogida-aceituna">
+    <onentry>
+      <execute expr="stateNumber='68'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-sala-Carmen-Escalona-muestra-recogida-aceituna.txt'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-S0P1MenuPrincipal"/>
+    <transition event="atrás" target="estado-sala-Carmen-Escalona"/>
+    <transition event="66" target="estado-sala-Carmen-Escalona"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+  </state>
+  
+  
+  <!-- EL CAMPO -->
+  
+  
+  
+  <state id="estado-sala-el-campo">
+    <onentry>
+      <execute expr="stateNumber='69'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-sala-el-campo.txt'"/>
+	  <execute expr="rule='rule_estado_sala_el_campo'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-S0P1MenuPrincipal"/>
+    <transition event="atrás" target="estado-S3P1GuiaTuristico"/>
+		<transition event="51" target="estado-S3P1GuiaTuristico"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="trillo" target="estado-sala-el-campo-muestra-trillo"/>
+    <transition event="70" target="estado-sala-el-campo-muestra-trillo"/>
+    <transition event="ubio" target="estado-sala-el-campo-muestra-ubio"/>
+    <transition event="71" target="estado-sala-el-campo-muestra-ubio"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+  </state>
+  
+  
+ 
+  <state id="estado-sala-el-campo-muestra-trillo">
+    <onentry>
+      <execute expr="stateNumber='70'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-sala-el-campo-muestra-trillo.txt'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-S0P1MenuPrincipal"/>
+    <transition event="atrás" target="estado-sala-el-campo"/>
+    <transition event="69" target="estado-sala-el-campo"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+  </state>
+  
+  
+  
+  <state id="estado-sala-el-campo-muestra-ubio">
+    <onentry>
+      <execute expr="stateNumber='71'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-sala-el-campo-muestra-ubio.txt'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-sala-el-campo"/>
+    <transition event="atrás" target="estado-sala-el-campo"/>
+    <transition event="69" target="estado-sala-el-campo"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+  </state>
+
+
+<!-- SALA DE EXPOSICIONES -->  
+ 
+  
+  <state id="estado-sala-exposiciones">
+    <onentry>
+      <execute expr="stateNumber='72'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-sala-exposiciones.txt'"/>
+	  <execute expr="rule='rule_estado_sala_exposiciones'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-S0P1MenuPrincipal"/>
+    <transition event="atrás" target="estado-S3P1GuiaTuristico"/>
+		<transition event="51" target="estado-S3P1GuiaTuristico"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="artesania" target="estado-sala-exposiciones-muestra-artesania"/>
+    <transition event="73" target="estado-sala-exposiciones-muestra-artesania"/>
+    <transition event="pintura" target="estado-sala-exposiciones-muestra-pintura"/>
+    <transition event="74" target="estado-sala-exposiciones-muestra-pintura"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+    
+  </state>
+  
+  
+  <state id="estado-sala-exposiciones-muestra-artesania">
+    <onentry>
+      <execute expr="stateNumber='73'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-sala-exposiciones-muestra-artesania.txt'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-S0P1MenuPrincipal"/>
+    <transition event="atrás" target="estado-sala-exposiciones"/>
+    <transition event="72" target="estado-sala-exposiciones"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+  </state>
+
+  <state id="estado-sala-exposiciones-muestra-pintura">
+    <onentry>
+      <execute expr="stateNumber='74'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-sala-exposiciones-muestra-pintura.txt'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-S0P1MenuPrincipal"/>
+    <transition event="atrás" target="estado-sala-exposiciones"/>
+    <transition event="72" target="estado-sala-exposiciones"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+  </state>
+  
+  
+  
+  <!-- MOLINOS DE ACEITE -->
+
+
+
+  <state id="estado-sala-Molinos-de-aceite">
+    <onentry>
+      <execute expr="stateNumber='75'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-sala-Molinos-de-aceite.txt'"/>
+	  <execute expr="rule='rule_estado_sala_Molinos_de_aceite'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-S0P1MenuPrincipal"/>
+    <transition event="atrás" target="estado-S3P1GuiaTuristico"/>
+		<transition event="51" target="estado-S3P1GuiaTuristico"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="molino_de_sangre" target="estado-sala-Molinos-de-aceite-muestra-molino-sangre"/>
+    <transition event="sangre" target="estado-sala-Molinos-de-aceite-muestra-molino-sangre"/>
+    <transition event="76" target="estado-sala-Molinos-de-aceite-muestra-molino-sangre"/>
+    <transition event="molino_mecanico" target="estado-sala-Molinos-de-aceite-muestra-molino-mecanico"/>
+    <transition event="mecanico" target="estado-sala-Molinos-de-aceite-muestra-molino-mecanico"/>
+    <transition event="77" target="estado-sala-Molinos-de-aceite-muestra-molino-mecanico"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+    
+  </state>
+  
+  
+  <state id="estado-sala-Molinos-de-aceite-muestra-molino-sangre">
+    <onentry>
+      <execute expr="stateNumber='76'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-sala-Molinos-de-aceite-muestra-molino-sangre.txt'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-sala-Molinos-de-aceite"/>
+    <transition event="atrás" target="estado-sala-Molinos-de-aceite"/>
+    <transition event="75" target="estado-sala-Molinos-de-aceite"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+  </state>
+  
+  
+  <state id="estado-sala-Molinos-de-aceite-muestra-molino-mecanico">
+    <onentry>
+      <execute expr="stateNumber='77'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-sala-Molinos-de-aceite-muestra-molino-mecanico.txt'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-sala-Molinos-de-aceite"/>
+    <transition event="atrás" target="estado-sala-Molinos-de-aceite"/>
+    <transition event="75" target="estado-sala-Molinos-de-aceite"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+  </state>
+  
+
+
+<!-- PANADERÍA -->  
+  
+  
+
+  <state id="estado-sala-panaderia">
+    <onentry>
+      <execute expr="stateNumber='78'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-sala-panaderia.txt'"/>
+	  <execute expr="rule='rule_estado_sala_panaderia'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-S0P1MenuPrincipal"/>
+    <transition event="atrás" target="estado-S3P1GuiaTuristico"/>
+		<transition event="51" target="estado-S3P1GuiaTuristico"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="horno_de_leña" target="estado-sala-panaderia-muestra-horno-de-lenia"/>
+    <transition event="79" target="estado-sala-panaderia-muestra-horno-de-lenia"/>
+    <transition event="pan_de_mijas" target="estado-sala-panaderia-muestra-pan-de-mijas"/>
+    <transition event="80" target="estado-sala-panaderia-muestra-pan-de-mijas"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+    
+  </state>
+  
+  
+  
+  
+  <state id="estado-sala-panaderia-muestra-horno-de-lenia">
+    <onentry>
+      <execute expr="stateNumber='79'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-sala-panaderia-muestra-horno-de-lenia.txt'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-sala-panaderia"/>
+    <transition event="atrás" target="estado-sala-panaderia"/>
+    <transition event="78" target="estado-sala-panaderia"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+  </state>
+  
+  
+  <state id="estado-sala-panaderia-muestra-pan-de-mijas">
+    <onentry>
+      <execute expr="stateNumber='80'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-sala-panaderia-muestra-pan-de-mijas.txt'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-sala-panaderia"/>
+    <transition event="atrás" target="estado-sala-panaderia"/>
+    <transition event="78" target="estado-sala-panaderia"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+  </state>
+  
+  
+  
+  
+<!-- SALA SIERRA -->  
+  
+  
+  <state id="estado-sala-sierra">
+    <onentry>
+      <execute expr="stateNumber='81'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-sala-sierra.txt'"/>
+	  <execute expr="rule='rule_estado_sala_sierra'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-S0P1MenuPrincipal"/>
+    <transition event="atrás" target="estado-S3P1GuiaTuristico"/>
+    <transition event="51" target="estado-S3P1GuiaTuristico"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="cal" target="estado-sala-sierra-muestra-encalar"/>
+    <transition event="encalar" target="estado-sala-sierra-muestra-encalar"/>
+    <transition event="cal_para_encalar" target="estado-sala-sierra-muestra-encalar"/>
+    <transition event="82" target="estado-sala-sierra-muestra-encalar"/>
+    <transition event="esparto" target="estado-sala-sierra-muestra-esparto"/>
+    <transition event="fibra_de_esparto" target="estado-sala-sierra-muestra-esparto"/>
+    <transition event="83" target="estado-sala-sierra-muestra-esparto"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+    
+  </state>
+
+  <state id="estado-sala-sierra-muestra-encalar">
+    <onentry>
+      <execute expr="stateNumber='82'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-sala-sierra-muestra-encalar.txt'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-sala-sierra"/>
+    <transition event="atrás" target="estado-sala-sierra"/>
+    <transition event="81" target="estado-sala-sierra"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+  </state>
+  
+  
+  <state id="estado-sala-sierra-muestra-esparto">
+    <onentry>
+      <execute expr="stateNumber='83'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-sala-sierra-muestra-esparto.txt'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-sala-sierra"/>
+    <transition event="atrás" target="estado-sala-sierra"/>
+    <transition event="81" target="estado-sala-sierra"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+  </state>
+  
+  
+
+<!-- VIVIENDA TRADICIONAL -->
+
+  <state id="estado-sala-vivienda-tradicional">
+    <onentry>
+      <execute expr="stateNumber='84'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-sala-vivienda-tradicional.txt'"/>
+	  <execute expr="rule='rule_estado_vivienda_tradicional'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-S0P1MenuPrincipal"/>
+    <transition event="atrás" target="estado-S3P1GuiaTuristico"/>
+		<transition event="51" target="estado-S3P1GuiaTuristico"/>
+    <transition event="cocina" target="estado-sala-vivienda-tradicional-muestra-cocina"/>
+    <transition event="85" target="estado-sala-vivienda-tradicional-muestra-cocina"/>
+    <transition event="dormitorio" target="estado-sala-vivienda-tradicional-muestra-dormitorio"/>
+    <transition event="86" target="estado-sala-vivienda-tradicional-muestra-dormitorio"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+    
+  </state>
+  
+  
+  <state id="estado-sala-vivienda-tradicional-muestra-cocina">
+    <onentry>
+      <execute expr="stateNumber='85'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-sala-vivienda-tradicional-muestra-cocina.txt'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-sala-vivienda-tradicional"/>
+    <transition event="atrás" target="estado-sala-vivienda-tradicional"/>
+    <transition event="84" target="estado-sala-vivienda-tradicional"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+  </state>
+  
+  
+  <state id="estado-sala-vivienda-tradicional-muestra-dormitorio">
+    <onentry>
+      <execute expr="stateNumber='86'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-sala-vivienda-tradicional-muestra-dormitorio.txt'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-sala-vivienda-tradicional"/>
+    <transition event="atrás" target="estado-sala-vivienda-tradicional"/>
+    <transition event="84" target="estado-sala-vivienda-tradicional"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+  </state>
+  
+
+  
+  
+  
+
+<!-- FIN SALAS -->
+
+
+  <state id="estado-S2P1AgendaEventos">
+    <onentry>
+      <execute expr="stateNumber='4'"/>
+      <execute expr="prompt='/Dialogo/MUJA/Prompts/prompt-estado-S2P1AgendaEventos.txt'"/>
+      <execute expr="go_to='ASR'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-S0P1MenuPrincipal"/>
+    <transition event="atrás" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+  </state>
+
+
+
+
+  <state id="estado-S4P1LibroVisitas">
+    <onentry>
+      <execute expr="stateNumber='14'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-S4P1LibroVisitas.txt'"/>
+	  <execute expr="rule='rule_estado_libro_visitas'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-S0P1MenuPrincipal"/>
+    <transition event="atrás" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="firmar" target="estado-S4P2FirmarLibro"/>
+    <transition event="15" target="estado-S4P2FirmarLibro"/>
+  </state>
+
+
+
+	<state id="estado-S4P2FirmarLibro">
+    <onentry>
+      <execute expr="stateNumber='15'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-S4P2FirmarLibro.txt'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="volver" target="estado-S4P1LibroVisitas"/>
+    <transition event="atrás" target="estado-S4P1LibroVisitas"/>
+    <transition event="14" target="estado-S4P1LibroVisitas"/>
+
+    <transition event="16" target="estado-S4P3Exito"/>
+
+    <transition event="17" target="estado-S4P4Error"/>
+  </state>
+
+
+  <state id="estado-S4P3Exito">
+    <onentry>
+      <execute expr="stateNumber='16'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-S4P3Exito.txt'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="14" target="estado-S4P1LibroVisitas"/>
+  </state>
+
+
+  <state id="estado-S4P4Error">
+    <onentry>
+      <execute expr="stateNumber='17'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-S4P4Error.txt'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="15" target="estado-S4P2FirmarLibro"/>
+  </state>
+
+
+  
+  
+
+
+  <state id="estado-S5P1RealizarEncuesta">
+    <onentry>
+      <execute expr="stateNumber='18'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-S5P1RealizarEncuesta.txt'"/>
+	  <execute expr="rule='ruleEstadoFinal'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-S0P1MenuPrincipal"/>
+    <transition event="atrás" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+  </state>
+
+
+  <state id="estado-S5P3Exito">
+    <onentry>
+      <execute expr="stateNumber='19'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-S5P3Exito.txt'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+  </state>
+
+
+  <state id="estado-S5P3Error">
+    <onentry>
+      <execute expr="stateNumber='20'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-S5P3Error.txt'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="18" target="estado-S4P2FirmarLibro"/>
+  </state>
+
+
+
+  
+
+  
+  <state id="estado-S8P3SacarFoto">
+    <onentry>
+      <execute expr="stateNumber='31'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-S8P3SacarFoto.txt'"/>
+	  	<execute expr="rule='ruleS8P3SacarFoto'"/>
+      <execute expr="final_state='false'"/>
+      <send targettype="c++" target="demolab-target" event="release-camara" />  
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="volver" target="estado-S0P1MenuPrincipal"/>
+    <transition event="atrás" target="estado-S0P1MenuPrincipal"/>
+    
+    <transition event="32" target="estado-S8P4AccionFoto"/>
+    <onexit>
+      <send targettype="c++" target="demolab-target" event="grab-camara" />  
+    </onexit>
+  </state>
+
+
+  <state id="estado-S8P4AccionFoto">
+    <onentry>
+      <execute expr="stateNumber='32'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-S8P4AccionFoto.txt'"/>
+	  <execute expr="rule='ruleS8P4Accion'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+
+    <transition event="volver" target="estado-S8P3SacarFoto"/>
+    <transition event="atrás" target="estado-S8P3SacarFoto"/>
+    <transition event="31" target="estado-S8P3SacarFoto"/>
+
+    <transition event="i_meil" target="estado-S8P7MandarEMail"/>
+    <transition event="enviar_i_meil" target="estado-S8P7MandarEMail"/>
+    <transition event="35" target="estado-S8P7MandarEMail"/>
+  </state>
+
+
+
+
+  <state id="estado-S8P7MandarEMail">
+    <onentry>
+      <execute expr="stateNumber='35'"/>
+      <execute expr="prompt='/Dialogo/DemoLab/Prompts/prompt-estado-S8P7MandarEMail.txt'"/>
+	  <execute expr="rule='ruleS8P7MandarEMail'"/>
+      <execute expr="final_state='false'"/>
+    </onentry>
+
+    <transition event="menú" target="estado-S0P1MenuPrincipal"/>
+    <transition event="salir" target="estado-S0P1MenuPrincipal"/>
+    <transition event="volver" target="estado-S0P1MenuPrincipal"/>
+    <transition event="0" target="estado-S0P1MenuPrincipal"/>
+    
+    <transition event="32" target="estado-S8P4AccionFoto"/>
+  </state>
+
+
+
+
+
+
+</scxml>
+

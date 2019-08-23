@@ -1,0 +1,14 @@
+copy prompt-estado-S4P1LibroVisitas.txt \kk
+copy prompt-estado-S4P2FirmarLibro.txt \kk
+copy prompt-estado-S4P3Exito.txt \kk
+copy prompt-estado-S4P4Error.txt \kk
+copy prompt-estado-S5P1RealizarEncuesta.txt \kk
+copy prompt-estado-S5P3Exito.txt \kk
+copy prompt-estado-S5P3Error.txt \kk
+copy prompt-estado-S78P0Multimedia.txt \kk
+copy prompt-estado-S7P1PublicacionMultimedia.txt \kk
+copy prompt-estado-S8P1FotografoVirtual.txt \kk
+copy prompt-estado-S8P2SeleccionarMarco.txt \kk
+copy prompt-estado-S8P3SacarFoto.txt \kk
+copy prompt-estado-S8P4AccionFoto.txt \kk
+copy prompt-estado-S8P7MandarEMail.txt \kk

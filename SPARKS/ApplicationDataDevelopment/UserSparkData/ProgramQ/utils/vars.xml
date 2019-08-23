@@ -1,0 +1,33 @@
+<vars>
+ <set name="aimlpath">/adele/dev/workspace/ApplicationDataDevelopment/UserSparkData/ProgramQ/aiml_set/spanish</set>
+ <set name="application">internet</set>
+ <set name="badanswer-input"></set>
+ <set name="browser"></set>
+ <set name="failed">passed</set>
+ <set name="father">hammadi</set>
+ <set name="fifth">superstar dee jays here we go</set>
+ <set name="fourth">superstar dee jays here we go</set>
+ <set name="he">Johnny 5</set>
+ <set name="it">superstar dee jays here we go</set>
+ <set name="last">robot</set>
+ <set name="location"></set>
+ <set name="name">Test passed.</set>
+ <set name="oldtopic">=5+5</set>
+ <set name="passed">failed</set>
+ <set name="personality">polite</set>
+ <set name="predicate">PredicateTestResulte</set>
+ <set name="second">superstar dee jays here we go</set>
+ <set name="seventh">website</set>
+ <set name="sign"></set>
+ <set name="sixth">superstar dee jays here we go</set>
+ <set name="speak">yes</set>
+ <set name="test">test passed</set>
+ <set name="test1"></set>
+ <set name="testcase">Test passed.</set>
+ <set name="third">superstar dee jays here we go</set>
+ <set name="top">superstar dee jays here we go</set>
+ <set name="topic">superstar dee jays here we go</set>
+ <set name="tospeak">Looking on the internethttp://www.google.com/search?q=+houssem is not installed</set>
+ <set name="url">http://www.google.com/search?q=+houssem</set>
+ <set name="we"></set>
+</vars>

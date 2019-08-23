@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+		    http://www.springframework.org/schema/webflow 
+		    http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd"
+	parent="ARQ_Abstract-flow" start-state="ed_signup_init">
+
+	<!-- 
+	<action-state id="ea_myprofile_init">
+		<evaluate expression="genericCustomAction.ejecutar">
+			<attribute name="clase"
+				value="com.adelerobots.web.fiopre.action.MyProfileInitSetupCustomAction">
+			</attribute>
+		</evaluate>
+		<transition on="success" to="ea_getEntityInformation">--><!--NCGDOC-TransitionState: Pasa a ventana los datos necesarios para mostrar en pantalla-->
+			<!-- <attribute name="fichero"
+				value="myprofile/MyProfile_Get_Entity_Information_VO_029_062.xml">
+			</attribute>
+		</transition>
+	</action-state>  -->	
+	
+	<action-state id="ed_signup_init"><!-- Decisor que determina las acciones a tomar al solicitar el inicio del flujo -->
+		<evaluate expression="genericDecisor.ejecutar">
+			<attribute name="clase"
+				value="MyProfileFlowInitSetupDecisor">
+			</attribute>
+		</evaluate>
+		<transition on="beginning" to="ea_getEntityInformation"><!--NCGDOC-TransitionState: Pasa a ventana los datos necesarios para mostrar en pantalla-->
+			<attribute name="fichero"
+				value="myprofile/MyProfile_Get_Entity_Information_VO_029_062.xml">
+			</attribute>
+		</transition>
+		<transition on="returned" to="ea_create_billing_agreement"><!--NCGDOC-TransitionState: Pasa a crear el acuerdo con Paypal-->				
+		</transition>
+		<transition on="cancelled" to="ea_update_account_type"><!--NCGDOC-TransitionState: Pasa a llamarse al SN que setea la cuenta como FREE	-->			
+			<attribute name="fichero"
+				value="myprofile/MyProfile_Save_VO_029_065.xml">
+			</attribute>
+		</transition>
+	</action-state>
+	
+	<action-state id="ea_getEntityInformation">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="062"></attribute>
+		</evaluate>
+		<transition on="success" to="ev_myprofile_edit_form"><!--NCGDOC-TransitionState: Pasa a ventana los datos necesarios para mostrar en pantalla-->
+			<attribute name="fichero"
+				value="myprofile/MyProfile_Edit_SV.xml">
+			</attribute>
+		</transition>
+	</action-state>	
+
+	<view-state id="ev_myprofile_edit_form"
+		view="/myprofile/myProfileEditFormView"><!--NCGDOC-ViewState: Pantalla de edicion de mi perfil de usuario-->
+		<!-- <transition on="submit" to="ea_myprofile_save">
+			<attribute name="fichero"
+				value="myprofile/MyProfile_Save_VO_029_002.xml">
+			</attribute>
+		</transition>  -->
+		<transition on="submit" to="ed_signup_account_type"><!--NCGDOC-TransitionState: Pasa los datos necesarios para guardar el usuario al contexto de operacion-->
+			<attribute name="fichero"
+				value="myprofile/MyProfile_Save_VV_029_002.xml">
+			</attribute>
+		</transition>
+		<transition on="cancelOK" to="ea_cancel_user_account">
+			<attribute name="fichero"
+				value="myprofile/MyProfile_Cancel_VO_029_070.xml">
+			</attribute>
+		</transition>
+		<transition on="back" to="ef_ev_myprofile_end_back"></transition>
+	</view-state>
+	
+	<!-- Para decidir si guardamos los datos directamente o arrancamos subflujo de paypal -->
+	<action-state id="ed_signup_account_type">
+		<evaluate expression="genericDecisor.ejecutar">
+			<attribute name="clase"
+				value="SignupAccountTypeDecisor">
+			</attribute>
+		</evaluate>
+		<transition on="free" to="ea_myprofile_save">
+			<attribute name="fichero"
+				value="myprofile/MyProfile_Save_VO_029_002.xml">
+			</attribute>
+		</transition>
+		<transition on="noFree" to="ev_myprofile_confirm_change">
+			<attribute name="fichero"
+				value="myprofile/MyProfile_Save_VV_029_002.xml">
+			</attribute>
+		</transition>
+	</action-state>
+	
+	<view-state id="ev_myprofile_confirm_change"
+		view="/myprofile/myProfileAccountCreditView">
+		
+		<transition on="continue" to="ed_check_active_agreement">
+			<attribute name="fichero"
+				value="myprofile/MyProfile_Save_VV_029_002.xml">
+			</attribute>
+		</transition>		
+		<transition on="cancel" to="ef_ev_myprofile_end_back"></transition>
+	</view-state>
+	
+	<action-state id="ea_myprofile_save_paypal">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="002"></attribute>
+		</evaluate>
+		<transition on="success" to="ea_do_reference_transaction">
+			<attribute name="fichero"
+				value="myprofile/MyProfile_Save_OV_029_002.xml">
+			</attribute>
+		</transition>
+	</action-state>
+	<!-- 
+	<view-state id="ev_myprofile_confirm_change"
+		view="/myprofile/myProfileAccountCreditView">
+		
+		<transition on="continue" to="ea_myprofile_save_paypal">
+			<attribute name="fichero"
+				value="myprofile/MyProfile_Save_VO_029_002.xml">
+			</attribute>
+		</transition>		
+		<transition on="cancel" to="ef_ev_myprofile_end_back"></transition>
+	</view-state>	
+	
+	<action-state id="ea_myprofile_save_paypal">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="002"></attribute>
+		</evaluate>
+		<transition on="success" to="ed_check_active_agreement">
+			<attribute name="fichero"
+				value="myprofile/MyProfile_Save_OV_029_002.xml">
+			</attribute>
+		</transition>
+	</action-state> -->
+	
+	<action-state id="ea_myprofile_save"><!--NCGDOC-ActionState: Guarda los datos del usuario-->
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="002"></attribute>
+		</evaluate>
+		<transition on="success" to="ef_ev_myprofile_end_success">
+			<attribute name="fichero"
+				value="myprofile/MyProfile_Save_OV_029_002.xml">
+			</attribute>
+		</transition>
+	</action-state>
+	
+	<action-state id="ed_check_active_agreement">
+		<evaluate expression="genericDecisor.ejecutar">
+			<attribute name="clase"
+				value="CheckAgreementStatusDecisor">
+			</attribute>
+		</evaluate>
+		<transition on="noAgreement" to="ev_signup_paypal_agreement_initial">
+			<attribute name="fichero"
+				value="myprofile/MyProfile_Save_VV_029_002.xml">
+			</attribute>
+		</transition>
+		<transition on="agreement" to="ea_myprofile_save_paypal">
+			<attribute name="fichero"
+				value="myprofile/MyProfile_Save_VO_029_002.xml">
+			</attribute>
+		</transition>
+	</action-state>
+	<!-- 
+	<action-state id="ed_check_active_agreement">
+		<evaluate expression="genericDecisor.ejecutar">
+			<attribute name="clase"
+				value="CheckAgreementStatusDecisor">
+			</attribute>
+		</evaluate>
+		<transition on="noAgreement" to="ev_signup_paypal_agreement_initial">
+			<attribute name="fichero"
+				value="myprofile/MyProfile_Save_VV_029_002.xml">
+			</attribute>
+		</transition>
+		<transition on="agreement" to="ea_do_reference_transaction">			
+		</transition>
+	</action-state> -->
+	
+	<action-state id="ea_do_reference_transaction">
+		<evaluate expression="genericCustomAction.ejecutar">
+			<attribute name="clase"
+				value="com.adelerobots.web.fiopre.action.DoReferenceTransactionCustomAction">
+			</attribute>
+		</evaluate>
+		<transition on="success" to="ef_ev_myprofile_end_success">
+			<attribute name="fichero"
+				value="myprofile/MyProfile_Save_VV_029_002.xml">
+			</attribute>
+		</transition>
+		<transition on="error" to="ev_signup_paypal_agreement_error">
+			<attribute name="fichero"
+				value="myprofile/MyProfile_Save_VV_029_002.xml">
+			</attribute>
+		</transition>
+	</action-state>
+	
+	<action-state id="ea_update_account_type">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="065"></attribute>
+		</evaluate>
+		<transition on="success" to="ef_ev_myprofile_end_back">
+			<attribute name="fichero"
+				value="myprofile/MyProfile_Save_OV_029_065.xml">
+			</attribute>
+		</transition>
+	</action-state>
+	
+	<view-state id="ev_uploadSpark" view="/subirSpark/uploadSpark">
+		<transition on="validate_upload" to="ea_validateUpload">
+			<attribute name="fichero"
+				value="uploadSpark/UploadSpark_VO_029_008.xml">
+			</attribute>
+		</transition>
+		<transition on="back" to="ed_signup_init"></transition>		
+	</view-state>
+	
+	<action-state id="ea_validateUpload">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="008"></attribute>
+		</evaluate>
+		<transition on="error" to="ev_uploadSpark"></transition>
+		<transition on="success" to="ed_signup_init"></transition>
+	</action-state>	
+	
+	<action-state id="ea_cancel_user_account">
+		<evaluate expression="genericAction.ejecutar">
+			<attribute name="ca" value="029"></attribute>
+			<attribute name="cs" value="070"></attribute>
+		</evaluate>
+		<!-- 
+		<transition on="success" to="ef_ev_myprofile_end_success">
+			<attribute name="fichero"
+				value="myprofile/MyProfile_Save_OV_029_002.xml">
+			</attribute>
+		</transition> -->
+		<transition on="success" to="ev_cancel_account">
+		</transition>
+	</action-state>
+	
+		
+	
+	<!-- [INICIO] Estado de subflujo para el store -->
+	<subflow-state id="sf_SparkStore"
+		subflow="FIOPRE_sparks_store-flow">
+		<transition to="ed_signup_init" on="ef_SparkStore" />		
+		<transition to="ed_signup_init" on="ef_manageMyProfile"/>
+		<transition to="ev_uploadSpark" on="ef_uploadSpark"/>
+		
+	</subflow-state>	
+	<!-- [FIN] Estado de subflujo para el store -->	
+	
+	
+
+	<end-state id="ef_ev_myprofile_end_back"
+		parent="ARQ_Abstract-flow#ev_manageMyAvatarRunPreview"><!--NCGDOC-EndState: Regresar al ultimo flujo conocido del que se vino (si existe) si no al mainpage-->
+	</end-state>
+	<!-- Este no puede ser un estado final porque, por alguna razón, al ir y volver de Paypal y perder la URL, casca -->
+	<view-state id="ef_ev_myprofile_end_success"
+		view="/myprofile/myProfileEditSuccessView"><!--NCGDOC-EndState: Pantalla de info edicion correcta-->
+		<transition on="resetMyProfile" to="ed_signup_init">
+		</transition>		
+	</view-state>
+	
+	
+	<view-state id="ev_cancel_account" view="flowRedirect:cancel_account-flow">
+	</view-state>
+		
+	
+	<!-- Parte de Paypal -->
+	<action-state id="ea_create_billing_agreement">
+		<evaluate expression="genericCustomAction.ejecutar">
+			<attribute name="clase"	value="com.adelerobots.web.fiopre.action.CreateBillingAgreementCustomAction"/>			
+		</evaluate>
+		<!-- 
+		<transition on="success" to="ef_ev_myprofile_end_back">
+		</transition> -->
+		<transition on="success" to="ea_myprofile_save">
+			<attribute name="fichero"
+				value="myprofile/MyProfile_SaveSes_VO_029_002.xml">
+			</attribute>
+		</transition>
+		
+	</action-state>
+
+	<view-state id="ev_signup_paypal_agreement_initial"
+		view="/signuppaypalagreement/signupAgreementInitial">
+
+		<transition on="success" to="ef_ev_myprofile_end_back">
+		</transition>		
+		
+	</view-state>
+	
+	<view-state id="ev_signup_paypal_agreement_error" view="/signuppaypalagreement/signupAgreementReturnEC">
+		<transition on="back" to="ef_ev_myprofile_end_back"></transition>
+	</view-state>
+	<!-- FIN Parte de Paypal -->
+		
+		
+		
+	<global-transitions>
+		<!-- Upload spark -->
+		<transition on="develop" to="ev_uploadSpark"></transition>
+		<!-- Spark Store -->
+		<transition on="store" to="sf_SparkStore">
+			<attribute name="fichero" value="sparkStore/FIOPRE_ListSparksByCriteria_VO_029_023.xml"/>
+		</transition>
+	</global-transitions>
+
+</flow>

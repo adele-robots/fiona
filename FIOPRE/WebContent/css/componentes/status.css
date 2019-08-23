@@ -1,0 +1,29 @@
+/********** Status ************/
+
+
+.status-Fondo {
+	display: block;
+	position: fixed;
+	z-index:100;
+	top: 0px;
+	left: 0px;
+	height:100%;
+	width:100%;
+	background-color:#404040;
+	filter:alpha(opacity=35);
+	-moz-opacity: 0.35;
+	opacity: 0.35;
+}
+.status-Contenedor {
+	background-image:url(../../images/status/ajax-loader.gif);
+	background-repeat:no-repeat;
+	display:block;
+	height:103px;
+	left:40%;
+	padding:3px;
+	position:fixed;
+	text-align:left;
+	top:35%;
+	width:285px;
+	z-index:102;
+}

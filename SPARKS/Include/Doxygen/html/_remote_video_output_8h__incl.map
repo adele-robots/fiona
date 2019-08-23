@@ -1,0 +1,22 @@
+<map id="G" name="G">
+<area shape="rect" id="node5" href="$_video_output_8h.html" title="VideoOutput class declaration." alt="" coords="1072,83,1176,112"/>
+<area shape="rect" id="node7" href="$_i_scene_8h.html" title="IScene.h" alt="" coords="167,315,241,344"/>
+<area shape="rect" id="node17" href="$_motion_controller_8h.html" title="MotionController class definition." alt="" coords="332,160,460,189"/>
+<area shape="rect" id="node31" href="$_stop_watch_8h.html" title="Declaration of the StopWatch class supporting high precision duration measures." alt="" coords="977,315,1076,344"/>
+<area shape="rect" id="node79" href="$_f_f_mpeg_audio_video_destination_8h.html" title="FFMpegAudioVideoDestination class declaration." alt="" coords="1697,83,1911,112"/>
+<area shape="rect" id="node90" href="$_remote_audio_output_8h.html" title="RemoteAudioOutput class declaration." alt="" coords="1200,83,1349,112"/>
+<area shape="rect" id="node13" href="$_scene3_d_8h.html" title="Scene3D.h" alt="" coords="559,160,644,189"/>
+<area shape="rect" id="node47" href="$_thread_8h.html" title="Base class for several concurrent flow abstractions based on the Pthreads library." alt="" coords="1152,237,1224,267"/>
+<area shape="rect" id="node51" href="$_i_async_fatal_error_handler_8h.html" title="Threads must have this handler to give up with a gobal fatal error." alt="" coords="1100,315,1276,344"/>
+<area shape="rect" id="node53" href="$_error_handling_8h.html" title="Global exception class definition, and error macro to throw it." alt="" coords="1341,315,1453,344"/>
+<area shape="rect" id="node59" href="$_on_screen_monitor_8h.html" title="OnScreenMonitor class declaration." alt="" coords="796,160,929,189"/>
+<area shape="rect" id="node71" href="$_window_8h.html" title="Window.h" alt="" coords="1249,160,1329,189"/>
+<area shape="rect" id="node9" href="$_configuration_8h.html" title="psisban::Config class and mainConfig global variable declarations." alt="" coords="149,392,259,421"/>
+<area shape="rect" id="node19" href="$_perlin_8h.html" title="Perlin.h" alt="" coords="5,237,72,267"/>
+<area shape="rect" id="node24" href="$_lip_synch_8h.html" title="LipSynch class definition." alt="" coords="624,237,709,267"/>
+<area shape="rect" id="node29" href="$_i_morph_target_blender_8h.html" title="IMorphTargetBlender.h" alt="" coords="265,315,420,344"/>
+<area shape="rect" id="node57" href="$_meca_tronica_serial_8h.html" title="MecaTronicaSerial.h" alt="" coords="248,237,389,267"/>
+<area shape="rect" id="node75" href="$_events_8h.html" title="Events.h" alt="" coords="1355,237,1429,267"/>
+<area shape="rect" id="node92" href="$_audio_output_8h.html" title="AudioOutput class declaration." alt="" coords="668,160,772,189"/>
+<area shape="rect" id="node95" href="$_audio_queue_8h.html" title="AudioQueue class declaration." alt="" coords="1504,237,1608,267"/>
+</map>

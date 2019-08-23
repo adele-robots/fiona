@@ -1,0 +1,4 @@
+<jboss-web>
+	<context-root>ServiceMngHandler</context-root>	 
+	<use-session-cookies>true</use-session-cookies>  
+</jboss-web>

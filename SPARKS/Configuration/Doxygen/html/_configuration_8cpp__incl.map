@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$stdafx_8h.html" title="stdafx.h" alt="" coords="5,83,75,112"/>
+<area shape="rect" id="node11" href="$_error_handling_8h.html" title="Global exception class definition, and error macro to throw it." alt="" coords="555,83,667,112"/>
+<area shape="rect" id="node15" href="$_configuration_8h.html" title="psisban::Config class and mainConfig global variable declarations." alt="" coords="99,83,208,112"/>
+<area shape="rect" id="node18" href="$environment_8h.html" title="Constant for global environment variables used." alt="" coords="427,83,531,112"/>
+<area shape="rect" id="node20" href="$fileops_8h.html" title="os&#45;independent file operations declarations." alt="" coords="333,83,403,112"/>
+</map>

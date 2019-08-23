@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<formatter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="../fwnScheme.xsd">  
+
+		<destino nombre="spark_id">
+			<origen nombre="FIONEGN004" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG004010" />
+		</destino>
+
+		<destino nombre="nombre">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004020" />
+		</destino>
+
+		<destino nombre="descripcion">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004040" />
+		</destino>
+		
+		<destino nombre="version">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004050" />
+		</destino>
+		
+		<destino nombre="descCorta">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004060" />
+		</destino>
+		
+		<destino nombre="novedades">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004070" />
+		</destino>
+		
+		<destino nombre="otrosKeywords">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004080" />
+		</destino>
+		
+		<destino nombre="email">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004090" />
+		</destino>
+		
+		<destino nombre="marketingURL">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004100" />
+		</destino>
+		
+		<!-- 
+		<destino nombre="numUsuarios">
+			<origen nombre="FIONEGN004" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG004120" />
+		</destino>
+		
+		<destino nombre="idUnidadTiempo">
+			<origen nombre="FIONEGN004" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG004130" />
+		</destino> -->
+		
+		<destino nombre="esTrial">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004140" />
+		</destino>
+		
+		<destino nombre="diasTrial">
+			<origen nombre="FIONEGN004" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG004150" />
+		</destino>
+		
+		<destino nombre="icono">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004160" />
+		</destino>
+		
+		<destino nombre="banner">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004170" />
+		</destino>
+		
+		<destino nombre="video">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004180" />
+		</destino>		
+		
+		<destino nombre="comprado">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004190" />
+		</destino>
+		
+		<destino nombre="status">
+			<origen nombre="FIONEGN004" tipoDatoValor="String"
+				propiedadValor="FIONEG004210" />
+		</destino>
+		
+		<destino nombre="unidadValor">
+			<origen nombre="FIONEGN004" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG004250" />
+		</destino>
+		
+		<destino nombre="precio">
+			<origen nombre="FIONEGN004" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG004260" />
+		</destino>
+		
+		<destino nombre="idUnidadUso">
+			<origen nombre="FIONEGN004" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG004270" />
+		</destino>
+		
+		<destino nombre="emailPaypal">
+			<origen nombre="FIONEGN004" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG004340" />
+		</destino>
+
+	
+</formatter>

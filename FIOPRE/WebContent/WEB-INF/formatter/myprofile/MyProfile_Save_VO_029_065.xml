@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<formatter 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+			xsi:noNamespaceSchemaLocation="../fwnScheme.xsd">
+
+	<destino nombre="00" tipoDato="BigDecimal">
+		<origen nombre="SECURE_USERID" />
+	</destino>
+	<!-- El identificador del tipo de cuenta FREE es 1 -->
+	<destino nombre="01" tipoDato="BigDecimal">
+		<funcion method="FuncionConstante">
+			<origen nombre="1" />
+		</funcion>
+	</destino>
+	
+
+</formatter>

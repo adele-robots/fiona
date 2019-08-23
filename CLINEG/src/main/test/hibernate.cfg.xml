@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+    <session-factory>
+        <!-- Configuración de conexión a BBDD -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://dbmdesa.treelogic.local:3309/fionadb</property>
+        <property name="connection.username">fiona_user</property>
+        <property name="connection.password">f10na</property>
+
+        <!-- Pool de conexiones -->
+        <property name="connection.pool_size">10</property>
+
+        <!-- Dialecto SQL -->
+        <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
+		<property name="transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+		
+		<property name="current_session_context_class">thread</property>
+				
+        <!-- Muestra el sql por la salida. X defecto a false, con lo q no veremos
+        	 las queries q tira hibernate -->
+        <property name="show_sql">false</property>
+		
+        <!-- Propiedad xa eliminar y regenerar el esquema de BBDD -->
+        <!-- <property name="hbm2ddl.auto">create</property>  -->		
+		
+		<!-- Mapeo de entidades q se van probando con los tests de JUnit -->
+		<mapping package="com.adelerobots.clineg.entity"/>
+        
+    </session-factory>
+
+</hibernate-configuration>
+

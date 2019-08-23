@@ -1,0 +1,25 @@
+/*** Estilos controles FAces ******/
+.asterisk
+{
+	color:red;
+}
+.textoRequerido {
+	background-color: #f7e6eb;
+	border-color: #0057ab;
+}
+.textoErrorValidacion {
+	background-color: #f7e6eb;
+	border-color: #b30838;
+}
+.textoDeshabilitado {
+	background-color: #CFCFCF !important;
+}
+
+.formato-numerico
+{
+ text-align: right;
+}
+
+.input-calendar {
+	width: 80px;
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formatter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="../fwnScheme.xsd">  
+  
+  <destino nombre="00" tipoDato="String">
+    <origen nombre="nombre" />
+  </destino>
+  <destino nombre="01" tipoDato="String">
+    <origen nombre="apellido" />
+  </destino>
+  <destino nombre="02" tipoDato="String">
+    <origen nombre="emailInvitado" />
+  </destino>
+   <destino nombre="03" tipoDato="String">
+    <origen nombre="SECURE_USERID" />
+  </destino>
+  <destino nombre="04" tipoDato="String">
+    <origen nombre="emailBody" />
+  </destino>
+  
+  
+  
+</formatter>
+

@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>.:: Fiona ::.:: Sparking Together ::.</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<meta property="og:title" content=".:: Fiona ::.:: Sparking Together ::." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="http://www.sparkingtogether.com" />
+<meta property="og:image" content="http://www.sparkingtogether.com/FIOPRE/images/120px-world.png" />
+<meta property="og:site_name" content="The community for the creation of the artificial mind" /> 
+
+<link rel="shortcut icon" href="/favicon.png"/>
+
+<link charset="utf-8" href="css/login.css" media="screen" rel="Stylesheet" title="Adele" type="text/css"/>
+
+<script type="text/javascript">
+function cleanup(a) {
+	if(a.id=="password"){
+		if(a.value=="Password") {
+			a.value="";
+			a.type="password";
+		}
+	}
+	if(a.id=="usuario"){
+		if(a.value=="Username (Email)") {
+			a.value="";
+		}
+	}
+}
+
+function setup(a) {
+	if(a.id=="password"){
+		if(a.value=="") {
+			a.value="Password";
+			a.type="text";
+		}
+	}
+	if(a.id=="usuario"){
+		if(a.value=="") {
+			a.value="Username (Email)";
+		}
+	}
+}
+</script>
+</head>
+<body class="login-widget no-js">
+<script type="text/javascript">document.body.className = document.body.className.replace('no-js', 'js');</script>
+
+<form id="formulario" action="/FIOPRE/j_security_check" enctype="application/x-www-form-urlencoded" method="post" target="_top" style="width:525px;float:left;">
+	<input type="text" name="j_username" id="usuario" value="Username (Email)" class="inputtext" onfocus="cleanup(this)" onblur="setup(this)"/>
+	<input type="text" name="j_password" id="password"	value="Password" class="inputtext" onfocus="cleanup(this)" onblur="setup(this)"/>
+	<input type="image" name="submit" id="entrar" src="images/login.png" onclick="submit();"/>
+</form>
+<form action="/FIOPRE/adele/signup-flow" enctype="application/x-www-form-urlencoded" method="post" target="_top" style="float:left;">
+	<input class="inputbutton" name="submit" type="image" src="images/register.png" value="REGISTER" onclick="submit();"/>
+</form>
+
+</body>
+</html>
+

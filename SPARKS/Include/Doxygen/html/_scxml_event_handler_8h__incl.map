@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node5" href="$_local_video_input_8h.html" title="LocalVideoInput class declaration." alt="" coords="169,83,295,112"/>
+<area shape="rect" id="node7" href="$_video_input_8h.html" title="VideoInput class declaration." alt="" coords="185,160,279,189"/>
+<area shape="rect" id="node19" href="$_i_video_consumer_8h.html" title="IVideoConsumer interface definition." alt="" coords="25,237,156,267"/>
+<area shape="rect" id="node25" href="$_vid_capture_8h.html" title="VidCapture.h" alt="" coords="347,160,445,189"/>
+<area shape="rect" id="node9" href="$_video_queue_8h.html" title="VideoQueue.h" alt="" coords="180,237,284,267"/>
+<area shape="rect" id="node17" href="$_i_async_fatal_error_handler_8h.html" title="Threads must have this handler to give up with a gobal fatal error." alt="" coords="308,237,484,267"/>
+<area shape="rect" id="node13" href="$_i_image_8h.html" title="IImage is a common interface for FFMpeg and CVCapture frames consumed by OpenCV." alt="" coords="248,315,320,344"/>
+<area shape="rect" id="node21" href="$_image_8h.html" title="Image.h" alt="" coords="56,315,125,344"/>
+</map>

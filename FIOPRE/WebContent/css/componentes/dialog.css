@@ -1,0 +1,168 @@
+/********** alert ************/
+
+
+.dialogFondo {
+	display: none;
+	position: fixed;
+	z-index:100;
+	top: 0px;
+	left: 0px;
+	height:100%;
+	width:100%;
+	background-color:#404040;
+	filter:alpha(opacity=35);
+	-moz-opacity: 0.35;
+	opacity: 0.35;
+}
+.dialogContenedor-normal {
+	position: fixed;
+	background-repeat: no-repeat;
+	width: 600px;
+	height: 300px;
+	padding: 3px;
+	z-index: 102;
+	color:#000000;
+	display:none;
+	text-align:left;
+	top:25%;
+	left:25%;
+	background-color: #E3FDFC; /* Adaptado a Fiona */
+	padding: 5px;
+	border:1px solid black;
+	-moz-border-radius: 11px;
+	-webkit-border-radius: 11px;
+	border-radius: 11px;
+	
+}
+
+.dialogContenedor-large {
+	position: fixed;
+	background-repeat: no-repeat;
+	width: 900px;
+	height: 450px;
+	padding: 3px;
+	z-index: 102;
+	color:#000000;
+	display:none;
+	text-align:left;
+	top:5%;
+	left:5%;
+	background-color: #E3FDFC; /* Adaptado a Fiona */
+	padding: 5px;
+	border:1px solid black;
+	-moz-border-radius: 11px;
+	-webkit-border-radius: 11px;
+	border-radius: 11px;
+	
+}
+
+.dialogContenedor-extraLarge {
+	position: fixed;
+	background-repeat: no-repeat;
+	width: 900px;
+	height: 530px;
+	padding: 3px;
+	z-index: 102;
+	color:#000000;
+	display:none;
+	text-align:left;
+	top:5%;
+	left:5%;
+	background-color: #E3FDFC; /* Adaptado a Fiona - List Types */
+	padding: 5px;
+	border:1px solid black;	
+	-moz-border-radius: 11px;
+	-webkit-border-radius: 11px;
+	border-radius: 11px;
+}
+
+.dialogContenedor-extraLarge600 {
+	position: fixed;
+	background-repeat: no-repeat;
+	width: 900px;
+	height: 600px;
+	padding: 3px;
+	z-index: 102;
+	color:#000000;
+	display:none;
+	text-align:left;
+	top:10%;
+	left:19%;
+	background-color: #E3FDFC; /* Adaptado a Fiona - List Types */
+	padding: 5px;
+	border:1px solid black;
+	-moz-border-radius: 11px;
+	-webkit-border-radius: 11px;
+	border-radius: 11px;
+}
+
+.dialogContenedor-small {
+	position: fixed;
+	background-repeat: no-repeat;
+	width: 300px;
+	height: 150px;
+	padding: 3px;
+	z-index: 102;
+	color:#000000;
+	display:none;
+	text-align:left;
+	top:25%;
+	left:30%;
+	background-color: #E3FDFC; /* Adaptado a Fiona */
+	padding: 5px;
+	border:1px solid black;
+	-moz-border-radius: 11px;
+	-webkit-border-radius: 11px;
+	border-radius: 11px;
+	
+}
+
+
+.dialogCabecera
+{
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  width: 100%;
+  height: 25px;
+  padding-top: 0.5%;
+  background-color: #1397d1;/* Adaptado a Fiona */
+  margin-bottom:10px;
+  
+}
+.dialogTituloCabecera
+{
+  text-align: left;
+  vertical-align : middle;
+  font-size: 10pt;
+  font-family: sans-serif;
+  width: 85%;	
+  height: 100%;
+  color:#FFFFFF;
+  font-weight: bold;
+  float: left;
+  padding-left: 1%;
+}
+
+.dialogImagenCabecera
+{
+  width: 25px;
+  height:100%;	
+  background-image: url(../../images/alert/cierreModal.gif);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  float: right;
+  cursor: pointer;
+  
+}
+
+
+.dialogCuerpo
+{
+   width:100%;
+   float:left;
+}
+
+
+
+

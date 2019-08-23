@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<formatter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="../fwnScheme.xsd">  
+
+	<componenteIterativo nombre="statusTabla"
+		persist="statusList">
+
+		<destino nombre="status_id">
+			<origen nombre="FIONEGN009" tipoDatoValor="BigDecimal"
+				propiedadValor="FIONEG009010" />
+		</destino>	
+		
+		<destino nombre="status_date">
+			<origen nombre="FIONEGN009" tipoDatoValor="String"
+				propiedadValor="FIONEG009030" />
+		</destino>
+		
+		<destino nombre="status_nombre">
+			<origen nombre="FIONEGN009" tipoDatoValor="String"
+				propiedadValor="FIONEG009050" />
+		</destino>	
+		
+		<destino nombre="status_nombre_usuario">
+			<origen nombre="FIONEGN009" tipoDatoValor="String"
+				propiedadValor="FIONEG009060" />
+		</destino>		
+		
+
+	</componenteIterativo>	
+
+	
+</formatter>

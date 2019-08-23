@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<formatter 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+			xsi:noNamespaceSchemaLocation="../fwnScheme.xsd">
+
+	<destino nombre="USER_ID">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino nombre="USER_FISTNAME">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino nombre="USER_SURNAME">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino nombre="USER_MAIL">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino nombre="USER_MAIL_ID">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino nombre="USER_PASSWORD1">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino nombre="USER_PASSWORD2">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino nombre="USER_ENTITY_ID">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino nombre="USER_ENTITY_NAME">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino nombre="USER_ACCOUNTTYPE_ID">
+		<funcion method="FuncionConstante">
+			<origen nombre="1" />
+		</funcion>
+	</destino>
+	<destino nombre="USER_ACCOUNTTYPE_NAME">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino nombre="USER_STATUS">
+		<funcion method="FuncionConstante">
+			<origen nombre="unconfirmed" />
+		</funcion>
+	</destino>
+	<destino nombre="USER_CREDITCARD_NUMBER">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino nombre="USER_CREDITCARD_EXPIRATION">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino nombre="USER_SIGNUPCODE">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino nombre="USER_NICKNAME">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino nombre="USER_FULLNAME">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino nombre="USER_DISPLAYNAME">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino nombre="USER_AVATARBUILDER_UMD5">
+		<funcion method="FuncionConstante">
+			<origen nombre="" />
+		</funcion>
+	</destino>
+	<destino nombre="USER_USERGROUP_ID">
+		<funcion method="FuncionConstante">
+			<origen nombre="2" />
+		</funcion>
+	</destino>
+	<destino nombre="USER_USERGROUP">
+		<funcion method="FuncionConstante">
+			<origen nombre="USER" />
+		</funcion>
+	</destino>
+	<destino nombre="USER_FLAGENTITY">
+		<funcion method="FuncionConstante">
+			<origen nombre="0" />
+		</funcion>
+	</destino>
+
+</formatter>

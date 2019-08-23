@@ -1,0 +1,45 @@
+.span_wrap{
+    -webkit-transform: rotate(-90deg);
+    -webkit-transform-origin: 100% 100%;
+    background-color: #008FCB;
+    border-left-color:  #E8E8E8; /*#B8B09A;*/
+    border-left-style: solid;
+    border-right-color:  #E8E8E8; /*#B8B09A;*/
+    border-right-style: solid;
+    border-top-color: #E8E8E8; /*#B8B09A;*/
+    border-top-style: solid;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-width: 3px 3px 0px;
+    cursor: pointer;
+    display: block;
+    height: 30px;
+    margin-top: -50px;
+    min-width: 120px;
+    position: fixed;
+    right: 0px;
+    top: 40%;
+    z-index: 100000;
+}
+
+.span_wrapped{
+    color: #E8E8E8;
+    font-family: arial, sans-serif;
+    font-size: 17px;
+    z-index: 100001;
+    display: block;
+    text-align: center;
+    padding-left: 11px;
+    padding-right: 10px;
+    padding-top: 6px;
+    vertical-align: middle;
+    font-weight: bold;
+    letter-spacing: 0px;
+    text-shadow: rgba(0, 0, 0, 0.298039) 1px 0px 2px;
+    line-height: 1;
+    top: 0px;
+}
+
+#fiona_send_button{
+    padding: 0 0 0 0 !important;
+}

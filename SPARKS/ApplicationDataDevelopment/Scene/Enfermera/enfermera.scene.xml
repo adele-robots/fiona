@@ -1,0 +1,149 @@
+<Model name="enfermera" geometry="enfermera.geo">
+	<!-- Morph targets: "A" "O" "E" "M" "F" "U" "blink" -->
+
+	<Joint name="Bip01" tx="-2.94163" ty="92.1992" tz="2.76495" rx="-0" ry="-89.9999" rz="0" jointIndex="1">
+		<Joint name="Bip01_Pelvis" rx="2.73208e-005" ry="-89.9999" rz="93.2914" jointIndex="2">
+			<Joint name="Bip01_Spine" tx="6.68933" ty="-0.384704" tz="0.523854" rx="0.102996" ry="0.0365198" rz="-0.60189" jointIndex="3">
+				<Joint name="Bip01_Spine1" tx="12.3769" ty="-1.33514e-005" tz="0.00985527" rx="0.0743974" ry="-0.000463761" rz="-0.846272" jointIndex="4">
+					<Joint name="Bip01_Spine2" tx="12.3769" ty="-1.52588e-005" tz="0.00985527" rx="0.0899977" ry="-0.00293635" rz="-1.9993" jointIndex="5">
+						<Joint name="Bip01_Neck" tx="12.6971" ty="-1.78814e-006" tz="1.12113" jointIndex="6">
+							<Joint name="Bip01_Head" tx="9.98285" ty="3.57628e-007" tz="1.19209e-007" rx="0.944586" ry="3.10892" rz="-1.73821" jointIndex="7">
+								<Mesh name="_" material="piel_estandar.material.xml" tx="11.7954" ty="-3.75355" tz="3.43198" rx="-5.98292e-005" ry="-95.816" rz="89.9999" sx="0.158434" sy="0.158434" sz="0.158434" batchStart="0" batchCount="21996" vertRStart="0" vertREnd="3981">
+									<Mesh name="#_" material="labiosss.material.xml" batchStart="21996" batchCount="1320" vertRStart="3982" vertREnd="4237" />
+									<Mesh name="#_" material="dientes_1.material.xml" batchStart="23316" batchCount="3072" vertRStart="4238" vertREnd="4831" />
+									<Mesh name="#_" material="ojos_verdes_1.material.xml" batchStart="26388" batchCount="4416" vertRStart="4832" vertREnd="5601" />
+									<Mesh name="#_" material="contorno_ojos_1.material.xml" batchStart="30804" batchCount="3024" vertRStart="5602" vertREnd="6235" />
+									<Mesh name="#_" material="pelo_enfermera_1.material.xml" batchStart="33828" batchCount="40608" vertRStart="6236" vertREnd="13314" />
+								</Mesh>
+							</Joint>
+							<Joint name="Bip01_L_Clavicle" tx="1.1467" ty="3.91653" tz="1.3109" rx="-0.000160107" ry="179.954" rz="68.5149" jointIndex="8">
+								<Joint name="Bip01_L_UpperArm" tx="10.6745" ty="0" tz="0" rx="2.9741" ry="18.2722" rz="-60.3097" jointIndex="9">
+									<Joint name="Bip01_L_Forearm" tx="25.3375" ty="0" tz="1.90735e-006" rx="1.07222e-006" ry="-20.802" rz="-4.1801e-007" jointIndex="10">
+										<Joint name="Bip01_L_Hand" tx="21.7929" ty="7.62939e-006" tz="0" rx="-64.4666" ry="17.1257" rz="-17.6506" jointIndex="11">
+											<Joint name="Bip01_L_Finger0" tx="2.44437" ty="-2.92221" tz="-1.39409" rx="62.0421" ry="-54.3145" rz="-74.0391" jointIndex="12">
+												<Joint name="Bip01_L_Finger01" tx="4.0806" ty="9.53674e-007" tz="0" rx="-6.33474e-007" ry="24.0645" rz="-8.12127e-007" jointIndex="13" />
+											</Joint>
+											<Joint name="Bip01_L_Finger1" tx="7.76656" ty="-2.52884" tz="0.170548" rx="0.729968" ry="22.5788" rz="-5.31493" jointIndex="14">
+												<Joint name="Bip01_L_Finger11" tx="3.55978" ty="3.8147e-006" tz="-1.90735e-006" rx="1.18217e-006" ry="22.6277" rz="-1.47666e-007" jointIndex="15" />
+											</Joint>
+											<Joint name="Bip01_L_Finger2" tx="7.81285" ty="-0.91824" tz="0.435682" rx="-0.0436039" ry="17.0866" rz="-0.0134037" jointIndex="16">
+												<Joint name="Bip01_L_Finger21" tx="3.82076" ty="0" tz="0" rx="2.53734e-007" ry="29.9464" rz="7.63401e-007" jointIndex="17" />
+											</Joint>
+											<Joint name="Bip01_L_Finger3" tx="7.67648" ty="0.933179" tz="0.599684" rx="-0.0432635" ry="18.5068" rz="3.82646" jointIndex="18">
+												<Joint name="Bip01_L_Finger31" tx="3.72409" ty="-1.90735e-006" tz="-1.90735e-006" rx="-2.41519e-007" ry="27.9843" rz="3.26816e-007" jointIndex="19" />
+											</Joint>
+											<Joint name="Bip01_L_Finger4" tx="7.67084" ty="2.36386" tz="0.418695" rx="-0.512374" ry="23.7085" rz="5.54123" jointIndex="20">
+												<Joint name="Bip01_L_Finger41" tx="3.47912" ty="4.76837e-007" tz="-1.90735e-006" rx="1.07389e-006" ry="29.4444" rz="8.93653e-007" jointIndex="21" />
+											</Joint>
+										</Joint>
+									</Joint>
+									<Joint name="Bip01_L_ForeTwist" tx="25.3375" ty="0" tz="1.90735e-006" rx="6.06725" ry="-20.802" rz="-3.21969e-007" jointIndex="22">
+										<Joint name="Bip01_L_ForeTwist1" tx="7.26432" ty="-3.8147e-006" tz="0" rx="6.06725" ry="4.53743e-008" rz="2.40467e-009" jointIndex="23">
+											<Joint name="Bip01_L_ForeTwist2" tx="7.26431" ty="3.8147e-006" tz="-9.53674e-007" rx="6.06725" ry="4.29291e-007" rz="-3.81513e-007" jointIndex="24" />
+										</Joint>
+									</Joint>
+								</Joint>
+							</Joint>
+							<Joint name="Bip01_R_Clavicle" tx="1.14671" ty="-3.91654" tz="1.31088" rx="2.41156" ry="179.954" rz="-64.7876" jointIndex="25">
+								<Joint name="Bip01_R_UpperArm" tx="10.6745" ty="7.62939e-006" tz="-2.6077e-008" rx="-6.24065" ry="5.7281" rz="55.7842" jointIndex="26">
+									<Joint name="Bip01_R_Forearm" tx="25.3375" ty="0" tz="0" rx="1.2852e-007" ry="-18.9012" rz="-1.68453e-006" jointIndex="27">
+										<Joint name="Bip01_R_Hand" tx="21.7929" ty="3.8147e-006" tz="0" rx="63.7251" ry="12.1279" rz="5.75641" jointIndex="28">
+											<Joint name="Bip01_R_Finger0" tx="2.44437" ty="2.92221" tz="-1.39409" rx="-62.0421" ry="-54.3145" rz="74.0391" jointIndex="29">
+												<Joint name="Bip01_R_Finger01" tx="4.08061" ty="1.90735e-006" tz="3.8147e-006" rx="2.31793e-006" ry="24.0645" rz="-2.36297e-006" jointIndex="30" />
+											</Joint>
+											<Joint name="Bip01_R_Finger1" tx="7.76656" ty="2.52885" tz="0.170549" rx="-0.729972" ry="22.5788" rz="5.31493" jointIndex="31">
+												<Joint name="Bip01_R_Finger11" tx="3.55977" ty="-9.53674e-007" tz="1.90735e-006" rx="-1.14937e-007" ry="22.6277" rz="4.10603e-008" jointIndex="32" />
+											</Joint>
+											<Joint name="Bip01_R_Finger2" tx="7.81284" ty="0.918242" tz="0.43568" rx="0.0436089" ry="17.0866" rz="0.0134142" jointIndex="33">
+												<Joint name="Bip01_R_Finger21" tx="3.82077" ty="4.76837e-007" tz="9.53674e-007" rx="2.2449e-006" ry="29.9464" rz="-3.3725e-008" jointIndex="34" />
+											</Joint>
+											<Joint name="Bip01_R_Finger3" tx="7.67648" ty="-0.933177" tz="0.599688" rx="0.0432639" ry="18.5068" rz="-3.82647" jointIndex="35">
+												<Joint name="Bip01_R_Finger31" tx="3.72411" ty="-9.53674e-007" tz="-9.53674e-007" rx="-5.1284e-007" ry="27.9843" rz="5.5803e-007" jointIndex="36" />
+											</Joint>
+											<Joint name="Bip01_R_Finger4" tx="7.67083" ty="-2.36385" tz="0.418699" rx="0.512359" ry="23.7085" rz="-5.54122" jointIndex="37">
+												<Joint name="Bip01_R_Finger41" tx="3.4791" ty="1.90735e-006" tz="1.90735e-006" rx="4.21285e-006" ry="29.4444" rz="-1.27672e-006" jointIndex="38" />
+											</Joint>
+										</Joint>
+									</Joint>
+									<Joint name="Bip01_R_ForeTwist" tx="25.3375" ty="0" tz="0" rx="-6.56135" ry="-18.9012" rz="-2.47078e-006" jointIndex="39">
+										<Joint name="Bip01_R_ForeTwist1" tx="7.26432" ty="0" tz="0" rx="-6.56135" ry="8.59404e-007" rz="-9.51975e-007" jointIndex="40">
+											<Joint name="Bip01_R_ForeTwist2" tx="7.26433" ty="0" tz="-9.53674e-007" rx="-6.56135" ry="-1.00389e-006" rz="2.19198e-006" jointIndex="41" />
+										</Joint>
+									</Joint>
+								</Joint>
+							</Joint>
+						</Joint>
+					</Joint>
+				</Joint>
+				<Joint name="Bip01_L_Thigh" tx="-6.78215" ty="8.8332" tz="-0.544141" rx="-0.413488" ry="-9.38867" rz="176.633" jointIndex="42">
+					<Joint name="Bip01_L_Calf" tx="41.4619" ty="0" tz="-1.90735e-006" rx="1.0205e-009" ry="-26.2453" rz="-3.00284e-008" jointIndex="43">
+						<Joint name="Bip01_L_Foot" tx="42.4755" ty="-9.53674e-007" tz="2.86102e-006" rx="-29.7102" ry="12.5471" rz="3.28185" jointIndex="44">
+							<Joint name="Bip01_L_Toe0" tx="9.47147" ty="9.53674e-007" tz="-11.2377" rx="0.517271" ry="93.4228" rz="0.0309286" jointIndex="45" />
+						</Joint>
+					</Joint>
+				</Joint>
+				<Joint name="Bip01_R_Thigh" tx="-6.60313" ty="-8.20627" tz="-0.513485" rx="-1.24417" ry="-7.22524" rz="175.333" jointIndex="46">
+					<Joint name="Bip01_R_Calf" tx="41.4619" ty="-9.53674e-007" tz="9.53674e-007" rx="-1.51635e-008" ry="-16.2186" rz="-3.21807e-007" jointIndex="47">
+						<Joint name="Bip01_R_Foot" tx="42.4755" ty="-1.90735e-006" tz="7.15256e-007" rx="6.54302" ry="9.22227" rz="2.11037" jointIndex="48">
+							<Joint name="Bip01_R_Toe0" tx="9.47147" ty="0" tz="-11.2377" rx="2.73823e-006" ry="90" rz="2.77476e-005" jointIndex="49" />
+						</Joint>
+					</Joint>
+				</Joint>
+			</Joint>
+		</Joint>
+	</Joint>
+
+	<Mesh name="cuerpo_enfermera" material="blusa.material.xml" batchStart="74436" batchCount="27300" vertRStart="13315" vertREnd="18390">
+		<Mesh name="#cuerpo_enfermera" material="piel_1.material.xml" batchStart="101736" batchCount="14442" vertRStart="18391" vertREnd="21212" />
+	</Mesh>
+	<Mesh name="O" material="piel_estandar.material.xml" tx="265.286" ty="159.309" tz="-0.881009" rx="90" ry="0" rz="-0" sx="0.158434" sy="0.158434" sz="0.158434" batchStart="116178" batchCount="21996" vertRStart="21213" vertREnd="25194">
+		<Mesh name="#O" material="labiosss.material.xml" batchStart="138174" batchCount="1320" vertRStart="25195" vertREnd="25450" />
+		<Mesh name="#O" material="dientes_1.material.xml" batchStart="139494" batchCount="3072" vertRStart="25451" vertREnd="26044" />
+		<Mesh name="#O" material="ojos_verdes_1.material.xml" batchStart="142566" batchCount="4416" vertRStart="26045" vertREnd="26814" />
+		<Mesh name="#O" material="contorno_ojos_1.material.xml" batchStart="146982" batchCount="3024" vertRStart="26815" vertREnd="27448" />
+		<Mesh name="#O" material="pelo_enfermera_1.material.xml" batchStart="150006" batchCount="40608" vertRStart="27449" vertREnd="34527" />
+	</Mesh>
+	<Mesh name="E" material="piel_estandar.material.xml" tx="292.424" ty="159.309" tz="-0.881009" rx="90" ry="0" rz="-0" sx="0.158434" sy="0.158434" sz="0.158434" batchStart="190614" batchCount="21996" vertRStart="34528" vertREnd="38509">
+		<Mesh name="#E" material="labiosss.material.xml" batchStart="212610" batchCount="1320" vertRStart="38510" vertREnd="38765" />
+		<Mesh name="#E" material="dientes_1.material.xml" batchStart="213930" batchCount="3072" vertRStart="38766" vertREnd="39359" />
+		<Mesh name="#E" material="ojos_verdes_1.material.xml" batchStart="217002" batchCount="4416" vertRStart="39360" vertREnd="40129" />
+		<Mesh name="#E" material="contorno_ojos_1.material.xml" batchStart="221418" batchCount="3024" vertRStart="40130" vertREnd="40763" />
+		<Mesh name="#E" material="pelo_enfermera_1.material.xml" batchStart="224442" batchCount="40608" vertRStart="40764" vertREnd="47842" />
+	</Mesh>
+	<Mesh name="U" material="piel_estandar.material.xml" tx="386.389" ty="159.309" tz="-0.881009" rx="90" ry="0" rz="-0" sx="0.158434" sy="0.158434" sz="0.158434" batchStart="265050" batchCount="21996" vertRStart="47843" vertREnd="51824">
+		<Mesh name="#U" material="labiosss.material.xml" batchStart="287046" batchCount="1320" vertRStart="51825" vertREnd="52080" />
+		<Mesh name="#U" material="dientes_1.material.xml" batchStart="288366" batchCount="3072" vertRStart="52081" vertREnd="52674" />
+		<Mesh name="#U" material="ojos_verdes_1.material.xml" batchStart="291438" batchCount="4416" vertRStart="52675" vertREnd="53444" />
+		<Mesh name="#U" material="contorno_ojos_1.material.xml" batchStart="295854" batchCount="3024" vertRStart="53445" vertREnd="54078" />
+		<Mesh name="#U" material="pelo_enfermera_1.material.xml" batchStart="298878" batchCount="40608" vertRStart="54079" vertREnd="61157" />
+	</Mesh>
+	<Mesh name="A" material="piel_estandar.material.xml" tx="232.968" ty="159.309" tz="-0.881009" rx="90" ry="0" rz="-0" sx="0.158434" sy="0.158434" sz="0.158434" batchStart="339486" batchCount="21996" vertRStart="61158" vertREnd="65139">
+		<Mesh name="#A" material="labiosss.material.xml" batchStart="361482" batchCount="1320" vertRStart="65140" vertREnd="65395" />
+		<Mesh name="#A" material="dientes_1.material.xml" batchStart="362802" batchCount="3072" vertRStart="65396" vertREnd="65989" />
+		<Mesh name="#A" material="ojos_verdes_1.material.xml" batchStart="365874" batchCount="4416" vertRStart="65990" vertREnd="66759" />
+		<Mesh name="#A" material="contorno_ojos_1.material.xml" batchStart="370290" batchCount="3024" vertRStart="66760" vertREnd="67393" />
+		<Mesh name="#A" material="pelo_enfermera_1.material.xml" batchStart="373314" batchCount="40608" vertRStart="67394" vertREnd="74472" />
+	</Mesh>
+	<Mesh name="M" material="piel.material.xml" tx="320.668" ty="158.146" tz="-1.5615" rx="86.7035" ry="37.2169" rz="36.1493" sx="0.158434" sy="0.158434" sz="0.158434" batchStart="413922" batchCount="21996" vertRStart="74473" vertREnd="78454">
+		<Mesh name="#M" material="labios.material.xml" batchStart="435918" batchCount="1320" vertRStart="78455" vertREnd="78710" />
+		<Mesh name="#M" material="dientes.material.xml" batchStart="437238" batchCount="3072" vertRStart="78711" vertREnd="79304" />
+		<Mesh name="#M" material="ojos_verdes.material.xml" batchStart="440310" batchCount="4416" vertRStart="79305" vertREnd="80074" />
+		<Mesh name="#M" material="contorno_ojos.material.xml" batchStart="444726" batchCount="3024" vertRStart="80075" vertREnd="80708" />
+		<Mesh name="#M" material="pelo_enfermera.material.xml" batchStart="447750" batchCount="40608" vertRStart="80709" vertREnd="87787" />
+	</Mesh>
+	<Mesh name="F" material="piel.material.xml" tx="352.394" ty="158.146" tz="-1.5615" rx="86.7035" ry="37.2169" rz="36.1493" sx="0.158434" sy="0.158434" sz="0.158434" batchStart="488358" batchCount="21996" vertRStart="87788" vertREnd="91769">
+		<Mesh name="#F" material="labios.material.xml" batchStart="510354" batchCount="1320" vertRStart="91770" vertREnd="92025" />
+		<Mesh name="#F" material="dientes.material.xml" batchStart="511674" batchCount="3072" vertRStart="92026" vertREnd="92619" />
+		<Mesh name="#F" material="ojos_verdes.material.xml" batchStart="514746" batchCount="4416" vertRStart="92620" vertREnd="93389" />
+		<Mesh name="#F" material="contorno_ojos.material.xml" batchStart="519162" batchCount="3024" vertRStart="93390" vertREnd="94023" />
+		<Mesh name="#F" material="pelo_enfermera.material.xml" batchStart="522186" batchCount="40608" vertRStart="94024" vertREnd="101102" />
+	</Mesh>
+	<Mesh name="blink" material="piel.material.xml" tx="417.72" ty="158.146" tz="-1.5615" rx="86.7035" ry="37.2169" rz="36.1493" sx="0.158434" sy="0.158434" sz="0.158434" batchStart="562794" batchCount="21996" vertRStart="101103" vertREnd="105084">
+		<Mesh name="#blink" material="labios.material.xml" batchStart="584790" batchCount="1320" vertRStart="105085" vertREnd="105340" />
+		<Mesh name="#blink" material="dientes.material.xml" batchStart="586110" batchCount="3072" vertRStart="105341" vertREnd="105934" />
+		<Mesh name="#blink" material="ojos_verdes.material.xml" batchStart="589182" batchCount="4416" vertRStart="105935" vertREnd="106704" />
+		<Mesh name="#blink" material="contorno_ojos.material.xml" batchStart="593598" batchCount="3024" vertRStart="106705" vertREnd="107338" />
+		<Mesh name="#blink" material="pelo_enfermera.material.xml" batchStart="596622" batchCount="40608" vertRStart="107339" vertREnd="114417" />
+	</Mesh>
+	<Mesh name="Plane01" material="_3_-_Default.material.xml" tx="0.948387" ty="140" tz="-40" rx="90" ry="0" rz="-0" batchStart="637230" batchCount="96" vertRStart="114418" vertREnd="114442" />
+</Model>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ComponentNetwork xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ComponentNetwork.xsd">
+
+    <!-- COMPONENT DECLARATION -->
+  <ComponentDeclarations>	
+
+   <Component  id="idASRSpark"  type="ASRSpark" plugin="libASRSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IAudioConsumer" />
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="IVoice" />           
+      </RequiredInterfaces>
+      
+    </Component>
+    
+    <Component  id="idChatThreadSpark"  type="ChatThreadSpark" plugin="libChatThreadSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IVoice" />
+        <Interface name="IConcurrent" />
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="IVoice" />  
+        <Interface name="IAsyncFatalErrorHandler" />      
+      </RequiredInterfaces>
+    </Component>
+    
+    <Component  id="idRebeccaAIMLSpark"  type="RebeccaAIMLSpark" plugin="libRebeccaAIMLSpark.so">
+      <ProvidedInterfaces>
+        <Interface name="IVoice" />
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="IVoice" />
+      </RequiredInterfaces>
+    </Component>
+
+   <Component  id="idTestASRSpark"  type="TestASRSpark" plugin="libTestASRSpark.so">
+     <ProvidedInterfaces>
+        <Interface name="IApplication" />        
+		<Interface name="IAsyncFatalErrorHandler" />
+      </ProvidedInterfaces>
+      <RequiredInterfaces>
+        <Interface name="IAudioConsumer" />
+      </RequiredInterfaces>
+   </Component>
+  
+  </ComponentDeclarations>
+  
+  
+  <!-- APPLICATION DESCRIPTION -->
+  <ApplicationDescription applicationComponent="instanceTestASRSpark" applicationConfig="/Eca.ini">
+    <!-- Paso 1/2: Instantiate components -->
+    <ComponentInstances>	  
+	  
+      <Instance instanceName="instanceASRSpark" componentID ="idASRSpark" configuration="/ComponentConfigurations/ASRSpark.ini" >
+      </Instance>
+      <Instance instanceName="instanceChatThreadSpark" componentID ="idChatThreadSpark">
+      </Instance>
+      <Instance instanceName="instanceRebeccaAIMLSpark" componentID ="idRebeccaAIMLSpark" configuration="/ComponentConfigurations/RebeccaAIMLSpark.ini" >
+      </Instance>
+      <Instance instanceName="instanceTestASRSpark" componentID ="idTestASRSpark" configuration="/ComponentConfigurations/ASRSpark.ini">
+      </Instance>      
+       
+    </ComponentInstances>
+    
+    <!-- Paso 2/2: Connect interfaces -->
+    <InterfaceConnections>      
+      <Connect interface="IAudioConsumer" providedBy="instanceASRSpark" requiredBy="instanceTestASRSpark" />      
+      <Connect interface="IVoice" providedBy="instanceTestASRSpark" requiredBy="instanceChatThreadSpark" />
+      <Connect interface="IVoice" providedBy="instanceChatThreadSpark" requiredBy="instanceRebeccaAIMLSpark" />
+      <Connect interface="IVoice" providedBy="instanceRebeccaAIMLSpark" requiredBy="instanceASRSpark" />
+      <ConnectAll interface="IAsyncFatalErrorHandler" providedBy="instanceTestASRSpark"/>
+    </InterfaceConnections>
+  </ApplicationDescription>
+</ComponentNetwork>

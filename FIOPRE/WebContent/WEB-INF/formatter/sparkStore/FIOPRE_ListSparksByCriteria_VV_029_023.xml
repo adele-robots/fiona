@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<formatter xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="../fwnScheme.xsd">  
+  
+  <destino persist="spark_criterio">
+    <origen nombre="spark_criterio" />
+  </destino>
+  
+   <destino nombre="SECURE_USERID">
+    <origen nombre="SECURE_USERID" />
+  </destino>
+  
+  <destino persist="pulsado_top">
+    <origen nombre="pulsado_top" />
+  </destino>
+  
+ <destino persist="pulsado_latest">
+    <origen nombre="pulsado_latest" />
+  </destino>
+  
+  <destino persist="pulsado_basic">
+    <origen nombre="pulsado_basic" />
+  </destino>
+  
+  <destino persist="sucessBuy" tipoDato="BigDecimal">
+	<funcion method="FuncionConstante">
+		<origen nombre="" />
+	</funcion>
+  </destino>
+  
+</formatter>
+
